@@ -1,0 +1,129 @@
+body {
+    background-color: var(--primary-dark-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 15px 50px 15px 180px;
+    background-color: var(--primary-dark-color);
+    display: flex;
+    justify-content: flex-end;
+
+    nav {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    a {
+        font-weight: 300;
+        text-transform: lowercase;
+        transition: var(--transition);
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+}
+
+#social {
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100px;
+        background-color: var(--text-color);
+        position: absolute;
+        bottom: 0;
+        left: 49%;
+    }
+
+    a {
+        line-height: 0;
+        margin-bottom: 15px;
+        position: relative;
+
+        &:hover {
+            img {
+                transform: translateY(-5px);
+            }
+
+            &:after {
+                max-width: 65px;
+            }
+        }
+
+        &:after {
+            content: attr(title);
+            color: #fff;
+            opacity: .5;
+            position: absolute;
+            top: -3px;
+            left: 36px;
+            font-weight: 200;
+            font-size: 0.8rem;
+            line-height: 30px;
+            max-width: 0;
+            overflow: hidden;
+            transition: all .35s linear;
+            background: var(--primary-dark-color);
+        }
+    }
+
+    img {
+        transition: var(--transition);
+        height: 30px;
+        opacity: 0.5;
+    }
+}
+
+#about {
+    display: flex;
+    column-gap: 100px;
+    align-items: center;
+
+    h1::first-line {
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--text-color);
+    }
+
+    .career {
+        color: var(--primary-color)
+    }
+
+    h1 {
+        color: rgba(255,255,255,.85);
+        font-size: 2.5rem;
+        font-weight: 800;
+        padding: 10px 0;
+    }
+
+    p {
+        text-align: justify;
+
+        &::first-letter {
+            margin-left: 20px;
+        }
+    }
+
+    .avatar {
+        max-width: 280px;
+    }
+}
