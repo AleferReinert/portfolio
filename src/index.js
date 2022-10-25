@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-export const windowHeight = window.innerHeight;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

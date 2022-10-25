@@ -1,0 +1,66 @@
+#certificates-skills {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .title {
+        color: rgba(255,255,255,.5);
+        font-weight: 300;
+        font-size: 2.5rem;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        column-gap: 100px;
+    }
+
+    .certificates {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 50px;
+        min-width: 250px;
+    
+        h2 {
+            color: $primary-color;
+            font-size: 1.2rem;
+        }
+    
+        a {
+            font-size: .9rem;
+            margin-top: 10px;
+        }
+    }
+
+    .skills {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        li {
+            background: #fff;
+            border-radius: 2px;
+            padding: 8px 15px;
+            list-style: none;
+            display: inline-block;
+            line-height: 0;
+            text-align: center;
+        }
+    
+        img {
+            height: 50px;
+        }
+    }
+}

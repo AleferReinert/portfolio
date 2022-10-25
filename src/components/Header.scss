@@ -1,0 +1,35 @@
+#header {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 15px 50px 15px 180px;
+    background-color: $primary-dark-color;
+    display: flex;
+    justify-content: flex-end;
+    transition: all .25s linear;
+
+    &.hidden {
+        top: -50px;
+    }
+
+    &.active {
+        background-color: lighten($primary-dark-color, 2%);
+    }
+
+    nav {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    a {
+        font-weight: 300;
+        text-transform: lowercase;
+        transition: $transition;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
