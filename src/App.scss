@@ -28,16 +28,18 @@ a {
     }
 }
 
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 // General
 .container {
-    margin: 0 180px;
-}
-
-p + p {
-    margin-top: 25px;
+    margin: 0 15px;
 }
 
 a {
@@ -47,6 +49,25 @@ a {
 body {
     background-color: $primary-dark-color;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: $text-color;
+}
+
+@media all and (min-width: 768px) {
+
+    .container {
+        margin: 0 50px 0 130px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media all and (min-width: 992px) {
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
 }

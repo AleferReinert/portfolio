@@ -4,23 +4,17 @@
     right: 0;
     left: 0;
     top: 0;
-    padding: 15px 50px 15px 180px;
+    padding: 10px 0;
     background-color: $primary-dark-color;
-    display: flex;
-    justify-content: flex-end;
+    text-align: right;
     transition: all .25s linear;
-
-    &.hidden {
-        top: -50px;
-    }
 
     &.active {
         background-color: lighten($primary-dark-color, 2%);
     }
 
-    nav {
-        display: flex;
-        column-gap: 30px;
+    .nav {
+        display: none;
     }
 
     a {
@@ -30,6 +24,33 @@
 
         &:hover {
             color: $primary-color;
+        }
+    }
+
+    .toggle-menu {
+
+        img {
+            height: 30px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+
+    #header {
+        padding: 15px 0;
+
+        &.active {
+            background-color: lighten($primary-dark-color, 2%);
+        }
+
+        .nav {
+            display: inline-flex;
+            column-gap: 30px;
+        }
+
+        .toggle-menu {
+            display: none;
         }
     }
 }

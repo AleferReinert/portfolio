@@ -1,38 +1,84 @@
 #projects {
     padding-top: 50px;
 
-    h1 {
-        text-align: center;
-    }
-
     .project {
         display: flex;
-        column-gap: 50px;
         align-items: center;
+        flex-direction: column;
         justify-content: space-between;
         background: darken($primary-dark-color, 2%);
         margin-bottom: 50px;
-
-        &:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
     }
 
     .informations {
-        margin: 0 auto;
+        padding: 25px;
     }
 
-    .topics li {
-        display: inline-block;
+    .skills {
         color: $primary-color;
         font-size: .9rem;
-        
-        + li {
-            margin-left: 10px;
+        margin: 25px 0;
+    }
+
+    .image {
+        display: block;
+        line-height: 0;
+
+        img {
+            max-width: 100%;
         }
     }
 
-    img {
-        width: 300px;
+    .nav {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        line-height: 0;
+        
+        img {
+            height: 20px;
+            opacity: 0.5;
+        }
+
+        a + a img {
+            height: 17px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+
+    #projects {
+
+        .project {
+            flex-direction: row;
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .informations {
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .image img {
+            max-width: 180px;
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+
+    #projects {
+
+        .informations {
+            padding: 0 100px;
+        }
+
+        .image img {
+            max-width: 300px;
+        }
     }
 }

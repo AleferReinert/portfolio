@@ -8,34 +8,32 @@
     .title {
         color: rgba(255,255,255,.5);
         font-weight: 300;
-        font-size: 2.5rem;
-        position: absolute;
-        top: 50px;
-        left: 0;
+        font-size: 2rem;
+        margin-bottom: 50px;
     }
 
     .content {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         justify-content: flex-start;
-        column-gap: 100px;
     }
 
     .certificates {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        row-gap: 50px;
-        min-width: 250px;
+
+        li {
+            margin-top: 25px;
+        }
     
         h2 {
             color: $primary-color;
             font-size: 1.2rem;
         }
     
-        a {
-            font-size: .9rem;
-            margin-top: 10px;
+        p {
+            margin-top: 2px;
         }
     }
 
@@ -48,6 +46,7 @@
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
+        margin-top: 25px;
 
         li {
             background: #fff;
@@ -60,7 +59,39 @@
         }
     
         img {
-            height: 50px;
+            height: 40px;
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+
+    #certificates-skills {
+
+        .title {
+            font-size: 2.5rem;
+        }
+
+        .content {
+            flex-direction: row-reverse;
+            column-gap: 100px;
+        }
+
+        .certificates {
+            min-width: 280px;
+            row-gap: 50px;
+
+            li {
+                margin-top: 0;
+            }
+        }
+
+        .skills {
+            margin-top: 0;
+            
+            img {
+                height: 50px;
+            }
         }
     }
 }
