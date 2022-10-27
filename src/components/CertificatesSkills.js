@@ -14,9 +14,6 @@ import iconGit from '../img/git.svg';
 export function CertificatesSkills(props){
     return(
         <section id="certificates-skills" className="container" style={ props.minHeight }>
-            <h1 className="title">
-                Certificados & Skills
-            </h1>
             <div className="content">
                 <ul className="certificates">
                     <li>

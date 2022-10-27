@@ -1,7 +1,10 @@
+@use "sass:math";
+
 $primary-color: #48E194;
 $primary-dark-color: #00344A;
 $text-color: #7F99A4;
 $transition: all .15s linear;
+$animation-time: .35s;
 
 @import './components/Header.scss';
 @import './components/About.scss';

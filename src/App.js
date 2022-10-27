@@ -1,6 +1,5 @@
-import './App.scss';
 
-// Componentes
+import './App.scss';
 import { Header } from './components/Header';
 import { About } from './components/About';
 import { CertificatesSkills } from './components/CertificatesSkills';
@@ -8,7 +7,7 @@ import { Projects } from './components/Projects';
 import { Social } from './components/Social';
 
 const sectionHeight = {
-    minHeight: window.innerHeight + 'px'
+    minHeight: (window.innerHeight - 50) + 'px'
 }
 
 function App() {

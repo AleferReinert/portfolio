@@ -34,19 +34,18 @@ function toggleHeader(){
 export function Header() {
     React.useEffect(() => {
         toggleHeader();
-    })
+        document.getElementById('header').classList.add('ready');
+    }, []);
     return (
         <header id="header">
-            <div className="container">
-                <nav className="nav">
-                    <MenuItem anchorId="about" itemName="Sobre mim" />
-                    <MenuItem anchorId="certificates-skills" itemName="Certificados & Skills" />
-                    <MenuItem anchorId="projects" itemName="Projetos" />
-                </nav>
-                <button title="Menu" className="toggle-menu">
-                    <img src={ iconMenu } alt="Menu" />
-                </button>
-            </div>
+            <nav className="nav">
+                <MenuItem anchorId="about" itemName="Sobre mim" />
+                <MenuItem anchorId="certificates-skills" itemName="Certificados & Skills" />
+                <MenuItem anchorId="projects" itemName="Projetos" />
+            </nav>
+            <button title="Menu" className="toggle-menu">
+                <img src={ iconMenu } alt="Menu" />
+            </button>
         </header>
     )
 }

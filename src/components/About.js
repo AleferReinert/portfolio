@@ -1,6 +1,10 @@
+import React from 'react';
 import avatar from '../img/avatar.png';
 
 export function About(props){
+    React.useEffect(() => {
+        document.getElementById('about').classList.add('ready');
+    }, []);
     return(
         <section id="about" className="container" style={ props.minHeight }>
             <div>
@@ -8,9 +12,8 @@ export function About(props){
                     <span className="first-line">
                         Olá, meu nome é
                     </span>
-                    <span>Alefer Reinert<br />
-                        e sou desenvolvedor 
-                        <span className="career"> front end</span>.
+                    <span className="second-line">Alefer Reinert</span>
+                    <span className="third-line">e sou desenvolvedor <span className="career"> front end</span>.
                     </span>
                 </h1>
                 <p>
@@ -27,9 +30,6 @@ export function About(props){
                     Além de codificar, sou uma pessoa apaixonada por doguinhos, música e saúde mental.
                     Toco bateria desde criança e já tive algumas bandas, inclusive gravei um CD em 2021. :)
                 </p>
-            </div>
-            <div>
-                <img className="avatar" src={ avatar } alt="Avatar" />
             </div>
         </section>
     )
