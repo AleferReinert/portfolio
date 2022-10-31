@@ -1,12 +1,24 @@
-import React from 'react';
-import avatar from '../img/avatar.png';
+import { useEffect } from 'react';
 
-export function About(props){
-    React.useEffect(() => {
+// Retorna orientação do dispositivo
+function orientationDevice(){
+    return window.screen.width > window.screen.height ? 'landscape' : 'portrait';
+}
+window.addEventListener('resize', function(){
+    orientationDevice();
+});
+
+export function About(){
+
+    useEffect(() => {
         document.getElementById('about').classList.add('ready');
+        if(orientationDevice() === 'landscape'){
+            document.getElementById('about').style.minHeight = `${window.innerHeight - 50}px`;
+        }
     }, []);
+
     return(
-        <section id="about" className="container" style={ props.minHeight }>
+        <section id="about" className="container">
             <div>
                 <h1 className="title">
                     <span className="first-line">

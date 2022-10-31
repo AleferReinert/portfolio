@@ -1,26 +1,9 @@
-#social {
-    position: fixed;
-    bottom: 0;
-    left: 50px;
-    display: none;
+.social {
     flex-direction: column;
-    padding-bottom: 100px;
-
-    &::after {
-        content: '';
-        display: block;
-        width: 1px;
-        height: 0;
-        background-color: $text-color;
-        position: absolute;
-        bottom: 0;
-        left: 49%;
-        transition: height $animation-time linear 1.3s;
-    }
+    display: none;
 
     a {
         line-height: 0;
-        margin-bottom: 15px;
         position: relative;
         transform: scale(0);
 
@@ -76,7 +59,45 @@
 
 @media all and (min-width: 768px) {
     
-    #social {
+    .social {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 20px;
+        padding-bottom: 25px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    
+    .social {
+        position: fixed;
+        bottom: 0;
+        left: 80px;
+        flex-direction: column;
+        padding-bottom: 100px;
+
+        a {
+            margin-bottom: 10px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 0;
+            background-color: $text-color;
+            position: absolute;
+            bottom: 0;
+            left: 49%;
+            transition: height $animation-time linear 1.3s;
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+
+    .social {
+        left: 50px;
     }
 }

@@ -6,10 +6,10 @@ $text-color: #7F99A4;
 $transition: all .15s linear;
 $animation-time: .35s;
 
-@import './components/Header.scss';
-@import './components/About.scss';
-@import './components/CertificatesSkills.scss';
-@import './components/Projects.scss';
+@import './components/header/Header.scss';
+@import './components/about/About.scss';
+@import './components/certificatesSkills/CertificatesSkills.scss';
+@import './components/projects/Projects.scss';
 @import './components/Social.scss';
 
 /* Reset */
@@ -45,6 +45,14 @@ button {
     margin: 0 15px;
 }
 
+main {
+    width: 100%;
+}
+
+section {
+    padding-top: 50px;
+}
+
 a {
     color: $text-color;
 }
@@ -56,10 +64,18 @@ body {
     color: $text-color;
 }
 
+@media all and (min-width: 576px) {
+    
+    .container {
+        margin: 0 30px;
+    }
+}
+
 @media all and (min-width: 768px) {
 
     .container {
-        margin: 0 50px 0 130px;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     body {
@@ -69,8 +85,29 @@ body {
 
 @media all and (min-width: 992px) {
 
+    .App {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    aside {
+        min-width: 110px;
+    }
+
     .container {
-        max-width: 960px;
+        margin: 0 80px;
+        max-width: none;
+    }
+}
+
+@media all and (min-width: 1200px) {
+
+    aside {
+        min-width: 80px;
+    }
+
+    .container {
         margin: 0 auto;
+        max-width: 960px;
     }
 }

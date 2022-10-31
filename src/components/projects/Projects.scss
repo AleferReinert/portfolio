@@ -1,0 +1,165 @@
+#projects {
+    padding-bottom: 25px;
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    .project {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        background: darken($primary-dark-color, 2%);
+        transform: scale(0.5);
+        opacity: 0;
+        overflow: hidden;
+        align-self: center;
+        transition:
+             transform $animation-time linear,
+             opacity $animation-time ease-in,
+             width $animation-time linear .4s;
+
+        &.ready {
+            transform: scale(1);
+            opacity: 1;
+            width: 100%;
+
+            .informations {
+                opacity: 1;
+            }
+        }
+
+        .informations {
+            padding: 25px;
+            opacity: 0;
+            transition: opacity $animation-time linear .6s;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            font-size: 1rem;
+        }
+
+        .skills {
+            color: $primary-color;
+            font-size: .9rem;
+            margin: 25px 0;
+        }
+
+        .nav {
+            display: flex;
+            column-gap: 15px;
+            align-items: center;
+            line-height: 0;
+            
+            img {
+                height: 20px;
+                opacity: 0.5;
+            }
+    
+            a + a img {
+                height: 17px;
+            }
+        }
+    }
+
+    .image {
+        display: block;
+        line-height: 0;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media all and (min-width: 576px) {
+
+    #projects {
+
+        .project {
+            flex-direction: row;
+            max-height: 300px;
+            width: 300px;
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+            }
+
+            .informations {
+                margin: 0 auto;
+                padding: 0 25px;
+            }
+
+            .title {
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+    
+            .description {
+                font-size: .9rem;
+            }
+
+            .skills {
+                margin: 15px 0;
+                font-size: .8rem;
+            }
+        }
+
+        .image img {
+            max-width: 180px;
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+
+    #projects {
+
+        .project {
+            flex-direction: row;
+
+            .informations {
+                padding: 0 50px;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+    
+            .description {
+                font-size: 1rem;
+            }
+
+            .skills {
+                font-size: .9rem;
+            }
+        }
+
+        .image img {
+            max-width: 300px;
+        }
+    }
+}
+
+@media all and (min-width: 1200px) {
+
+    #projects {
+
+        .informations {
+            padding: 0 100px;
+        }
+
+        .image img {
+            max-width: 300px;
+        }
+    }
+}

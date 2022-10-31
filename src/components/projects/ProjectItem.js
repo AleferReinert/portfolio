@@ -1,5 +1,5 @@
-import iconGithub from '../img/github.svg';
-import iconExternalLink from '../img/externalLink.svg';
+import iconGithub from '../../img/github.svg';
+import iconExternalLink from '../../img/externalLink.svg';
 
 export function ProjectItem(props){
     return(
@@ -10,8 +10,8 @@ export function ProjectItem(props){
                 </a>
             </div>
             <div className="informations">
-                <h2>{ props.name }</h2>
-                <p>{ props.description }</p>
+                <h2 className="title">{ props.name }</h2>
+                <p className="description">{ props.description }</p>
                 <p className="skills">{ props.skills }</p>
                 <nav className="nav">
                     <a href={ props.repositoryUrl } title="Repositório" target="_blank" rel="noreferrer">

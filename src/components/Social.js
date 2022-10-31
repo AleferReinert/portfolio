@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import iconFacebook from '../img/facebook.svg';
 import iconGithub from '../img/github.svg';
 import iconGmail from '../img/gmail.svg';
@@ -7,11 +7,13 @@ import iconWhatsapp from '../img/whatsapp.svg';
 import iconYoutube from '../img/youtube.svg';
 
 export function Social(){
-    React.useEffect(() => {
-        document.getElementById('social').classList.add('ready');
+    const [ready, setReady] = useState('');
+
+    useEffect(() => {
+        setReady('ready');
     }, []);
     return(
-        <nav id="social">
+        <nav className={ `social ${ ready }`}>
             <a href="https://www.facebook.com/AleferReinert" target="_blank" title="Facebook" rel="noreferrer">
                 <img src={ iconFacebook } alt="Facebook" />
             </a>

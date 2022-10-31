@@ -1,15 +1,16 @@
-import iconLess from '../img/less.svg';
-import iconSass from '../img/sass.svg';
-import iconCss3 from '../img/css3.svg';
-import iconHtml5 from '../img/html5.svg';
-import iconJavascript from '../img/javascript.svg';
-import iconJquery from '../img/jquery.svg';
-import iconGrunt from '../img/grunt.svg';
-import iconGulp from '../img/gulp.svg';
-import iconBootstrap from '../img/bootstrap.svg';
-import iconPhotoshop from '../img/photoshop.svg';
-import iconSql from '../img/sql.svg';
-import iconGit from '../img/git.svg';
+import iconLess from '../../img/less.svg';
+import iconSass from '../../img/sass.svg';
+import iconCss3 from '../../img/css3.svg';
+import iconHtml5 from '../../img/html5.svg';
+import iconJavascript from '../../img/javascript.svg';
+import iconReact from '../../img/react.svg';
+import iconJquery from '../../img/jquery.svg';
+import iconGrunt from '../../img/grunt.svg';
+import iconGulp from '../../img/gulp.svg';
+import iconBootstrap from '../../img/bootstrap.svg';
+import iconPhotoshop from '../../img/photoshop.svg';
+import iconSql from '../../img/sql.svg';
+import iconGit from '../../img/git.svg';
 
 export function CertificatesSkills(props){
     return(
@@ -27,7 +28,8 @@ export function CertificatesSkills(props){
                         </a>
                     </li>
                     <li>
-                        <a  target="_blank" 
+                        <a  target="_blank"
+                            rel="noreferrer"
                             title="Visualizar certificado"
                             href="https://www.unovacursos.com.br/certificados/14304132340741204202210"
                         >
@@ -42,11 +44,12 @@ export function CertificatesSkills(props){
                     <li title="LESS"><img src={ iconLess } alt="LESS" /></li>
                     <li title="SASS"><img src={ iconSass } alt="SASS" /></li>
                     <li title="JavaScript"><img src={ iconJavascript } alt="JavaScript" /></li>
+                    <li title="React"><img src={ iconReact } alt="React" /></li>
                     <li title="JQuery"><img src={ iconJquery } alt="JQuery" /></li>
                     <li title="Grunt"><img src={ iconGrunt } alt="Grunt" /></li>
                     <li title="Gulp"><img src={ iconGulp } alt="Gulp" /></li>
                     <li title="Bootstrap"><img src={ iconBootstrap } alt="Bootstrap" /></li>
-                    <li title="Github"><img src={ iconGit } alt="Git" /></li>
+                    <li title="Git"><img src={ iconGit } alt="Git" /></li>
                     <li title="Photoshop"><img src={ iconPhotoshop } alt="Photoshop" /></li>
                     <li title="SQL"><img src={ iconSql } alt="SQL" /></li>
                 </ul>
