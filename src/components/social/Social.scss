@@ -7,16 +7,6 @@
         position: relative;
         transform: scale(0);
 
-        &:hover {
-            img {
-                transform: translateY(-5px);
-            }
-
-            &:after {
-                max-width: 65px;
-            }
-        }
-
         &:after {
             content: attr(title);
             color: #fff;
@@ -80,6 +70,16 @@
 
         a {
             margin-bottom: 10px;
+
+            &:hover {
+                img {
+                    transform: translateY(-5px);
+                }
+    
+                &:after {
+                    max-width: 65px;
+                }
+            }
         }
 
         &::after {
@@ -96,7 +96,7 @@
     }
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 1200px) {
 
     .social {
         left: 50px;
