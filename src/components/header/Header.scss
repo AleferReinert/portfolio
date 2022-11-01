@@ -18,7 +18,7 @@
         background-color: lighten($primary-dark-color, 2%);
     }
 
-    >.nav {
+    > .nav {
         display: none;
     }
 
@@ -139,6 +139,10 @@
         .nav {
             display: inline-flex;
             column-gap: 30px;
+
+            a.active {
+                color: $primary-color;
+            }
         }
 
         .toggle-menu {

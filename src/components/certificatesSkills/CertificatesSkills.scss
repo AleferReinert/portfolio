@@ -1,5 +1,4 @@
 #certificates-skills {
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +24,6 @@
     .certificates {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         row-gap: 25px;
     
         h2 {
@@ -100,11 +98,6 @@
 
         .certificates {
             min-width: 280px;
-            row-gap: 50px;
-
-            li {
-                margin-top: 0;
-            }
         }
 
         .skills {

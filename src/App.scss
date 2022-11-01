@@ -10,7 +10,7 @@ $animation-time: .35s;
 @import './components/about/About.scss';
 @import './components/certificatesSkills/CertificatesSkills.scss';
 @import './components/projects/Projects.scss';
-@import './components/Social.scss';
+@import './components/social/Social.scss';
 
 /* Reset */
 * {
@@ -57,10 +57,19 @@ a {
     color: $text-color;
 }
 
+.title-default {
+    color: rgba(255,255,255,.85);
+    text-align: left;
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $primary-color;
+    margin-bottom: 20px;
+}
+
 body {
     background-color: $primary-dark-color;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     color: $text-color;
 }
 
@@ -97,6 +106,11 @@ body {
     .container {
         margin: 0 80px;
         max-width: none;
+    }
+
+    .title-default {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
     }
 }
 

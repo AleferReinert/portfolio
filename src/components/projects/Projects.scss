@@ -7,6 +7,19 @@
         row-gap: 25px;
     }
 
+    .title-default {
+        transform: translateY(50px);
+        opacity: 0;
+        transition:
+            transform $animation-time linear,
+            opacity $animation-time ease-in;
+
+        &.ready {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
     .project {
         display: flex;
         align-items: center;

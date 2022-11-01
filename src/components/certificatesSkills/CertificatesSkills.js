@@ -11,10 +11,17 @@ import iconBootstrap from '../../img/bootstrap.svg';
 import iconPhotoshop from '../../img/photoshop.svg';
 import iconSql from '../../img/sql.svg';
 import iconGit from '../../img/git.svg';
+import { useEffect } from 'react';
+import { showOnScroll } from '../commom/showOnScroll';
 
 export function CertificatesSkills(props){
+    useEffect(() => {
+        showOnScroll('#certificates-skills', 100);
+    },[]);
+
     return(
         <section id="certificates-skills" className="container" style={ props.minHeight }>
+            <h1 className="title-default">Certificados & Skills</h1>
             <div className="content">
                 <ul className="certificates">
                     <li>
@@ -23,7 +30,7 @@ export function CertificatesSkills(props){
                             title="Visualizar certificado"
                             href="https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf"
                         >
-                            <h2>CC50: Introdução à <br />Ciência da Computação</h2>
+                            <h2>CC50: Introdução à Ciência da Computação</h2>
                             <p>Fundação Estudar | Setembro/2022</p>
                         </a>
                     </li>
@@ -33,7 +40,7 @@ export function CertificatesSkills(props){
                             title="Visualizar certificado"
                             href="https://www.unovacursos.com.br/certificados/14304132340741204202210"
                         >
-                            <h2>Javascript <br />Para Iniciantes</h2>
+                            <h2>Javascript Para Iniciantes</h2>
                             <p>Unova Cursos | Outubro/2022</p>
                         </a>
                     </li>

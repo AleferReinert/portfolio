@@ -1,9 +1,8 @@
 import { Nav } from './Nav';
-import { Social } from '../Social';
+import { Social } from '../social/Social';
 import iconClose from '../../img/close.svg';
 
 export function MenuMobile(props) {
-
     return (
         <div id="menu-mobile" className={ props.visibility }>
             <div>

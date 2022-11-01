@@ -1,24 +1,14 @@
-import { useEffect } from 'react';
-
-// Retorna orientação do dispositivo
-function orientationDevice(){
-    return window.screen.width > window.screen.height ? 'landscape' : 'portrait';
-}
-window.addEventListener('resize', function(){
-    orientationDevice();
-});
+import { useState, useEffect } from 'react';
 
 export function About(){
+    const [ready, setReady] = useState('');
 
     useEffect(() => {
-        document.getElementById('about').classList.add('ready');
-        if(orientationDevice() === 'landscape'){
-            document.getElementById('about').style.minHeight = `${window.innerHeight - 50}px`;
-        }
+        setReady('ready');
     }, []);
 
     return(
-        <section id="about" className="container">
+        <section id="about" className={ `container ${ ready }`}>
             <div>
                 <h1 className="title">
                     <span className="first-line">

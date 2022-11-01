@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import iconFacebook from '../img/facebook.svg';
-import iconGithub from '../img/github.svg';
-import iconGmail from '../img/gmail.svg';
-import iconLinkedin from '../img/linkedin.svg';
-import iconWhatsapp from '../img/whatsapp.svg';
-import iconYoutube from '../img/youtube.svg';
+import iconFacebook from '../../img/facebook.svg';
+import iconGithub from '../../img/github.svg';
+import iconGmail from '../../img/gmail.svg';
+import iconLinkedin from '../../img/linkedin.svg';
+import iconWhatsapp from '../../img/whatsapp.svg';
+import iconYoutube from '../../img/youtube.svg';
 
 export function Social(){
     const [ready, setReady] = useState('');

@@ -4,11 +4,22 @@ import singlePage from '../../img/photoSinglePage.png';
 import ticTacToe from '../../img/photoTicTacToe.png';
 import timer from '../../img/photoTimer.png';
 import { ProjectItem } from "./ProjectItem";
+import { showOnScroll } from '../commom/showOnScroll';
+import { useEffect } from 'react';
 
 export function Projects() {
+    useEffect(() => {
+        showOnScroll('#projects .title-default', 100);
+        showOnScroll('#projects li:nth-child(1)', 0);
+        showOnScroll('#projects li:nth-child(2)', 100);
+        showOnScroll('#projects li:nth-child(3)', 100);
+        showOnScroll('#projects li:nth-child(4)', 100);
+        showOnScroll('#projects li:nth-child(5)', 100);
+    },[]);
 
     return (
         <section id="projects" className="container">
+            <h1 className="title-default">Projetos</h1>
             <ul>
                 <ProjectItem
                     name="Single Page"
