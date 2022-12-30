@@ -1,4 +1,5 @@
 import googleHomepage from '../../img/photoGoogleHomepage.png';
+import eCommerce from '../../img/photoECommerce.jpg';
 import metronome from '../../img/photoMetronome.png';
 import singlePage from '../../img/photoSinglePage.png';
 import ticTacToe from '../../img/photoTicTacToe.png';
@@ -15,12 +16,21 @@ export function Projects() {
         showOnScroll('#projects li:nth-child(3)', 100);
         showOnScroll('#projects li:nth-child(4)', 100);
         showOnScroll('#projects li:nth-child(5)', 100);
+        showOnScroll('#projects li:nth-child(6)', 100);
     },[]);
 
     return (
         <section id="projects" className="container">
             <h1 className="title-default">Projetos</h1>
             <ul>
+                <ProjectItem
+                    name="E-Commerce"
+                    imageUrl={eCommerce}
+                    description="Loja virtual responsiva."
+                    skills="React Sass Bootstrap"
+                    pageUrl="https://aleferreinert.github.io/react-commerce"
+                    repositoryUrl="https://github.com/AleferReinert/react-commerce"
+                />
                 <ProjectItem
                     name="Single Page"
                     imageUrl={singlePage}
