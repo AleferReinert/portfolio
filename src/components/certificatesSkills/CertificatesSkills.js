@@ -28,6 +28,16 @@ export function CertificatesSkills(props){
                         <a  target="_blank"
                             rel="noreferrer"
                             title="Visualizar certificado"
+                            href="https://www.unovacursos.com.br/certificados/14304132340741204202210"
+                        >
+                            <h2>Javascript Para Iniciantes</h2>
+                            <p>Unova Cursos | Outubro/2022</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a  target="_blank"
+                            rel="noreferrer"
+                            title="Visualizar certificado"
                             href="https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf"
                         >
                             <h2>CC50: Introdução à Ciência da Computação</h2>
@@ -35,14 +45,8 @@ export function CertificatesSkills(props){
                         </a>
                     </li>
                     <li>
-                        <a  target="_blank"
-                            rel="noreferrer"
-                            title="Visualizar certificado"
-                            href="https://www.unovacursos.com.br/certificados/14304132340741204202210"
-                        >
-                            <h2>Javascript Para Iniciantes</h2>
-                            <p>Unova Cursos | Outubro/2022</p>
-                        </a>
+                        <h2>Formação Design Gráfico</h2>
+                        <p>ProWay Informática | Fevereiro/2012</p>
                     </li>
                 </ul>
                 <ul className="skills">
