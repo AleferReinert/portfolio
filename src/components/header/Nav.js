@@ -23,10 +23,10 @@ export function Nav(){
     }, [])
 
     return(
-        <nav className="nav">
-            <NavItem anchorId="about" itemName="Sobre mim" active={ aboutActive } />
-            <NavItem anchorId="certificates-skills" itemName="Certificados & Skills" active={ certificatesActive } />
-            <NavItem anchorId="projects" itemName="Projetos" active={ projectsActive } />
+        <nav className='nav'>
+            <NavItem anchorId='about' itemName='Sobre mim' active={aboutActive} />
+            <NavItem anchorId='certificates-skills' itemName='Certificados & Skills' active={certificatesActive} />
+            <NavItem anchorId='projects' itemName='Projetos' active={projectsActive} />
         </nav>
     )
 }

@@ -8,14 +8,14 @@ export function About(){
     }, []);
 
     return(
-        <section id="about" className={ `container ${ ready }`}>
+        <section id='about' className={ `container ${ ready }`}>
             <div>
-                <h1 className="title">
-                    <span className="first-line">
+                <h1 className='title'>
+                    <span className='first-line'>
                         Olá, meu nome é
                     </span>
-                    <span className="second-line">Alefer Reinert</span>
-                    <span className="third-line">e sou desenvolvedor <span className="career"> front end</span>.
+                    <span className='second-line'>Alefer Reinert</span>
+                    <span className='third-line'>e sou desenvolvedor <span className='career'> front end</span>.
                     </span>
                 </h1>
                 <p>

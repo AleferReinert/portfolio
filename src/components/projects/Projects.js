@@ -1,11 +1,5 @@
-import googleHomepage from '../../img/photoGoogleHomepage.png';
-import eCommerce from '../../img/photoECommerce.jpg';
-import metronome from '../../img/photoMetronome.png';
-import singlePage from '../../img/photoSinglePage.png';
-import ticTacToe from '../../img/photoTicTacToe.png';
-import timer from '../../img/photoTimer.png';
 import { ProjectItem } from "./ProjectItem";
-import { showOnScroll } from '../commom/showOnScroll';
+import { showOnScroll } from '../showOnScroll';
 import { useEffect } from 'react';
 
 export function Projects() {
@@ -25,15 +19,15 @@ export function Projects() {
             <ul>
                 <ProjectItem
                     name="E-Commerce"
-                    imageUrl={eCommerce}
-                    description="Loja virtual responsiva."
+                    img='e-commerce.jpg'
+                    description="Loja virtual responsiva (em desenvolvimento)."
                     skills="React Sass Bootstrap"
                     pageUrl="https://aleferreinert.github.io/react-commerce"
                     repositoryUrl="https://github.com/AleferReinert/react-commerce"
                 />
                 <ProjectItem
                     name="Single Page"
-                    imageUrl={singlePage}
+                    img='single-page.png'
                     description="Um simples website genérico de página única."
                     skills="HTML JavaScript Less Gulp"
                     pageUrl="https://aleferreinert.github.io/single-page"
@@ -41,15 +35,15 @@ export function Projects() {
                 />
                 <ProjectItem
                     name="Tic Tac Toe"
-                    imageUrl={ticTacToe}
-                    description="Jogo da velha feito a partir do tutorial do react."
+                    img='tic-tac-toe.png'
+                    description="Jogo da velha feito a partir do tutorial do React."
                     skills="React JSX CSS"
                     pageUrl="https://aleferreinert.github.io/tic-tac-toe"
                     repositoryUrl="https://github.com/AleferReinert/tic-tac-toe"
                 />
                 <ProjectItem
                     name="Metronome"
-                    imageUrl={metronome}
+                    img='metronome.png'
                     description="O metrônomo é um item obrigatório para qualquer músico, auxilia nos estudos e a tocar no tempo correto."
                     skills="HTML JavaScript CSS"
                     pageUrl="https://aleferreinert.github.io/metronome"
@@ -57,7 +51,7 @@ export function Projects() {
                 />
                 <ProjectItem
                     name="Timer"
-                    imageUrl={timer}
+                    img='timer.png'
                     description="Medição de intervalos de tempo."
                     skills="HTML JavaScript CSS"
                     pageUrl="https://aleferreinert.github.io/timer"
@@ -65,7 +59,7 @@ export function Projects() {
                 />
                 <ProjectItem
                     name="Google Homepage"
-                    imageUrl={googleHomepage}
+                    img='google-homepage.png'
                     description="Clone da página inicial de busca do Google (desktop)."
                     skills="HTML JavaScript CSS"
                     pageUrl="https://aleferreinert.github.io/google-homepage"

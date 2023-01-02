@@ -24,8 +24,8 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
-            <Header itemName={'about'} />
+        <div className='App'>
+            <Header />
             <main>
                 <About />
                 <CertificatesSkills />

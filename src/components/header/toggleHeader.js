@@ -6,7 +6,7 @@ export function toggleHeader(setFixed, setScrolling){
     document.addEventListener('mousemove', e => {
         if(e.clientY <= headerHeight){
             setFixed('fixed');
-
+            
             if(window.pageYOffset > headerHeight) {
                 setScrolling('scrolling-to-top');
             }

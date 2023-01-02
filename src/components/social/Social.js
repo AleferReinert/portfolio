@@ -1,37 +1,27 @@
 import { useEffect, useState } from 'react';
-import iconFacebook from '../../img/facebook.svg';
-import iconGithub from '../../img/github.svg';
-import iconGmail from '../../img/gmail.svg';
-import iconLinkedin from '../../img/linkedin.svg';
-import iconWhatsapp from '../../img/whatsapp.svg';
-import iconYoutube from '../../img/youtube.svg';
 
-export function Social(){
+const Item = props => {
+    return (
+        <a href={props.url} title={props.title} target="_blank" rel="noreferrer">
+            <img src={ process.env.PUBLIC_URL + '/img/icons/' + props.icon } alt={props.title} />
+        </a>
+    )
+}
+
+export function Social() {
     const [ready, setReady] = useState('');
 
     useEffect(() => {
         setReady('ready');
     }, []);
-    return(
-        <nav className={ `social ${ ready }`}>
-            <a href="https://www.facebook.com/AleferReinert" target="_blank" title="Facebook" rel="noreferrer">
-                <img src={ iconFacebook } alt="Facebook" />
-            </a>
-            <a href="https://github.com/AleferReinert" target="_blank" title="Github" rel="noreferrer">
-                <img src={ iconGithub } alt="Github" />
-            </a>
-            <a href="mailto:aleferreinert@gmail.com" target="_blank" title="Gmail" rel="noreferrer">
-                <img src={ iconGmail } alt="Gmail" />
-            </a>
-            <a href="https://www.linkedin.com/in/aleferreinert" target="_blank" title="Linkedin" rel="noreferrer">
-                <img src={ iconLinkedin } alt="Linkedin" />
-            </a>
-            <a href="https://wa.me/message/FSN72FDKNRO3O1" target="_blank" title="Whatsapp" rel="noreferrer">
-                <img src={ iconWhatsapp } alt="Whatsapp" />
-            </a>
-            <a href="https://www.youtube.com/AleferReinert" target="_blank" title="YouTube" rel="noreferrer">
-                <img src={ iconYoutube } alt="YouTube" />
-            </a>
+    return (
+        <nav className={`social ${ready}`}>
+            <Item url='https://www.facebook.com/AleferReinert' title='Facebook' icon='facebook.svg' />
+            <Item url='https://github.com/AleferReinert' title='Github' icon='github.svg' />
+            <Item url='mailto:aleferreinert@gmail.com' title="Gmail" icon='gmail.svg' />
+            <Item url='https://www.linkedin.com/in/aleferreinert' title='Linkedin' icon='linkedin.svg' />
+            <Item url='https://wa.me/message/FSN72FDKNRO3O1' title='Whatsapp' icon='whatsapp.svg' />
+            <Item url='https://www.youtube.com/AleferReinert' title='YouTube' icon='youtube.svg' />
         </nav>
     )
 }

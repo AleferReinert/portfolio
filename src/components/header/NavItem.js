@@ -27,10 +27,10 @@ export const NavItem = ({ anchorId, itemName, active }) => {
 
     return (
         <a
-            href={`#${ anchorId }`}
-            onClick={ handleClick }
+            href={'#' + anchorId}
+            onClick={handleClick}
             className={active}
-            aria-label={`Scroll to ${ anchorId }`}
+            aria-label={'Scroll to ' + anchorId}
         >
             {itemName}
         </a>

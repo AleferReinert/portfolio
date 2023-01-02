@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import iconMenu from '../../img/menu.svg';
 import { toggleHeader } from './toggleHeader';
 import { Nav } from './Nav';
 import { MenuMobile } from './MenuMobile';
@@ -24,12 +23,12 @@ export function Header() {
     }
 
     return (
-        <header id="header" className={ `${fixed} ${scrolling} ${ready}` }>
+        <header id='header' className={`${fixed} ${scrolling} ${ready}`}>
             <Nav />
-            <button title="Menu" className={ `toggle-menu` } onClick={ showMenu }>
-                <img src={ iconMenu } alt="Menu" />
+            <button title='Menu' className='toggle-menu' onClick={showMenu}>
+                <img src={ process.env.PUBLIC_URL + '/img/icons/menu.svg' } alt='Menu' />
             </button>
-            <MenuMobile visibility={ visibilityMenuMobile } closeMenu={ closeMenu } />
+            <MenuMobile visibility={visibilityMenuMobile} closeMenu={closeMenu} />
         </header>
     )
 }
