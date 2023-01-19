@@ -11,7 +11,7 @@ export const NavItem = ({ anchorId, itemName, active }) => {
         event.preventDefault();
         document.querySelector('.close-menu').click();
         anchorTarget.scrollIntoView({
-            behavior: 'smooth', 
+            behavior: 'smooth',
             block: 'start'
         });
 
@@ -26,12 +26,7 @@ export const NavItem = ({ anchorId, itemName, active }) => {
     };
 
     return (
-        <a
-            href={'#' + anchorId}
-            onClick={handleClick}
-            className={active}
-            aria-label={'Scroll to ' + anchorId}
-        >
+        <a href={'#' + anchorId} onClick={handleClick} className={active}>
             {itemName}
         </a>
     );

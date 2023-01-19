@@ -14,21 +14,13 @@ export function Header() {
         toggleHeader(setFixed, setScrolling);
     }, []);
 
-    function showMenu(){
-        setVisibilityMenuMobile('visible');
-    }
-
-    function closeMenu(){
-        setVisibilityMenuMobile('');
-    }
-
     return (
         <header id='header' className={`${fixed} ${scrolling} ${ready}`}>
             <Nav />
-            <button title='Menu' className='toggle-menu' onClick={showMenu}>
-                <img src={ process.env.PUBLIC_URL + '/img/icons/menu.svg' } alt='Menu' />
+            <button title='Menu' className='toggle-menu' onClick={()=>setVisibilityMenuMobile('visible')}>
+                <img src={process.env.PUBLIC_URL + '/img/icons/menu.svg'} alt='Menu' />
             </button>
-            <MenuMobile visibility={visibilityMenuMobile} closeMenu={closeMenu} />
+            <MenuMobile visibility={visibilityMenuMobile} closeMenu={()=>setVisibilityMenuMobile('')} />
         </header>
     )
 }
