@@ -1,28 +1,39 @@
 import { useEffect } from 'react';
 import { showOnScroll } from '../showOnScroll';
 
-const Certificate = props => {
-    return (
-        <li>
-            <a target='_blank'
-                rel='noreferrer'
-                title='Visualizar certificado'
-                href={props.url}
-            >
-                <h2>{props.title}</h2>
-                <p>{props.description}</p>
-            </a>
-        </li>
-    )
-}
+const skills = [
+    { title: 'HTML 5', icon: 'html5.svg' },
+    { title: 'CSS 3', icon: 'css3.svg' },
+    { title: 'LESS', icon: 'less.svg' },
+    { title: 'SASS', icon: 'sass.svg' },
+    { title: 'JavaScript', icon: 'javascript.svg' },
+    { title: 'React', icon: 'react.svg' },
+    { title: 'JQuery', icon: 'jquery.svg' },
+    { title: 'Grunt', icon: 'grunt.svg' },
+    { title: 'Gulp', icon: 'gulp.svg' },
+    { title: 'Bootstrap', icon: 'bootstrap.svg' },
+    { title: 'Git', icon: 'git.svg' },
+    { title: 'Photoshop', icon: 'photoshop.svg' },
+    { title: 'SQL', icon: 'sql.svg' }
+];
 
-const Skill = props => {
-    return (
-        <li title={props.title}>
-            <img src={process.env.PUBLIC_URL + '/img/skills/' + props.icon} alt={props.title} />
-        </li>
-    )
-}
+const certificates = [
+    {
+        title: 'Javascript Para Iniciantes',
+        description: 'Unova Cursos | Outubro/2022',
+        url: 'https://www.unovacursos.com.br/certificados/14304132340741204202210'
+    },
+    {
+        title: 'CC50: Introdução à Ciência da Computação',
+        description: 'Fundação Estudar | Setembro/2022',
+        url: 'https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf'
+    },
+    {
+        title: 'Formação Design Gráfico',
+        description: 'ProWay Informática | Fevereiro/2012',
+        url: 'https://drive.google.com/file/d/1dJErgNzdqUchbaEo7upZoSCO3GBYVRIv/view?usp=share_link'
+    }
+];
 
 export function CertificatesSkills(props) {
     useEffect(() => {
@@ -34,35 +45,25 @@ export function CertificatesSkills(props) {
             <h1 className='title-default'>Certificados & Skills</h1>
             <div className='content'>
                 <ul className='certificates'>
-                    <Certificate
-                        title='Javascript Para Iniciantes'
-                        description='Unova Cursos | Outubro/2022'
-                        url='https://www.unovacursos.com.br/certificados/14304132340741204202210'
-                    />
-                    <Certificate
-                        title='CC50: Introdução à Ciência da Computação'
-                        description='Fundação Estudar | Setembro/2022'
-                        url='https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf'
-                    />
-                    <li>
-                        <h2>Formação Design Gráfico</h2>
-                        <p>ProWay Informática | Fevereiro/2012</p>
-                    </li>
+                    {certificates.map((certificate, i) => {
+                        return (
+                            <li key={i}>
+                                <a target='_blank' rel='noreferrer' title='Visualizar certificado' href={certificate.url}>
+                                    <h2>{certificate.title}</h2>
+                                    <p>{certificate.description}</p>
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
                 <ul className='skills'>
-                    <Skill title='HTML 5' icon='html5.svg' />
-                    <Skill title='CSS 3' icon='css3.svg' />
-                    <Skill title='LESS' icon='less.svg' />
-                    <Skill title='SASS' icon='sass.svg' />
-                    <Skill title='JavaScript' icon='javascript.svg' />
-                    <Skill title='React' icon='react.svg' />
-                    <Skill title='JQuery' icon='jquery.svg' />
-                    <Skill title='Grunt' icon='grunt.svg' />
-                    <Skill title='Gulp' icon='gulp.svg' />
-                    <Skill title='Bootstrap' icon='bootstrap.svg' />
-                    <Skill title='Git' icon='git.svg' />
-                    <Skill title='Photoshop' icon='photoshop.svg' />
-                    <Skill title='SQL' icon='sql.svg' />
+                    {skills.map((skill, i) => {
+                        return (
+                            <li title={skill.title} key={i}>
+                                <img src={process.env.PUBLIC_URL + '/img/skills/' + skill.icon} alt={skill.title} />
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         </section>
