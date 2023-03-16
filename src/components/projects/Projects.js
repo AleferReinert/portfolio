@@ -3,6 +3,14 @@ import { useEffect } from 'react';
 
 const projects = [
     {
+        name: 'Landing Page',
+        image: 'landing-page.png',
+        description: 'Projeto do curso "React Avançado: Crie aplicações com NextJS, Strapi e mais".',
+        skills: 'React NextJS TypeScript StyledComponents Strapi',
+        pageUrl: 'https://landing-page-ar.netlify.app',
+        repositoryUrl: 'https://github.com/AleferReinert/landing-page'
+    },
+    {
         name: 'E-Commerce',
         image: 'e-commerce.jpg',
         description: 'Loja virtual responsiva (em desenvolvimento).',
@@ -61,6 +69,7 @@ export function Projects() {
         showOnScroll('#projects li:nth-child(4)', 100);
         showOnScroll('#projects li:nth-child(5)', 100);
         showOnScroll('#projects li:nth-child(6)', 100);
+        showOnScroll('#projects li:nth-child(7)', 100);
     }, []);
 
     return (
