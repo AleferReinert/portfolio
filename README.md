@@ -1,3 +1,17 @@
-# aleferreinert.github.io
+# Portifólio
 
-My page.
+Após clonar, instalar dependências:
+```
+yarn install
+```
+
+## Desenvolvimento
+
+```
+yarn start
+```
+
+## GitHub Pages
+```
+yarn deploy
+```
