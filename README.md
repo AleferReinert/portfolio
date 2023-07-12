@@ -1,17 +1,22 @@
-# Portifólio
+# Boilerplate
 
-Após clonar, instalar dependências:
-```
+Boilerplate utilizing React, Next.js, TypeScript, Styled Components and Storybook.
+
+## Development
+
+```bash
+# Install dependencies:
 yarn install
-```
 
-## Desenvolvimento
+# Run the server:
+yarn dev
 
-```
-yarn start
-```
+# Run the Storybook:
+yarn storybook
 
-## GitHub Pages
-```
-yarn deploy
+# Watching tests:
+yarn test-storybook --watch
+
+# Create new component:
+yarn plop
 ```
