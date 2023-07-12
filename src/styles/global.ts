@@ -1,34 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-    @font-face {
-        font-display: swap;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 300;
-        src: url('/fonts/poppins-v20-latin-300.woff2') format('woff2');
-    }
-    @font-face {
-        font-display: swap; 
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        src: url('/fonts/poppins-v20-latin-regular.woff2') format('woff2');
-    }
-    @font-face {
-    font-display: swap; 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/poppins-v20-latin-500.woff2') format('woff2'); 
-    }
-    @font-face {
-        font-display: swap;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        src: url('/fonts/poppins-v20-latin-600.woff2') format('woff2');
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
 
     ${({ theme }) => css`
       html {
@@ -36,9 +9,10 @@ const GlobalStyles = createGlobalStyle`
       }
 
       body {
+        color: ${theme.colors.gray};
         font-family: ${theme.font.family};
         font-size: ${theme.font.sizes.medium};
-        background-color: ${theme.colors.lightBg};
+        background-color: ${theme.colors.bg};
         overflow-x: hidden;
       }
 
