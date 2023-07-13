@@ -75,6 +75,7 @@ const preview: Preview = {
     controls: {
       hideNoControlsWarning: true
     },
+    layout: 'fullscreen',
     options: {
       showPanel: true,
       panelDirection: 'right'

@@ -1,7 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
 
     ${({ theme }) => css`
       html {
@@ -20,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
 
       button {
         cursor: pointer;
+        background-color: transparent;
         border: 0;
         font-family: inherit;
       }
@@ -42,6 +43,10 @@ const GlobalStyles = createGlobalStyle`
       button:focus,
       svg:focus {
         outline: none;
+      }
+
+      a {
+        text-decoration: none;
       }
     `}    
 `
