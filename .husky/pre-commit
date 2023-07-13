@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn test-storybook && npx lint-staged
+npm test-storybook & npx lint-staged
