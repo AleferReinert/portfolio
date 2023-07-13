@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import * as NavMenuStyles from 'components/NavMenu/NavMenu.styles'
+import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -36,6 +37,10 @@ export const Wrapper = styled.div`
         transform: translateY(0);
         opacity: 1;
       }
+    }
+
+    ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
+      display: none;
     }
   `}
 `
