@@ -22,8 +22,11 @@ export const Mobile: Story = {
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const openMenuButton = canvas.getByRole('button', { name: /abrir menu/i })
+    const openMenuButton = canvas.queryByRole('button', { name: /abrir menu/i })
     const openMenuIcon = canvasElement.getElementsByTagName('svg')[0]
+    const closeMenuButton = canvas.queryByRole('button', {
+      name: /fechar menu/i
+    })
     const menuMobile = canvas.queryByTestId('menuMobile')
     const menuLinks = canvas.queryAllByRole('link')
 
@@ -37,18 +40,14 @@ export const Mobile: Story = {
       })
 
       await step('Show menu on buttonOpenMenu click', async () => {
-        await userEvent.click(openMenuButton)
+        await userEvent.click(openMenuButton!)
         await waitFor(() => {
           expect(menuMobile).toBeVisible()
         })
       })
 
       await step('Close menu on buttonCloseMenu click', async () => {
-        const closeMenuButton = canvas.getByRole('button', {
-          name: /fechar menu/i
-        })
-
-        await userEvent.click(closeMenuButton)
+        await userEvent.click(closeMenuButton!)
         await waitFor(() => {
           expect(menuMobile).not.toBeVisible()
         })
