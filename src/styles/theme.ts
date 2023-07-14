@@ -42,6 +42,7 @@ const theme = {
     alwaysOnTop: 50
   },
   transition: {
+    slow: '.3s linear',
     default: '.15s linear'
   },
   breakpoint: {

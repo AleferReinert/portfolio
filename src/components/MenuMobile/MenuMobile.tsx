@@ -1,6 +1,8 @@
 import type { Dispatch, SetStateAction } from 'react'
 import NavMenu from 'components/NavMenu/NavMenu'
 import * as S from './MenuMobile.styles'
+import Social from 'components/Social/Social'
+import socialContent from 'components/Social/content'
 
 type MenuMobileProps = {
   menuMobile: boolean
@@ -17,6 +19,7 @@ const MenuMobile = ({ menuMobile, setMenuMobile }: MenuMobileProps) => {
         </svg>
       </S.CloseMenu>
       <NavMenu />
+      <Social socials={socialContent} />
     </S.Wrapper>
   )
 }

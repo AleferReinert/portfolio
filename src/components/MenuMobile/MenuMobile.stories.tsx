@@ -32,8 +32,8 @@ export const MenuMobile: Story = {
     const closeMenuIcon = canvasElement.getElementsByTagName('svg')[0]
 
     jsMediaQuery.lessThan(theme.breakpoint.small, async () => {
-      await step('Render 3 links and a button', () => {
-        expect(links.length).toBe(3)
+      await step('Render 9 links and a button', () => {
+        expect(links.length).toBe(9)
         expect(closeMenuButton).toBeInTheDocument()
         expect(closeMenuIcon).toBeInTheDocument()
       })
