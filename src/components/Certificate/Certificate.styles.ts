@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 export const Title = styled.h3`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.weights.bold};
     margin-bottom: ${theme.spacings.xsmall};
   `}

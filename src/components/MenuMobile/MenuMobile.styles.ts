@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       text-align: center;
-      font-size: ${theme.font.sizes.xlarge};
+      font-size: ${theme.font.sizes.large};
       gap: ${theme.spacings.medium};
       opacity: 0;
     }

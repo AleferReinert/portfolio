@@ -13,7 +13,8 @@ const theme = {
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
-      xlarge: '2rem',
+      large: '2rem',
+      xlarge: '2.8rem',
       xxlarge: '4rem'
     }
   },
