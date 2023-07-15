@@ -4,8 +4,6 @@ import { expect } from '@storybook/jest'
 import ProjectComponent from './Project'
 import { projects } from 'content/content'
 import Container from 'components/Container/Container'
-import { jsMediaQuery } from 'utils/helpers'
-import theme from 'styles/theme'
 
 const meta: Meta<typeof ProjectComponent> = {
   title: 'Components/Project',

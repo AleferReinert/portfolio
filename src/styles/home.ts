@@ -42,9 +42,7 @@ export const Main = styled.main`
   `}
 `
 
-export const Section = styled.section`
-  ${({ theme }) => css``}
-`
+export const Section = styled.section``
 
 export const SocialWrapper = styled.aside`
   ${({ theme }) => css`

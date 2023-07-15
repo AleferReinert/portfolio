@@ -21,9 +21,6 @@ export const Skill = styled.div`
     padding: ${theme.spacings.small} ${theme.spacings.xsmall};
     display: grid;
     grid-template-rows: max-content calc(100% - 5rem);
-
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-    }
   `}
 `
 
@@ -43,7 +40,7 @@ export const Title = styled.h3`
 export const ImageWrapper = styled.div`
   ${({ theme }) => css`
     position: relative;
-    width: 5rem;
+    width: ${theme.icons.sizes.xlarge};
     aspect-ratio: 1/1;
     margin: 0 auto;
   `}
