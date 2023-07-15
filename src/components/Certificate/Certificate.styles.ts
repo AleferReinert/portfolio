@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css``}
-`
+export const Wrapper = styled.div``
 
 export const Title = styled.h3`
   ${({ theme }) => css`

@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components'
 import { cssMediaQuery } from 'utils/helpers'
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css``}
-`
+export const Wrapper = styled.div``
 
 export const Title = styled.h1`
   ${({ theme }) => css`
