@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import SocialComponent from './Social'
-import social from './content'
+import { social } from 'content/content'
 import { jsMediaQuery } from 'utils/helpers'
 import theme from 'styles/theme'
 
@@ -31,13 +31,13 @@ export const Social: Story = {
       }
     })
 
-    jsMediaQuery.lessThan(theme.breakpoint.small, async () => {
+    jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
       await step('Horizontal on mobile', () => {
         expect(wrapper).not.toHaveStyle({ flexDirection: 'column' })
       })
     })
 
-    jsMediaQuery.greaterThan(theme.breakpoint.small, async () => {
+    jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
       await step('Vertical and fixed on desktop', () => {
         expect(wrapper).toHaveStyle({
           flexDirection: 'column',

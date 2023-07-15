@@ -8,42 +8,42 @@ const customViewports = {
   xxsmall: {
     name: `320 x 480`,
     styles: {
-      width: theme.breakpoint.xxsmall,
+      width: theme.breakpoints.xxsmall,
       height: '480px'
     }
   },
   xsmall: {
     name: `360 x 640`,
     styles: {
-      width: theme.breakpoint.xsmall,
+      width: theme.breakpoints.xsmall,
       height: '640px'
     }
   },
   small: {
     name: `768 x 1024`,
     styles: {
-      width: theme.breakpoint.small,
+      width: theme.breakpoints.small,
       height: '1024px'
     }
   },
   medium: {
     name: `1024 x 768`,
     styles: {
-      width: theme.breakpoint.medium,
+      width: theme.breakpoints.medium,
       height: '768px'
     }
   },
   large: {
     name: `1366 x 768`,
     styles: {
-      width: theme.breakpoint.large,
+      width: theme.breakpoints.large,
       height: '768px'
     }
   },
   xlarge: {
     name: `1920 x 1080`,
     styles: {
-      width: theme.breakpoint.xlarge,
+      width: theme.breakpoints.xlarge,
       height: '1080px'
     }
   }

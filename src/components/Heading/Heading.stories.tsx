@@ -8,7 +8,7 @@ const meta: Meta<typeof HeadingComponent> = {
   title: 'Components/Heading',
   component: HeadingComponent,
   args: {
-    title: 'Heading'
+    children: 'Heading'
   }
 }
 

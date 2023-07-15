@@ -2,6 +2,7 @@ import { useState } from 'react'
 import MenuMobile from 'components/MenuMobile/MenuMobile'
 import NavMenu from 'components/NavMenu/NavMenu'
 import * as S from './Header.styles'
+import { social } from 'content/content'
 
 const Header = () => {
   const [menuMobile, setMenuMobile] = useState(false)
@@ -18,7 +19,11 @@ const Header = () => {
           <path d='M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z'></path>
         </svg>
       </S.OpenMenuButton>
-      <MenuMobile menuMobile={menuMobile} setMenuMobile={setMenuMobile} />
+      <MenuMobile
+        menuMobile={menuMobile}
+        setMenuMobile={setMenuMobile}
+        socials={social}
+      />
       <S.MenuDesktop>
         <NavMenu />
       </S.MenuDesktop>

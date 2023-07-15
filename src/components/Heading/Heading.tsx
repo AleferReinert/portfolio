@@ -1,11 +1,11 @@
 import * as S from './Heading.styles'
 
-type HeadingProps = {
-  title: string
+export type HeadingProps = {
+  children: string
 }
 
-const Heading = ({ title }: HeadingProps) => {
-  return <S.Wrapper>{title}</S.Wrapper>
+const Heading = ({ children }: HeadingProps) => {
+  return <S.Wrapper>{children}</S.Wrapper>
 }
 
 export default Heading

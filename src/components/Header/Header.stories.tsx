@@ -27,7 +27,7 @@ export const Mobile: Story = {
     const menuMobile = canvas.queryByTestId('menuMobile')
     const menuLinks = canvas.queryAllByRole('link')
 
-    jsMediaQuery.lessThan(theme.breakpoint.small, async () => {
+    jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
       await step('Show buttonOpenMenu', () => {
         expect(openMenuButton).toBeInTheDocument()
         expect(openMenuIcon).toBeInTheDocument()
@@ -68,7 +68,7 @@ export const Desktop: Story = {
     const menuMobile = canvas.queryByTestId('menuMobile')
     const menuLinks = canvas.getAllByRole('link')
 
-    jsMediaQuery.greaterThan(theme.breakpoint.small, async () => {
+    jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
       await step('Hidden button to open menu', () => {
         expect(openMenuButton).not.toBeInTheDocument()
       })

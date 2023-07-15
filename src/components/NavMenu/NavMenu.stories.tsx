@@ -15,16 +15,10 @@ type Story = StoryObj<typeof NavMenuComponent>
 export const NavMenu: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const about = canvas.getByRole('link', { name: /sobre mim/ })
-    const certificatesAndSkills = canvas.getByRole('link', {
-      name: /certificados e skills/
-    })
-    const projects = canvas.getByRole('link', { name: /projetos/ })
+    const links = canvas.getAllByRole('link')
 
     await step('Render links', () => {
-      expect(about).toBeInTheDocument()
-      expect(certificatesAndSkills).toBeInTheDocument()
-      expect(projects).toBeInTheDocument()
+      expect(links.length).toBe(4)
     })
   }
 }

@@ -4,12 +4,14 @@ import { expect } from '@storybook/jest'
 import MenuMobileComponent from './MenuMobile'
 import { jsMediaQuery } from 'utils/helpers'
 import theme from 'styles/theme'
+import { social } from 'content/content'
 
 const meta: Meta<typeof MenuMobileComponent> = {
   title: 'Components/MenuMobile',
   component: MenuMobileComponent,
   args: {
-    menuMobile: true
+    menuMobile: true,
+    socials: social
   },
   parameters: {
     viewport: {
@@ -31,7 +33,7 @@ export const MenuMobile: Story = {
     })
     const closeMenuIcon = canvasElement.getElementsByTagName('svg')[0]
 
-    jsMediaQuery.lessThan(theme.breakpoint.small, async () => {
+    jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
       await step('Render 9 links and a button', () => {
         expect(links.length).toBe(9)
         expect(closeMenuButton).toBeInTheDocument()

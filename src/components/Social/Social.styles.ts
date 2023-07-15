@@ -8,14 +8,14 @@ export const Wrapper = styled.nav`
     gap: ${theme.spacings.small};
     align-items: center;
     justify-content: center;
+    padding: ${theme.spacings.xxlarge} 0;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
-      position: fixed;
-      left: 0;
+    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+      position: absolute;
       bottom: 0;
       flex-direction: column;
+      gap: 0;
       padding-bottom: 10rem;
-      gap: ${theme.spacings.xsmall};
 
       &::after {
         position: absolute;
@@ -30,12 +30,12 @@ export const Wrapper = styled.nav`
 
       a {
         position: relative;
+        margin-bottom: ${theme.spacings.small};
 
         &::after {
           color: ${theme.colors.white};
           content: attr(title);
-          font-size: ${theme.font.sizes.xsmall};
-          font-weight: ${theme.font.weights.light};
+          font-size: ${theme.font.sizes.xxsmall};
           left: 3.6rem;
           line-height: 3rem;
           text-wrap: nowrap;
@@ -44,7 +44,8 @@ export const Wrapper = styled.nav`
           overflow: hidden;
           position: absolute;
           top: -3px;
-          transition: max-width ${theme.transition.slow};
+          transition: max-width ${theme.transition.duration.slow}
+            ${theme.transition.effect};
         }
 
         &:hover {
@@ -52,8 +53,10 @@ export const Wrapper = styled.nav`
             transform: translateY(-0.5rem);
           }
 
-          &::after {
-            max-width: 6.5rem;
+          ${cssMediaQuery.greaterThan(theme.breakpoints.large)} {
+            &::after {
+              max-width: 6.5rem;
+            }
           }
         }
       }
@@ -64,13 +67,13 @@ export const Wrapper = styled.nav`
 export const SocialItem = styled(Link)`
   ${({ theme }) => css`
     svg {
-      width: 3.6rem;
-      color: ${theme.colors.gray};
-      transition: all ${theme.transition.default};
+      width: ${theme.icons.sizes.medium};
+      transition: all ${theme.transition.duration.default}
+        ${theme.transition.effect};
 
-      ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
+      ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
         width: auto;
-        height: 3rem;
+        height: ${theme.icons.sizes.small};
       }
     }
   `}

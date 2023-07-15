@@ -1,15 +1,19 @@
 import type { Dispatch, SetStateAction } from 'react'
 import NavMenu from 'components/NavMenu/NavMenu'
 import * as S from './MenuMobile.styles'
-import Social from 'components/Social/Social'
-import socialContent from 'components/Social/content'
+import Social, { SocialItemProps } from 'components/Social/Social'
 
 type MenuMobileProps = {
   menuMobile: boolean
   setMenuMobile: Dispatch<SetStateAction<boolean>>
+  socials: SocialItemProps[]
 }
 
-const MenuMobile = ({ menuMobile, setMenuMobile }: MenuMobileProps) => {
+const MenuMobile = ({
+  menuMobile,
+  setMenuMobile,
+  socials
+}: MenuMobileProps) => {
   return (
     <S.Wrapper aria-hidden={!menuMobile} data-testid='menuMobile'>
       <S.CloseMenu title='Fechar menu' onClick={() => setMenuMobile(false)}>
@@ -19,7 +23,7 @@ const MenuMobile = ({ menuMobile, setMenuMobile }: MenuMobileProps) => {
         </svg>
       </S.CloseMenu>
       <NavMenu />
-      <Social socials={socialContent} />
+      <Social socials={socials} />
     </S.Wrapper>
   )
 }

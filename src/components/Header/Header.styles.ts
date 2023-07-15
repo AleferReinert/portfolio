@@ -1,24 +1,33 @@
 import styled, { css } from 'styled-components'
 import { cssMediaQuery } from 'utils/helpers'
-import * as NavMenuStyles from 'components/NavMenu/NavMenu.styles'
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`
     display: flex;
     justify-content: end;
     padding: ${theme.spacings.xsmall} ${theme.spacings.small};
+    background-color: ${theme.colors.darkBg};
+
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+      padding: ${theme.spacings.small} ${theme.spacings.large};
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: ${theme.layers.menu};
+    }
   `}
 `
 
 export const OpenMenuButton = styled.button`
   ${({ theme }) => css`
     svg {
-      width: 3rem;
-      height: 3rem;
+      width: ${theme.icons.sizes.medium};
+      height: ${theme.icons.sizes.medium};
       fill: ${theme.colors.primary};
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       display: none;
     }
   `}
@@ -28,13 +37,8 @@ export const MenuDesktop = styled.div`
   ${({ theme }) => css`
     display: none;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       display: flex;
-    }
-
-    ${NavMenuStyles.Wrapper} {
-      display: flex;
-      gap: ${theme.spacings.large};
     }
   `}
 `

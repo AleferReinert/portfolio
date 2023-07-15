@@ -4,9 +4,10 @@ import * as S from './NavMenu.styles'
 const NavMenu = () => {
   return (
     <S.Wrapper>
-      <Link href='#about'>sobre mim</Link>
-      <Link href='#certificates-skills'>certificados e skills</Link>
-      <Link href='#projects'>projetos</Link>
+      <Link href='#about'>Sobre mim</Link>
+      <Link href='#projects'>Projetos</Link>
+      <Link href='#certificates'>Certificados</Link>
+      <Link href='#skills'>Skills</Link>
     </S.Wrapper>
   )
 }

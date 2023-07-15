@@ -1,26 +1,15 @@
 import styled, { css } from 'styled-components'
 import { cssMediaQuery } from 'utils/helpers'
-import { ProjectProps } from './Project'
 
-const wrapperModifiers = {
-  left: () => css`
-    flex-direction: row;
-  `,
-  right: () => css`
-    flex-direction: row-reverse;
-  `
-}
-
-export const Wrapper = styled.div<Pick<ProjectProps, 'direction'>>`
-  ${({ theme, direction }) => css`
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    background-color: ${theme.colors.darkBg};
+    background-color: rgba(0, 0, 0, 0.25);
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       justify-content: space-between;
-
-      ${!!direction && wrapperModifiers[direction]()}
+      flex-direction: row;
     }
   `}
 `
@@ -31,11 +20,11 @@ export const ImageWrapper = styled.div`
     aspect-ratio: 1/1;
     width: 100%;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
-      max-width: 20rem;
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+      max-width: 24rem;
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.medium)} {
+    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
       max-width: 30rem;
     }
   `}
@@ -43,21 +32,26 @@ export const ImageWrapper = styled.div`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    padding: ${theme.spacings.medium};
-    margin: 0 auto;
+    padding: ${theme.spacings.large} ${theme.spacings.small};
     flex-direction: column;
     align-self: center;
+    margin: 0 auto;
+
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+      padding-left: ${theme.spacings.xxlarge};
+      padding-right: ${theme.spacings.xxlarge};
+    }
   `}
 `
 
 export const Title = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};
-    font-weight: ${theme.font.weights.bold};
-    margin-bottom: ${theme.spacings.xsmall};
+    font-weight: ${theme.font.weights.extraBold};
+    margin-bottom: ${theme.spacings.small};
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.medium)} {
-      font-size: ${theme.font.sizes.xlarge};
+    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+      font-size: ${theme.font.sizes.large};
       margin-bottom: ${theme.spacings.small};
     }
   `}
@@ -65,7 +59,7 @@ export const Title = styled.h3`
 
 export const Description = styled.p`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.small};
   `}
 `
 
@@ -75,7 +69,7 @@ export const Skills = styled.p`
     font-size: ${theme.font.sizes.small};
     margin: ${theme.spacings.medium} 0;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.medium)} {
+    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
       margin: ${theme.spacings.large} 0;
     }
   `}
@@ -87,11 +81,12 @@ export const IconsWrapper = styled.div`
     gap: ${theme.spacings.small};
 
     svg {
-      fill: ${theme.colors.gray};
-      transition: fill ${theme.transition.default};
+      height: ${theme.font.sizes.large};
+      transition: fill ${theme.transition.duration.default}
+        ${theme.transition.effect};
 
       &:hover {
-        fill: ${theme.colors.primary};
+        color: ${theme.colors.primary};
       }
     }
   `}

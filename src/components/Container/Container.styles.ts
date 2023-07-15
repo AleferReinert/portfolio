@@ -1,11 +1,21 @@
 import styled, { css } from 'styled-components'
+import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: ${theme.spacings.small};
-    padding-right: ${theme.spacings.small};
-    max-width: 96rem;
+    margin: 0 ${theme.spacings.small};
+
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+      margin: 0 ${theme.spacings.medium};
+    }
+
+    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+      max-width: none;
+      margin: 0;
+    }
+
+    ${cssMediaQuery.greaterThan(theme.breakpoints.large)} {
+      max-width: 100rem;
+    }
   `}
 `

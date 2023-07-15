@@ -2,13 +2,14 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import CertificateComponent from './Certificate'
+import { certificates } from 'content/content'
 
 const meta: Meta<typeof CertificateComponent> = {
   title: 'Components/Certificate',
   component: CertificateComponent,
   args: {
-    title: 'Course name',
-    description: 'Organization | October/2023'
+    ...certificates[0],
+    link: ''
   }
 }
 
@@ -44,8 +45,9 @@ export const WithLink: Story = {
       name: args.title
     }).parentElement
 
-    await step('Has link', () => {
-      expect(wrapper).toHaveAttribute('href', args.link)
+    await step('Has link with title', () => {
+      expect(wrapper).toHaveAttribute('href', '/link')
+      expect(wrapper).toHaveAttribute('title', 'Visualizar certificado')
     })
   }
 }

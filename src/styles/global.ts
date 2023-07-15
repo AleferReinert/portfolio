@@ -10,8 +10,9 @@ const GlobalStyles = createGlobalStyle`
       body {
         color: ${theme.colors.gray};
         font-family: ${theme.font.family};
-        font-size: ${theme.font.sizes.medium};
-        background-color: ${theme.colors.bg};
+        font-size: ${theme.font.sizes.small};
+        font-weight: ${theme.font.weights.light};
+        background-color: ${theme.colors.darkBg};
         overflow-x: hidden;
       }
 
@@ -19,7 +20,6 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
@@ -47,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
 
       a {
         text-decoration: none;
+        color: inherit;
       }
     `}    
 `

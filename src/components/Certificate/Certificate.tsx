@@ -1,6 +1,6 @@
 import * as S from './Certificate.styles'
 
-type CertificateProps = {
+export type CertificateProps = {
   title: string
   description: string
   link?: string
@@ -9,7 +9,9 @@ type CertificateProps = {
 const Certificate = ({ title, description, link }: CertificateProps) => {
   const asLink = !!link && {
     href: link,
-    as: 'a'
+    as: 'a',
+    title: 'Visualizar certificado',
+    target: '_blank'
   }
 
   return (

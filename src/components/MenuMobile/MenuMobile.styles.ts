@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,23 +17,21 @@ export const Wrapper = styled.div`
     background: ${theme.colors.darkBg};
     z-index: ${theme.layers.menu};
     padding-bottom: ${theme.spacings.xxlarge};
-    transition: opacity ${theme.transition.default};
+    transition: opacity ${theme.transition.duration.default}
+      ${theme.transition.effect} ${theme.transition.duration.slow};
     opacity: 0;
     pointer-events: none;
 
     ${NavMenuStyles.Wrapper} {
-      transition: all ${theme.transition.default} 0.15s;
-      transform: translateY(10rem);
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      font-size: ${theme.font.sizes.xlarge};
-      gap: ${theme.spacings.medium};
+      transition: all ${theme.transition.duration.slow}
+        ${theme.transition.effect};
+      transform: translateY(15rem);
       opacity: 0;
     }
 
     ${SocialStyles.Wrapper} {
-      transition: width ${theme.transition.slow} 0.25s;
+      transition: width ${theme.transition.duration.slow}
+        ${theme.transition.effect};
       width: 0;
       overflow: hidden;
     }
@@ -41,18 +39,24 @@ export const Wrapper = styled.div`
     &[aria-hidden='false'] {
       opacity: 1;
       pointer-events: all;
+      transition: opacity ${theme.transition.duration.default}
+        ${theme.transition.effect};
 
       ${NavMenuStyles.Wrapper} {
+        transition: all ${theme.transition.duration.slow}
+          ${theme.transition.effect} ${theme.transition.duration.slow};
         transform: translateY(0);
         opacity: 1;
       }
 
       ${SocialStyles.Wrapper} {
+        transition: width ${theme.transition.duration.slow}
+          ${theme.transition.effect} ${theme.transition.duration.slow};
         width: 100%;
       }
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoint.small)} {
+    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       display: none;
     }
   `}
@@ -65,8 +69,8 @@ export const CloseMenu = styled.button`
     margin-right: ${theme.spacings.small};
 
     svg {
-      width: 3rem;
-      height: 3rem;
+      width: ${theme.icons.sizes.medium};
+      height: ${theme.icons.sizes.medium};
       fill: ${theme.colors.primary};
     }
   `}

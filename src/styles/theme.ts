@@ -10,29 +10,34 @@ const theme = {
       extraBold: 800
     },
     sizes: {
-      xsmall: '1.2rem',
-      small: '1.4rem',
-      medium: '1.6rem',
-      large: '2rem',
+      xxsmall: '1.4rem',
+      xsmall: '1.6rem',
+      small: '1.8rem',
+      medium: '2rem',
+      large: '2.4rem',
       xlarge: '2.8rem',
-      xxlarge: '4rem'
+      xxlarge: '3.6rem',
+      huge: '4.4rem'
     }
   },
   colors: {
     primary: '#48e194',
-    lightBg: '#003b54',
-    bg: '#00344a',
-    darkBg: '#002d40',
-    white: '#ffffffd9',
-    gray: '#7f99a4'
+    lightBg: '#fff',
+    darkBg: '#00344a',
+    white: 'rgba(255,255,255,0.85)',
+    black: '#000',
+    gray: '#7f99a4',
+    lightGray: 'rgba(0, 0, 0, 0.025)'
   },
   spacings: {
+    xxsmall: '0.4rem',
     xsmall: '0.8rem',
     small: '1.6rem',
     medium: '2.4rem',
     large: '3.2rem',
     xlarge: '4.0rem',
-    xxlarge: '4.8rem'
+    xxlarge: '4.8rem',
+    huge: '8rem'
   },
   layers: {
     base: 10,
@@ -42,16 +47,27 @@ const theme = {
     alwaysOnTop: 50
   },
   transition: {
-    slow: '.3s linear',
-    default: '.15s linear'
+    effect: 'linear',
+    duration: {
+      slow: '.3s',
+      default: '.15s'
+    }
   },
-  breakpoint: {
+  breakpoints: {
     xxsmall: '320px',
     xsmall: '360px',
     small: '768px',
     medium: '1024px',
     large: '1366px',
     xlarge: '1920px'
+  },
+  icons: {
+    sizes: {
+      small: '2.8rem',
+      medium: '3.6rem',
+      large: '4.4rem',
+      xlarge: '5.2rem'
+    }
   }
 }
 

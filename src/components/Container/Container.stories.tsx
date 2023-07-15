@@ -15,7 +15,7 @@ const meta: Meta<typeof ContainerComponent> = {
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: theme.colors.gray,
-          color: theme.colors.bg,
+          color: theme.colors.darkBg,
           height: '100vh'
         }}
       >
