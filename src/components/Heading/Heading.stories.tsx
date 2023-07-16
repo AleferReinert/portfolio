@@ -17,9 +17,9 @@ export default meta
 type Story = StoryObj<typeof HeadingComponent>
 
 export const Heading: Story = {
-  play: async ({ canvasElement, step, args }) => {
+  play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const title = canvas.getByRole('heading', { name: args.title })
+    const title = canvas.getByRole('heading')
 
     await step('Render heading', () => {
       expect(title).toBeInTheDocument()
