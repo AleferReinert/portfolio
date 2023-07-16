@@ -1,6 +1,6 @@
 import { SocialItemProps } from 'components/Social/Social'
 import { useState } from 'react'
-import { Menu } from '@styled-icons/material'
+import { Menu } from '@styled-icons/material/Menu'
 import MenuMobile from 'components/MenuMobile/MenuMobile'
 import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import * as S from './Header.styles'

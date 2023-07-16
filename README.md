@@ -1,6 +1,6 @@
 # My Github Page
 
-Utilizing React, Next.js, TypeScript, Styled Components and Storybook.
+React, Next.js, TypeScript, Styled Components and Storybook.
 
 ## Development
 
