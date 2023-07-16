@@ -32,7 +32,11 @@ const Project = ({
         </S.Description>
         <S.Skills aria-label='skills utilizadas'>{skills}</S.Skills>
         <S.IconsWrapper>
-          <Link href={repositoryLink} title='Repositório' target='_blank'>
+          <Link
+            href={repositoryLink}
+            title='Visualizar repositório'
+            target='_blank'
+          >
             <GithubIcon aria-hidden />
           </Link>
           <Link href={websiteLink} title='Visualizar projeto' target='_blank'>

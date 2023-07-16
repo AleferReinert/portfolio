@@ -22,7 +22,6 @@ const NavMenu = ({ menu, setShowMobileMenu }: NavMenuProps) => {
           scroll={false}
           onClick={() => setShowMobileMenu(false)}
           role='menuitem'
-          replace
         >
           {item.children}
         </Link>

@@ -48,7 +48,7 @@ export default function Home() {
 
           <S.Section id='skills'>
             <Container>
-              <Heading>Skills</Heading>
+              <Heading>Habilidades</Heading>
               <Skills skills={skills} />
             </Container>
           </S.Section>

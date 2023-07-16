@@ -5,7 +5,7 @@ export const Wrapper = styled.div``
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.heading};
     font-size: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.weights.extraBold};
     margin-bottom: ${theme.spacings.medium};

@@ -28,7 +28,9 @@ export const Project: Story = {
     const title = canvas.getByRole('heading')
     const description = canvas.getByRole('paragraph')
     const skills = canvas.getByLabelText(/skills utilizadas/i)
-    const repositoryLink = canvas.getByRole('link', { name: /repositório/i })
+    const repositoryLink = canvas.getByRole('link', {
+      name: /visualizar repositório/i
+    })
     const websiteLink = canvas.getByRole('link', {
       name: /visualizar projeto/i
     })

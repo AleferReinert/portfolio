@@ -15,7 +15,12 @@ const Social = ({ socials }: SocialProps) => {
   return (
     <S.Wrapper>
       {socials.map((social, index) => (
-        <S.SocialItem key={index} href={social.link} title={social.name}>
+        <S.SocialItem
+          key={index}
+          href={social.link}
+          title={social.name}
+          target='_blank'
+        >
           {social.icon}
         </S.SocialItem>
       ))}

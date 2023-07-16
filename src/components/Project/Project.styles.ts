@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: ${theme.colors.backgroundSecondary};
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       justify-content: space-between;
@@ -25,7 +25,7 @@ export const ImageWrapper = styled.div`
     }
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
-      max-width: 30rem;
+      max-width: 28rem;
     }
   `}
 `
@@ -33,13 +33,18 @@ export const ImageWrapper = styled.div`
 export const Content = styled.div`
   ${({ theme }) => css`
     padding: ${theme.spacings.large} ${theme.spacings.small};
+    display: flex;
     flex-direction: column;
     align-self: center;
     margin: 0 auto;
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      padding-left: ${theme.spacings.xxlarge};
-      padding-right: ${theme.spacings.xxlarge};
+      padding: ${theme.spacings.small} ${theme.spacings.large};
+    }
+
+    ${cssMediaQuery.greaterThan(theme.breakpoints.large)} {
+      padding-left: ${theme.spacings.huge};
+      padding-right: ${theme.spacings.huge};
     }
   `}
 `
@@ -66,7 +71,7 @@ export const Description = styled.p`
 export const Skills = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.xsmall};
     margin: ${theme.spacings.medium} 0;
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
@@ -82,12 +87,25 @@ export const IconsWrapper = styled.div`
 
     svg {
       height: ${theme.font.sizes.large};
-      transition: fill ${theme.transition.duration.default}
+      transition: all ${theme.transition.duration.default}
         ${theme.transition.effect};
+    }
 
-      &:hover {
-        color: ${theme.colors.primary};
+    a:hover {
+      color: ${theme.colors.primary};
+
+      svg {
+        animation: rotateFrom180 ${theme.transition.duration.slow};
       }
     }
   `}
+
+  @keyframes rotateFrom180 {
+    from {
+      transform: rotate(-180deg) scale(0.75);
+    }
+    to {
+      transform: rotate(0) scale(1);
+    }
+  }
 `

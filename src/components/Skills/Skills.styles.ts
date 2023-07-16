@@ -4,29 +4,30 @@ import { cssMediaQuery } from 'utils/helpers'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, auto);
     column-gap: ${theme.spacings.xsmall};
     row-gap: ${theme.spacings.large};
+    justify-content: space-around;
+    justify-items: center;
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      grid-template-columns: repeat(6, min-content);
-      justify-content: space-around;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: ${theme.spacings.xlarge};
     }
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
-      row-gap: ${theme.spacings.xxlarge};
+      grid-template-columns: repeat(5, 1fr);
     }
   `}
 `
 
 export const Skill = styled.div`
-  display: grid;
-  grid-template-rows: max-content calc(100% - 5rem);
+  width: 9.2rem;
 `
 
 export const Title = styled.h3`
   ${({ theme }) => css`
-    margin-top: ${theme.spacings.small};
+    margin-top: ${theme.spacings.xsmall};
     font-size: ${theme.font.sizes.xsmall};
     font-weight: ${theme.font.weights.regular};
     display: flex;
@@ -38,12 +39,8 @@ export const Title = styled.h3`
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    width: ${theme.icons.sizes.small};
+    width: ${theme.icons.sizes.medium};
     margin: 0 auto;
-
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      width: ${theme.icons.sizes.medium};
-    }
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
       width: ${theme.icons.sizes.large};

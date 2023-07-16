@@ -24,7 +24,9 @@ import {
   Bootstrap,
   Git,
   Adobephotoshop,
-  Graphql
+  Graphql,
+  Strapi,
+  Figma
 } from '@styled-icons/simple-icons'
 
 export const menu = [
@@ -42,7 +44,7 @@ export const menu = [
   },
   {
     link: '#skills',
-    children: 'Skills'
+    children: 'Habilidades'
   }
 ]
 
@@ -80,22 +82,24 @@ export const about = {
 export const skills = [
   { title: 'HTML5', icon: <Html5 aria-hidden /> },
   { title: 'CSS3', icon: <Css3 aria-hidden /> },
-  { title: 'Storybook', icon: <Storybook aria-hidden /> },
+  { title: 'JQuery', icon: <Jquery aria-hidden /> },
   { title: 'JavaScript', icon: <Javascript aria-hidden /> },
   { title: 'TypeScript', icon: <Typescript aria-hidden /> },
-  { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> },
+  { title: 'LESS', icon: <Less aria-hidden /> },
   { title: 'SASS', icon: <Sass aria-hidden /> },
   { title: 'React', icon: <ReactLogo aria-hidden /> },
   { title: 'Next.js', icon: <Nextdotjs aria-hidden /> },
-  { title: 'Graphql', icon: <Graphql aria-hidden /> },
+  { title: 'Storybook', icon: <Storybook aria-hidden /> },
+  { title: 'Git', icon: <Git aria-hidden /> },
   { title: 'Testing Library', icon: <Testinglibrary aria-hidden /> },
-  { title: 'Grunt', icon: <Grunt aria-hidden /> },
-  { title: 'LESS', icon: <Less aria-hidden /> },
+  { title: 'Graphql', icon: <Graphql aria-hidden /> },
   { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
   { title: 'Gulp', icon: <Gulp aria-hidden /> },
-  { title: 'JQuery', icon: <Jquery aria-hidden /> },
-  { title: 'Git', icon: <Git aria-hidden /> },
-  { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> }
+  { title: 'Grunt', icon: <Grunt aria-hidden /> },
+  { title: 'Strapi', icon: <Strapi aria-hidden /> },
+  { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> },
+  { title: 'Figma', icon: <Figma aria-hidden /> },
+  { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
 ]
 
 export const certificates = [
@@ -125,7 +129,7 @@ export const projects = [
     title: 'Landing Page',
     description:
       'Projeto do curso "React Avançado: Crie aplicações com NextJS, Strapi e mais".',
-    skills: 'React NextJS TypeScript StyledComponents Strapi',
+    skills: 'React Next.js TypeScript StyledComponents Strapi',
     websiteLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
     img: '/img/projects/landing-page.png'

@@ -17,7 +17,8 @@ export const Wrapper = styled.nav`
       gap: 0;
       padding-bottom: 10rem;
 
-      &::after {
+      &::after,
+      &::before {
         position: absolute;
         left: 49%;
         bottom: 0;
@@ -26,21 +27,33 @@ export const Wrapper = styled.nav`
         width: 1px;
         height: 10rem;
         background-color: ${theme.colors.text};
+        overflow: hidden;
+      }
+
+      &::after {
+        transform: translateY(100%);
+        transition: all ${theme.transition.duration.slow};
+        background-color: ${theme.colors.primary};
+        ${theme.transition.effect};
+      }
+
+      &:hover::after {
+        transform: translateY(0);
       }
 
       a {
         position: relative;
         margin-bottom: ${theme.spacings.small};
+        transition: color ${theme.transition.duration.default}
+          ${theme.transition.effect};
 
         &::after {
-          color: ${theme.colors.white};
           content: attr(title);
           font-size: ${theme.font.sizes.xxsmall};
           left: 3.6rem;
           line-height: 3rem;
           text-wrap: nowrap;
           max-width: 0;
-          opacity: 0.5;
           overflow: hidden;
           position: absolute;
           top: -3px;
@@ -48,7 +61,14 @@ export const Wrapper = styled.nav`
             ${theme.transition.effect};
         }
 
+        svg {
+          transition: all ${theme.transition.duration.default}
+            ${theme.transition.effect};
+        }
+
         &:hover {
+          color: ${theme.colors.primary};
+
           svg {
             transform: translateY(-0.5rem);
           }

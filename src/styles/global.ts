@@ -1,11 +1,15 @@
 import { createGlobalStyle, css } from 'styled-components'
+import { cssMediaQuery } from 'utils/helpers'
 
 const GlobalStyles = createGlobalStyle`
 
     ${({ theme }) => css`
       html {
         font-size: 62.5%;
-        scroll-behavior: smooth;
+
+        ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+          scroll-behavior: smooth;
+        }
       }
 
       body {
@@ -13,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: ${theme.font.family};
         font-size: ${theme.font.sizes.small};
         font-weight: ${theme.font.weights.light};
-        background-color: ${theme.colors.darkBg};
+        background-color: ${theme.colors.background};
         overflow-x: hidden;
       }
 

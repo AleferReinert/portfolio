@@ -38,14 +38,14 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html lang='pt-br'>
+      <Html lang='pt-BR'>
         <Head>
           <meta
             name='description'
-            content='Portifólio do desenvolvedor front end Alefer Reinert'
+            content='Desenvolvedor Front End com experiência em React, Next.js, Styled Components, Storybook, etc.'
           />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
-          <link rel='icon' href='/favicon.ico' />
+          <link rel='icon' href='/favicon.png' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
             rel='preconnect'

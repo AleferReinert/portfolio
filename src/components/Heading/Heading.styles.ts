@@ -3,7 +3,7 @@ import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.h2`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.heading};
     font-size: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.weights.bold};
     padding-bottom: ${theme.spacings.xsmall};

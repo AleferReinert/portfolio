@@ -21,10 +21,9 @@ const theme = {
   },
   colors: {
     primary: '#48e194',
-    lightBg: '#fff',
-    darkBg: '#00344a',
-    white: 'rgba(255,255,255,0.85)',
-    black: '#000',
+    background: '#00344a',
+    backgroundSecondary: 'rgba(0, 0, 0, 0.25)',
+    heading: 'rgba(255,255,255,0.85)',
     text: '#7f99a4'
   },
   spacings: {

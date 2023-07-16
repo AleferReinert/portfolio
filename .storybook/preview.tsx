@@ -63,12 +63,8 @@ const preview: Preview = {
     backgrounds: {
       values: [
         {
-          name: 'Dark',
+          name: 'Default',
           value: theme.colors.darkBg
-        },
-        {
-          name: 'Light',
-          value: theme.colors.lightBg
         }
       ]
     },

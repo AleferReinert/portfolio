@@ -6,7 +6,7 @@ export const Wrapper = styled.header`
     display: flex;
     justify-content: end;
     padding: ${theme.spacings.xsmall} ${theme.spacings.small};
-    background-color: ${theme.colors.darkBg};
+    background-color: ${theme.colors.background};
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       padding: ${theme.spacings.small} ${theme.spacings.large};
