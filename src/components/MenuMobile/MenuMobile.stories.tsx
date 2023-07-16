@@ -4,13 +4,14 @@ import { expect } from '@storybook/jest'
 import MenuMobileComponent from './MenuMobile'
 import { jsMediaQuery } from 'utils/helpers'
 import theme from 'styles/theme'
-import { social } from 'content/content'
+import { menu, social } from 'content/content'
 
 const meta: Meta<typeof MenuMobileComponent> = {
   title: 'Components/MenuMobile',
   component: MenuMobileComponent,
   args: {
     menuMobile: true,
+    menu: menu,
     socials: social
   },
   parameters: {
@@ -27,17 +28,17 @@ type Story = StoryObj<typeof MenuMobileComponent>
 export const MenuMobile: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const links = canvas.queryAllByRole('link')
     const closeMenuButton = canvas.queryByRole('button', {
       name: /fechar menu/i
     })
-    const closeMenuIcon = canvasElement.getElementsByTagName('svg')[0]
+    const menu = canvas.queryByRole('menu')
+    const socialLinks = canvas.queryAllByRole('link')
 
     jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
-      await step('Render 9 links and a button', () => {
-        expect(links.length).toBe(9)
+      await step('Render button, menu and social', () => {
         expect(closeMenuButton).toBeInTheDocument()
-        expect(closeMenuIcon).toBeInTheDocument()
+        expect(menu).toBeInTheDocument()
+        expect(socialLinks.length).toBe(6)
       })
     })
   }

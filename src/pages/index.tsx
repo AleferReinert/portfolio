@@ -1,4 +1,11 @@
-import { certificates, projects, skills, social, about } from 'content/content'
+import {
+  certificates,
+  projects,
+  skills,
+  social,
+  about,
+  menu
+} from 'content/content'
 import About from 'components/About/About'
 import Certificates from 'components/Certificates/Certificates'
 import Container from 'components/Container/Container'
@@ -16,30 +23,30 @@ export default function Home() {
       <Head>
         <title>Alefer Reinert - Desenvolvedor Front End</title>
       </Head>
-      <Header />
+      <Header menu={menu} socials={social} />
       <S.Wrapper>
         <S.Main>
-          <S.Section>
+          <S.Section id='about'>
             <Container>
               <About {...about} />
             </Container>
           </S.Section>
 
-          <S.Section>
+          <S.Section id='projects'>
             <Container>
               <Heading>Projetos</Heading>
               <Projects projects={projects} />
             </Container>
           </S.Section>
 
-          <S.Section>
+          <S.Section id='certificates'>
             <Container>
               <Heading>Certificados</Heading>
               <Certificates certificates={certificates} />
             </Container>
           </S.Section>
 
-          <S.Section>
+          <S.Section id='skills'>
             <Container>
               <Heading>Skills</Heading>
               <Skills skills={skills} />

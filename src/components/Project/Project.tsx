@@ -21,20 +21,22 @@ const Project = ({
   img
 }: ProjectProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper role='listitem'>
       <S.ImageWrapper>
         <Image src={img} alt='Imagem do projeto' fill />
       </S.ImageWrapper>
       <S.Content>
         <S.Title>{title}</S.Title>
-        <S.Description aria-label='descrição'>{description}</S.Description>
-        <S.Skills aria-label='skills'>{skills}</S.Skills>
+        <S.Description role='paragraph' aria-label='descrição'>
+          {description}
+        </S.Description>
+        <S.Skills aria-label='skills utilizadas'>{skills}</S.Skills>
         <S.IconsWrapper>
           <Link href={repositoryLink} title='Repositório' target='_blank'>
-            <GithubIcon />
+            <GithubIcon aria-hidden />
           </Link>
-          <Link href={websiteLink} title='Website' target='_blank'>
-            <LinkIcon />
+          <Link href={websiteLink} title='Visualizar projeto' target='_blank'>
+            <LinkIcon aria-hidden />
           </Link>
         </S.IconsWrapper>
       </S.Content>

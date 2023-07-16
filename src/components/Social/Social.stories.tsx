@@ -31,18 +31,15 @@ export const Social: Story = {
       }
     })
 
-    jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
+    jsMediaQuery.lessThan(theme.breakpoints.medium, async () => {
       await step('Horizontal on mobile', () => {
         expect(wrapper).not.toHaveStyle({ flexDirection: 'column' })
       })
     })
 
-    jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
-      await step('Vertical and fixed on desktop', () => {
-        expect(wrapper).toHaveStyle({
-          flexDirection: 'column',
-          position: 'fixed'
-        })
+    jsMediaQuery.greaterThan(theme.breakpoints.medium, async () => {
+      await step('Vertical on desktop', () => {
+        expect(wrapper).toHaveStyle({ flexDirection: 'column' })
       })
     })
   }

@@ -12,11 +12,11 @@ type SkillsProps = {
 
 const Skills = ({ skills }: SkillsProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper role='list'>
       {skills.map((skill, index) => (
-        <S.Skill key={index} title={skill.title}>
+        <S.Skill key={index} role='listitem'>
           <S.ImageWrapper>
-            <Image src={skill.img} alt={skill.title} fill />
+            <Image src={skill.img} alt='' fill />
           </S.ImageWrapper>
           <S.Title>{skill.title}</S.Title>
         </S.Skill>

@@ -1,13 +1,23 @@
 import Link from 'next/link'
 import * as S from './NavMenu.styles'
 
-const NavMenu = () => {
+export type NavMenuItemProps = {
+  link: string
+  children: string
+}
+
+type NavMenuProps = {
+  menu: NavMenuItemProps[]
+}
+
+const NavMenu = ({ menu }: NavMenuProps) => {
   return (
-    <S.Wrapper>
-      <Link href='#about'>Sobre mim</Link>
-      <Link href='#projects'>Projetos</Link>
-      <Link href='#certificates'>Certificados</Link>
-      <Link href='#skills'>Skills</Link>
+    <S.Wrapper role='menu'>
+      {menu.map((item, index) => (
+        <Link key={index} href={item.link} scroll={false} role='menuitem'>
+          {item.children}
+        </Link>
+      ))}
     </S.Wrapper>
   )
 }

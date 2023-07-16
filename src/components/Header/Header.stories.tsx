@@ -1,13 +1,18 @@
 import type { StoryObj, Meta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import HeaderComponent from './Header'
 import { jsMediaQuery } from 'utils/helpers'
+import HeaderComponent from './Header'
 import theme from 'styles/theme'
+import { menu, social } from 'content/content'
 
 const meta: Meta<typeof HeaderComponent> = {
   title: 'Components/Header',
-  component: HeaderComponent
+  component: HeaderComponent,
+  args: {
+    menu: menu,
+    socials: social
+  }
 }
 
 export default meta
@@ -23,38 +28,34 @@ export const Mobile: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const openMenuButton = canvas.queryByRole('button', { name: /abrir menu/i })
-    const openMenuIcon = canvasElement.getElementsByTagName('svg')[0]
-    const menuMobile = canvas.queryByTestId('menuMobile')
-    const menuLinks = canvas.queryAllByRole('link')
+    const menus = canvas.queryAllByRole('menu')
 
     jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
-      await step('Show buttonOpenMenu', () => {
+      await step('Render buttonOpenMenu', () => {
         expect(openMenuButton).toBeInTheDocument()
-        expect(openMenuIcon).toBeInTheDocument()
-      })
-      await step('Hidden menu desktop', () => {
-        expect(menuLinks.length).toBe(0)
       })
 
-      await step('Show menu on buttonOpenMenu click', async () => {
-        await userEvent.click(
-          canvas.getByRole('button', {
-            name: /abrir menu/i
-          })
-        )
+      await step('Hidden menu as default', () => {
+        expect(menus.length).toBe(0)
+      })
+
+      await step('Show menu mobile on buttonOpenMenu click', async () => {
+        const button = canvas.getByRole('button', { name: /abrir menu/i })
+
+        await userEvent.click(button)
         await waitFor(() => {
-          expect(menuMobile).toBeVisible()
+          const menus = canvas.getAllByRole('menu')
+          expect(menus.length).toBe(1)
         })
       })
 
       await step('Close menu on buttonCloseMenu click', async () => {
-        await userEvent.click(
-          canvas.getByRole('button', {
-            name: /fechar menu/i
-          })
-        )
+        const button = canvas.getByRole('button', { name: /fechar menu/i })
+
+        await userEvent.click(button)
         await waitFor(() => {
-          expect(menuMobile).not.toBeVisible()
+          const menus = canvas.queryAllByRole('menu')
+          expect(menus.length).toBe(0)
         })
       })
     })
@@ -65,20 +66,15 @@ export const Desktop: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const openMenuButton = canvas.queryByRole('button', { name: /abrir menu/i })
-    const menuMobile = canvas.queryByTestId('menuMobile')
-    const menuLinks = canvas.getAllByRole('link')
+    const menus = canvas.getAllByRole('menu')
 
     jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
       await step('Hidden button to open menu', () => {
         expect(openMenuButton).not.toBeInTheDocument()
       })
 
-      await step('Hidden menu mobile', () => {
-        expect(menuMobile).not.toBeVisible()
-      })
-
-      await step('Render menu desktop', () => {
-        expect(menuLinks.length).toBe(3)
+      await step('Render only one menu', () => {
+        expect(menus.length).toBe(1)
       })
     })
   }

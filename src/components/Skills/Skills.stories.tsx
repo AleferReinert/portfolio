@@ -27,15 +27,12 @@ type Story = StoryObj<typeof SkillsComponent>
 export const Skills: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const imgs = canvas.getAllByRole('img')
+    const skills = canvas.getAllByRole('listitem')
+    const headings = canvas.getAllByRole('heading')
 
-    await step('Render icons with alt and title attributes', () => {
-      for (const img of imgs) {
-        const wrapper = img.parentElement?.parentElement
-
-        expect(img).toHaveAttribute('alt')
-        expect(wrapper).toHaveAttribute('title')
-      }
+    await step('Render minimal two 8 skills', () => {
+      expect(skills.length).toBeGreaterThanOrEqual(8)
+      expect(headings.length).toBeGreaterThanOrEqual(8)
     })
   }
 }

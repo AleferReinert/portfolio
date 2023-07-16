@@ -17,7 +17,7 @@ const Certificate = ({ title, description, link }: CertificateProps) => {
   return (
     <S.Wrapper {...asLink}>
       <S.Title>{title}</S.Title>
-      <S.Description>{description}</S.Description>
+      <S.Description role='paragraph'>{description}</S.Description>
     </S.Wrapper>
   )
 }

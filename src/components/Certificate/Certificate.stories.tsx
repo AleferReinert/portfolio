@@ -18,10 +18,10 @@ export default meta
 type Story = StoryObj<typeof CertificateComponent>
 
 export const Default: Story = {
-  play: async ({ canvasElement, step, args }) => {
+  play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const title = canvas.getByRole('heading', { name: args.title })
-    const description = canvas.getByText(args.description)
+    const title = canvas.getByRole('heading')
+    const description = canvas.getByRole('paragraph')
     const link = canvas.queryByRole('link')
 
     await step('Render title and description', () => {

@@ -7,6 +7,25 @@ import {
 } from '@styled-icons/feather'
 import { Whatsapp } from '@styled-icons/boxicons-logos'
 
+export const menu = [
+  {
+    link: '#about',
+    children: 'Sobre mim'
+  },
+  {
+    link: '#projects',
+    children: 'Projetos'
+  },
+  {
+    link: '#certificates',
+    children: 'Certificados'
+  },
+  {
+    link: '#skills',
+    children: 'Skills'
+  }
+]
+
 export const about = {
   title: (
     <>

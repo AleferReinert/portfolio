@@ -7,7 +7,7 @@ type ProjectsProps = {
 
 const Projects = ({ projects }: ProjectsProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper role='list'>
       {projects.map((project, index) => (
         <Project key={index} {...project} />
       ))}

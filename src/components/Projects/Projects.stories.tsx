@@ -29,20 +29,19 @@ type Story = StoryObj<typeof ProjectsComponent>
 export const Projects: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const titles = canvas.getAllByRole('heading')
+    const projects = canvas.getAllByRole('listitem')
 
     await step('Minimal two projects', () => {
-      expect(titles.length).toBeGreaterThan(1)
+      expect(projects.length).toBeGreaterThan(1)
     })
 
     jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
       await step('Alternate alignment between right and left', () => {
-        for (let i = 0; i < titles.length; i++) {
-          const wrapper = titles[i].parentElement?.parentElement
+        for (let i = 0; i < projects.length; i++) {
           if (i % 2 === 0) {
-            expect(wrapper).toHaveStyle({ flexDirection: 'row' })
+            expect(projects[i]).toHaveStyle({ flexDirection: 'row' })
           } else {
-            expect(wrapper).toHaveStyle({ flexDirection: 'row-reverse' })
+            expect(projects[i]).toHaveStyle({ flexDirection: 'row-reverse' })
           }
         }
       })

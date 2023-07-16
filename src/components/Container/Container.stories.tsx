@@ -39,7 +39,7 @@ export const Container: Story = {
     const canvas = within(canvasElement)
     const children = canvas.getByText('children')
 
-    await step('Required children', () => {
+    await step('Render children', () => {
       expect(children).toBeInTheDocument()
     })
   }

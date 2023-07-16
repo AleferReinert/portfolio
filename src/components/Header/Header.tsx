@@ -1,16 +1,22 @@
+import { SocialItemProps } from 'components/Social/Social'
 import { useState } from 'react'
 import MenuMobile from 'components/MenuMobile/MenuMobile'
-import NavMenu from 'components/NavMenu/NavMenu'
+import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import * as S from './Header.styles'
-import { social } from 'content/content'
 
-const Header = () => {
+type HeaderProps = {
+  menu: NavMenuItemProps[]
+  socials: SocialItemProps[]
+}
+
+const Header = ({ menu, socials }: HeaderProps) => {
   const [menuMobile, setMenuMobile] = useState(false)
 
   return (
     <S.Wrapper>
       <S.OpenMenuButton title='Abrir menu' onClick={() => setMenuMobile(true)}>
         <svg
+          aria-hidden
           xmlns='http://www.w3.org/2000/svg'
           width='24'
           height='24'
@@ -22,10 +28,11 @@ const Header = () => {
       <MenuMobile
         menuMobile={menuMobile}
         setMenuMobile={setMenuMobile}
-        socials={social}
+        socials={socials}
+        menu={menu}
       />
       <S.MenuDesktop>
-        <NavMenu />
+        <NavMenu menu={menu} />
       </S.MenuDesktop>
     </S.Wrapper>
   )

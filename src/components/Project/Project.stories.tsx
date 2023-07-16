@@ -26,19 +26,21 @@ export const Project: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const title = canvas.getByRole('heading')
-    const description = canvas.getByLabelText(/descrição/i)
-    const skills = canvas.getByLabelText(/skills/i)
+    const description = canvas.getByRole('paragraph')
+    const skills = canvas.getByLabelText(/skills utilizadas/i)
     const repositoryLink = canvas.getByRole('link', { name: /repositório/i })
-    const siteLink = canvas.getByRole('link', { name: /website/i })
+    const websiteLink = canvas.getByRole('link', {
+      name: /visualizar projeto/i
+    })
     const img = canvas.getByRole('img', { name: /imagem do projeto/i })
 
     await step('Render title, description, skills, links and image', () => {
       expect(title).toBeInTheDocument()
       expect(description).toBeInTheDocument()
       expect(skills).toBeInTheDocument()
-      expect(img).toBeInTheDocument()
       expect(repositoryLink).toHaveAttribute('href')
-      expect(siteLink).toHaveAttribute('href')
+      expect(websiteLink).toHaveAttribute('href')
+      expect(img).toBeInTheDocument()
     })
   }
 }
