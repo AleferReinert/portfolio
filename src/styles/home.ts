@@ -21,9 +21,6 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   ${({ theme }) => css`
-    /* display: flex;
-    flex-direction: column;
-    gap: ${theme.spacings.xxlarge}; */
     order: 2;
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {

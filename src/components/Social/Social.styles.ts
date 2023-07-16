@@ -25,7 +25,7 @@ export const Wrapper = styled.nav`
         display: block;
         width: 1px;
         height: 10rem;
-        background-color: ${theme.colors.gray};
+        background-color: ${theme.colors.text};
       }
 
       a {

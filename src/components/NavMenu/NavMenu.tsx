@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import * as S from './NavMenu.styles'
+import { Dispatch, SetStateAction } from 'react'
 
 export type NavMenuItemProps = {
   link: string
@@ -8,13 +9,21 @@ export type NavMenuItemProps = {
 
 type NavMenuProps = {
   menu: NavMenuItemProps[]
+  setShowMobileMenu: Dispatch<SetStateAction<boolean>>
 }
 
-const NavMenu = ({ menu }: NavMenuProps) => {
+const NavMenu = ({ menu, setShowMobileMenu }: NavMenuProps) => {
   return (
     <S.Wrapper role='menu'>
       {menu.map((item, index) => (
-        <Link key={index} href={item.link} scroll={false} role='menuitem'>
+        <Link
+          key={index}
+          href={item.link}
+          scroll={false}
+          onClick={() => setShowMobileMenu(false)}
+          role='menuitem'
+          replace
+        >
           {item.children}
         </Link>
       ))}

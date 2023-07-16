@@ -30,7 +30,7 @@ export const Skills: Story = {
     const skills = canvas.getAllByRole('listitem')
     const headings = canvas.getAllByRole('heading')
 
-    await step('Render minimal two 8 skills', () => {
+    await step('Render minimal 8 skills', () => {
       expect(skills.length).toBeGreaterThanOrEqual(8)
       expect(headings.length).toBeGreaterThanOrEqual(8)
     })

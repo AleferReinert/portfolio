@@ -6,6 +6,26 @@ import {
   Youtube
 } from '@styled-icons/feather'
 import { Whatsapp } from '@styled-icons/boxicons-logos'
+import {
+  Html5,
+  Css3,
+  Less,
+  Sass,
+  Styledcomponents,
+  Javascript,
+  Typescript,
+  ReactLogo,
+  Nextdotjs,
+  Testinglibrary,
+  Jquery,
+  Grunt,
+  Gulp,
+  Storybook,
+  Bootstrap,
+  Git,
+  Adobephotoshop,
+  Graphql
+} from '@styled-icons/simple-icons'
 
 export const menu = [
   {
@@ -58,24 +78,24 @@ export const about = {
 }
 
 export const skills = [
-  { title: 'HTML 5', img: 'img/skills/html5.svg' },
-  { title: 'CSS 3', img: 'img/skills/css3.svg' },
-  { title: 'LESS', img: 'img/skills/less.svg' },
-  { title: 'SASS', img: 'img/skills/sass.svg' },
-  { title: 'Styled Components', img: 'img/skills/styled-components.svg' },
-  { title: 'JavaScript', img: 'img/skills/javascript.svg' },
-  { title: 'TypeScript', img: 'img/skills/typescript.svg' },
-  { title: 'React', img: 'img/skills/react.svg' },
-  { title: 'Next.js', img: 'img/skills/nextjs.svg' },
-  { title: 'Testing Library', img: 'img/skills/testing-library.svg' },
-  { title: 'JQuery', img: 'img/skills/jquery.svg' },
-  { title: 'Grunt', img: 'img/skills/grunt.svg' },
-  { title: 'Gulp', img: 'img/skills/gulp.svg' },
-  { title: 'Storybook', img: 'img/skills/storybook.svg' },
-  { title: 'Bootstrap', img: 'img/skills/bootstrap.svg' },
-  { title: 'Git', img: 'img/skills/git.svg' },
-  { title: 'Photoshop', img: 'img/skills/photoshop.svg' },
-  { title: 'SQL', img: 'img/skills/sql.svg' }
+  { title: 'HTML5', icon: <Html5 aria-hidden /> },
+  { title: 'CSS3', icon: <Css3 aria-hidden /> },
+  { title: 'Storybook', icon: <Storybook aria-hidden /> },
+  { title: 'JavaScript', icon: <Javascript aria-hidden /> },
+  { title: 'TypeScript', icon: <Typescript aria-hidden /> },
+  { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> },
+  { title: 'SASS', icon: <Sass aria-hidden /> },
+  { title: 'React', icon: <ReactLogo aria-hidden /> },
+  { title: 'Next.js', icon: <Nextdotjs aria-hidden /> },
+  { title: 'Graphql', icon: <Graphql aria-hidden /> },
+  { title: 'Testing Library', icon: <Testinglibrary aria-hidden /> },
+  { title: 'Grunt', icon: <Grunt aria-hidden /> },
+  { title: 'LESS', icon: <Less aria-hidden /> },
+  { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
+  { title: 'Gulp', icon: <Gulp aria-hidden /> },
+  { title: 'JQuery', icon: <Jquery aria-hidden /> },
+  { title: 'Git', icon: <Git aria-hidden /> },
+  { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> }
 ]
 
 export const certificates = [
@@ -165,31 +185,31 @@ export const social = [
   {
     name: 'Facebook',
     link: 'https://www.facebook.com/AleferReinert',
-    icon: <Facebook />
+    icon: <Facebook aria-hidden />
   },
   {
     name: 'Github',
     link: 'https://github.com/AleferReinert',
-    icon: <Github />
+    icon: <Github aria-hidden />
   },
   {
     name: 'E-mail',
     link: 'mailto:aleferreinert@gmail.com',
-    icon: <Mail />
+    icon: <Mail aria-hidden />
   },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/aleferreinert',
-    icon: <Linkedin />
+    icon: <Linkedin aria-hidden />
   },
   {
     name: 'Whatsapp',
     link: 'https://wa.me/message/FSN72FDKNRO3O1',
-    icon: <Whatsapp />
+    icon: <Whatsapp aria-hidden />
   },
   {
     name: 'YouTube',
     link: 'https://www.youtube.com/AleferReinert',
-    icon: <Youtube />
+    icon: <Youtube aria-hidden />
   }
 ]

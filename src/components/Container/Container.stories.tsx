@@ -14,7 +14,7 @@ const meta: Meta<typeof ContainerComponent> = {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: theme.colors.gray,
+          backgroundColor: theme.colors.text,
           color: theme.colors.darkBg,
           height: '100vh'
         }}

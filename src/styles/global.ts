@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
       }
 
       body {
-        color: ${theme.colors.gray};
+        color: ${theme.colors.text};
         font-family: ${theme.font.family};
         font-size: ${theme.font.sizes.small};
         font-weight: ${theme.font.weights.light};

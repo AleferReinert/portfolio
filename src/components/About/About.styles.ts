@@ -14,7 +14,7 @@ export const Title = styled.h1`
       display: block;
 
       &:first-child {
-        color: ${theme.colors.gray};
+        color: ${theme.colors.text};
         font-size: ${theme.font.sizes.xsmall};
         font-weight: ${theme.font.weights.light};
       }

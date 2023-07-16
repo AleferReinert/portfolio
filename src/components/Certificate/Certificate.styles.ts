@@ -14,7 +14,6 @@ export const Title = styled.h3`
 
 export const Description = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.gray};
     font-size: ${theme.font.sizes.small};
   `}
 `

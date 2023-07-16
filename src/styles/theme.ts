@@ -1,5 +1,4 @@
 const theme = {
-  radius: '0.2rem',
   font: {
     family:
       "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
@@ -26,8 +25,7 @@ const theme = {
     darkBg: '#00344a',
     white: 'rgba(255,255,255,0.85)',
     black: '#000',
-    gray: '#7f99a4',
-    lightGray: 'rgba(0, 0, 0, 0.025)'
+    text: '#7f99a4'
   },
   spacings: {
     xxsmall: '0.4rem',
@@ -65,8 +63,7 @@ const theme = {
     sizes: {
       small: '2.8rem',
       medium: '3.6rem',
-      large: '4.4rem',
-      xlarge: '5.2rem'
+      large: '4.4rem'
     }
   }
 }

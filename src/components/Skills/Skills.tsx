@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import { ReactNode } from 'react'
 import * as S from './Skills.styles'
 
 type SkillProps = {
   title: string
-  img: string
+  icon: ReactNode
 }
 
 type SkillsProps = {
@@ -15,9 +15,7 @@ const Skills = ({ skills }: SkillsProps) => {
     <S.Wrapper role='list'>
       {skills.map((skill, index) => (
         <S.Skill key={index} role='listitem'>
-          <S.ImageWrapper>
-            <Image src={skill.img} alt='' fill />
-          </S.ImageWrapper>
+          <S.IconWrapper>{skill.icon}</S.IconWrapper>
           <S.Title>{skill.title}</S.Title>
         </S.Skill>
       ))}
