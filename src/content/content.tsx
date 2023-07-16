@@ -132,7 +132,7 @@ export const projects = [
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     websiteLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
-    img: '/img/projects/landing-page.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540028/portfolio/projects/landing-page.png'
   },
   {
     title: 'E-Commerce',
@@ -140,7 +140,7 @@ export const projects = [
     skills: 'React Sass Bootstrap',
     websiteLink: 'https://aleferreinert.github.io/react-commerce',
     repositoryLink: 'https://github.com/AleferReinert/react-commerce',
-    img: '/img/projects/e-commerce.jpg'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540028/portfolio/projects/e-commerce_em5p4w.jpg'
   },
   {
     title: 'Single Page',
@@ -148,7 +148,7 @@ export const projects = [
     skills: 'HTML JavaScript Less Gulp',
     websiteLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
-    img: '/img/projects/single-page.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540029/portfolio/projects/single-page.png'
   },
   {
     title: 'Tic Tac Toe',
@@ -156,7 +156,7 @@ export const projects = [
     skills: 'React JSX CSS',
     websiteLink: 'https://aleferreinert.github.io/tic-tac-toe',
     repositoryLink: 'https://github.com/AleferReinert/tic-tac-toe',
-    img: '/img/projects/tic-tac-toe.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540027/portfolio/projects/tic-tac-toe_pkfbqn.png'
   },
   {
     title: 'Metronome',
@@ -165,7 +165,7 @@ export const projects = [
     skills: 'HTML JavaScript CSS',
     websiteLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
-    img: '/img/projects/metronome.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540028/portfolio/projects/metronome_oi1bf2.png'
   },
   {
     title: 'Timer',
@@ -173,7 +173,7 @@ export const projects = [
     skills: 'HTML JavaScript CSS',
     websiteLink: 'https://aleferreinert.github.io/timer',
     repositoryLink: 'https://github.com/AleferReinert/timer',
-    img: '/img/projects/timer.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540029/portfolio/projects/timer_dwfxup.png'
   },
   {
     title: 'Google Homepage',
@@ -181,7 +181,7 @@ export const projects = [
     skills: 'HTML JavaScript CSS',
     websiteLink: 'https://aleferreinert.github.io/google-homepage',
     repositoryLink: 'https://github.com/AleferReinert/google-homepage',
-    img: '/img/projects/google-homepage.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540027/portfolio/projects/google-homepage_d1foik.png'
   }
 ]
 

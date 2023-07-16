@@ -10,7 +10,7 @@ const meta: Meta<typeof MenuMobileComponent> = {
   title: 'Components/MenuMobile',
   component: MenuMobileComponent,
   args: {
-    menuMobile: true,
+    showMobileMenu: true,
     menu: menu,
     socials: social
   },
