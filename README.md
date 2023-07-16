@@ -1,6 +1,6 @@
-# Boilerplate
+# My Github Page
 
-Boilerplate utilizing React, Next.js, TypeScript, Styled Components and Storybook.
+Utilizing React, Next.js, TypeScript, Styled Components and Storybook.
 
 ## Development
 
