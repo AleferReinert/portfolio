@@ -23,8 +23,7 @@ export const OpenMenuButton = styled.button`
   ${({ theme }) => css`
     svg {
       width: ${theme.icons.sizes.medium};
-      height: ${theme.icons.sizes.medium};
-      fill: ${theme.colors.primary};
+      color: ${theme.colors.primary};
     }
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
