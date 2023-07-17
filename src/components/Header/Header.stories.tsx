@@ -27,7 +27,7 @@ export const Mobile: Story = {
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const openMenuButton = canvas.queryByRole('button', { name: /abrir menu/i })
+    const openMenuButton = canvas.queryByRole('img', { name: /abrir menu/i })
     const menus = canvas.queryAllByRole('menu')
 
     jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
@@ -40,7 +40,7 @@ export const Mobile: Story = {
       })
 
       await step('Show menu mobile on buttonOpenMenu click', async () => {
-        const button = canvas.getByRole('button', { name: /abrir menu/i })
+        const button = canvas.getByRole('img', { name: /abrir menu/i })
 
         await userEvent.click(button)
         await waitFor(() => {
@@ -50,7 +50,7 @@ export const Mobile: Story = {
       })
 
       await step('Close menu on buttonCloseMenu click', async () => {
-        const button = canvas.getByRole('button', { name: /fechar menu/i })
+        const button = canvas.getByRole('img', { name: /fechar menu/i })
 
         await userEvent.click(button)
         await waitFor(() => {
@@ -65,7 +65,7 @@ export const Mobile: Story = {
 export const Desktop: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const openMenuButton = canvas.queryByRole('button', { name: /abrir menu/i })
+    const openMenuButton = canvas.queryByRole('img', { name: /abrir menu/i })
     const menus = canvas.getAllByRole('menu')
 
     jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {

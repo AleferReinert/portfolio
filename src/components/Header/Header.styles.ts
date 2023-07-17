@@ -19,11 +19,12 @@ export const Wrapper = styled.header`
   `}
 `
 
-export const OpenMenuButton = styled.button`
+export const IconWrapper = styled.div`
   ${({ theme }) => css`
     svg {
       width: ${theme.icons.sizes.medium};
       color: ${theme.colors.primary};
+      cursor: pointer;
     }
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {

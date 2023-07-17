@@ -62,7 +62,7 @@ export const Wrapper = styled.div`
   `}
 `
 
-export const CloseMenu = styled.button`
+export const IconWrapper = styled.div`
   ${({ theme }) => css`
     align-self: end;
     margin-top: ${theme.spacings.xsmall};
@@ -71,6 +71,7 @@ export const CloseMenu = styled.button`
     svg {
       width: ${theme.icons.sizes.medium};
       color: ${theme.colors.primary};
+      cursor: pointer;
     }
   `}
 `

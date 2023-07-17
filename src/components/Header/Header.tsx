@@ -15,12 +15,9 @@ const Header = ({ menu, socials }: HeaderProps) => {
 
   return (
     <S.Wrapper>
-      <S.OpenMenuButton
-        title='Abrir menu'
-        onClick={() => setShowMobileMenu(true)}
-      >
-        <Menu aria-hidden />
-      </S.OpenMenuButton>
+      <S.IconWrapper>
+        <Menu title='Abrir menu' onClick={() => setShowMobileMenu(true)} />
+      </S.IconWrapper>
       <MenuMobile
         showMobileMenu={showMobileMenu}
         setShowMobileMenu={setShowMobileMenu}

@@ -28,7 +28,7 @@ type Story = StoryObj<typeof MenuMobileComponent>
 export const MenuMobile: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const closeMenuButton = canvas.queryByRole('button', {
+    const closeMenuButton = canvas.queryByRole('img', {
       name: /fechar menu/i
     })
     const menu = canvas.queryByRole('menu')
