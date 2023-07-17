@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as S from './Project.styles'
 import { Github as GithubIcon, Link as LinkIcon } from '@styled-icons/feather'
+import theme from 'styles/theme'
 
 export type ProjectProps = {
   title: string
@@ -23,7 +24,17 @@ const Project = ({
   return (
     <S.Wrapper role='listitem'>
       <S.ImageWrapper>
-        <Image src={img} alt='Imagem do projeto' loading='lazy' fill />
+        <Image
+          src={img}
+          alt='Imagem do projeto'
+          loading='lazy'
+          fill
+          sizes={`
+            (min-width: ${theme.breakpoints.xsmall}) 328px,
+            (min-width: ${theme.breakpoints.small}) 240px, 
+            (min-width: ${theme.breakpoints.medium}) 280px,
+            288px`}
+        />
       </S.ImageWrapper>
       <S.Content>
         <S.Title>{title}</S.Title>

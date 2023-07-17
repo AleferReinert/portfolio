@@ -45,9 +45,5 @@ export const Description = styled.div`
         margin-top: ${theme.spacings.medium};
       }
     }
-
-    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
-      max-width: 68rem;
-    }
   `}
 `

@@ -147,7 +147,7 @@ export const projects = [
     title: 'Single Page',
     description:
       'Website responsivo de uma empresa fictícia, desenvolvido em página única.',
-    skills: 'HTML JavaScript Less Gulp',
+    skills: 'HTML Less JavaScript Gulp',
     websiteLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/single-page_wvrp0j.webp'
@@ -155,7 +155,7 @@ export const projects = [
   {
     title: 'Tic Tac Toe',
     description: 'Jogo da velha feito a partir do tutorial do React.',
-    skills: 'React JSX CSS',
+    skills: 'React CSS JSX',
     websiteLink: 'https://aleferreinert.github.io/tic-tac-toe',
     repositoryLink: 'https://github.com/AleferReinert/tic-tac-toe',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1689602179/portfolio/projects/tic-tac-toe_fu4onn.webp'
@@ -164,7 +164,7 @@ export const projects = [
     title: 'Metronome',
     description:
       'O metrônomo é um item obrigatório para qualquer músico, auxilia nos estudos e a tocar no tempo correto.',
-    skills: 'HTML JavaScript CSS',
+    skills: 'HTML CSS JavaScript',
     websiteLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/metronome_wdn7fn.webp'
@@ -172,15 +172,15 @@ export const projects = [
   {
     title: 'Timer',
     description: 'Medição de intervalos de tempo.',
-    skills: 'HTML JavaScript CSS',
+    skills: 'HTML CSS JavaScript',
     websiteLink: 'https://aleferreinert.github.io/timer',
     repositoryLink: 'https://github.com/AleferReinert/timer',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/timer_ervtcn.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689604640/portfolio/projects/timer_zmpauq.webp'
   },
   {
     title: 'Google Homepage',
     description: 'Clone da página inicial de busca do Google (desktop).',
-    skills: 'HTML JavaScript CSS',
+    skills: 'HTML CSS JavaScript',
     websiteLink: 'https://aleferreinert.github.io/google-homepage',
     repositoryLink: 'https://github.com/AleferReinert/google-homepage',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/google-homepage_epguos.webp'

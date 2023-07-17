@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     background-color: ${theme.colors.backgroundSecondary};
+    width: 100%;
     max-width: calc(
       ${theme.breakpoints.xsmall} - calc(${theme.spacings.small} * 2)
     );
@@ -26,6 +27,10 @@ export const ImageWrapper = styled.div`
     width: 100%;
     height: min-content;
     aspect-ratio: 1/1;
+
+    img {
+      object-fit: contain;
+    }
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       max-width: 24rem;
