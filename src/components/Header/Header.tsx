@@ -13,22 +13,19 @@ type HeaderProps = {
 const Header = ({ menu, socials }: HeaderProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [fixedHeader, setFixedHeader] = useState('fixed')
-  let prev = window.scrollY
 
   useEffect(() => {
+    let prev = window.scrollY
+
+    const fixedHeaderOnScrollUp = () => {
+      let current = window.scrollY
+      prev > current ? setFixedHeader('fixed') : setFixedHeader('')
+      prev = current
+    }
+
     window.addEventListener('scroll', fixedHeaderOnScrollUp)
     return () => window.removeEventListener('scroll', fixedHeaderOnScrollUp)
   })
-
-  const fixedHeaderOnScrollUp = () => {
-    let current = window.scrollY
-    if (prev > current) {
-      setFixedHeader('fixed')
-    } else {
-      setFixedHeader('')
-    }
-    prev = current
-  }
 
   return (
     <S.Wrapper className={fixedHeader}>
