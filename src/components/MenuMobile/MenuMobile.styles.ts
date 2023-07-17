@@ -5,11 +5,11 @@ import * as SocialStyles from 'components/Social/Social.styles'
 import { MenuMobileProps } from './MenuMobile'
 
 const wrapperModifiers = {
-  show: (theme: DefaultTheme) => css`
-    transition: opacity
-      (${theme.transition.duration.default} ${theme.transition.effect});
+  showMobileMenu: (theme: DefaultTheme) => css`
     opacity: 1;
     pointer-events: all;
+    transition: all ${theme.transition.duration.default}
+      ${theme.transition.effect};
 
     ${NavMenuStyles.Wrapper} {
       transition: all ${theme.transition.duration.slow}
@@ -23,13 +23,6 @@ const wrapperModifiers = {
         ${theme.transition.effect} ${theme.transition.duration.slow};
       width: 100%;
     }
-  `,
-  hidden: (theme: DefaultTheme) => css`
-    transition: opacity ${theme.transition.duration.default}
-      ${theme.transition.effect} ${theme.transition.duration.slow};
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
   `
 }
 
@@ -40,13 +33,17 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
     left: 0;
     right: 0;
     bottom: 0;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background: ${theme.colors.background};
     z-index: ${theme.layers.menu};
     padding-bottom: ${theme.spacings.xxlarge};
-    display: flex;
+    transition: opacity ${theme.transition.duration.default}
+      ${theme.transition.effect} ${theme.transition.duration.slow};
+    opacity: 0;
+    pointer-events: none;
 
     ${NavMenuStyles.Wrapper} {
       transition: all ${theme.transition.duration.slow}
@@ -62,12 +59,11 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
       overflow: hidden;
     }
 
+    ${showMobileMenu && wrapperModifiers.showMobileMenu(theme)}
+
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       display: none;
     }
-
-    ${showMobileMenu && wrapperModifiers.show(theme)};
-    ${!showMobileMenu && wrapperModifiers.hidden(theme)};
   `}
 `
 

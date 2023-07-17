@@ -36,7 +36,7 @@ export const Mobile: Story = {
       })
 
       await step('Hidden menu as default', () => {
-        expect(menus.length).toBe(0)
+        expect(menus[0]).not.toBeVisible()
       })
 
       await step('Show menu mobile on buttonOpenMenu click', async () => {
@@ -45,7 +45,7 @@ export const Mobile: Story = {
         await userEvent.click(button)
         await waitFor(() => {
           const menus = canvas.getAllByRole('menu')
-          expect(menus.length).toBe(1)
+          expect(menus[0]).toBeVisible()
         })
       })
 
@@ -55,7 +55,7 @@ export const Mobile: Story = {
         await userEvent.click(button)
         await waitFor(() => {
           const menus = canvas.queryAllByRole('menu')
-          expect(menus.length).toBe(0)
+          expect(menus[0]).not.toBeVisible()
         })
       })
     })

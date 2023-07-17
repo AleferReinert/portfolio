@@ -1,5 +1,5 @@
 import { SocialItemProps } from 'components/Social/Social'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu } from '@styled-icons/feather'
 import MenuMobile from 'components/MenuMobile/MenuMobile'
 import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
@@ -12,9 +12,26 @@ type HeaderProps = {
 
 const Header = ({ menu, socials }: HeaderProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [fixedHeader, setFixedHeader] = useState('fixed')
+  let prev = window.scrollY
+
+  useEffect(() => {
+    window.addEventListener('scroll', fixedHeaderOnScrollUp)
+    return () => window.removeEventListener('scroll', fixedHeaderOnScrollUp)
+  })
+
+  const fixedHeaderOnScrollUp = () => {
+    let current = window.scrollY
+    if (prev > current) {
+      setFixedHeader('fixed')
+    } else {
+      setFixedHeader('')
+    }
+    prev = current
+  }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper className={fixedHeader}>
       <S.IconWrapper>
         <Menu title='Abrir menu' onClick={() => setShowMobileMenu(true)} />
       </S.IconWrapper>

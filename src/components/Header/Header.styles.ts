@@ -11,10 +11,16 @@ export const Wrapper = styled.header`
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       padding: ${theme.spacings.small} ${theme.spacings.large};
       position: fixed;
-      top: 0;
+      top: -100%;
       left: 0;
       right: 0;
       z-index: ${theme.layers.menu};
+      transition: top ${theme.transition.duration.slow}
+        ${theme.transition.effect};
+
+      &.fixed {
+        top: 0;
+      }
     }
   `}
 `
