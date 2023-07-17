@@ -9,7 +9,7 @@ type CertificatesProps = {
 
 const Certificates = ({ certificates }: CertificatesProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper role='list'>
       {certificates.map((certificate, index) => (
         <Certificate key={index} {...certificate} />
       ))}

@@ -6,10 +6,16 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     background-color: ${theme.colors.backgroundSecondary};
+    max-width: calc(
+      ${theme.breakpoints.xsmall} - calc(${theme.spacings.small} * 2)
+    );
+    align-self: center;
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       justify-content: space-between;
       flex-direction: row;
+      max-width: none;
+      align-self: auto;
     }
   `}
 `

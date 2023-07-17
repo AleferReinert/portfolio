@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import * as S from './Certificate.styles'
 
 export type CertificateProps = {
@@ -7,17 +8,19 @@ export type CertificateProps = {
 }
 
 const Certificate = ({ title, description, link }: CertificateProps) => {
-  const asLink = !!link && {
-    href: link,
-    as: 'a',
-    title: 'Visualizar certificado',
-    target: '_blank'
-  }
-
   return (
-    <S.Wrapper {...asLink}>
-      <S.Title>{title}</S.Title>
-      <S.Description role='paragraph'>{description}</S.Description>
+    <S.Wrapper role='listitem'>
+      {link ? (
+        <Link href={link} title='Visualizar certificado' target='_blank'>
+          <S.Title>{title}</S.Title>
+          <S.Description role='paragraph'>{description}</S.Description>
+        </Link>
+      ) : (
+        <>
+          <S.Title>{title}</S.Title>
+          <S.Description role='paragraph'>{description}</S.Description>
+        </>
+      )}
     </S.Wrapper>
   )
 }

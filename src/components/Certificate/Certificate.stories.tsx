@@ -39,15 +39,13 @@ export const WithLink: Story = {
   args: {
     link: '/link'
   },
-  play: async ({ canvasElement, step, args }) => {
+  play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const wrapper = canvas.getByRole('heading', {
-      name: args.title
-    }).parentElement
+    const link = canvas.getByRole('link')
 
     await step('Has link with title', () => {
-      expect(wrapper).toHaveAttribute('href', '/link')
-      expect(wrapper).toHaveAttribute('title', 'Visualizar certificado')
+      expect(link).toHaveAttribute('href', '/link')
+      expect(link).toHaveAttribute('title', 'Visualizar certificado')
     })
   }
 }

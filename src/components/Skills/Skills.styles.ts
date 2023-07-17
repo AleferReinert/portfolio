@@ -4,7 +4,7 @@ import { cssMediaQuery } from 'utils/helpers'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: ${theme.spacings.xsmall};
     row-gap: ${theme.spacings.large};
     justify-content: space-around;
