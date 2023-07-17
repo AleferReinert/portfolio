@@ -23,8 +23,9 @@ export const Wrapper = styled.div`
 export const ImageWrapper = styled.div`
   ${({ theme }) => css`
     position: relative;
-    aspect-ratio: 1/1;
     width: 100%;
+    height: min-content;
+    aspect-ratio: 1/1;
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       max-width: 24rem;

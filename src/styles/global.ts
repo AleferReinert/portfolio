@@ -45,6 +45,7 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
       }
 
+      a:focus-visible,
       button:focus,
       svg:focus {
         outline: none;

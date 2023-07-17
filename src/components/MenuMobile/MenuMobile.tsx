@@ -4,7 +4,7 @@ import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import Social, { SocialItemProps } from 'components/Social/Social'
 import * as S from './MenuMobile.styles'
 
-type MenuMobileProps = {
+export type MenuMobileProps = {
   showMobileMenu: boolean
   setShowMobileMenu: Dispatch<SetStateAction<boolean>>
   menu: NavMenuItemProps[]
@@ -18,7 +18,7 @@ const MenuMobile = ({
   socials
 }: MenuMobileProps) => {
   return (
-    <S.Wrapper aria-hidden={!showMobileMenu}>
+    <S.Wrapper showMobileMenu={showMobileMenu}>
       <S.IconWrapper>
         <X title='Fechar menu' onClick={() => setShowMobileMenu(false)} />
       </S.IconWrapper>

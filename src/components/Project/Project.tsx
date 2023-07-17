@@ -23,7 +23,7 @@ const Project = ({
   return (
     <S.Wrapper role='listitem'>
       <S.ImageWrapper>
-        <Image src={img} alt='Imagem do projeto' fill loading='lazy' />
+        <Image src={img} alt='Imagem do projeto' loading='lazy' fill />
       </S.ImageWrapper>
       <S.Content>
         <S.Title>{title}</S.Title>

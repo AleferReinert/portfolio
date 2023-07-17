@@ -126,29 +126,31 @@ export const certificates = [
 
 export const projects = [
   {
-    title: 'Landing Page',
+    title: 'React Avançado',
     description:
-      'Projeto do curso "React Avançado: Crie aplicações com NextJS, Strapi e mais".',
+      'Projeto do curso "React Avançado: Crie aplicações com Next.js, Strapi e mais".',
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     websiteLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540028/portfolio/projects/landing-page.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/landing-page_rxporm.webp'
   },
   {
-    title: 'E-Commerce',
-    description: 'Loja virtual responsiva (em desenvolvimento).',
+    title: 'Minha lojinha',
+    description:
+      'Front end de um e-commerce fictício, ainda em desenvolvimento.',
     skills: 'React Sass Bootstrap',
     websiteLink: 'https://aleferreinert.github.io/react-commerce',
     repositoryLink: 'https://github.com/AleferReinert/react-commerce',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540028/portfolio/projects/e-commerce_em5p4w.jpg'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/e-commerce_trymjy.webp'
   },
   {
     title: 'Single Page',
-    description: 'Um simples website genérico de página única.',
+    description:
+      'Website responsivo de uma empresa fictícia, desenvolvido em página única.',
     skills: 'HTML JavaScript Less Gulp',
     websiteLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540029/portfolio/projects/single-page.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/single-page_wvrp0j.webp'
   },
   {
     title: 'Tic Tac Toe',
@@ -156,7 +158,7 @@ export const projects = [
     skills: 'React JSX CSS',
     websiteLink: 'https://aleferreinert.github.io/tic-tac-toe',
     repositoryLink: 'https://github.com/AleferReinert/tic-tac-toe',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540027/portfolio/projects/tic-tac-toe_pkfbqn.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689602179/portfolio/projects/tic-tac-toe_fu4onn.webp'
   },
   {
     title: 'Metronome',
@@ -165,7 +167,7 @@ export const projects = [
     skills: 'HTML JavaScript CSS',
     websiteLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540028/portfolio/projects/metronome_oi1bf2.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/metronome_wdn7fn.webp'
   },
   {
     title: 'Timer',
@@ -173,7 +175,7 @@ export const projects = [
     skills: 'HTML JavaScript CSS',
     websiteLink: 'https://aleferreinert.github.io/timer',
     repositoryLink: 'https://github.com/AleferReinert/timer',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540029/portfolio/projects/timer_dwfxup.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/timer_ervtcn.webp'
   },
   {
     title: 'Google Homepage',
@@ -181,7 +183,7 @@ export const projects = [
     skills: 'HTML JavaScript CSS',
     websiteLink: 'https://aleferreinert.github.io/google-homepage',
     repositoryLink: 'https://github.com/AleferReinert/google-homepage',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689540027/portfolio/projects/google-homepage_d1foik.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/google-homepage_epguos.webp'
   }
 ]
 

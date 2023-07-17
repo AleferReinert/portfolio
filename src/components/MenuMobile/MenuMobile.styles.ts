@@ -1,26 +1,51 @@
-import styled, { css } from 'styled-components'
+import styled, { DefaultTheme, css } from 'styled-components'
 import * as NavMenuStyles from 'components/NavMenu/NavMenu.styles'
 import { cssMediaQuery } from 'utils/helpers'
 import * as SocialStyles from 'components/Social/Social.styles'
+import { MenuMobileProps } from './MenuMobile'
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css`
+const wrapperModifiers = {
+  show: (theme: DefaultTheme) => css`
+    transition: opacity
+      (${theme.transition.duration.default} ${theme.transition.effect});
+    opacity: 1;
+    pointer-events: all;
+
+    ${NavMenuStyles.Wrapper} {
+      transition: all ${theme.transition.duration.slow}
+        ${theme.transition.effect} ${theme.transition.duration.slow};
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    ${SocialStyles.Wrapper} {
+      transition: width ${theme.transition.duration.slow}
+        ${theme.transition.effect} ${theme.transition.duration.slow};
+      width: 100%;
+    }
+  `,
+  hidden: (theme: DefaultTheme) => css`
+    transition: opacity ${theme.transition.duration.default}
+      ${theme.transition.effect} ${theme.transition.duration.slow};
+    opacity: 0;
+    pointer-events: none;
+  `
+}
+
+export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
+  ${({ theme, showMobileMenu }) => css`
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background: ${theme.colors.background};
     z-index: ${theme.layers.menu};
     padding-bottom: ${theme.spacings.xxlarge};
-    transition: opacity ${theme.transition.duration.default}
-      ${theme.transition.effect} ${theme.transition.duration.slow};
-    opacity: 0;
-    pointer-events: none;
+    display: flex;
 
     ${NavMenuStyles.Wrapper} {
       transition: all ${theme.transition.duration.slow}
@@ -36,29 +61,12 @@ export const Wrapper = styled.div`
       overflow: hidden;
     }
 
-    &[aria-hidden='false'] {
-      opacity: 1;
-      pointer-events: all;
-      transition: opacity ${theme.transition.duration.default}
-        ${theme.transition.effect};
-
-      ${NavMenuStyles.Wrapper} {
-        transition: all ${theme.transition.duration.slow}
-          ${theme.transition.effect} ${theme.transition.duration.slow};
-        transform: translateY(0);
-        opacity: 1;
-      }
-
-      ${SocialStyles.Wrapper} {
-        transition: width ${theme.transition.duration.slow}
-          ${theme.transition.effect} ${theme.transition.duration.slow};
-        width: 100%;
-      }
-    }
-
     ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
       display: none;
     }
+
+    ${showMobileMenu && wrapperModifiers.show(theme)};
+    ${!showMobileMenu && wrapperModifiers.hidden(theme)};
   `}
 `
 
