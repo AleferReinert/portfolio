@@ -8,9 +8,11 @@ type ProjectsProps = {
 const Projects = ({ projects }: ProjectsProps) => {
   return (
     <S.Wrapper role='list'>
-      {projects.map((project, index) => (
-        <Project key={index} {...project} />
-      ))}
+      {projects.map((project, index) => {
+        const lazy = index === 0 ? true : false
+
+        return <Project key={index} lazy={lazy} {...project} />
+      })}
     </S.Wrapper>
   )
 }

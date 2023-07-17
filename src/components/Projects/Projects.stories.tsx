@@ -30,9 +30,14 @@ export const Projects: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const projects = canvas.getAllByRole('listitem')
+    const firstImage = canvas.getAllByRole('img')[0]
 
     await step('Minimal two projects', () => {
       expect(projects.length).toBeGreaterThan(1)
+    })
+
+    await step('First image without loading lazy', () => {
+      expect(firstImage).not.toHaveAttribute('loading')
     })
 
     jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {

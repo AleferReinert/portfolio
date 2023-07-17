@@ -13,21 +13,26 @@ export type ProjectProps = {
   img: string
 }
 
+type lazyProps = {
+  lazy: boolean
+}
+
 const Project = ({
   title,
   description,
   skills,
   repositoryLink,
   websiteLink,
-  img
-}: ProjectProps) => {
+  img,
+  lazy
+}: ProjectProps & lazyProps) => {
   return (
     <S.Wrapper role='listitem'>
       <S.ImageWrapper>
         <Image
           src={img}
           alt='Imagem do projeto'
-          loading='lazy'
+          priority={lazy}
           fill
           sizes={`
             (min-width: ${theme.breakpoints.xsmall}) 328px,
