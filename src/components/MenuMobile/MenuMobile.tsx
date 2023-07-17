@@ -20,7 +20,7 @@ const MenuMobile = ({
   return (
     <S.Wrapper aria-hidden={!showMobileMenu}>
       <S.CloseMenu title='Fechar menu' onClick={() => setShowMobileMenu(false)}>
-        <X aria-hidden />
+        <X />
       </S.CloseMenu>
       <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
       <Social socials={socials} />
