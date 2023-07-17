@@ -15,5 +15,10 @@ export const Wrapper = styled.h2`
       padding-bottom: ${theme.spacings.small};
       margin-bottom: ${theme.spacings.xlarge};
     }
+
+    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+      font-size: ${theme.font.sizes.huge};
+      margin-bottom: ${theme.spacings.xxlarge};
+    }
   `}
 `

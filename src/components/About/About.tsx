@@ -2,14 +2,22 @@ import { ReactNode } from 'react'
 import * as S from './About.styles'
 
 type AboutProps = {
-  title: ReactNode
+  name: string
+  role: string
   description: ReactNode
 }
 
-const About = ({ title, description }: AboutProps) => {
+const About = ({ name, role, description }: AboutProps) => {
   return (
     <S.Wrapper>
-      <S.Title>{title}</S.Title>
+      <S.TitleWrapper>
+        <S.Title>
+          <S.FirstLine>Olá, meu nome é</S.FirstLine>
+          <S.Name>{name}</S.Name>
+        </S.Title>
+        <S.Role>{role}</S.Role>
+      </S.TitleWrapper>
+      <S.Subtitle>Sobre mim</S.Subtitle>
       <S.Description role='paragraph'>{description}</S.Description>
     </S.Wrapper>
   )

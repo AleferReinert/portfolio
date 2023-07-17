@@ -49,26 +49,14 @@ export const menu = [
 ]
 
 export const about = {
-  title: (
-    <>
-      <span>Olá, meu nome é</span>
-      <span>Alefer Reinert</span>
-      <span>
-        e sou desenvolvedor <span> front end</span>.
-      </span>
-    </>
-  ),
+  name: 'Alefer Reinert',
+  role: 'Desenvolvedor front end',
   description: (
     <>
       <p>
-        Nos meus mais de 5 anos de experiência, atuei principalmente no
-        desenvolvimento de e-commerces, websites, wordpress e e-mail marketing.
-      </p>
-      <p>
-        Aprendi HTML e CSS por conta própria, isso lá por 2012, então
-        solidifiquei esse conhecimento no meu primeiro emprego na área, onde
-        também aprendi JQuery que era bem popular na época. Hoje meu foco
-        principal é o javascript e seus populares frameworks.
+        Dev desde 2012, aprendi sozinho e adquiri experiência nas duas empresas
+        que trabalhei. Já desenvolvi e-commerces, websites, wordpress e e-mail
+        marketing. Atualmente estudo JavaScript e seus frameworks.
       </p>
       <p>
         Além de codificar, sou uma pessoa apaixonada por doguinhos, música e

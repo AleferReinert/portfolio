@@ -29,6 +29,7 @@ const wrapperModifiers = {
       ${theme.transition.effect} ${theme.transition.duration.slow};
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
   `
 }
 
