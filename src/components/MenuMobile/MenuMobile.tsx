@@ -18,7 +18,7 @@ const MenuMobile = ({
   socials
 }: MenuMobileProps) => {
   return (
-    <S.Wrapper aria-hidden={!showMobileMenu} aria-label='menu mobile'>
+    <S.Wrapper aria-hidden={!showMobileMenu}>
       <S.CloseMenu title='Fechar menu' onClick={() => setShowMobileMenu(false)}>
         <X aria-hidden />
       </S.CloseMenu>
