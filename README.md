@@ -1,4 +1,4 @@
-# My Github Page
+# Portfolio
 
 React, Next.js, TypeScript, Styled Components and Storybook.
 

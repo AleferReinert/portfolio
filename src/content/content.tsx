@@ -80,7 +80,7 @@ export const skills = [
   { title: 'Storybook', icon: <Storybook aria-hidden /> },
   { title: 'Git', icon: <Git aria-hidden /> },
   { title: 'Testing Library', icon: <Testinglibrary aria-hidden /> },
-  { title: 'Graphql', icon: <Graphql aria-hidden /> },
+  { title: 'GraphQL', icon: <Graphql aria-hidden /> },
   { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
   { title: 'Gulp', icon: <Gulp aria-hidden /> },
   { title: 'Grunt', icon: <Grunt aria-hidden /> },
