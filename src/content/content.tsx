@@ -136,7 +136,7 @@ export const projects = [
     skills: 'HTML Less JavaScript Gulp',
     websiteLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/single-page_wvrp0j.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689701547/portfolio/projects/single-page_omkoyr.webp'
   },
   {
     title: 'Tic Tac Toe',
