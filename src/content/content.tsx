@@ -54,14 +54,12 @@ export const about = {
   description: (
     <>
       <p>
-        Dev desde 2012, aprendi sozinho e adquiri experiência nas duas empresas
-        que trabalhei. Já desenvolvi e-commerces, websites, wordpress e e-mail
-        marketing. Atualmente estudo JavaScript e seus frameworks.
-      </p>
-      <p>
-        Além de codificar, sou uma pessoa apaixonada por doguinhos, música e
-        saúde mental. Toco bateria desde criança e já tive algumas bandas,
-        inclusive gravei um CD em 2021. :)
+        Escrevo códigos desde 2012, adquiri experiência em duas empresas e em
+        meus projetos pessoais. Desenvolvi e-commerces, websites, wordpress e
+        e-mail marketing. Atualmente estou me aprofundando nos principais
+        frameworks (React, Next.js). <br />
+        Além de codificar, sou uma pessoa apaixonada por animais, música e saúde
+        mental.
       </p>
     </>
   )
