@@ -26,10 +26,10 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/devalefer/image/upload/v1689773151/portfolio/projects/portfolio_aabcwh.webp'
+          content='https://res.cloudinary.com/devalefer/image/upload/v1689779983/portfolio/projects/portfolio_hukteg.webp'
         />
         <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='1146' />
+        <meta property='og:image:height' content='630' />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
