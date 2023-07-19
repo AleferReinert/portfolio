@@ -24,8 +24,8 @@ export const Social: Story = {
     const socialLinks = canvas.getAllByRole('link')
     const wrapper = canvasElement.getElementsByTagName('nav')[0]
 
-    await step('Render 6 links with title attribute', () => {
-      expect(socialLinks.length).toBe(6)
+    await step('Render 4 links with title attribute', () => {
+      expect(socialLinks.length).toBe(4)
       for (const socialLink of socialLinks) {
         expect(socialLink).toHaveAttribute('title')
       }

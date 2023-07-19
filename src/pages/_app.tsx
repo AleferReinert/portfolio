@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:title' content='Alefer Reinert - Portfólio' />
         <meta
           property='og:description'
-          content='Desenvolvedor front end com experiência em React, Next.js, Storybook, Testing Library, etc.'
+          content='Desenvolvedor front end com experiência em React, Next.js, Styled Components, Storybook, Testing Library e outros.'
         />
         <meta
           property='og:image'

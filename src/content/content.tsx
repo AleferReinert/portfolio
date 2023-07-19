@@ -1,10 +1,4 @@
-import {
-  Facebook,
-  Github,
-  Mail,
-  Linkedin,
-  Youtube
-} from '@styled-icons/feather'
+import { Github, Mail, Linkedin } from '@styled-icons/feather'
 import { Whatsapp } from '@styled-icons/boxicons-logos'
 import {
   Html5,
@@ -175,11 +169,6 @@ export const skills = [
 
 export const social = [
   {
-    name: 'Facebook',
-    link: 'https://www.facebook.com/AleferReinert',
-    icon: <Facebook aria-hidden />
-  },
-  {
     name: 'Github',
     link: 'https://github.com/AleferReinert',
     icon: <Github aria-hidden />
@@ -198,10 +187,5 @@ export const social = [
     name: 'Whatsapp',
     link: 'https://wa.me/message/FSN72FDKNRO3O1',
     icon: <Whatsapp aria-hidden />
-  },
-  {
-    name: 'YouTube',
-    link: 'https://www.youtube.com/AleferReinert',
-    icon: <Youtube aria-hidden />
   }
 ]
