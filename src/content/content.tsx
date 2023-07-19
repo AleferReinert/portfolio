@@ -65,51 +65,6 @@ export const about = {
   )
 }
 
-export const skills = [
-  { title: 'HTML5', icon: <Html5 aria-hidden /> },
-  { title: 'CSS3', icon: <Css3 aria-hidden /> },
-  { title: 'JQuery', icon: <Jquery aria-hidden /> },
-  { title: 'JavaScript', icon: <Javascript aria-hidden /> },
-  { title: 'TypeScript', icon: <Typescript aria-hidden /> },
-  { title: 'LESS', icon: <Less aria-hidden /> },
-  { title: 'SASS', icon: <Sass aria-hidden /> },
-  { title: 'React', icon: <ReactLogo aria-hidden /> },
-  { title: 'Next.js', icon: <Nextdotjs aria-hidden /> },
-  { title: 'Storybook', icon: <Storybook aria-hidden /> },
-  { title: 'Git', icon: <Git aria-hidden /> },
-  { title: 'Testing Library', icon: <Testinglibrary aria-hidden /> },
-  { title: 'GraphQL', icon: <Graphql aria-hidden /> },
-  { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
-  { title: 'Gulp', icon: <Gulp aria-hidden /> },
-  { title: 'Grunt', icon: <Grunt aria-hidden /> },
-  { title: 'Strapi', icon: <Strapi aria-hidden /> },
-  { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> },
-  { title: 'Figma', icon: <Figma aria-hidden /> },
-  { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
-]
-
-export const certificates = [
-  {
-    title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
-    description: 'Udemy | Cursando'
-  },
-  {
-    title: 'Javascript Para Iniciantes',
-    description: 'Unova Cursos | Outubro/2022',
-    link: 'https://www.unovacursos.com.br/certificados/14304132340741204202210'
-  },
-  {
-    title: 'CC50: Introdução à Ciência da Computação',
-    description: 'Fundação Estudar | Setembro/2022',
-    link: 'https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf'
-  },
-  {
-    title: 'Formação Design Gráfico',
-    description: 'ProWay Informática | Fevereiro/2012',
-    link: 'https://drive.google.com/file/d/1dJErgNzdqUchbaEo7upZoSCO3GBYVRIv/view?usp=share_link'
-  }
-]
-
 export const projects = [
   {
     title: 'React Avançado',
@@ -171,6 +126,51 @@ export const projects = [
     repositoryLink: 'https://github.com/AleferReinert/google-homepage',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/google-homepage_epguos.webp'
   }
+]
+
+export const certificates = [
+  {
+    title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
+    description: 'Udemy | Cursando'
+  },
+  {
+    title: 'Javascript Para Iniciantes',
+    description: 'Unova Cursos | Outubro/2022',
+    link: 'https://www.unovacursos.com.br/certificados/14304132340741204202210'
+  },
+  {
+    title: 'CC50: Introdução à Ciência da Computação',
+    description: 'Fundação Estudar | Setembro/2022',
+    link: 'https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf'
+  },
+  {
+    title: 'Formação Design Gráfico',
+    description: 'ProWay Informática | Fevereiro/2012',
+    link: 'https://drive.google.com/file/d/1dJErgNzdqUchbaEo7upZoSCO3GBYVRIv/view?usp=share_link'
+  }
+]
+
+export const skills = [
+  { title: 'HTML5', icon: <Html5 aria-hidden /> },
+  { title: 'CSS3', icon: <Css3 aria-hidden /> },
+  { title: 'JQuery', icon: <Jquery aria-hidden /> },
+  { title: 'JavaScript', icon: <Javascript aria-hidden /> },
+  { title: 'TypeScript', icon: <Typescript aria-hidden /> },
+  { title: 'LESS', icon: <Less aria-hidden /> },
+  { title: 'SASS', icon: <Sass aria-hidden /> },
+  { title: 'React', icon: <ReactLogo aria-hidden /> },
+  { title: 'Next.js', icon: <Nextdotjs aria-hidden /> },
+  { title: 'Storybook', icon: <Storybook aria-hidden /> },
+  { title: 'Git', icon: <Git aria-hidden /> },
+  { title: 'Testing Library', icon: <Testinglibrary aria-hidden /> },
+  { title: 'GraphQL', icon: <Graphql aria-hidden /> },
+  { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
+  { title: 'Gulp', icon: <Gulp aria-hidden /> },
+  { title: 'Grunt', icon: <Grunt aria-hidden /> },
+  { title: 'Strapi', icon: <Strapi aria-hidden /> },
+  { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> },
+  { title: 'Figma', icon: <Figma aria-hidden /> },
+  { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
 ]
 
 export const social = [
