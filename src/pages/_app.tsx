@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }: AppProps) {
           name='keywords'
           content='HTML, CSS, JavaScript, TypeScript, Less, Sass, React, Next.js, Styled Components, Storybook, Jest, Testing Library, GraphQL, Photoshop, Grunt, Gulp, Figma, Jquery, Git, Bootstrap, Strapi'
         ></meta>
-        <meta property='fb:app_id' content='1735266403570170' />
         <meta property='og:url' content='https://aleferreinert.netlify.app' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content='Alefer Reinert - Portfólio' />
