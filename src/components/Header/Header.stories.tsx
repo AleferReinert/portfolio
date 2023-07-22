@@ -3,7 +3,7 @@ import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import { jsMediaQuery } from 'utils/helpers'
 import HeaderComponent from './Header'
-import theme from 'styles/theme'
+import theme from 'styles/themes/dark'
 import { menu, social } from 'content/content'
 
 const meta: Meta<typeof HeaderComponent> = {

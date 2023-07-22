@@ -1,4 +1,5 @@
 const theme = {
+  title: 'light',
   font: {
     family:
       "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
@@ -20,11 +21,11 @@ const theme = {
     }
   },
   colors: {
-    primary: '#48e194',
-    background: '#00344a',
-    backgroundSecondary: 'rgba(0, 0, 0, 0.25)',
-    heading: 'rgba(255,255,255,0.85)',
-    text: '#829BA6'
+    primary: '#00344a',
+    background: '#f5f5f5',
+    backgroundSecondary: 'rgba(0, 0, 0, 0.05)',
+    heading: '#313131',
+    text: '#595959'
   },
   spacings: {
     xxsmall: '0.4rem',

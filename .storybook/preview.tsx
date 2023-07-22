@@ -1,8 +1,8 @@
 import type { Preview } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from '../src/styles/global'
-import theme from '../src/styles/theme'
 import React from 'react'
+import theme from '../src/styles/themes/dark'
 
 const customViewports = {
   xxsmall: {
@@ -64,7 +64,7 @@ const preview: Preview = {
       values: [
         {
           name: 'Default',
-          value: theme.colors.darkBg
+          value: theme.colors.background
         }
       ]
     },

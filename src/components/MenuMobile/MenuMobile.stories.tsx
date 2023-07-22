@@ -3,7 +3,7 @@ import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import MenuMobileComponent from './MenuMobile'
 import { jsMediaQuery } from 'utils/helpers'
-import theme from 'styles/theme'
+import theme from 'styles/themes/dark'
 import { menu, social } from 'content/content'
 
 const meta: Meta<typeof MenuMobileComponent> = {

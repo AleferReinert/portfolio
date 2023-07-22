@@ -4,7 +4,8 @@ import { cssMediaQuery } from 'utils/helpers'
 export const Wrapper = styled.header`
   ${({ theme }) => css`
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     padding: ${theme.spacings.xsmall} ${theme.spacings.small};
     background-color: ${theme.colors.background};
 
@@ -24,6 +25,17 @@ export const Wrapper = styled.header`
       }
     }
   `}
+`
+
+export const SwitchWrapper = styled.div`
+  display: flex;
+  height: min-content;
+
+  .react-switch-handle {
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    top: 0.2rem !important;
+  }
 `
 
 export const IconWrapper = styled.div`

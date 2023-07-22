@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import ContainerComponent from './Container'
-import theme from 'styles/theme'
+import theme from 'styles/themes/dark'
 
 const meta: Meta<typeof ContainerComponent> = {
   title: 'Components/Container',

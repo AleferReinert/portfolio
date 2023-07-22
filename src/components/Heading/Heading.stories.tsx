@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import HeadingComponent from './Heading'
-import theme from 'styles/theme'
+import theme from 'styles/themes/dark'
 
 const meta: Meta<typeof HeadingComponent> = {
   title: 'Components/Heading',

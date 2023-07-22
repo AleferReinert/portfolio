@@ -4,7 +4,7 @@ import { expect } from '@storybook/jest'
 import SocialComponent from './Social'
 import { social } from 'content/content'
 import { jsMediaQuery } from 'utils/helpers'
-import theme from 'styles/theme'
+import theme from 'styles/themes/dark'
 
 const meta: Meta<typeof SocialComponent> = {
   title: 'Components/Social',

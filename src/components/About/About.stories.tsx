@@ -4,7 +4,7 @@ import { expect } from '@storybook/jest'
 import AboutComponent from './About'
 import { about } from 'content/content'
 import Container from 'components/Container/Container'
-import theme from 'styles/theme'
+import theme from 'styles/themes/dark'
 import { jsMediaQuery } from 'utils/helpers'
 
 const meta: Meta<typeof AboutComponent> = {

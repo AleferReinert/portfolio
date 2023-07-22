@@ -1,18 +1,22 @@
 import { SocialItemProps } from 'components/Social/Social'
 import { useEffect, useState } from 'react'
+import { useTheme } from 'styled-components'
 import { Menu } from '@styled-icons/feather'
-import MenuMobile from 'components/MenuMobile/MenuMobile'
 import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
+import MenuMobile from 'components/MenuMobile/MenuMobile'
 import * as S from './Header.styles'
+import Switch from 'components/Switch/Switch'
 
 type HeaderProps = {
   menu: NavMenuItemProps[]
   socials: SocialItemProps[]
+  toggleTheme: () => void
 }
 
-const Header = ({ menu, socials }: HeaderProps) => {
+const Header = ({ menu, socials, toggleTheme }: HeaderProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [fixedHeader, setFixedHeader] = useState('fixed')
+  const theme = useTheme()
 
   useEffect(() => {
     let prev = window.scrollY
@@ -29,6 +33,9 @@ const Header = ({ menu, socials }: HeaderProps) => {
 
   return (
     <S.Wrapper className={fixedHeader}>
+      <S.SwitchWrapper>
+        <Switch toggleTheme={toggleTheme} theme={theme.title} />
+      </S.SwitchWrapper>
       <S.IconWrapper>
         <Menu title='Abrir menu' onClick={() => setShowMobileMenu(true)} />
       </S.IconWrapper>

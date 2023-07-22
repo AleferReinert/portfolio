@@ -17,13 +17,17 @@ import Skills from 'components/Skills/Skills'
 import Social from 'components/Social/Social'
 import * as S from 'styles/home'
 
-export default function Home() {
+type HomeProps = {
+  toggleTheme(): void
+}
+
+export default function Home({ toggleTheme }: HomeProps) {
   return (
     <>
       <Head>
         <title>Alefer Reinert - Desenvolvedor Front End</title>
       </Head>
-      <Header menu={menu} socials={social} />
+      <Header menu={menu} socials={social} toggleTheme={toggleTheme} />
       <S.Wrapper>
         <S.Main>
           <S.Section id='about'>

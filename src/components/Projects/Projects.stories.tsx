@@ -5,7 +5,7 @@ import { jsMediaQuery } from 'utils/helpers'
 import { projects } from 'content/content'
 import Container from 'components/Container/Container'
 import ProjectsComponent from './Projects'
-import theme from 'styles/theme'
+import theme from 'styles/themes/dark'
 
 const meta: Meta<typeof ProjectsComponent> = {
   title: 'Components/Projects',

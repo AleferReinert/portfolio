@@ -84,6 +84,7 @@ export const Skills = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
     font-size: ${theme.font.sizes.xsmall};
+    font-weight: ${theme.font.weights.regular};
     margin: ${theme.spacings.medium} 0;
 
     ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
