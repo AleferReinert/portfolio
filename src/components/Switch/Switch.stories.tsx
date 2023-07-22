@@ -1,11 +1,15 @@
 import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { expect, jest } from '@storybook/jest'
 import SwitchComponent from './Switch'
 
 const meta: Meta<typeof SwitchComponent> = {
   title: 'Components/Switch',
-  component: SwitchComponent
+  component: SwitchComponent,
+  args: {
+    theme: 'dark',
+    toggleTheme: jest.fn()
+  }
 }
 
 export default meta
