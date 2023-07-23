@@ -3,7 +3,7 @@ import * as S from './Switch.styles'
 type SwitchProps = {
   toggleTheme: () => void
   theme: string
-} & HTMLInputElement
+}
 
 const Switch = ({ toggleTheme, theme = 'dark' }: SwitchProps) => {
   return (
