@@ -1,8 +1,8 @@
+import { Github as GithubIcon, Link as LinkIcon } from '@styled-icons/feather'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as S from './Project.styles'
-import { Github as GithubIcon, Link as LinkIcon } from '@styled-icons/feather'
-import { useTheme } from 'styled-components'
+import theme from 'styles/themes/dark'
 
 export type ProjectProps = {
   title: string
@@ -26,8 +26,6 @@ const Project = ({
   img,
   lazy
 }: ProjectProps & lazyProps) => {
-  const { breakpoints } = useTheme()
-
   return (
     <S.Wrapper role='listitem'>
       <S.ImageWrapper>
@@ -37,9 +35,9 @@ const Project = ({
           priority={lazy}
           fill
           sizes={`
-            (min-width: ${breakpoints.xsmall}) 328px,
-            (min-width: ${breakpoints.small}) 240px, 
-            (min-width: ${breakpoints.medium}) 280px,
+            (min-width: ${theme.breakpoints.xsmall}) 328px,
+            (min-width: ${theme.breakpoints.small}) 240px, 
+            (min-width:${theme.breakpoints.medium}) 280px,
             288px`}
         />
       </S.ImageWrapper>

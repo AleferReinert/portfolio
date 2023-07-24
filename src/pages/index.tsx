@@ -18,7 +18,7 @@ import Social from 'components/Social/Social'
 import * as S from 'styles/home'
 
 type HomeProps = {
-  toggleTheme(): void
+  toggleTheme: () => void
 }
 
 export default function Home({ toggleTheme }: HomeProps) {

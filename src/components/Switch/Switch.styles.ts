@@ -27,7 +27,7 @@ export const Handle = styled.div`
     height: 2rem;
     background-color: ${theme.colors.background};
     border: 0.2rem solid ${theme.colors.text};
-    transition: transform ${theme.transition.duration.default}
-      ${theme.transition.effect};
+    transition: transform var(--transition-duration-default)
+      var(--transition-effect);
   `}
 `

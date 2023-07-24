@@ -5,15 +5,13 @@ export const Wrapper = styled.div``
 export const Title = styled.h3`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.weights.bold};
-    margin-top: -${theme.spacings.xxsmall};
-    margin-bottom: ${theme.spacings.xxsmall};
+    font-size: var(--font-medium);
+    font-weight: var(--font-bold);
+    margin-top: -var(--spacing-xxsmall);
+    margin-bottom: var(--spacing-xxsmall);
   `}
 `
 
 export const Description = styled.p`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
-  `}
+  font-size: var(--font-small);
 `

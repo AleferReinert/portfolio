@@ -45,13 +45,13 @@ export const About: Story = {
       expect(description).toBeInTheDocument()
     })
 
-    jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
+    jsMediaQuery.lessThan('--breakpoint-small', async () => {
       await step('Without subtitle on mobile', () => {
         expect(subtitle).not.toBeInTheDocument()
       })
     })
 
-    jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
+    jsMediaQuery.greaterThan('--breakpoint-small', async () => {
       await step('Render subtitle on desktop', () => {
         expect(subtitle).toBeInTheDocument()
       })

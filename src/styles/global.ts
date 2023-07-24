@@ -1,7 +1,41 @@
 import { createGlobalStyle, css } from 'styled-components'
-import { cssMediaQuery } from 'utils/helpers'
 
 const GlobalStyles = createGlobalStyle`
+    :root {
+        --font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        --font-light: 300;
+        --font-regular: 400;
+        --font-bold: 700;
+        --font-extrabold: 800;
+        --font-xxsmall: 1.4rem;
+        --font-xsmall: 1.6rem;
+        --font-small: 1.8rem;
+        --font-medium: 2rem;
+        --font-large: 2.4rem;
+        --font-xlarge: 2.8rem;
+        --font-xxlarge: 3.6rem;
+        --font-huge: 4.4rem;
+        --spacing-xxsmall: 0.4rem;
+        --spacing-xsmall: 0.8rem;
+        --spacing-small: 1.6rem;
+        --spacing-medium: 2.4rem;
+        --spacing-large: 3.2rem;
+        --spacing-xlarge: 4rem;
+        --spacing-xxlarge: 4.8rem;
+        --spacing-huge: 8rem;
+        --transition-effect: linear;
+        --transition-duration-slow: .3s;
+        --transition-duration-default: .15s;
+        --breakpoint-xxsmall: 320px;
+        --breakpoint-xsmall: 360px;
+        --breakpoint-small: 768px;
+        --breakpoint-medium: 1024px;
+        --breakpoint-large: 1366px;
+        --breakpoint-xlarge: 1920px;
+        --icon-small: 2.8rem;
+        --icon-medium: 3.6rem;
+        --icon-large: 4.4rem;
+    }
 
     @font-face {
         font-display: swap; 
@@ -39,16 +73,16 @@ const GlobalStyles = createGlobalStyle`
       html {
         font-size: 62.5%;
 
-        ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+        @media (min-width: ${theme.breakpoints.small}) {
           scroll-behavior: smooth;
         }
       }
 
       body {
         color: ${theme.colors.text};
-        font-family: ${theme.font.family};
-        font-size: ${theme.font.sizes.small};
-        font-weight: ${theme.font.weights.light};
+        font-family: var(--font-family);
+        font-size: var(--font-small);
+        font-weight: var(--font-light);
         background-color: ${theme.colors.background};
         overflow-x: hidden;
       }

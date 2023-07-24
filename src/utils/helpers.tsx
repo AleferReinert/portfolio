@@ -16,16 +16,6 @@ export const hexToRGB = (hexCode: string) => {
   return `rgb(${r}, ${g}, ${b})`
 }
 
-// Return a css media query with breakpoints of the theme
-export const cssMediaQuery = {
-  lessThan: (themeBreakpoint: string) => {
-    return `@media (max-width: ${pxToNumber(themeBreakpoint) - 1}px)`
-  },
-  greaterThan: (themeBreakpoint: string) => {
-    return `@media (min-width: ${pxToNumber(themeBreakpoint)}px)`
-  }
-}
-
 // Scripts only media queries passed
 export const jsMediaQuery = {
   lessThan: (breakpoint: string, myFunction: () => void) => {

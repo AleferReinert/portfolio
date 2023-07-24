@@ -1,20 +1,19 @@
 import styled, { css } from 'styled-components'
-import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    margin: 0 ${theme.spacings.small};
+    margin: 0 var(--spacing-small);
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      margin: 0 ${theme.spacings.medium};
+    @media (min-width: ${theme.breakpoints.small}) {
+      margin: 0 var(--spacing-medium);
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+    @media (min-width: ${theme.breakpoints.medium}) {
       max-width: none;
       margin: 0;
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.large)} {
+    @media (min-width: ${theme.breakpoints.large}) {
       max-width: 100rem;
     }
   `}

@@ -1,21 +1,20 @@
 import styled, { css } from 'styled-components'
-import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: ${theme.spacings.xsmall};
-    row-gap: ${theme.spacings.large};
+    column-gap: var(--spacing-xsmall);
+    row-gap: var(--spacing-large);
     justify-content: space-around;
     justify-items: center;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+    @media (min-width: ${theme.breakpoints.small}) {
       grid-template-columns: repeat(4, 1fr);
-      row-gap: ${theme.spacings.xlarge};
+      row-gap: var(--spacing-xlarge);
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+    @media (min-width: ${theme.breakpoints.medium}) {
       grid-template-columns: repeat(5, 1fr);
     }
   `}
@@ -26,24 +25,22 @@ export const Skill = styled.div`
 `
 
 export const Title = styled.h3`
-  ${({ theme }) => css`
-    margin-top: ${theme.spacings.xsmall};
-    font-size: ${theme.font.sizes.xsmall};
-    font-weight: ${theme.font.weights.regular};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  `}
+  margin-top: var(--spacing-xsmall);
+  font-size: var(--font-xsmall);
+  font-weight: var(--font-regular);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    width: ${theme.icons.sizes.medium};
+    width: var(--icon-medium);
     margin: 0 auto;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
-      width: ${theme.icons.sizes.large};
+    @media (min-width: ${theme.breakpoints.medium}) {
+      width: var(--icon-large);
     }
   `}
 `

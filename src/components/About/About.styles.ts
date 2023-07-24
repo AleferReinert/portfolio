@@ -1,15 +1,14 @@
 import styled, { css } from 'styled-components'
-import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.div``
 
 export const TitleWrapper = styled.div`
   ${({ theme }) => css`
-    margin-bottom: ${theme.spacings.xlarge};
+    margin-bottom: var(--spacing-xlarge);
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      margin-bottom: ${theme.spacings.huge};
-      margin-top: ${theme.spacings.large};
+    @media (min-width: ${theme.breakpoints.small}) {
+      margin-bottom: var(--spacing-huge);
+      margin-top: var(--spacing-large);
     }
   `}
 `
@@ -21,20 +20,18 @@ export const Title = styled.h1`
 `
 
 export const FirstLine = styled.div`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.large};
-    font-weight: ${theme.font.weights.light};
-  `}
+  font-size: var(--font-large);
+  font-weight: var(--font-light);
 `
 
 export const Name = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.huge};
-    font-weight: ${theme.font.weights.extraBold};
-    margin-bottom: ${theme.spacings.xsmall};
+    font-size: var(--font-huge);
+    font-weight: var(--font-extraBold);
+    margin-bottom: var(--spacing-xsmall);
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      font-size: calc(${theme.font.sizes.huge} * 1.4);
+    @media (min-width: ${theme.breakpoints.small}) {
+      font-size: calc(var(--font-huge) * 1.4);
     }
   `}
 `
@@ -42,11 +39,11 @@ export const Name = styled.div`
 export const Role = styled.h2`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.small};
-    margin-bottom: ${theme.spacings.xlarge};
+    font-size: var(--font-small);
+    margin-bottom: var(--spacing-xlarge);
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      font-size: ${theme.font.sizes.medium};
+    @media (min-width: ${theme.breakpoints.small}) {
+      font-size: var(--font-medium);
     }
   `}
 `
@@ -55,9 +52,9 @@ export const Subtitle = styled.h3`
   ${({ theme }) => css`
     text-align: center;
     color: ${theme.colors.heading};
-    font-size: ${theme.font.sizes.xxlarge};
+    font-size: var(--font-xxlarge);
 
-    ${cssMediaQuery.lessThan(theme.breakpoints.small)} {
+    @media (max-width: calc(var(--breakpoint-small) -1)) {
       display: none;
     }
   `}
@@ -67,17 +64,17 @@ export const Description = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    gap: ${theme.spacings.large};
+    gap: var(--spacing-large);
 
     p::first-letter {
-      margin-left: ${theme.spacings.medium};
+      margin-left: var(--spacing-medium);
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+    @media (min-width: ${theme.breakpoints.small}) {
       text-align: center;
       max-width: 80rem;
-      margin: ${theme.spacings.xlarge} auto;
-      font-size: ${theme.font.sizes.medium};
+      margin: var(--spacing-xlarge) auto;
+      font-size: var(--font-medium);
     }
   `}
 `

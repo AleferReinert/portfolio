@@ -1,20 +1,19 @@
 import styled, { css } from 'styled-components'
-import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+    @media (min-width: ${theme.breakpoints.medium}) {
       display: grid;
       grid-template-columns: max-content auto;
-      gap: ${theme.spacings.huge};
-      padding: 0 ${theme.spacings.huge};
+      gap: var(--spacing-huge);
+      padding: 0 var(--spacing-huge);
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.large)} {
+    @media (min-width: ${theme.breakpoints.large}) {
       display: grid;
       grid-template-columns: max-content max-content;
       justify-content: center;
-      gap: ${theme.spacings.huge};
+      gap: var(--spacing-huge);
     }
   `}
 `
@@ -25,29 +24,29 @@ export const Main = styled.main`
 
 export const Section = styled.section`
   ${({ theme }) => css`
-    padding-top: ${theme.spacings.xxlarge};
+    padding-top: var(--spacing-xxlarge);
 
     &:last-child {
-      padding-bottom: ${theme.spacings.huge};
+      padding-bottom: var(--spacing-huge);
     }
 
-    ${cssMediaQuery.lessThan(theme.breakpoints.small)} {
+    @media (max-width: calc(var(--breakpoint-small) -1)) {
       &:first-child {
-        padding-top: ${theme.spacings.small};
+        padding-top: var(--spacing-small);
       }
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      padding-top: ${theme.spacings.huge};
+    @media (min-width: ${theme.breakpoints.small}) {
+      padding-top: var(--spacing-huge);
 
       &:last-child {
         padding-bottom: 0;
       }
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+    @media (min-width: ${theme.breakpoints.medium}) {
       &:last-child {
-        padding-bottom: ${theme.spacings.xlarge};
+        padding-bottom: var(--spacing-xlarge);
       }
     }
   `}
@@ -57,19 +56,19 @@ export const SocialWrapper = styled.footer`
   ${({ theme }) => css`
     display: none;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+    @media (min-width: ${theme.breakpoints.small}) {
       display: block;
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.medium)} {
+    @media (min-width: ${theme.breakpoints.medium}) {
       position: sticky;
       top: 0;
       height: 100vh;
-      width: ${theme.icons.sizes.small};
+      width: var(--icon-small);
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.large)} {
-      transform: translateX(-${theme.icons.sizes.small});
+    @media (min-width: ${theme.breakpoints.large}) {
+      transform: translateX(-var(--icon-small));
     }
   `}
 `

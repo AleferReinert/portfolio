@@ -1,24 +1,23 @@
 import styled, { css } from 'styled-components'
-import { cssMediaQuery } from 'utils/helpers'
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${theme.spacings.xsmall} ${theme.spacings.small};
+    padding: var(--spacing-xsmall) var(--spacing-small);
     background-color: ${theme.colors.background};
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
-      padding: ${theme.spacings.small} ${theme.spacings.large};
+    @media (min-width: ${theme.breakpoints.small}) {
+      padding: var(--spacing-small) var(--spacing-large);
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: ${theme.layers.menu};
+      z-index: 1;
       transform: translateY(-100%);
-      transition: transform ${theme.transition.duration.slow}
-        ${theme.transition.effect};
+      transition: transform var(--transition-duration-slow)
+        var(--transition-effect);
 
       &.fixed {
         transform: translateY(0);
@@ -41,12 +40,12 @@ export const SwitchWrapper = styled.div`
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
     svg {
-      width: ${theme.icons.sizes.medium};
+      width: var(--icon-medium);
       color: ${theme.colors.primary};
       cursor: pointer;
     }
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+    @media (min-width: ${theme.breakpoints.small}) {
       display: none;
     }
   `}
@@ -56,7 +55,7 @@ export const MenuDesktop = styled.div`
   ${({ theme }) => css`
     display: none;
 
-    ${cssMediaQuery.greaterThan(theme.breakpoints.small)} {
+    @media (min-width: ${theme.breakpoints.small}) {
       display: flex;
     }
   `}

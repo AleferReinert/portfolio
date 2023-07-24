@@ -1,9 +1,9 @@
 import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import ProjectComponent from './Project'
 import { projects } from 'content/content'
 import Container from 'components/Container/Container'
+import ProjectComponent from './Project'
 
 const meta: Meta<typeof ProjectComponent> = {
   title: 'Components/Project',
