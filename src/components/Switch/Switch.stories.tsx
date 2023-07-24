@@ -3,7 +3,7 @@ import { userEvent, within } from '@storybook/testing-library'
 import { expect, jest } from '@storybook/jest'
 import SwitchComponent from './Switch'
 import { ThemeProvider } from 'styled-components'
-import light from 'styles/themes/light'
+import { light } from 'styles/themes'
 
 const meta: Meta<typeof SwitchComponent> = {
   title: 'Components/Switch',

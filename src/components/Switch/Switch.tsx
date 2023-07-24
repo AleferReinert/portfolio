@@ -1,11 +1,7 @@
+import { ThemeProps } from 'pages'
 import * as S from './Switch.styles'
 
-type SwitchProps = {
-  toggleTheme: () => void
-  theme: string
-}
-
-const Switch = ({ toggleTheme, theme = 'dark' }: SwitchProps) => {
+const Switch = ({ toggleTheme, theme }: ThemeProps) => {
   return (
     <S.Wrapper>
       <input

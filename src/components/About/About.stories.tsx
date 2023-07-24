@@ -1,12 +1,12 @@
 import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import AboutComponent from './About'
 import { about } from 'content/content'
-import Container from 'components/Container/Container'
-import theme from 'styles/themes/dark'
+import { dark as theme } from 'styles/themes'
 import { jsMediaQuery } from 'utils/helpers'
 import { breakpoints } from 'styles/global'
+import AboutComponent from './About'
+import Container from 'components/Container/Container'
 
 const meta: Meta<typeof AboutComponent> = {
   title: 'Components/About',

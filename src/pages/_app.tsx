@@ -3,14 +3,13 @@ import { ThemeProvider } from 'styled-components'
 import { useState } from 'react'
 import GlobalStyles from 'styles/global'
 import Head from 'next/head'
-import dark from 'styles/themes/dark'
-import light from 'styles/themes/light'
+import { light, dark } from 'styles/themes'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState(dark)
+  const [theme, setTheme] = useState('dark')
 
   const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light)
+    theme === 'light' ? setTheme('dark') : setTheme('light')
   }
 
   return (
@@ -39,9 +38,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme === 'light' ? light : dark}>
         <GlobalStyles />
-        <Component toggleTheme={toggleTheme} {...pageProps} />
+        <Component theme={theme} toggleTheme={toggleTheme} {...pageProps} />
       </ThemeProvider>
     </>
   )

@@ -2,8 +2,7 @@ import type { Preview } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles, { breakpoints } from '../src/styles/global'
 import React from 'react'
-import themeDark from '../src/styles/themes/dark'
-import themeLight from '../src/styles/themes/light'
+import { dark, light } from '../src/styles/themes'
 
 const customViewports = {
   xxsmall: {
@@ -52,7 +51,7 @@ const customViewports = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={themeDark}>
+    <ThemeProvider theme={dark}>
       <GlobalStyles />
       <Story />
     </ThemeProvider>
@@ -65,11 +64,11 @@ const preview: Preview = {
       values: [
         {
           name: 'Light',
-          value: themeLight.colors.background
+          value: light.colors.background
         },
         {
           name: 'Dark',
-          value: themeDark.colors.background
+          value: dark.colors.background
         }
       ]
     },
