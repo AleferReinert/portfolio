@@ -1,15 +1,13 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Wrapper = styled.div``
 
 export const Title = styled.h3`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
-    font-size: var(--font-medium);
-    font-weight: var(--font-bold);
-    margin-top: calc(var(--spacing-xxsmall) * -1);
-    margin-bottom: var(--spacing-xxsmall);
-  `}
+  color: ${(props) => props.theme.colors.primary};
+  font-size: var(--font-medium);
+  font-weight: var(--font-bold);
+  margin-top: calc(var(--spacing-xxsmall) * -1);
+  margin-bottom: var(--spacing-xxsmall);
 `
 
 export const Description = styled.p`

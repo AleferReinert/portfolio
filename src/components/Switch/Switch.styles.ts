@@ -1,33 +1,29 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Wrapper = styled.label`
-  ${({ theme }) => css`
-    display: inline-flex;
-    width: 4rem;
-    height: 2rem;
-    background-color: ${theme.colors.text};
-    border-radius: 1rem;
+  display: inline-flex;
+  width: 4rem;
+  height: 2rem;
+  background-color: ${(props) => props.theme.colors.text};
+  border-radius: 1rem;
 
-    input {
-      position: absolute;
-      opacity: 0;
-      z-index: -1;
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
 
-      &:checked + ${Handle} {
-        transform: translateX(100%);
-      }
+    &:checked + div {
+      transform: translateX(100%);
     }
-  `}
+  }
 `
 
 export const Handle = styled.div`
-  ${({ theme }) => css`
-    border-radius: 100%;
-    width: 2rem;
-    height: 2rem;
-    background-color: ${theme.colors.background};
-    border: 0.2rem solid ${theme.colors.text};
-    transition: transform var(--transition-duration-default)
-      var(--transition-effect);
-  `}
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  background-color: ${(props) => props.theme.colors.background};
+  border: 0.2rem solid ${(props) => props.theme.colors.text};
+  transition: transform var(--transition-duration-default)
+    var(--transition-effect);
 `

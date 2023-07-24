@@ -1,22 +1,20 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    background-color: ${theme.colors.backgroundSecondary};
-    width: 100%;
-    max-width: calc(${breakpoints.xsmall}) - calc(${breakpoints.small} * 2));
-    align-self: center;
+  display: flex;
+  flex-direction: column;
+  background-color: ${(props) => props.theme.colors.backgroundSecondary};
+  width: 100%;
+  max-width: calc(${breakpoints.xsmall}) - calc(${breakpoints.small} * 2);
+  align-self: center;
 
-    @media (min-width: ${breakpoints.small}) {
-      justify-content: space-between;
-      flex-direction: row;
-      max-width: none;
-      align-self: auto;
-    }
-  `}
+  @media (min-width: ${breakpoints.small}) {
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: none;
+    align-self: auto;
+  }
 `
 
 export const ImageWrapper = styled.div`
@@ -71,37 +69,32 @@ export const Description = styled.p`
 `
 
 export const Skills = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
-    font-size: var(--font-xsmall);
-    font-weight: var(--font-regular);
-    margin: var(--spacing-medium) 0;
+  color: ${(props) => props.theme.colors.primary};
+  font-size: var(--font-xsmall);
+  font-weight: var(--font-regular);
+  margin: var(--spacing-medium) 0;
 
-    @media (min-width: ${breakpoints.medium}) {
-      margin: var(--spacing-large) 0;
-    }
-  `}
+  @media (min-width: ${breakpoints.medium}) {
+    margin: var(--spacing-large) 0;
+  }
 `
 
 export const IconsWrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    gap: var(--spacing-small);
+  display: flex;
+  gap: var(--spacing-small);
+
+  svg {
+    height: var(--font-large);
+    transition: all var(--transition-duration-default) var(--transition-effect);
+  }
+
+  a:hover {
+    color: ${(props) => props.theme.colors.primary};
 
     svg {
-      height: var(--font-large);
-      transition: all var(--transition-duration-default)
-        var(--transition-effect);
+      animation: rotateFrom180 var(--transition-duration-slow);
     }
-
-    a:hover {
-      color: ${theme.colors.primary};
-
-      svg {
-        animation: rotateFrom180 var(--transition-duration-slow);
-      }
-    }
-  `}
+  }
 
   @keyframes rotateFrom180 {
     from {

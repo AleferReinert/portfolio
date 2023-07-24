@@ -1,6 +1,6 @@
+import { breakpoints } from 'styles/global'
 import styled from 'styled-components'
 import * as ProjectStyles from 'components/Project/Project.styles'
-import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.div`
   display: flex;

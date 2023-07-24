@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.div``
@@ -13,9 +13,7 @@ export const TitleWrapper = styled.div`
 `
 
 export const Title = styled.h1`
-  ${({ theme }) => css`
-    color: ${theme.colors.heading};
-  `}
+  color: ${(props) => props.theme.colors.heading};
 `
 
 export const FirstLine = styled.div`
@@ -34,27 +32,23 @@ export const Name = styled.div`
 `
 
 export const Role = styled.h2`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
-    font-size: var(--font-small);
-    margin-bottom: var(--spacing-xlarge);
+  color: ${(props) => props.theme.colors.primary};
+  font-size: var(--font-small);
+  margin-bottom: var(--spacing-xlarge);
 
-    @media (min-width: ${breakpoints.small}) {
-      font-size: var(--font-medium);
-    }
-  `}
+  @media (min-width: ${breakpoints.small}) {
+    font-size: var(--font-medium);
+  }
 `
 
 export const Subtitle = styled.h3`
-  ${({ theme }) => css`
-    text-align: center;
-    color: ${theme.colors.heading};
-    font-size: var(--font-xxlarge);
+  text-align: center;
+  color: ${(props) => props.theme.colors.heading};
+  font-size: var(--font-xxlarge);
 
-    @media (max-width: calc(${breakpoints.small} -1)) {
-      display: none;
-    }
-  `}
+  @media (max-width: calc(${breakpoints.small} -1)) {
+    display: none;
+  }
 `
 
 export const Description = styled.div`

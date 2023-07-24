@@ -27,7 +27,7 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
-  ${({ theme, showMobileMenu }) => css`
+  ${({ showMobileMenu }) => css`
     position: fixed;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: ${theme.colors.background};
+    background: ${(props) => props.theme.colors.background};
     z-index: 1;
     padding-bottom: var(--spacing-xxlarge);
     transition: opacity var(--transition-duration-default)
@@ -66,15 +66,13 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
 `
 
 export const IconWrapper = styled.div`
-  ${({ theme }) => css`
-    align-self: end;
-    margin-top: var(--spacing-xsmall);
-    margin-right: var(--spacing-small);
+  align-self: end;
+  margin-top: var(--spacing-xsmall);
+  margin-right: var(--spacing-small);
 
-    svg {
-      width: var(--icon-medium);
-      color: ${theme.colors.primary};
-      cursor: pointer;
-    }
-  `}
+  svg {
+    width: var(--icon-medium);
+    color: ${(props) => props.theme.colors.primary};
+    cursor: pointer;
+  }
 `
