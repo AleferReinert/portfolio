@@ -55,7 +55,7 @@ export const Content = styled.div`
 
 export const Title = styled.h3`
   font-size: var(--font-large);
-  font-weight: var(--font-extraBold);
+  font-weight: var(--font-extrabold);
   margin-bottom: var(--spacing-small);
 
   @media (min-width: ${breakpoints.medium}) {

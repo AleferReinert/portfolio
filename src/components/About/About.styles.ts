@@ -23,7 +23,7 @@ export const FirstLine = styled.div`
 
 export const Name = styled.div`
   font-size: var(--font-huge);
-  font-weight: var(--font-extraBold);
+  font-weight: var(--font-extrabold);
   margin-bottom: var(--spacing-xsmall);
 
   @media (min-width: ${breakpoints.small}) {
