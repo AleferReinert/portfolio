@@ -1,17 +1,8 @@
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
-import { useState } from 'react'
 import GlobalStyles from 'styles/global'
 import Head from 'next/head'
-import { light, dark } from 'styles/themes'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState('dark')
-
-  const toggleTheme = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-  }
-
   return (
     <>
       <Head>
@@ -38,10 +29,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
       </Head>
-      <ThemeProvider theme={theme === 'light' ? light : dark}>
-        <GlobalStyles />
-        <Component theme={theme} toggleTheme={toggleTheme} {...pageProps} />
-      </ThemeProvider>
+      <GlobalStyles />
+      <Component {...pageProps} />
     </>
   )
 }

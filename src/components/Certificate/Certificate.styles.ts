@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div``
 
 export const Title = styled.h3`
-  color: ${(props) => props.theme.colors.primary};
+  color: var(--color-primary);
   font-size: var(--font-medium);
   font-weight: var(--font-bold);
   margin-top: calc(var(--spacing-xxsmall) * -1);

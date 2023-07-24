@@ -1,7 +1,6 @@
 import { SocialItemProps } from 'components/Social/Social'
 import { useEffect, useState } from 'react'
 import { Menu } from '@styled-icons/feather'
-import { ThemeProps } from 'pages'
 import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import MenuMobile from 'components/MenuMobile/MenuMobile'
 import Switch from 'components/Switch/Switch'
@@ -10,9 +9,9 @@ import * as S from './Header.styles'
 type HeaderProps = {
   menu: NavMenuItemProps[]
   socials: SocialItemProps[]
-} & ThemeProps
+}
 
-const Header = ({ menu, socials, toggleTheme, theme }: HeaderProps) => {
+const Header = ({ menu, socials }: HeaderProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [fixedHeader, setFixedHeader] = useState('fixed')
 
@@ -32,7 +31,7 @@ const Header = ({ menu, socials, toggleTheme, theme }: HeaderProps) => {
   return (
     <S.Wrapper className={fixedHeader}>
       <S.SwitchWrapper>
-        <Switch toggleTheme={toggleTheme} theme={theme} />
+        <Switch />
       </S.SwitchWrapper>
       <S.IconWrapper>
         <Menu title='Abrir menu' onClick={() => setShowMobileMenu(true)} />

@@ -6,7 +6,7 @@ export const Wrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-xsmall) var(--spacing-small);
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: var(--color-background);
 
   @media (min-width: ${breakpoints.small}) {
     padding: var(--spacing-small) var(--spacing-large);
@@ -39,7 +39,7 @@ export const SwitchWrapper = styled.div`
 export const IconWrapper = styled.div`
   svg {
     width: var(--icon-medium);
-    color: ${(props) => props.theme.colors.primary};
+    color: var(--color-primary);
     cursor: pointer;
   }
 

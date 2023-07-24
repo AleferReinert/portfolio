@@ -1,4 +1,13 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
+
+export const breakpoints = {
+  xxsmall: '320px',
+  xsmall: '360px',
+  small: '768px',
+  medium: '1024px',
+  large: '1366px',
+  xlarge: '1920px'
+}
 
 const GlobalStyles = createGlobalStyle`
     :root {
@@ -29,6 +38,19 @@ const GlobalStyles = createGlobalStyle`
         --icon-small: 2.8rem;
         --icon-medium: 3.6rem;
         --icon-large: 4.4rem;
+        --color-primary: #48e194;
+        --color-background: #00344a;
+        --color-background-secondary: rgba(0, 0, 0, 0.25);
+        --color-heading: rgba(255,255,255,0.85);
+        --color-text: #829BA6;
+    }
+
+    .lightTheme {
+        --color-primary: #00344a;
+        --color-background: #f5f5f5;
+        --color-background-secondary: rgba(0, 0, 0, 0.05);
+        --color-heading: #313131;
+        --color-text: #595959;
     }
 
     @font-face {
@@ -63,7 +85,6 @@ const GlobalStyles = createGlobalStyle`
         src: url('/fonts/inter-v12-latin-800.woff2') format('woff2');
     }
 
-    ${({ theme }) => css`
       html {
         font-size: 62.5%;
 
@@ -73,11 +94,11 @@ const GlobalStyles = createGlobalStyle`
       }
 
       body {
-        color: ${theme.colors.text};
+        color: var(--color-text);
         font-family: var(--font-family);
         font-size: var(--font-small);
         font-weight: var(--font-light);
-        background-color: ${theme.colors.background};
+        background-color: var(--color-background);
         overflow-x: hidden;
       }
 
@@ -115,16 +136,6 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
       }
-    `}    
 `
-
-export const breakpoints = {
-  xxsmall: '320px',
-  xsmall: '360px',
-  small: '768px',
-  medium: '1024px',
-  large: '1366px',
-  xlarge: '1920px'
-}
 
 export default GlobalStyles

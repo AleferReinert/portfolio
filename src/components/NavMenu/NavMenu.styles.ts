@@ -14,7 +14,7 @@ export const Wrapper = styled.nav`
       var(--transition-effect);
 
     &:hover {
-      color: ${(props) => props.theme.colors.primary};
+      color: var(--color-primary);
     }
   }
 

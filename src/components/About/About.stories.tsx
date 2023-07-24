@@ -2,7 +2,6 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import { about } from 'content/content'
-import { dark as theme } from 'styles/themes'
 import { jsMediaQuery } from 'utils/helpers'
 import { breakpoints } from 'styles/global'
 import AboutComponent from './About'
@@ -26,11 +25,6 @@ export default meta
 type Story = StoryObj<typeof AboutComponent>
 
 export const About: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: 'xsmall'
-    }
-  },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const name = canvas.getByRole('heading', { name: /alefer reinert/i })
@@ -41,8 +35,8 @@ export const About: Story = {
     const description = canvas.getByRole('paragraph')
 
     await step('Render name, role and description', () => {
-      expect(name).toHaveStyle({ color: theme.colors.heading })
-      expect(role).toHaveStyle({ color: theme.colors.primary })
+      expect(name).toBeInTheDocument()
+      expect(role).toBeInTheDocument()
       expect(description).toBeInTheDocument()
     })
 

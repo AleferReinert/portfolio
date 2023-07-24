@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.h2`
-  color: ${(props) => props.theme.colors.heading};
+  color: var(--color-heading);
   font-size: var(--font-xlarge);
   font-weight: var(--font-bold);
   padding-bottom: var(--spacing-xsmall);
-  border-bottom: 0.1rem solid ${(props) => props.theme.colors.primary};
+  border-bottom: 0.1rem solid var(--color-primary);
   margin-bottom: var(--spacing-xlarge);
 
   @media (min-width: ${breakpoints.small}) {

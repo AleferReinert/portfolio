@@ -1,7 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import { dark as theme } from 'styles/themes'
 import ContainerComponent from './Container'
 
 const meta: Meta<typeof ContainerComponent> = {
@@ -14,8 +13,7 @@ const meta: Meta<typeof ContainerComponent> = {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: theme.colors.text,
-          color: theme.colors.background,
+          backgroundColor: 'rgba(0, 0, 0, 0.25)',
           height: '100vh'
         }}
       >
@@ -26,6 +24,11 @@ const meta: Meta<typeof ContainerComponent> = {
   argTypes: {
     children: {
       table: { disable: true }
+    }
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'xxsmall'
     }
   }
 }

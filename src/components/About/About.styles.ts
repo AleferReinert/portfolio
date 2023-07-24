@@ -13,7 +13,7 @@ export const TitleWrapper = styled.div`
 `
 
 export const Title = styled.h1`
-  color: ${(props) => props.theme.colors.heading};
+  color: var(--color-heading);
 `
 
 export const FirstLine = styled.div`
@@ -32,7 +32,7 @@ export const Name = styled.div`
 `
 
 export const Role = styled.h2`
-  color: ${(props) => props.theme.colors.primary};
+  color: var(--color-primary);
   font-size: var(--font-small);
   margin-bottom: var(--spacing-xlarge);
 
@@ -42,12 +42,13 @@ export const Role = styled.h2`
 `
 
 export const Subtitle = styled.h3`
-  text-align: center;
-  color: ${(props) => props.theme.colors.heading};
-  font-size: var(--font-xxlarge);
+  display: none;
 
-  @media (max-width: calc(${breakpoints.small} -1)) {
-    display: none;
+  @media (min-width: ${breakpoints.small}) {
+    text-align: center;
+    color: var(--color-heading);
+    font-size: var(--font-xxlarge);
+    display: block;
   }
 `
 

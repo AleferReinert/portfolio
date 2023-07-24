@@ -22,20 +22,18 @@ export const Main = styled.main`
 `
 
 export const Section = styled.section`
-  padding-top: var(--spacing-xxlarge);
+  padding-top: var(--spacing-small);
 
   &:last-child {
     padding-bottom: var(--spacing-huge);
   }
 
-  @media (max-width: calc(${breakpoints.small} -1)) {
-    &:first-child {
-      padding-top: var(--spacing-small);
-    }
-  }
-
   @media (min-width: ${breakpoints.small}) {
     padding-top: var(--spacing-huge);
+
+    &:first-child {
+      padding-top: var(--spacing-xxlarge);
+    }
 
     &:last-child {
       padding-bottom: 0;

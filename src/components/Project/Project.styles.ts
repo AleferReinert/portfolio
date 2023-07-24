@@ -4,7 +4,7 @@ import { breakpoints } from 'styles/global'
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${(props) => props.theme.colors.backgroundSecondary};
+  background-color: var(--color-background-secondary);
   width: 100%;
   max-width: calc(${breakpoints.xsmall}) - calc(${breakpoints.small} * 2);
   align-self: center;
@@ -69,7 +69,7 @@ export const Description = styled.p`
 `
 
 export const Skills = styled.p`
-  color: ${(props) => props.theme.colors.primary};
+  color: var(--color-primary);
   font-size: var(--font-xsmall);
   font-weight: var(--font-regular);
   margin: var(--spacing-medium) 0;
@@ -89,7 +89,7 @@ export const IconsWrapper = styled.div`
   }
 
   a:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: var(--color-primary);
 
     svg {
       animation: rotateFrom180 var(--transition-duration-slow);

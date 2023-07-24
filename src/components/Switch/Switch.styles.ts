@@ -4,7 +4,7 @@ export const Wrapper = styled.label`
   display: inline-flex;
   width: 4rem;
   height: 2rem;
-  background-color: ${(props) => props.theme.colors.text};
+  background-color: var(--color-text);
   border-radius: 1rem;
 
   input {
@@ -22,8 +22,8 @@ export const Handle = styled.div`
   border-radius: 100%;
   width: 2rem;
   height: 2rem;
-  background-color: ${(props) => props.theme.colors.background};
-  border: 0.2rem solid ${(props) => props.theme.colors.text};
+  background-color: var(--color-background);
+  border: 0.2rem solid var(--color-text);
   transition: transform var(--transition-duration-default)
     var(--transition-effect);
 `

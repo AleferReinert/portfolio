@@ -37,7 +37,7 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: ${(props) => props.theme.colors.background};
+    background: var(--color-background);
     z-index: 1;
     padding-bottom: var(--spacing-xxlarge);
     transition: opacity var(--transition-duration-default)
@@ -72,7 +72,7 @@ export const IconWrapper = styled.div`
 
   svg {
     width: var(--icon-medium);
-    color: ${(props) => props.theme.colors.primary};
+    color: var(--color-primary);
     cursor: pointer;
   }
 `

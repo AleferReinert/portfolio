@@ -25,14 +25,14 @@ export const Wrapper = styled.nav`
       display: block;
       width: 1px;
       height: 10rem;
-      background-color: ${(props) => props.theme.colors.text};
+      background-color: var(--color-text);
       overflow: hidden;
     }
 
     &::after {
       transform: translateY(100%);
       transition: all var(--transition-duration-slow) var(--transition-effect);
-      background-color: ${(props) => props.theme.colors.primary};
+      background-color: var(--color-primary);
     }
 
     &:hover::after {
@@ -65,7 +65,7 @@ export const Wrapper = styled.nav`
       }
 
       &:hover {
-        color: ${(props) => props.theme.colors.primary};
+        color: var(--color-primary);
 
         svg {
           transform: translateY(-0.5rem);

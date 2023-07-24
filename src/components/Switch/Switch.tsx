@@ -1,14 +1,24 @@
-import { ThemeProps } from 'pages'
+import { useState } from 'react'
 import * as S from './Switch.styles'
 
-const Switch = ({ toggleTheme, theme }: ThemeProps) => {
+const Switch = () => {
+  const [theme, setTheme] = useState('darkTheme')
+
+  function toggleTheme() {
+    if (theme === 'darkTheme') {
+      document.body.classList.add('lightTheme')
+      setTheme('lightTheme')
+    } else {
+      document.body.classList.remove('lightTheme')
+      setTheme('darkTheme')
+    }
+  }
   return (
-    <S.Wrapper>
+    <S.Wrapper title={`Tema ${theme === 'darkTheme' ? 'claro' : 'escuro'}`}>
       <input
         type='checkbox'
         onChange={toggleTheme}
-        checked={theme === 'dark'}
-        title={`Alterar para tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
+        checked={theme === 'darkTheme'}
       />
       <S.Handle />
     </S.Wrapper>
