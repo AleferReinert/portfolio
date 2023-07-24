@@ -1,10 +1,10 @@
 import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import SocialComponent from './Social'
 import { social } from 'content/content'
 import { jsMediaQuery } from 'utils/helpers'
-import theme from 'styles/themes/dark'
+import { breakpoints } from 'styles/global'
+import SocialComponent from './Social'
 
 const meta: Meta<typeof SocialComponent> = {
   title: 'Components/Social',
@@ -31,13 +31,13 @@ export const Social: Story = {
       }
     })
 
-    jsMediaQuery.lessThan(theme.breakpoints.medium, async () => {
+    jsMediaQuery.lessThan(breakpoints.medium, async () => {
       await step('Horizontal on mobile', () => {
         expect(wrapper).not.toHaveStyle({ flexDirection: 'column' })
       })
     })
 
-    jsMediaQuery.greaterThan(theme.breakpoints.medium, async () => {
+    jsMediaQuery.greaterThan(breakpoints.medium, async () => {
       await step('Vertical on desktop', () => {
         expect(wrapper).toHaveStyle({ flexDirection: 'column' })
       })

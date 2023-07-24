@@ -26,12 +26,6 @@ const GlobalStyles = createGlobalStyle`
         --transition-effect: linear;
         --transition-duration-slow: .3s;
         --transition-duration-default: .15s;
-        --breakpoint-xxsmall: 320px;
-        --breakpoint-xsmall: 360px;
-        --breakpoint-small: 768px;
-        --breakpoint-medium: 1024px;
-        --breakpoint-large: 1366px;
-        --breakpoint-xlarge: 1920px;
         --icon-small: 2.8rem;
         --icon-medium: 3.6rem;
         --icon-large: 4.4rem;
@@ -73,7 +67,7 @@ const GlobalStyles = createGlobalStyle`
       html {
         font-size: 62.5%;
 
-        @media (min-width: ${theme.breakpoints.small}) {
+        @media (min-width: ${breakpoints.small}) {
           scroll-behavior: smooth;
         }
       }
@@ -123,5 +117,14 @@ const GlobalStyles = createGlobalStyle`
       }
     `}    
 `
+
+export const breakpoints = {
+  xxsmall: '320px',
+  xsmall: '360px',
+  small: '768px',
+  medium: '1024px',
+  large: '1366px',
+  xlarge: '1920px'
+}
 
 export default GlobalStyles

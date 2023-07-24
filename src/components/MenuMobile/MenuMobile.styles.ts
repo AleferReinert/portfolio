@@ -3,6 +3,7 @@ import * as NavMenuStyles from 'components/NavMenu/NavMenu.styles'
 
 import * as SocialStyles from 'components/Social/Social.styles'
 import { MenuMobileProps } from './MenuMobile'
+import { breakpoints } from 'styles/global'
 
 const wrapperModifiers = {
   showMobileMenu: () => css`
@@ -58,7 +59,7 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
 
     ${showMobileMenu && wrapperModifiers.showMobileMenu()}
 
-    @media (min-width: ${theme.breakpoints.small}) {
+    @media (min-width: ${breakpoints.small}) {
       display: none;
     }
   `}

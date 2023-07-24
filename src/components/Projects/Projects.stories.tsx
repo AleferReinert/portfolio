@@ -3,9 +3,9 @@ import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import { jsMediaQuery } from 'utils/helpers'
 import { projects } from 'content/content'
+import { breakpoints } from 'styles/global'
 import Container from 'components/Container/Container'
 import ProjectsComponent from './Projects'
-import theme from 'styles/themes/dark'
 
 const meta: Meta<typeof ProjectsComponent> = {
   title: 'Components/Projects',
@@ -40,7 +40,7 @@ export const Projects: Story = {
       expect(firstImage).not.toHaveAttribute('loading')
     })
 
-    jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
+    jsMediaQuery.greaterThan(breakpoints.small, async () => {
       await step('Alternate alignment between right and left', () => {
         for (let i = 0; i < projects.length; i++) {
           if (i % 2 === 0) {

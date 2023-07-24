@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.nav`
   ${({ theme }) => css`
@@ -18,7 +19,7 @@ export const Wrapper = styled.nav`
       }
     }
 
-    @media (min-width: ${theme.breakpoints.small}) {
+    @media (min-width: ${breakpoints.small}) {
       flex-direction: row;
       font-size: var(--font-xsmall);
       gap: var(--spacing-large);

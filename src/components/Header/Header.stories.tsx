@@ -3,8 +3,8 @@ import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import { jsMediaQuery } from 'utils/helpers'
 import HeaderComponent from './Header'
-import theme from 'styles/themes/dark'
 import { menu, social } from 'content/content'
+import { breakpoints } from 'styles/global'
 
 const meta: Meta<typeof HeaderComponent> = {
   title: 'Components/Header',
@@ -30,7 +30,7 @@ export const Mobile: Story = {
     const openMenuButton = canvas.queryByRole('img', { name: /abrir menu/i })
     const menus = canvas.queryAllByRole('menu')
 
-    jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
+    jsMediaQuery.lessThan(breakpoints.small, async () => {
       await step('Render buttonOpenMenu', () => {
         expect(openMenuButton).toBeInTheDocument()
       })
@@ -68,7 +68,7 @@ export const Desktop: Story = {
     const openMenuButton = canvas.queryByRole('img', { name: /abrir menu/i })
     const menus = canvas.getAllByRole('menu')
 
-    jsMediaQuery.greaterThan(theme.breakpoints.small, async () => {
+    jsMediaQuery.greaterThan(breakpoints.small, async () => {
       await step('Hidden button to open menu', () => {
         expect(openMenuButton).not.toBeInTheDocument()
       })

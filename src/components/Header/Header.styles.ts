@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`
@@ -8,7 +9,7 @@ export const Wrapper = styled.header`
     padding: var(--spacing-xsmall) var(--spacing-small);
     background-color: ${theme.colors.background};
 
-    @media (min-width: ${theme.breakpoints.small}) {
+    @media (min-width: ${breakpoints.small}) {
       padding: var(--spacing-small) var(--spacing-large);
       position: fixed;
       top: 0;
@@ -45,18 +46,16 @@ export const IconWrapper = styled.div`
       cursor: pointer;
     }
 
-    @media (min-width: ${theme.breakpoints.small}) {
+    @media (min-width: ${breakpoints.small}) {
       display: none;
     }
   `}
 `
 
 export const MenuDesktop = styled.div`
-  ${({ theme }) => css`
-    display: none;
+  display: none;
 
-    @media (min-width: ${theme.breakpoints.small}) {
-      display: flex;
-    }
-  `}
+  @media (min-width: ${breakpoints.small}) {
+    display: flex;
+  }
 `

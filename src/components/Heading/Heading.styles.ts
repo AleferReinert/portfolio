@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.h2`
   ${({ theme }) => css`
@@ -9,13 +10,13 @@ export const Wrapper = styled.h2`
     border-bottom: 0.1rem solid ${theme.colors.primary};
     margin-bottom: var(--spacing-xlarge);
 
-    @media (min-width: ${theme.breakpoints.small}) {
+    @media (min-width: ${breakpoints.small}) {
       font-size: var(--font-xxlarge);
       padding-bottom: var(--spacing-small);
       margin-bottom: var(--spacing-xlarge);
     }
 
-    @media (min-width: ${theme.breakpoints.medium}) {
+    @media (min-width: ${breakpoints.medium}) {
       font-size: var(--font-huge);
       margin-bottom: var(--spacing-xxlarge);
     }

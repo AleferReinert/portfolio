@@ -6,6 +6,7 @@ import { about } from 'content/content'
 import Container from 'components/Container/Container'
 import theme from 'styles/themes/dark'
 import { jsMediaQuery } from 'utils/helpers'
+import { breakpoints } from 'styles/global'
 
 const meta: Meta<typeof AboutComponent> = {
   title: 'Components/About',
@@ -45,13 +46,13 @@ export const About: Story = {
       expect(description).toBeInTheDocument()
     })
 
-    jsMediaQuery.lessThan('--breakpoint-small', async () => {
+    jsMediaQuery.lessThan(breakpoints.small, async () => {
       await step('Without subtitle on mobile', () => {
         expect(subtitle).not.toBeInTheDocument()
       })
     })
 
-    jsMediaQuery.greaterThan('--breakpoint-small', async () => {
+    jsMediaQuery.greaterThan(breakpoints.small, async () => {
       await step('Render subtitle on desktop', () => {
         expect(subtitle).toBeInTheDocument()
       })

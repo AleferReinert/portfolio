@@ -1,10 +1,10 @@
 import type { StoryObj, Meta } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import MenuMobileComponent from './MenuMobile'
 import { jsMediaQuery } from 'utils/helpers'
-import theme from 'styles/themes/dark'
 import { menu, social } from 'content/content'
+import { breakpoints } from 'styles/global'
+import MenuMobileComponent from './MenuMobile'
 
 const meta: Meta<typeof MenuMobileComponent> = {
   title: 'Components/MenuMobile',
@@ -34,7 +34,7 @@ export const MenuMobile: Story = {
     const menu = canvas.queryByRole('menu')
     const socialLinks = canvas.queryAllByRole('link')
 
-    jsMediaQuery.lessThan(theme.breakpoints.small, async () => {
+    jsMediaQuery.lessThan(breakpoints.small, async () => {
       await step('Render button, menu and social', () => {
         expect(closeMenuButton).toBeInTheDocument()
         expect(menu).toBeInTheDocument()

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -6,10 +7,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     background-color: ${theme.colors.backgroundSecondary};
     width: 100%;
-    max-width: calc(var(--breakpoint-xsmall) - calc(var(--spacing-small) * 2));
+    max-width: calc(${breakpoints.xsmall}) - calc(${breakpoints.small} * 2));
     align-self: center;
 
-    @media (min-width: ${theme.breakpoints.small}) {
+    @media (min-width: ${breakpoints.small}) {
       justify-content: space-between;
       flex-direction: row;
       max-width: none;
@@ -19,56 +20,50 @@ export const Wrapper = styled.div`
 `
 
 export const ImageWrapper = styled.div`
-  ${({ theme }) => css`
-    position: relative;
-    width: 100%;
-    height: min-content;
-    aspect-ratio: 1/1;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  aspect-ratio: 1/1;
 
-    img {
-      object-fit: contain;
-    }
+  img {
+    object-fit: contain;
+  }
 
-    @media (min-width: ${theme.breakpoints.small}) {
-      max-width: 24rem;
-    }
+  @media (min-width: ${breakpoints.small}) {
+    max-width: 24rem;
+  }
 
-    @media (min-width: ${theme.breakpoints.medium}) {
-      max-width: 28rem;
-    }
-  `}
+  @media (min-width: ${breakpoints.medium}) {
+    max-width: 28rem;
+  }
 `
 
 export const Content = styled.div`
-  ${({ theme }) => css`
-    padding: var(--spacing-large) var(--spacing-small);
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin: 0 auto;
+  padding: var(--spacing-large) var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 auto;
 
-    @media (min-width: ${theme.breakpoints.small}) {
-      padding: var(--spacing-small) var(--spacing-large);
-    }
+  @media (min-width: ${breakpoints.small}) {
+    padding: var(--spacing-small) var(--spacing-large);
+  }
 
-    @media (min-width: ${theme.breakpoints.large}) {
-      padding-left: var(--spacing-huge);
-      padding-right: var(--spacing-huge);
-    }
-  `}
+  @media (min-width: ${breakpoints.large}) {
+    padding-left: var(--spacing-huge);
+    padding-right: var(--spacing-huge);
+  }
 `
 
 export const Title = styled.h3`
-  ${({ theme }) => css`
-    font-size: var(--font-large);
-    font-weight: var(--font-extraBold);
-    margin-bottom: var(--spacing-small);
+  font-size: var(--font-large);
+  font-weight: var(--font-extraBold);
+  margin-bottom: var(--spacing-small);
 
-    @media (min-width: ${theme.breakpoints.medium}) {
-      font-size: var(--font-large);
-      margin-bottom: var(--spacing-small);
-    }
-  `}
+  @media (min-width: ${breakpoints.medium}) {
+    font-size: var(--font-large);
+    margin-bottom: var(--spacing-small);
+  }
 `
 
 export const Description = styled.p`
@@ -82,7 +77,7 @@ export const Skills = styled.p`
     font-weight: var(--font-regular);
     margin: var(--spacing-medium) 0;
 
-    @media (min-width: ${theme.breakpoints.medium}) {
+    @media (min-width: ${breakpoints.medium}) {
       margin: var(--spacing-large) 0;
     }
   `}
