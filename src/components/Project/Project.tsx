@@ -11,10 +11,7 @@ export type ProjectProps = {
   repositoryLink: string
   websiteLink: string
   img: string
-}
-
-type lazyProps = {
-  lazy: boolean
+  lazy?: boolean
 }
 
 const Project = ({
@@ -25,7 +22,7 @@ const Project = ({
   websiteLink,
   img,
   lazy
-}: ProjectProps & lazyProps) => {
+}: ProjectProps) => {
   return (
     <S.Wrapper role='listitem'>
       <S.ImageWrapper>

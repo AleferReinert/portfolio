@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import * as S from './NavMenu.styles'
 import { Dispatch, SetStateAction } from 'react'
-
 export type NavMenuItemProps = {
   link: string
   children: string
