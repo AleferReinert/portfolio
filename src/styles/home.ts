@@ -22,7 +22,7 @@ export const Main = styled.main`
 `
 
 export const Section = styled.section`
-  padding-top: var(--spacing-xxlarge);
+  padding-top: var(--spacing-huge);
 
   &:last-child {
     padding-bottom: var(--spacing-xxlarge);
@@ -43,7 +43,7 @@ export const Section = styled.section`
   }
 `
 
-export const SocialWrapper = styled.footer`
+export const SocialWrapper = styled.div`
   display: none;
 
   @media (min-width: ${breakpoints.small}) {

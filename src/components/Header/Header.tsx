@@ -1,6 +1,6 @@
 import { SocialItemProps } from 'components/Social/Social'
 import { useEffect, useState } from 'react'
-import { Menu } from '@styled-icons/feather'
+import { Menu as MenuIcon } from '@styled-icons/feather'
 import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import MenuMobile from 'components/MenuMobile/MenuMobile'
 import Switch from 'components/Switch/Switch'
@@ -29,22 +29,30 @@ const Header = ({ menu, socials }: HeaderProps) => {
   })
 
   return (
-    <S.Wrapper className={fixedHeader}>
-      <S.SwitchWrapper>
-        <Switch />
-      </S.SwitchWrapper>
-      <S.IconWrapper>
-        <Menu title='Abrir menu' onClick={() => setShowMobileMenu(true)} />
-      </S.IconWrapper>
+    <S.Wrapper>
+      <S.Fixed className={fixedHeader}>
+        <S.SwitchWrapper>
+          <Switch />
+        </S.SwitchWrapper>
+
+        <S.IconWrapper>
+          <MenuIcon
+            title='Abrir menu'
+            onClick={() => setShowMobileMenu(true)}
+          />
+        </S.IconWrapper>
+
+        <S.MenuDesktop>
+          <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
+        </S.MenuDesktop>
+      </S.Fixed>
+
       <MenuMobile
         showMobileMenu={showMobileMenu}
         setShowMobileMenu={setShowMobileMenu}
         socials={socials}
         menu={menu}
       />
-      <S.MenuDesktop>
-        <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
-      </S.MenuDesktop>
     </S.Wrapper>
   )
 }
