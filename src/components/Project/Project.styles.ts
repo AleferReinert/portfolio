@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background-color: var(--color-background-secondary);
   width: 100%;
-  max-width: calc(${breakpoints.xsmall}) - calc(${breakpoints.small} * 2);
+  max-width: 32.8rem;
   align-self: center;
 
   @media (min-width: ${breakpoints.small}) {
