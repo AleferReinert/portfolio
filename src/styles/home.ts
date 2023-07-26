@@ -22,18 +22,14 @@ export const Main = styled.main`
 `
 
 export const Section = styled.section`
-  padding-top: var(--spacing-small);
+  padding-top: var(--spacing-xxlarge);
 
   &:last-child {
-    padding-bottom: var(--spacing-huge);
+    padding-bottom: var(--spacing-xxlarge);
   }
 
   @media (min-width: ${breakpoints.small}) {
     padding-top: var(--spacing-huge);
-
-    &:first-child {
-      padding-top: var(--spacing-xxlarge);
-    }
 
     &:last-child {
       padding-bottom: 0;
@@ -42,7 +38,7 @@ export const Section = styled.section`
 
   @media (min-width: ${breakpoints.medium}) {
     &:last-child {
-      padding-bottom: var(--spacing-xlarge);
+      padding-bottom: var(--spacing-xxlarge);
     }
   }
 `
