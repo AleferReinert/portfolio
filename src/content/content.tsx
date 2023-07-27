@@ -50,8 +50,8 @@ export const about = {
       <p>
         Escrevo códigos desde 2012, adquiri experiência em duas empresas e em
         meus projetos pessoais. Desenvolvi e-commerces, websites, wordpress e
-        e-mail marketing. Atualmente estou me aprofundando nos principais
-        frameworks (React, Next.js). <br />
+        e-mail marketing. Atualmente estou me aprofundando em React e Next.js.{' '}
+        <br />
         Além de codificar, sou uma pessoa apaixonada por animais, música e saúde
         mental.
       </p>
