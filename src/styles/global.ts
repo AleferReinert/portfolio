@@ -137,6 +137,11 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
       }
+
+      ::selection {
+            color: rgba(255,255,255,0.85);
+            background: var(--color-primary);
+        }
 `
 
 export default GlobalStyles
