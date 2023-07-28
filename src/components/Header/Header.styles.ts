@@ -9,7 +9,6 @@ export const Fixed = styled.div`
   align-items: center;
   padding: var(--spacing-xsmall) var(--spacing-small);
   background-color: var(--color-background);
-  padding: var(--spacing-small) var(--spacing-large);
   position: fixed;
   top: 0;
   left: 0;
@@ -20,6 +19,10 @@ export const Fixed = styled.div`
 
   &.fixed {
     transform: translateY(0);
+  }
+
+  @media (min-width: ${breakpoints.small}) {
+    padding: var(--spacing-small) var(--spacing-large);
   }
 `
 
