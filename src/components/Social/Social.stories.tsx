@@ -21,14 +21,17 @@ type Story = StoryObj<typeof SocialComponent>
 export const Social: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const socialLinks = canvas.getAllByRole('link')
+    const github = canvas.getByRole('link', { name: /github/i })
+    const email = canvas.getByRole('link', { name: /e-mail/i })
+    const linkedin = canvas.getByRole('link', { name: /linkedin/i })
+    const whatsapp = canvas.getByRole('link', { name: /whatsapp/i })
     const wrapper = canvasElement.getElementsByTagName('nav')[0]
 
-    await step('Render 4 links with title attribute', () => {
-      expect(socialLinks.length).toBe(4)
-      for (const socialLink of socialLinks) {
-        expect(socialLink).toHaveAttribute('title')
-      }
+    await step('Render social links', () => {
+      expect(github).toBeInTheDocument()
+      expect(email).toBeInTheDocument()
+      expect(linkedin).toBeInTheDocument()
+      expect(whatsapp).toBeInTheDocument()
     })
 
     jsMediaQuery.lessThan(breakpoints.medium, async () => {

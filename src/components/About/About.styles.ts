@@ -52,7 +52,7 @@ export const Subtitle = styled.h3`
   }
 `
 
-export const Description = styled.div`
+export const Description = styled.p`
   display: flex;
   flex-direction: column;
   gap: var(--spacing-large);

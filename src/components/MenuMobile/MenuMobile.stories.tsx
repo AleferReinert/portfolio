@@ -14,6 +14,11 @@ const meta: Meta<typeof MenuMobileComponent> = {
     menu: menu,
     socials: social
   },
+  argTypes: {
+    setShowMobileMenu: {
+      table: { disable: true }
+    }
+  },
   parameters: {
     viewport: {
       defaultViewport: 'xxsmall'
@@ -38,7 +43,7 @@ export const MenuMobile: Story = {
       await step('Render button, menu and social', () => {
         expect(closeMenuButton).toBeInTheDocument()
         expect(menu).toBeInTheDocument()
-        expect(socialLinks.length).toBe(6)
+        expect(socialLinks.length).toBe(4)
       })
     })
   }

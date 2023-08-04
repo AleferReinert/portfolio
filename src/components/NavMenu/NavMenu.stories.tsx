@@ -9,6 +9,11 @@ const meta: Meta<typeof NavMenuComponent> = {
   component: NavMenuComponent,
   args: {
     menu: menu
+  },
+  argTypes: {
+    setShowMobileMenu: {
+      table: { disable: true }
+    }
   }
 }
 

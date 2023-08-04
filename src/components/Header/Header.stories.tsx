@@ -2,9 +2,9 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import { jsMediaQuery } from 'utils/helpers'
-import HeaderComponent from './Header'
 import { menu, social } from 'content/content'
 import { breakpoints } from 'styles/global'
+import HeaderComponent from './Header'
 
 const meta: Meta<typeof HeaderComponent> = {
   title: 'Components/Header',

@@ -45,25 +45,34 @@ export const menu = [
 export const about = {
   name: 'Alefer Reinert',
   role: 'Desenvolvedor front end',
-  description: (
-    <>
-      <p>
-        Escrevo códigos desde 2012, adquiri experiência em duas empresas e em
-        meus projetos pessoais. Desenvolvi e-commerces, websites, wordpress e
-        e-mail marketing. Atualmente estou me aprofundando em React e Next.js.{' '}
-        <br />
-        Além de codificar, sou uma pessoa apaixonada por animais, música e saúde
-        mental.
-      </p>
-    </>
-  )
+  description: `
+      Escrevo códigos desde 2012, adquiri experiência em duas empresas e em meus
+      projetos pessoais. Desenvolvi e-commerces, websites, wordpress e e-mail
+      marketing. Atualmente estou me aprofundando em React e Next.js.
+      Além de codificar, sou uma pessoa apaixonada por animais, música e saúde
+      mental.`
 }
 
 export const projects = [
   {
-    title: 'React Avançado',
+    title: 'Won Games',
     description:
-      'Projeto do curso "React Avançado: Crie aplicações com Next.js, Strapi e mais".',
+      'E-ecommerce de jogos que faz parte do curso de React Avançado, ainda em desenvolvimento.',
+    skills: 'React Next.js Styled Components Storybook Jest',
+    repositoryLink: 'https://github.com/AleferReinert/won-games',
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691176194/portfolio/projects/icon-512_judw0q.png'
+  },
+  {
+    title: 'Portfólio',
+    description: 'Veja como foi a construção desse portfólio.',
+    skills: 'React Next.js Styled Components Storybook Jest',
+    repositoryLink: 'https://github.com/AleferReinert/portfolio',
+    storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691172456/portfolio/projects/portfolio_cugysp.webp'
+  },
+  {
+    title: 'Landing Page',
+    description: 'Primeiro projeto do curso de React Avançado.',
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     websiteLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
@@ -97,49 +106,36 @@ export const projects = [
   },
   {
     title: 'Metronome',
-    description:
-      'O metrônomo é um item obrigatório para qualquer músico, auxilia nos estudos e a tocar no tempo correto.',
+    description: 'Metrônomo para desktop com diversas configurações.',
     skills: 'HTML CSS JavaScript',
     websiteLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/metronome_wdn7fn.webp'
-  },
-  {
-    title: 'Timer',
-    description: 'Medição de intervalos de tempo.',
-    skills: 'HTML CSS JavaScript',
-    websiteLink: 'https://aleferreinert.github.io/timer',
-    repositoryLink: 'https://github.com/AleferReinert/timer',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689604640/portfolio/projects/timer_zmpauq.webp'
-  },
-  {
-    title: 'Google Homepage',
-    description: 'Clone da página inicial de busca do Google (desktop).',
-    skills: 'HTML CSS JavaScript',
-    websiteLink: 'https://aleferreinert.github.io/google-homepage',
-    repositoryLink: 'https://github.com/AleferReinert/google-homepage',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/google-homepage_epguos.webp'
   }
 ]
 
 export const certificates = [
   {
     title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
-    description: 'Udemy | Cursando'
+    organization: 'Udemy',
+    conclusionDate: 'Cursando'
   },
   {
     title: 'Javascript Para Iniciantes',
-    description: 'Unova Cursos | Outubro/2022',
+    organization: 'Unova Cursos',
+    conclusionDate: 'Outubro/2022',
     link: 'https://www.unovacursos.com.br/certificados/14304132340741204202210'
   },
   {
     title: 'CC50: Introdução à Ciência da Computação',
-    description: 'Fundação Estudar | Setembro/2022',
+    organization: 'Fundação Estudar',
+    conclusionDate: 'Setembro/2022',
     link: 'https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf'
   },
   {
     title: 'Formação Design Gráfico',
-    description: 'ProWay Informática | Fevereiro/2012',
+    organization: 'ProWay Informática',
+    conclusionDate: 'Fevereiro/2012',
     link: 'https://drive.google.com/file/d/1dJErgNzdqUchbaEo7upZoSCO3GBYVRIv/view?usp=share_link'
   }
 ]

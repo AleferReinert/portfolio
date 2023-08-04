@@ -12,7 +12,8 @@
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
     "prettier": "prettier . --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "chromatic": "npx chromatic --project-token=chpt_346081a73da75d8"
   },
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.47.0",
@@ -47,5 +48,7 @@
     "plop": "^3.1.2",
     "prettier": "3.0.0",
     "storybook": "^7.0.26"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "boilerplate@2.0.0"
 }

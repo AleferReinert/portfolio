@@ -1,10 +1,9 @@
-import { ReactNode } from 'react'
 import * as S from './About.styles'
 
 type AboutProps = {
   name: string
   role: string
-  description: ReactNode
+  description: string
 }
 
 const About = ({ name, role, description }: AboutProps) => {

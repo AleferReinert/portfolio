@@ -1,4 +1,5 @@
 import { Github as GithubIcon, Link as LinkIcon } from '@styled-icons/feather'
+import { Storybook as StorybookIcon } from '@styled-icons/simple-icons'
 import { breakpoints } from 'styles/global'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,7 +10,8 @@ export type ProjectProps = {
   description: string
   skills: string
   repositoryLink: string
-  websiteLink: string
+  storybookLink?: string
+  projectLink?: string
   img: string
   lazy?: boolean
 }
@@ -19,7 +21,8 @@ const Project = ({
   description,
   skills,
   repositoryLink,
-  websiteLink,
+  storybookLink,
+  projectLink,
   img,
   lazy
 }: ProjectProps) => {
@@ -45,16 +48,19 @@ const Project = ({
         </S.Description>
         <S.Skills aria-label='skills utilizadas'>{skills}</S.Skills>
         <S.IconsWrapper>
-          <Link
-            href={repositoryLink}
-            title='Visualizar repositório'
-            target='_blank'
-          >
+          <Link href={repositoryLink} title='Repositório' target='_blank'>
             <GithubIcon aria-hidden />
           </Link>
-          <Link href={websiteLink} title='Visualizar projeto' target='_blank'>
-            <LinkIcon aria-hidden />
-          </Link>
+          {storybookLink && (
+            <Link href={storybookLink} title='Storybook' target='_blank'>
+              <StorybookIcon aria-hidden />
+            </Link>
+          )}
+          {projectLink && (
+            <Link href={projectLink} title='Projeto' target='_blank'>
+              <LinkIcon aria-hidden />
+            </Link>
+          )}
         </S.IconsWrapper>
       </S.Content>
     </S.Wrapper>
