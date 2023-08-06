@@ -57,8 +57,8 @@ export const projects = [
   {
     title: 'Won Games',
     description:
-      'E-ecommerce de jogos que faz parte do curso de React Avançado, ainda em desenvolvimento.',
-    skills: 'React Next.js Styled Components Storybook Jest',
+      'E-ecommerce de jogos que faz parte do curso de React Avançado, em desenvolvimento.',
+    skills: 'React Next.js TypeScript Styled Components Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/won-games',
     storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com/',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282514/portfolio/projects/won-games_i6iip7.webp'
@@ -66,7 +66,7 @@ export const projects = [
   {
     title: 'Portfólio',
     description: 'Veja como foi a construção desse portfólio.',
-    skills: 'React Next.js Styled Components Storybook Jest',
+    skills: 'React Next.js TypeScript Styled Components Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/portfolio_vwzlzk.webp'
