@@ -8,12 +8,26 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 32.8rem;
   align-self: center;
+  align-items: center;
+  padding: var(--spacing-medium);
+  gap: var(--spacing-medium);
 
   @media (min-width: ${breakpoints.small}) {
     justify-content: space-between;
     flex-direction: row;
     max-width: none;
     align-self: auto;
+    padding: var(--spacing-large) var(--spacing-medium);
+    gap: var(--spacing-large);
+  }
+
+  @media (min-width: ${breakpoints.medium}) {
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: none;
+    align-self: auto;
+    padding: var(--spacing-xxlarge);
+    gap: var(--spacing-xxlarge);
   }
 `
 
@@ -21,10 +35,14 @@ export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   height: min-content;
-  aspect-ratio: 1/1;
+  aspect-ratio: 25/17;
 
   img {
     object-fit: contain;
+    /* padding: var(--spacing-small) var(--spacing-small) 0; */
+    @media (min-width: ${breakpoints.small}) {
+      /* padding: var(--spacing-medium); */
+    }
   }
 
   @media (min-width: ${breakpoints.small}) {
@@ -37,20 +55,20 @@ export const ImageWrapper = styled.div`
 `
 
 export const Content = styled.div`
-  padding: var(--spacing-large) var(--spacing-small);
+  /* padding: var(--spacing-large) var(--spacing-small); */
   display: flex;
   flex-direction: column;
   align-self: center;
   margin: 0 auto;
 
-  @media (min-width: ${breakpoints.small}) {
-    padding: var(--spacing-small) var(--spacing-large);
+  /* @media (min-width: ${breakpoints.small}) {
+    padding: var(--spacing-large);
   }
 
   @media (min-width: ${breakpoints.large}) {
     padding-left: var(--spacing-huge);
     padding-right: var(--spacing-huge);
-  }
+  } */
 `
 
 export const Title = styled.h3`

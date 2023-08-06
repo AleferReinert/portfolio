@@ -11,5 +11,25 @@ export const Wrapper = styled.div`
     ${ProjectStyles.Wrapper}:nth-child(even) {
       flex-direction: row-reverse;
     }
+
+    /* ${ProjectStyles.Wrapper}:nth-child(1) img {
+      background-color: #060729;
+    }
+
+    ${ProjectStyles.Wrapper}:nth-child(2) img {
+      background-color: #d0ecf5;
+    }
+
+    ${ProjectStyles.Wrapper}:nth-child(3) img {
+      background-color: #002737;
+    }
+
+    ${ProjectStyles.Wrapper}:nth-child(4) img {
+      background-color: #002737;
+    }
+
+    ${ProjectStyles.Wrapper}:nth-child(5) img {
+      background-color: #002737;
+    } */
   }
 `

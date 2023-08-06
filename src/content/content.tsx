@@ -60,7 +60,8 @@ export const projects = [
       'E-ecommerce de jogos que faz parte do curso de React Avançado, ainda em desenvolvimento.',
     skills: 'React Next.js Styled Components Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/won-games',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691176194/portfolio/projects/icon-512_judw0q.png'
+    storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com/',
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282514/portfolio/projects/won-games_i6iip7.webp'
   },
   {
     title: 'Portfólio',
@@ -68,49 +69,40 @@ export const projects = [
     skills: 'React Next.js Styled Components Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691172456/portfolio/projects/portfolio_cugysp.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/portfolio_vwzlzk.webp'
   },
   {
     title: 'Landing Page',
     description: 'Primeiro projeto do curso de React Avançado.',
     skills: 'React Next.js TypeScript StyledComponents Strapi',
-    websiteLink: 'https://landing-page-ar.netlify.app',
+    projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/landing-page_rxporm.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282512/portfolio/projects/landing-page_olg789.webp'
   },
   {
     title: 'Minha lojinha',
-    description:
-      'Front end de um e-commerce fictício, ainda em desenvolvimento.',
+    description: 'Front end de um e-commerce fictício, em desenvolvimento.',
     skills: 'React Sass Bootstrap',
-    websiteLink: 'https://aleferreinert.github.io/react-commerce',
+    projectLink: 'https://aleferreinert.github.io/react-commerce',
     repositoryLink: 'https://github.com/AleferReinert/react-commerce',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/e-commerce_trymjy.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/minha-lojinha_grzc2m.webp'
   },
   {
     title: 'Single Page',
     description:
       'Website responsivo de uma empresa fictícia, desenvolvido em página única.',
     skills: 'HTML Less JavaScript Gulp',
-    websiteLink: 'https://aleferreinert.github.io/single-page',
+    projectLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689701547/portfolio/projects/single-page_omkoyr.webp'
-  },
-  {
-    title: 'Tic Tac Toe',
-    description: 'Jogo da velha feito a partir do tutorial do React.',
-    skills: 'React CSS JSX',
-    websiteLink: 'https://aleferreinert.github.io/tic-tac-toe',
-    repositoryLink: 'https://github.com/AleferReinert/tic-tac-toe',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689602179/portfolio/projects/tic-tac-toe_fu4onn.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/single-page_sj0mi1.webp'
   },
   {
     title: 'Metronome',
     description: 'Metrônomo para desktop com diversas configurações.',
     skills: 'HTML CSS JavaScript',
-    websiteLink: 'https://aleferreinert.github.io/metronome',
+    projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1689600901/portfolio/projects/metronome_wdn7fn.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691284888/portfolio/projects/metronome_blzuw0.png'
   }
 ]
 

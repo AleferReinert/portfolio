@@ -61,3 +61,18 @@ export const SocialWrapper = styled.div`
     transform: translateX(calc(var(--icon-small) * -1));
   }
 `
+
+export const Footer = styled.footer`
+  text-align: center;
+  margin-top: var(--spacing-huge);
+  margin-bottom: var(--spacing-xxlarge);
+  font-size: var(--font-xxsmall);
+
+  @media (min-width: ${breakpoints.small}) {
+    display: none;
+  }
+
+  @media (min-width: ${breakpoints.medium}) {
+    display: block;
+  }
+`

@@ -52,6 +52,7 @@ export default function Home() {
               <Skills skills={skills} />
             </Container>
           </S.Section>
+          <S.Footer>Desenvolvido em 2023.</S.Footer>
         </S.Main>
         <S.SocialWrapper>
           <Social socials={social} />
