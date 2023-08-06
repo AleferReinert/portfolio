@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
+import { Inter } from 'next/font/google'
 import GlobalStyles from 'styles/global'
 import Head from 'next/head'
-
-import { Inter } from 'next/font/google'
 
 const inter = Inter({
   weight: ['300', '400', '700', '800'],
@@ -38,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:height' content='630' />
       </Head>
       <GlobalStyles />
+      <GoogleAnalytics trackPageViews />
       <Component className={inter.className} {...pageProps} />
     </>
   )
