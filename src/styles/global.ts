@@ -53,38 +53,6 @@ const GlobalStyles = createGlobalStyle`
         --color-text: #595959;
     }
 
-    @font-face {
-        font-display: swap; 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 300;
-        src: url('/fonts/inter-v12-latin-300.woff2') format('woff2');
-    }
-
-    @font-face {
-        font-display: swap; 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        src: url('/fonts/inter-v12-latin-regular.woff2') format('woff2');
-    }
-    
-    @font-face {
-        font-display: swap; 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        src: url('/fonts/inter-v12-latin-700.woff2') format('woff2');
-    }
-
-    @font-face {
-        font-display: swap; 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 800;
-        src: url('/fonts/inter-v12-latin-800.woff2') format('woff2');
-    }
-
       html {
         font-size: 62.5%;
 

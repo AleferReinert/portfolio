@@ -2,6 +2,14 @@ import type { AppProps } from 'next/app'
 import GlobalStyles from 'styles/global'
 import Head from 'next/head'
 
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  weight: ['300', '400', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap'
+})
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -30,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:height' content='630' />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Component className={inter.className} {...pageProps} />
     </>
   )
 }
