@@ -102,7 +102,7 @@ export const projects = [
     skills: 'HTML CSS JavaScript',
     projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691284888/portfolio/projects/metronome_blzuw0.png'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691286338/portfolio/projects/metronome_in0apj.webp'
   }
 ]
 
