@@ -34,8 +34,14 @@ export default function App({ Component, pageProps }: AppProps) {
           property='og:image'
           content='https://res.cloudinary.com/devalefer/image/upload/v1691437893/portfolio/social-share_pkmpl3.webp'
         />
+        <meta
+          name='og:image:alt'
+          content='Imagem que mostra o site responsivo em um celular, tablet e notebook.'
+        />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
+        <meta name='author' content='Alefer Reinert' />
+        <meta name='publish-date' content='2023-08-07' />
       </Head>
       <GlobalStyles />
       <GoogleAnalytics trackPageViews />
