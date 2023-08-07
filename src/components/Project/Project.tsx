@@ -7,6 +7,7 @@ import * as S from './Project.styles'
 
 export type ProjectProps = {
   title: string
+  year: string
   description: string
   skills: string
   repositoryLink: string
@@ -18,6 +19,7 @@ export type ProjectProps = {
 
 const Project = ({
   title,
+  year,
   description,
   skills,
   repositoryLink,
@@ -42,7 +44,11 @@ const Project = ({
         />
       </S.ImageWrapper>
       <S.Content>
-        <S.Title>{title}</S.Title>
+        <S.Title>
+          {title}
+          <S.Year aria-label='ano'>{year}</S.Year>
+        </S.Title>
+
         <S.Description role='paragraph' aria-label='descrição'>
           {description}
         </S.Description>

@@ -39,10 +39,6 @@ export const ImageWrapper = styled.div`
 
   img {
     object-fit: contain;
-    /* padding: var(--spacing-small) var(--spacing-small) 0; */
-    @media (min-width: ${breakpoints.small}) {
-      /* padding: var(--spacing-medium); */
-    }
   }
 
   @media (min-width: ${breakpoints.small}) {
@@ -55,23 +51,16 @@ export const ImageWrapper = styled.div`
 `
 
 export const Content = styled.div`
-  /* padding: var(--spacing-large) var(--spacing-small); */
   display: flex;
   flex-direction: column;
   align-self: center;
   margin: 0 auto;
-
-  /* @media (min-width: ${breakpoints.small}) {
-    padding: var(--spacing-large);
-  }
-
-  @media (min-width: ${breakpoints.large}) {
-    padding-left: var(--spacing-huge);
-    padding-right: var(--spacing-huge);
-  } */
 `
 
 export const Title = styled.h3`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   font-size: var(--font-large);
   font-weight: var(--font-extrabold);
   margin-bottom: var(--spacing-small);
@@ -80,6 +69,11 @@ export const Title = styled.h3`
     font-size: var(--font-large);
     margin-bottom: var(--spacing-small);
   }
+`
+
+export const Year = styled.span`
+  font-size: var(--font-xxsmall);
+  font-weight: var(--font-light);
 `
 
 export const Description = styled.p`

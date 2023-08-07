@@ -56,6 +56,7 @@ export const about = {
 export const projects = [
   {
     title: 'Won Games',
+    year: '2023',
     description:
       'E-ecommerce de jogos que faz parte do curso de React Avançado, em desenvolvimento.',
     skills: 'React Next.js TypeScript Styled Components Storybook Jest',
@@ -65,6 +66,7 @@ export const projects = [
   },
   {
     title: 'Portfólio',
+    year: '2023',
     description: 'Veja como foi a construção desse portfólio.',
     skills: 'React Next.js TypeScript Styled Components Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
@@ -73,6 +75,7 @@ export const projects = [
   },
   {
     title: 'Landing Page',
+    year: '2023',
     description: 'Primeiro projeto do curso de React Avançado.',
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
@@ -81,14 +84,16 @@ export const projects = [
   },
   {
     title: 'Minha lojinha',
+    year: '2022',
     description: 'Front end de um e-commerce fictício, em desenvolvimento.',
     skills: 'React Sass Bootstrap',
     projectLink: 'https://aleferreinert.github.io/react-commerce',
-    repositoryLink: 'https://github.com/AleferReinert/react-commerce',
+    repositoryLink: 'https://github.com/AleferReinert/minha-lojinha',
     img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/minha-lojinha_grzc2m.webp'
   },
   {
     title: 'Single Page',
+    year: '2022',
     description:
       'Website responsivo de uma empresa fictícia, desenvolvido em página única.',
     skills: 'HTML Less JavaScript Gulp',
@@ -98,6 +103,7 @@ export const projects = [
   },
   {
     title: 'Metronome',
+    year: '2022',
     description: 'Metrônomo para desktop com diversas configurações.',
     skills: 'HTML CSS JavaScript',
     projectLink: 'https://aleferreinert.github.io/metronome',

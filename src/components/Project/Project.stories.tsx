@@ -9,6 +9,7 @@ const meta: Meta<typeof ProjectComponent> = {
   component: ProjectComponent,
   args: {
     title: 'My project',
+    year: '2023',
     description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     skills: 'React Next.js Jest',
     repositoryLink: '/repository-link',
@@ -35,7 +36,8 @@ type Story = StoryObj<typeof ProjectComponent>
 export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const title = canvas.getByRole('heading', { name: 'My project' })
+    const title = canvas.getByRole('heading', { name: /my project/i })
+    const year = canvas.getByLabelText('ano')
     const description = canvas.getByRole('paragraph')
     const skills = canvas.getByLabelText(/skills utilizadas/i)
     const repositoryLink = canvas.getByRole('link', {
@@ -44,9 +46,10 @@ export const Default: Story = {
     const img = canvas.getByRole('img', { name: /imagem do projeto/i })
 
     await step(
-      'Render title, description, skills, repository and image',
+      'Render title, year, description, skills, repository and image',
       () => {
         expect(title).toBeInTheDocument()
+        expect(year).toBeInTheDocument()
         expect(description).toHaveTextContent(/lorem ipsum dolor sit/i)
         expect(skills).toBeInTheDocument()
         expect(repositoryLink).toHaveAttribute('href', '/repository-link')
