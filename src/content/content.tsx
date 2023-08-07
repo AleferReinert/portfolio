@@ -71,7 +71,7 @@ export const projects = [
     skills: 'React Next.js TypeScript Styled Components Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/portfolio_vwzlzk.webp'
+    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691438016/portfolio/projects/portfolio_koavvj.webp'
   },
   {
     title: 'Landing Page',
