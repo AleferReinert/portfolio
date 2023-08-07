@@ -41,7 +41,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta name='author' content='Alefer Reinert' />
-        <meta name='publish-date' content='2023-08-07' />
+        <meta
+          name='publish_date'
+          property='og:publish_date'
+          content='2023-08-07'
+        />
       </Head>
       <GlobalStyles />
       <GoogleAnalytics trackPageViews />
