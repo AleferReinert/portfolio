@@ -118,6 +118,18 @@ export const certificates = [
     organization: 'Udemy',
     conclusionDate: 'Cursando'
   },
+    {
+    title: 'Organização de Produtividade Remota',
+    organization: 'Descomplica',
+    conclusionDate: 'Janeiro/2024',
+    link: 'https://drive.google.com/file/d/1_Ft-af5KTcpE_Jx77TZcJnIi4UjAM0qR/view?usp=drivesdk'
+  },
+ {
+    title: 'PHP - MYSQL - INICIANTE ',
+    organization: 'Unova Cursos',
+    conclusionDate: 'Novembro/2023',
+    link: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view?usp=drivesdk'
+  },
   {
     title: 'Javascript Para Iniciantes',
     organization: 'Unova Cursos',
