@@ -134,7 +134,7 @@ export const certificates = [
     title: 'Javascript Para Iniciantes',
     organization: 'Unova Cursos',
     conclusionDate: 'Outubro/2022',
-    link: 'https://www.unovacursos.com.br/certificados/14304132340741204202210'
+    link: 'https://drive.google.com/file/d/1JlXW0mOzE2BANTBJE-EuKvALBTx1y0OF/view?usp=drivesdk'
   },
   {
     title: 'CC50: Introdução à Ciência da Computação',
