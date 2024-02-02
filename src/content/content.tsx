@@ -140,7 +140,7 @@ export const certificates = [
     title: 'CC50: Introdução à Ciência da Computação',
     organization: 'Fundação Estudar',
     conclusionDate: 'Setembro/2022',
-    link: 'https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-7244069/course-84414-bvrom.pdf'
+    link: 'https://drive.google.com/file/d/1CnuB8aRzOaDDiZSg4LMwYMYT8Fftbsl9/view?usp=drivesdk'
   },
   {
     title: 'Formação Design Gráfico',
