@@ -119,6 +119,12 @@ export const certificates = [
     conclusionDate: 'Cursando'
   },
     {
+    title: 'Fundamentos de Banco de Dados',
+    organization: 'Descomplica',
+    conclusionDate: 'Janeiro/2024',
+    link: 'https://drive.google.com/file/d/168BBYFD8yjjCRLlZx608FqsNLAATOTY1/view?usp=sharing'
+  },
+  {
     title: 'Organização de Produtividade Remota',
     organization: 'Descomplica',
     conclusionDate: 'Janeiro/2024',
