@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  &:first-child {
+    grid-column: 1/3;
+  }
+`
 
 export const Title = styled.h3`
   color: var(--color-primary);
