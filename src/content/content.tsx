@@ -118,7 +118,12 @@ export const certificates = [
     organization: 'Udemy',
     conclusionDate: 'Cursando'
   },
-    
+  {
+    title: 'Curso Introdução ao Git e Github',
+    organization: 'Refatorando',
+    conclusionDate: 'Março/2024',
+    link: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view?usp=sharing'
+  },  
   {
     title: 'Organização de Produtividade Remota',
     organization: 'Descomplica',
