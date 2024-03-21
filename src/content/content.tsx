@@ -119,6 +119,12 @@ export const certificates = [
     conclusionDate: 'Cursando'
   },
   {
+    title: 'Curso Introdução ao TypeScript',
+    organization: 'Refatorando',
+    conclusionDate: 'Março/2024',
+    link: 'https://drive.google.com/file/d/1d3-MN9qgV0cW93yQf3xFDlRAWqzAHGeI/view?usp=sharing'
+  },  
+  {
     title: 'Curso Introdução ao Git e Github',
     organization: 'Refatorando',
     conclusionDate: 'Março/2024',
