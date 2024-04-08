@@ -119,6 +119,12 @@ export const certificates = [
     conclusionDate: 'Cursando'
   },
   {
+    title: 'NLW Unite - Nodejs',
+    organization: 'Rocketseat',
+    conclusionDate: 'Abril/2024',
+    link: 'https://drive.google.com/file/d/1FzB1k96PXgG8ZtSMhJoiA4O3SWFHbDwn/view?usp=sharing'
+  },
+  {
     title: 'NLW Unite - Reactjs',
     organization: 'Rocketseat',
     conclusionDate: 'Abril/2024',
