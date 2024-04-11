@@ -7,7 +7,7 @@ export const Fixed = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-xsmall) var(--spacing-small);
+  padding: var(--spacing-xs) var(--spacing-sm);
   background-color: var(--color-background);
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@ export const Fixed = styled.div`
   }
 
   @media (min-width: ${breakpoints.small}) {
-    padding: var(--spacing-small) var(--spacing-large);
+    padding: var(--spacing-sm) var(--spacing-lg);
   }
 `
 
@@ -39,7 +39,7 @@ export const SwitchWrapper = styled.div`
 
 export const IconWrapper = styled.div`
   svg {
-    width: var(--icon-medium);
+    width: var(--icon-md);
     color: var(--color-primary);
     cursor: pointer;
   }

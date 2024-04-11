@@ -3,7 +3,6 @@ import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 import { about } from 'content/content'
 import { jsMediaQuery } from 'utils/helpers'
-import { breakpoints } from 'styles/global'
 import AboutComponent from './About'
 import Container from 'components/Container/Container'
 
@@ -40,13 +39,13 @@ export const About: Story = {
       expect(description).toBeInTheDocument()
     })
 
-    jsMediaQuery.lessThan(breakpoints.small, async () => {
+    jsMediaQuery.lessThan('small', async () => {
       await step('Without subtitle on mobile', () => {
         expect(subtitle).not.toBeInTheDocument()
       })
     })
 
-    jsMediaQuery.greaterThan(breakpoints.small, async () => {
+    jsMediaQuery.greaterThan('small', async () => {
       await step('Render subtitle on desktop', () => {
         expect(subtitle).toBeInTheDocument()
       })

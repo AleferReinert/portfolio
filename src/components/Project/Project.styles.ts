@@ -9,16 +9,16 @@ export const Wrapper = styled.div`
   max-width: 32.8rem;
   align-self: center;
   align-items: center;
-  padding: var(--spacing-medium);
-  gap: var(--spacing-medium);
+  padding: var(--spacing-md);
+  gap: var(--spacing-md);
 
   @media (min-width: ${breakpoints.small}) {
     justify-content: space-between;
     flex-direction: row;
     max-width: none;
     align-self: auto;
-    padding: var(--spacing-large) var(--spacing-medium);
-    gap: var(--spacing-large);
+    padding: var(--spacing-lg) var(--spacing-md);
+    gap: var(--spacing-lg);
   }
 
   @media (min-width: ${breakpoints.medium}) {
@@ -26,8 +26,8 @@ export const Wrapper = styled.div`
     flex-direction: row;
     max-width: none;
     align-self: auto;
-    padding: var(--spacing-xxlarge);
-    gap: var(--spacing-xxlarge);
+    padding: var(--spacing-xxl);
+    gap: var(--spacing-xxl);
   }
 `
 
@@ -61,42 +61,42 @@ export const Title = styled.h3`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: var(--font-large);
+  font-size: var(--font-lg);
   font-weight: var(--font-extrabold);
-  margin-bottom: var(--spacing-small);
+  margin-bottom: var(--spacing-sm);
 
   @media (min-width: ${breakpoints.medium}) {
-    font-size: var(--font-large);
-    margin-bottom: var(--spacing-small);
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-sm);
   }
 `
 
 export const Year = styled.span`
-  font-size: var(--font-xxsmall);
+  font-size: var(--font-xxs);
   font-weight: var(--font-light);
 `
 
 export const Description = styled.p`
-  font-size: var(--font-small);
+  font-size: var(--font-sm);
 `
 
 export const Skills = styled.p`
   color: var(--color-primary);
-  font-size: var(--font-xsmall);
+  font-size: var(--font-xs);
   font-weight: var(--font-regular);
-  margin: var(--spacing-medium) 0;
+  margin: var(--spacing-md) 0;
 
   @media (min-width: ${breakpoints.medium}) {
-    margin: var(--spacing-large) 0;
+    margin: var(--spacing-lg) 0;
   }
 `
 
 export const IconsWrapper = styled.div`
   display: flex;
-  gap: var(--spacing-small);
+  gap: var(--spacing-sm);
 
   svg {
-    height: var(--font-large);
+    height: var(--font-lg);
     transition: all var(--transition-duration-default) var(--transition-effect);
   }
 

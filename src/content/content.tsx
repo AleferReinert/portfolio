@@ -57,58 +57,66 @@ export const projects = [
   {
     title: 'Won Games',
     year: '2023',
-    description:
-      'E-ecommerce de jogos que faz parte do curso de React Avançado, em desenvolvimento.',
-    skills: 'React Next.js TypeScript Styled Components Storybook Jest',
+    description: `
+        Projeto principal do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br>
+        Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Ainda em desenvolvimento.`,
+    skills:
+      'React Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
     repositoryLink: 'https://github.com/AleferReinert/won-games',
     storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com/',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282514/portfolio/projects/won-games_i6iip7.webp'
+    img: '/img/projects/won-games.webp'
+    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282514/portfolio/projects/won-games_i6iip7.webp'
   },
   {
     title: 'Portfólio',
     year: '2023',
-    description: 'Veja como foi a construção desse portfólio.',
-    skills: 'React Next.js TypeScript Styled Components Storybook Jest',
+    description: 'Veja como foi o desenvolvimento do meu portfólio.',
+    skills: 'React Next.js TypeScript StyledComponents Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691438016/portfolio/projects/portfolio_koavvj.webp'
+    img: '/img/projects/portfolio.webp'
+    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691438016/portfolio/projects/portfolio_koavvj.webp'
   },
   {
     title: 'Landing Page',
     year: '2023',
-    description: 'Primeiro projeto do curso de React Avançado.',
+    description: `Página de apresentação do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
+        Foi um projeto extra com o objetivo de iniciar no Strapi, substituindo dados estáticos por dinâmicos através de uma API.`,
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282512/portfolio/projects/landing-page_olg789.webp'
+    img: '/img/projects/landing-page.webp'
+    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282512/portfolio/projects/landing-page_olg789.webp'
   },
   {
     title: 'Minha lojinha',
     year: '2022',
-    description: 'Front end de um e-commerce fictício, em desenvolvimento.',
+    description: `Front end de um e-commerce fictício, em desenvolvimento.`,
     skills: 'React Sass Bootstrap',
     projectLink: 'https://aleferreinert.github.io/react-commerce',
     repositoryLink: 'https://github.com/AleferReinert/minha-lojinha',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/minha-lojinha_grzc2m.webp'
+    img: '/img/projects/minha-lojinha.webp'
+    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/minha-lojinha_grzc2m.webp'
   },
   {
     title: 'Single Page',
     year: '2022',
-    description:
-      'Website responsivo de uma empresa fictícia, desenvolvido em página única.',
+    description: `Website genérico de página única. Apresenta informações sobre uma empresa destacando seus projetos e serviços. Além disso, é apresentado sua história, redes sociais e formulário para contato, tudo de forma minimalista e objetiva.`,
     skills: 'HTML Less JavaScript Gulp',
     projectLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/single-page_sj0mi1.webp'
+    img: '/img/projects/single-page.webp'
+    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/single-page_sj0mi1.webp'
   },
   {
     title: 'Metronome',
     year: '2022',
-    description: 'Metrônomo para desktop com diversas configurações.',
+    description: `Metrônomo com diversas configurações. Além do andamento, é possível definir a fórmula de compasso, quantidade de compassos a serem executados e limite de tempo em minutos. Também é possível controlar o volume dos tempos, contratempos e tercinas separadamente.`,
     skills: 'HTML CSS JavaScript',
     projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691286338/portfolio/projects/metronome_in0apj.webp'
+    img: '/img/projects/metronome.webp'
+    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691286338/portfolio/projects/metronome_in0apj.webp'
   }
 ]
 
@@ -117,6 +125,18 @@ export const certificates = [
     title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
     organization: 'Udemy',
     conclusionDate: 'Cursando'
+  },
+  {
+    title: 'A História da IA',
+    organization: 'ENAP',
+    conclusionDate: 'Abril/2024',
+    link: 'https://drive.google.com/file/d/1dK8GkpAUg-gn85giv1JltQE5KXyGx0fD/view?usp=sharing'
+  },
+  {
+    title: 'Inteligência Artificial Generativa',
+    organization: 'ENAP',
+    conclusionDate: 'Abril/2024',
+    link: 'https://drive.google.com/file/d/1cl7woPdxgeocrIWu_1nB74BBfuObu53y/view?usp=sharing'
   },
   {
     title: 'NLW Unite - Nodejs',
@@ -135,19 +155,19 @@ export const certificates = [
     organization: 'Refatorando',
     conclusionDate: 'Março/2024',
     link: 'https://drive.google.com/file/d/1QY9usp1Wvj3EwK6RDuSTb0LbUDnImg0u/view?usp=sharing'
-  },  
+  },
   {
     title: 'Curso Introdução ao TypeScript',
     organization: 'Refatorando',
     conclusionDate: 'Março/2024',
     link: 'https://drive.google.com/file/d/1d3-MN9qgV0cW93yQf3xFDlRAWqzAHGeI/view?usp=sharing'
-  },  
+  },
   {
     title: 'Curso Introdução ao Git e Github',
     organization: 'Refatorando',
     conclusionDate: 'Março/2024',
     link: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view?usp=sharing'
-  },  
+  },
   {
     title: 'Organização de Produtividade Remota',
     organization: 'Descomplica',
@@ -160,7 +180,7 @@ export const certificates = [
     conclusionDate: 'Janeiro/2024',
     link: 'https://drive.google.com/file/d/168BBYFD8yjjCRLlZx608FqsNLAATOTY1/view?usp=sharing'
   },
- {
+  {
     title: 'PHP - MYSQL - INICIANTE ',
     organization: 'Unova Cursos',
     conclusionDate: 'Novembro/2023',
@@ -175,14 +195,14 @@ export const certificates = [
   {
     title: 'CC50: Introdução à Ciência da Computação',
     organization: 'Fundação Estudar',
-    conclusionDate: 'Setembro/2022',
-    link: 'https://drive.google.com/file/d/1CnuB8aRzOaDDiZSg4LMwYMYT8Fftbsl9/view?usp=drivesdk'
+    link: 'https://drive.google.com/file/d/1CnuB8aRzOaDDiZSg4LMwYMYT8Fftbsl9/view?usp=drivesdk',
+    conclusionDate: 'Setembro/2022'
   },
   {
     title: 'Formação Design Gráfico',
     organization: 'ProWay Informática',
-    conclusionDate: 'Fevereiro/2012',
-    link: 'https://drive.google.com/file/d/1dJErgNzdqUchbaEo7upZoSCO3GBYVRIv/view?usp=share_link'
+    link: 'https://drive.google.com/file/d/1dJErgNzdqUchbaEo7upZoSCO3GBYVRIv/view?usp=share_link',
+    conclusionDate: 'Fevereiro/2012'
   }
 ]
 

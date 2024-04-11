@@ -25,7 +25,7 @@ export const Section = styled.section`
   padding-top: var(--spacing-huge);
 
   &:last-child {
-    padding-bottom: var(--spacing-xxlarge);
+    padding-bottom: var(--spacing-xxl);
   }
 
   @media (min-width: ${breakpoints.small}) {
@@ -38,7 +38,7 @@ export const Section = styled.section`
 
   @media (min-width: ${breakpoints.medium}) {
     &:last-child {
-      padding-bottom: var(--spacing-xxlarge);
+      padding-bottom: var(--spacing-xxl);
     }
   }
 `
@@ -54,19 +54,19 @@ export const SocialWrapper = styled.div`
     position: sticky;
     top: 0;
     height: 100vh;
-    width: var(--icon-small);
+    width: var(--icon-sm);
   }
 
   @media (min-width: ${breakpoints.large}) {
-    transform: translateX(calc(var(--icon-small) * -1));
+    transform: translateX(calc(var(--icon-sm) * -1));
   }
 `
 
 export const Footer = styled.footer`
   text-align: center;
   margin-top: var(--spacing-huge);
-  margin-bottom: var(--spacing-xxlarge);
-  font-size: var(--font-xxsmall);
+  margin-bottom: var(--spacing-xxl);
+  font-size: var(--font-xxs);
 
   @media (min-width: ${breakpoints.small}) {
     display: none;

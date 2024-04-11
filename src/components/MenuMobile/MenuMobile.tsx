@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react'
-import { X } from '@styled-icons/feather'
+import { X as CloseIcon } from '@styled-icons/feather'
 import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import Social, { SocialItemProps } from 'components/Social/Social'
 import * as S from './MenuMobile.styles'
@@ -20,7 +20,7 @@ const MenuMobile = ({
   return (
     <S.Wrapper showMobileMenu={showMobileMenu}>
       <S.IconWrapper>
-        <X title='Fechar menu' onClick={() => setShowMobileMenu(false)} />
+        <CloseIcon title='Fechar' onClick={() => setShowMobileMenu(false)} />
       </S.IconWrapper>
       <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
       <Social socials={socials} />

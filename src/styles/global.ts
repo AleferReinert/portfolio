@@ -16,33 +16,34 @@ const GlobalStyles = createGlobalStyle`
         --font-regular: 400;
         --font-bold: 700;
         --font-extrabold: 800;
-        --font-xxsmall: 1.4rem;
-        --font-xsmall: 1.6rem;
-        --font-small: 1.8rem;
-        --font-medium: 2rem;
-        --font-large: 2.4rem;
-        --font-xlarge: 2.8rem;
-        --font-xxlarge: 3.6rem;
+        --font-xxs: 1.4rem;
+        --font-xs: 1.6rem;
+        --font-sm: 1.8rem;
+        --font-md: 2rem;
+        --font-lg: 2.4rem;
+        --spacing-xl: 2.8rem;
+        --font-xxl: 3.6rem;
         --font-huge: 4.4rem;
-        --spacing-xxsmall: 0.4rem;
-        --spacing-xsmall: 0.8rem;
-        --spacing-small: 1.6rem;
-        --spacing-medium: 2.4rem;
-        --spacing-large: 3.2rem;
-        --spacing-xlarge: 4rem;
-        --spacing-xxlarge: 4.8rem;
+        --spacing-xxs: 0.4rem;
+        --spacing-xs: 0.8rem;
+        --spacing-sm: 1.6rem;
+        --spacing-md: 2.4rem;
+        --spacing-lg: 3.2rem;
+        --spacing-xl: 4rem;
+        --spacing-xxl: 4.8rem;
         --spacing-huge: 8rem;
         --transition-effect: linear;
         --transition-duration-slow: .3s;
         --transition-duration-default: .15s;
-        --icon-small: 2.8rem;
-        --icon-medium: 3.6rem;
-        --icon-large: 4.4rem;
+        --icon-sm: 2.8rem;
+        --icon-md: 3.6rem;
+        --icon-lg: 4.4rem;
         --color-primary: #48e194;
         --color-background: #00344a;
         --color-background-secondary: rgba(0, 0, 0, 0.25);
         --color-heading: rgba(255,255,255,0.85);
         --color-text: #829BA6;
+        --color-bg-modal: rgba(0,0,0,0.85);
     }
 
     .lightTheme {
@@ -64,7 +65,7 @@ const GlobalStyles = createGlobalStyle`
       body {
         color: var(--color-text);
         font-family: var(--font-family);
-        font-size: var(--font-small);
+        font-size: var(--font-sm);
         font-weight: var(--font-light);
         background-color: var(--color-background);
         overflow-x: hidden;

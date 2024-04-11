@@ -4,14 +4,14 @@ import { breakpoints } from 'styles/global'
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: var(--spacing-xsmall);
-  row-gap: var(--spacing-large);
+  column-gap: var(--spacing-xs);
+  row-gap: var(--spacing-lg);
   justify-content: space-around;
   justify-items: center;
 
   @media (min-width: ${breakpoints.small}) {
     grid-template-columns: repeat(4, 1fr);
-    row-gap: var(--spacing-xlarge);
+    row-gap: var(--spacing-xl);
   }
 
   @media (min-width: ${breakpoints.medium}) {
@@ -24,8 +24,8 @@ export const Skill = styled.div`
 `
 
 export const Title = styled.h3`
-  margin-top: var(--spacing-xsmall);
-  font-size: var(--font-xsmall);
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-xs);
   font-weight: var(--font-regular);
   display: flex;
   justify-content: center;
@@ -34,10 +34,10 @@ export const Title = styled.h3`
 `
 
 export const IconWrapper = styled.div`
-  width: var(--icon-medium);
+  width: var(--icon-md);
   margin: 0 auto;
 
   @media (min-width: ${breakpoints.medium}) {
-    width: var(--icon-large);
+    width: var(--icon-lg);
   }
 `

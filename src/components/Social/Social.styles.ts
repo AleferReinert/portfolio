@@ -4,10 +4,10 @@ import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.nav`
   display: flex;
-  gap: var(--spacing-small);
+  gap: var(--spacing-sm);
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-xxlarge) 0;
+  padding: var(--spacing-xxl) 0;
 
   @media (min-width: ${breakpoints.medium}) {
     position: absolute;
@@ -41,13 +41,13 @@ export const Wrapper = styled.nav`
 
     a {
       position: relative;
-      margin-bottom: var(--spacing-small);
+      margin-bottom: var(--spacing-sm);
       transition: color var(--transition-duration-default)
         var(--transition-effect);
 
       &::after {
         content: attr(title);
-        font-size: var(--font-xxsmall);
+        font-size: var(--font-xxs);
         left: 3.6rem;
         line-height: 3rem;
         text-wrap: nowrap;
@@ -83,12 +83,12 @@ export const Wrapper = styled.nav`
 
 export const SocialItem = styled(Link)`
   svg {
-    width: var(--icon-medium);
+    width: var(--icon-md);
     transition: all var(--transition-duration-default) var(--transition-effect);
 
     @media (min-width: ${breakpoints.small}) {
       width: auto;
-      height: var(--icon-small);
+      height: var(--icon-sm);
     }
   }
 `

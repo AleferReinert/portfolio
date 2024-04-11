@@ -4,11 +4,11 @@ import { breakpoints } from 'styles/global'
 export const Wrapper = styled.div``
 
 export const TitleWrapper = styled.div`
-  margin-bottom: var(--spacing-xlarge);
+  margin-bottom: var(--spacing-xl);
 
   @media (min-width: ${breakpoints.small}) {
     margin-bottom: var(--spacing-huge);
-    margin-top: var(--spacing-large);
+    margin-top: var(--spacing-lg);
   }
 `
 
@@ -17,14 +17,14 @@ export const Title = styled.h1`
 `
 
 export const FirstLine = styled.div`
-  font-size: var(--font-large);
+  font-size: var(--font-lg);
   font-weight: var(--font-light);
 `
 
 export const Name = styled.div`
   font-size: var(--font-huge);
   font-weight: var(--font-extrabold);
-  margin-bottom: var(--spacing-xsmall);
+  margin-bottom: var(--spacing-xs);
 
   @media (min-width: ${breakpoints.small}) {
     font-size: calc(var(--font-huge) * 1.4);
@@ -33,11 +33,11 @@ export const Name = styled.div`
 
 export const Role = styled.h2`
   color: var(--color-primary);
-  font-size: var(--font-small);
-  margin-bottom: var(--spacing-xlarge);
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-xl);
 
   @media (min-width: ${breakpoints.small}) {
-    font-size: var(--font-medium);
+    font-size: var(--font-md);
   }
 `
 
@@ -47,7 +47,7 @@ export const Subtitle = styled.h3`
   @media (min-width: ${breakpoints.small}) {
     text-align: center;
     color: var(--color-heading);
-    font-size: var(--font-xxlarge);
+    font-size: var(--font-xxl);
     display: block;
   }
 `
@@ -55,16 +55,16 @@ export const Subtitle = styled.h3`
 export const Description = styled.p`
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-large);
+  gap: var(--spacing-lg);
 
   p::first-letter {
-    margin-left: var(--spacing-medium);
+    margin-left: var(--spacing-md);
   }
 
   @media (min-width: ${breakpoints.small}) {
     text-align: center;
     max-width: 80rem;
-    margin: var(--spacing-xlarge) auto;
-    font-size: var(--font-medium);
+    margin: var(--spacing-xl) auto;
+    font-size: var(--font-md);
   }
 `

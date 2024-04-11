@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import * as NavMenuStyles from 'components/NavMenu/NavMenu.styles'
-
 import * as SocialStyles from 'components/Social/Social.styles'
 import { MenuMobileProps } from './MenuMobile'
 import { breakpoints } from 'styles/global'
@@ -39,7 +38,7 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
     justify-content: space-between;
     background: var(--color-background);
     z-index: 1;
-    padding-bottom: var(--spacing-xxlarge);
+    padding-bottom: var(--spacing-xxl);
     transition: opacity var(--transition-duration-default)
       var(--transition-effect) var(--transition-duration-slow);
     opacity: 0;
@@ -67,11 +66,11 @@ export const Wrapper = styled.div<Pick<MenuMobileProps, 'showMobileMenu'>>`
 
 export const IconWrapper = styled.div`
   align-self: end;
-  margin-top: var(--spacing-xsmall);
-  margin-right: var(--spacing-small);
+  margin-top: var(--spacing-xs);
+  margin-right: var(--spacing-sm);
 
   svg {
-    width: var(--icon-medium);
+    width: var(--icon-md);
     color: var(--color-primary);
     cursor: pointer;
   }

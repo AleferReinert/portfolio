@@ -13,7 +13,7 @@ const meta: Meta<typeof ProjectComponent> = {
     description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     skills: 'React Next.js Jest',
     repositoryLink: '/repository-link',
-    img: 'https://res.cloudinary.com/devalefer/image/upload/v1691172456/portfolio/projects/portfolio_cugysp.webp'
+    img: '/img/projects/portfolio.webp'
   },
   argTypes: {
     lazy: {

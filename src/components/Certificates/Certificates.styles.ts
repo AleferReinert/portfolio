@@ -4,7 +4,7 @@ import { breakpoints } from 'styles/global'
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-large);
+  gap: var(--spacing-lg);
 
   @media (min-width: ${breakpoints.medium}) {
     display: grid;

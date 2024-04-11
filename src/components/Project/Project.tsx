@@ -1,14 +1,14 @@
 import { Github as GithubIcon, Link as LinkIcon } from '@styled-icons/feather'
 import { Storybook as StorybookIcon } from '@styled-icons/simple-icons'
-import { breakpoints } from 'styles/global'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as S from './Project.styles'
+import { breakpoints } from 'styles/global'
 
 export type ProjectProps = {
   title: string
   year: string
-  description: string
+  description: String
   skills: string
   repositoryLink: string
   storybookLink?: string
@@ -39,7 +39,7 @@ const Project = ({
           sizes={`
             (min-width: ${breakpoints.xsmall}) 328px,
             (min-width: ${breakpoints.small}) 240px, 
-            (min-width:${breakpoints.medium}) 280px,
+            (min-width: ${breakpoints.medium}) 280px,
             288px`}
         />
       </S.ImageWrapper>
@@ -49,10 +49,16 @@ const Project = ({
           <S.Year aria-label='ano'>{year}</S.Year>
         </S.Title>
 
-        <S.Description role='paragraph' aria-label='descrição'>
-          {description}
-        </S.Description>
-        <S.Skills aria-label='skills utilizadas'>{skills}</S.Skills>
+        <S.Description
+          role='paragraph'
+          aria-label='descrição'
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></S.Description>
+
+        <S.Skills aria-label='skills utilizadas' title='Tecnologias utilizadas'>
+          {skills}
+        </S.Skills>
+
         <S.IconsWrapper>
           <Link href={repositoryLink} title='Repositório' target='_blank'>
             <GithubIcon aria-hidden />

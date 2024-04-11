@@ -24,9 +24,11 @@ const Certificate = ({
   )
 
   const contentWithLink = (
-    <Link href={link!} title='Visualizar certificado' target='_blank'>
-      {content}
-    </Link>
+    <>
+      <Link title='Visualizar certificado' href={link!} target='_blank'>
+        {content}
+      </Link>
+    </>
   )
 
   return (

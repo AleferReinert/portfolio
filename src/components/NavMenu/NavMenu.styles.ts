@@ -4,9 +4,9 @@ import { breakpoints } from 'styles/global'
 export const Wrapper = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-medium);
+  gap: var(--spacing-md);
   text-align: center;
-  font-size: var(--font-large);
+  font-size: var(--font-lg);
   font-weight: var(--font-light);
 
   a {
@@ -20,7 +20,7 @@ export const Wrapper = styled.nav`
 
   @media (min-width: ${breakpoints.small}) {
     flex-direction: row;
-    font-size: var(--font-xsmall);
-    gap: var(--spacing-large);
+    font-size: var(--font-xs);
+    gap: var(--spacing-lg);
   }
 `
