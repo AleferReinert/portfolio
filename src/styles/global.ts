@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
         --font-sm: 1.8rem;
         --font-md: 2rem;
         --font-lg: 2.4rem;
-        --spacing-xl: 2.8rem;
+        --font-xl: 2.8rem;
         --font-xxl: 3.6rem;
         --font-huge: 4.4rem;
         --spacing-xxs: 0.4rem;
@@ -43,7 +43,6 @@ const GlobalStyles = createGlobalStyle`
         --color-background-secondary: rgba(0, 0, 0, 0.25);
         --color-heading: rgba(255,255,255,0.85);
         --color-text: #829BA6;
-        --color-bg-modal: rgba(0,0,0,0.85);
     }
 
     .lightTheme {

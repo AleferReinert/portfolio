@@ -3,7 +3,7 @@ import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.h2`
   color: var(--color-heading);
-  font-size: var(--spacing-xl);
+  font-size: var(--font-xl);
   font-weight: var(--font-bold);
   padding-bottom: var(--spacing-xs);
   border-bottom: 0.1rem solid var(--color-primary);
