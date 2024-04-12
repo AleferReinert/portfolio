@@ -56,7 +56,7 @@ export const about = {
 export const projects = [
   {
     title: 'Won Games',
-    year: '2023',
+    year: '2024',
     description: `
         Projeto principal do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br>
         Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Ainda em desenvolvimento.`,
@@ -65,7 +65,6 @@ export const projects = [
     repositoryLink: 'https://github.com/AleferReinert/won-games',
     storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com/',
     img: '/img/projects/won-games.webp'
-    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282514/portfolio/projects/won-games_i6iip7.webp'
   },
   {
     title: 'Portfólio',
@@ -75,7 +74,6 @@ export const projects = [
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
     img: '/img/projects/portfolio.webp'
-    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691438016/portfolio/projects/portfolio_koavvj.webp'
   },
   {
     title: 'Landing Page',
@@ -86,7 +84,6 @@ export const projects = [
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
     img: '/img/projects/landing-page.webp'
-    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282512/portfolio/projects/landing-page_olg789.webp'
   },
   {
     title: 'Minha lojinha',
@@ -96,7 +93,6 @@ export const projects = [
     projectLink: 'https://aleferreinert.github.io/react-commerce',
     repositoryLink: 'https://github.com/AleferReinert/minha-lojinha',
     img: '/img/projects/minha-lojinha.webp'
-    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/minha-lojinha_grzc2m.webp'
   },
   {
     title: 'Single Page',
@@ -106,7 +102,6 @@ export const projects = [
     projectLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
     img: '/img/projects/single-page.webp'
-    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691282513/portfolio/projects/single-page_sj0mi1.webp'
   },
   {
     title: 'Metronome',
@@ -116,7 +111,6 @@ export const projects = [
     projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
     img: '/img/projects/metronome.webp'
-    // img: 'https://res.cloudinary.com/devalefer/image/upload/v1691286338/portfolio/projects/metronome_in0apj.webp'
   }
 ]
 
@@ -125,6 +119,12 @@ export const certificates = [
     title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
     organization: 'Udemy',
     conclusionDate: 'Cursando'
+  },
+  {
+    title: 'Ética em IA',
+    organization: 'ENAP',
+    conclusionDate: 'Abril/2024',
+    link: 'https://drive.google.com/file/d/1eGB8VfrT3avBevGB0L3GKePcgLkDYUw2/view?usp=sharing'
   },
   {
     title: 'A História da IA',
