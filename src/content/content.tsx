@@ -121,34 +121,10 @@ export const certificates = [
     conclusionDate: 'Cursando'
   },
   {
-    title: 'Como ser mais Produtivo usando o Bing Chat',
+    title: 'Trilha fluêncIA',
     organization: 'ENAP',
     conclusionDate: 'Abril/2024',
-    link: 'https://drive.google.com/file/d/1fGOnc5QeBGR0ZbJOyDKxbp3SuxY4pxAb/view?usp=sharing'
-  },
-  {
-    title: 'A Evolução das Buscas Online',
-    organization: 'ENAP',
-    conclusionDate: 'Abril/2024',
-    link: 'https://drive.google.com/file/d/1eaw8npMiIjBqr6T1rt_AUtvEkM1YRxOp/view?usp=sharing'
-  },
-  {
-    title: 'Ética em IA',
-    organization: 'ENAP',
-    conclusionDate: 'Abril/2024',
-    link: 'https://drive.google.com/file/d/1eGB8VfrT3avBevGB0L3GKePcgLkDYUw2/view?usp=sharing'
-  },
-  {
-    title: 'A História da IA',
-    organization: 'ENAP',
-    conclusionDate: 'Abril/2024',
-    link: 'https://drive.google.com/file/d/1dK8GkpAUg-gn85giv1JltQE5KXyGx0fD/view?usp=sharing'
-  },
-  {
-    title: 'Inteligência Artificial Generativa',
-    organization: 'ENAP',
-    conclusionDate: 'Abril/2024',
-    link: 'https://drive.google.com/file/d/1cl7woPdxgeocrIWu_1nB74BBfuObu53y/view?usp=sharing'
+    link: 'https://drive.google.com/file/d/1e5-HPBjV8Ip5XhDVmusBE2W9OehXze3N/view?usp=sharing'
   },
   {
     title: 'NLW Unite - Nodejs',
