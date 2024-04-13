@@ -121,6 +121,12 @@ export const certificates = [
     conclusionDate: 'Cursando'
   },
   {
+    title: 'Como ser mais Produtivo usando o Bing Chat',
+    organization: 'ENAP',
+    conclusionDate: 'Abril/2024',
+    link: 'https://drive.google.com/file/d/1fGOnc5QeBGR0ZbJOyDKxbp3SuxY4pxAb/view?usp=sharing'
+  },
+  {
     title: 'A Evolução das Buscas Online',
     organization: 'ENAP',
     conclusionDate: 'Abril/2024',
