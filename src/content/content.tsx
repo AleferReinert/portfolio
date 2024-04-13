@@ -121,6 +121,12 @@ export const certificates = [
     conclusionDate: 'Cursando'
   },
   {
+    title: 'A Evolução das Buscas Online',
+    organization: 'ENAP',
+    conclusionDate: 'Abril/2024',
+    link: 'https://drive.google.com/file/d/1eaw8npMiIjBqr6T1rt_AUtvEkM1YRxOp/view?usp=sharing'
+  },
+  {
     title: 'Ética em IA',
     organization: 'ENAP',
     conclusionDate: 'Abril/2024',
