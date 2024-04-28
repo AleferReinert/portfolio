@@ -59,9 +59,8 @@ export const projects = [
     year: '2024',
     description: `
         Aplicação para gestão de participantes em eventos presenciais. 
-        Desenvolvido durante o NLW Unite da Rocketseat, utilizando React e Node.`,
-    skills:
-      'React Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
+        Desenvolvido durante o NLW Unite da Rocketseat.`,
+    skills: 'React TypeScript Node.js',
     projectLink: 'https://pass-in-nlw-unite.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/pass.in-react',
     img: '/img/projects/pass-in.webp'
@@ -71,7 +70,7 @@ export const projects = [
     year: '2024',
     description: `
         Projeto principal do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br>
-        Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Ainda em desenvolvimento.`,
+        Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Em desenvolvimento.`,
     skills:
       'React Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
     repositoryLink: 'https://github.com/AleferReinert/won-games',
