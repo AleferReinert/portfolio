@@ -4,19 +4,22 @@ React, Next.js, TypeScript, Styled Components and Storybook.
 
 ## Development
 
-```bash
-# Install dependencies:
-yarn install
+### Install dependencies:
 
-# Run the server:
-yarn dev
+`npm run install`
 
-# Run the Storybook:
-yarn storybook
+### Run server:
 
-# Watching tests:
-yarn test-storybook --watch
+`npm run dev`
 
-# Create new component:
-yarn plop
-```
+### Run Storybook:
+
+`npm run storybook`
+
+### Watching tests:
+
+`npm run test-storybook --watch`
+
+### Create new component:
+
+`npm run plop`

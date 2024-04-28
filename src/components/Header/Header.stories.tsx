@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { userEvent, waitFor, within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { userEvent, waitFor, within } from '@storybook/test'
+import { expect } from '@storybook/test'
 import { jsMediaQuery } from 'utils/helpers'
 import { menu, social } from 'content/content'
 import { breakpoints } from 'styles/global'

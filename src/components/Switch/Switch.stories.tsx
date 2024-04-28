@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { userEvent, within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { userEvent, within } from '@storybook/test'
+import { expect } from '@storybook/test'
 import SwitchComponent from './Switch'
 
 const meta: Meta<typeof SwitchComponent> = {

@@ -55,6 +55,18 @@ export const about = {
 
 export const projects = [
   {
+    title: 'Pass In',
+    year: '2024',
+    description: `
+        Aplicação para gestão de participantes em eventos presenciais. 
+        Desenvolvido durante o NLW Unite da Rocketseat, utilizando React e Node.`,
+    skills:
+      'React Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
+    projectLink: 'https://pass-in-nlw-unite.vercel.app',
+    repositoryLink: 'https://github.com/AleferReinert/pass.in-react',
+    img: '/img/projects/pass-in.webp'
+  },
+  {
     title: 'Won Games',
     year: '2024',
     description: `
@@ -84,15 +96,6 @@ export const projects = [
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
     img: '/img/projects/landing-page.webp'
-  },
-  {
-    title: 'Minha lojinha',
-    year: '2022',
-    description: `Front end de um e-commerce fictício, em desenvolvimento.`,
-    skills: 'React Sass Bootstrap',
-    projectLink: 'https://aleferreinert.github.io/react-commerce',
-    repositoryLink: 'https://github.com/AleferReinert/minha-lojinha',
-    img: '/img/projects/minha-lojinha.webp'
   },
   {
     title: 'Single Page',
