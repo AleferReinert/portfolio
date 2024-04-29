@@ -1,13 +1,13 @@
 import { ReactNode } from 'react'
 import * as S from './Social.styles'
 
-export type SocialItemProps = {
+export interface SocialItemProps {
   name: string
   link: string
   icon: ReactNode
 }
 
-type SocialProps = {
+interface SocialProps {
   socials: SocialItemProps[]
 }
 

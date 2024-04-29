@@ -1,7 +1,7 @@
 import Project, { ProjectProps } from 'components/Project/Project'
 import * as S from './Projects.styles'
 
-type ProjectsProps = {
+interface ProjectsProps {
   projects: ProjectProps[]
 }
 
@@ -10,7 +10,7 @@ const Projects = ({ projects }: ProjectsProps) => {
     <S.Wrapper role='list'>
       {projects.map((project, index) => {
         // Disable loading lazy for the first element
-        project.lazy = index === 0 ? true : false
+        project.lazy = index === 0 ?? false
 
         return <Project key={index} {...project} />
       })}

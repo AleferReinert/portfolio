@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Alefer Reinert - Desenvolvedor Front End</title>
+        <title>Alefer Reinert - Desenvolvedor Front-end</title>
       </Head>
       <Header menu={menu} socials={social} />
       <S.Wrapper>

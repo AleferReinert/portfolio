@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import * as S from './Container.styles'
 
-type ContainerProps = {
+interface ContainerProps {
   children: ReactNode
 }
 

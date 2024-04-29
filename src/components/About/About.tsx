@@ -1,6 +1,6 @@
 import * as S from './About.styles'
 
-type AboutProps = {
+interface AboutProps {
   name: string
   role: string
   description: string

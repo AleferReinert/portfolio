@@ -28,7 +28,7 @@ export const About: Story = {
     const canvas = within(canvasElement)
     const name = canvas.getByRole('heading', { name: /alefer reinert/i })
     const role = canvas.getByRole('heading', {
-      name: /desenvolvedor front end/i
+      name: /desenvolvedor front-end/i
     })
     const subtitle = canvas.queryByRole('heading', { name: /sobre mim/i })
     const description = canvas.getByRole('paragraph')

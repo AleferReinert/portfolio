@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 import * as S from './Skills.styles'
 
-type SkillProps = {
+interface SkillProps {
   title: string
   icon: ReactNode
 }
 
-type SkillsProps = {
+interface SkillsProps {
   skills: SkillProps[]
 }
 

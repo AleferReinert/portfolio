@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import * as S from './NavMenu.styles'
 import { Dispatch, SetStateAction } from 'react'
-export type NavMenuItemProps = {
+
+export interface NavMenuItemProps {
   link: string
   children: string
 }
 
-type NavMenuProps = {
+interface NavMenuProps {
   menu: NavMenuItemProps[]
   setShowMobileMenu: Dispatch<SetStateAction<boolean>>
 }

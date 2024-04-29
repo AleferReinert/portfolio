@@ -4,7 +4,7 @@ import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import Social, { SocialItemProps } from 'components/Social/Social'
 import * as S from './MenuMobile.styles'
 
-export type MenuMobileProps = {
+export interface MenuMobileProps {
   showMobileMenu: boolean
   setShowMobileMenu: Dispatch<SetStateAction<boolean>>
   menu: NavMenuItemProps[]

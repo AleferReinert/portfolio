@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import * as S from './Certificate.styles'
 
-export type CertificateProps = {
+export interface CertificateProps {
   title: string
   organization: string
   conclusionDate: string

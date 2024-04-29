@@ -1,24 +1,26 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as S from './Switch.styles'
 
 const Switch = () => {
-  const [theme, setTheme] = useState('darkTheme')
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark')
+
+  useEffect(() => {
+    document.body.classList.add(theme)
+  }, [])
 
   function toggleTheme() {
-    if (theme === 'darkTheme') {
-      document.body.classList.add('lightTheme')
-      setTheme('lightTheme')
-    } else {
-      document.body.classList.remove('lightTheme')
-      setTheme('darkTheme')
-    }
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
+
+    setTheme(newTheme)
+    document.body.classList.replace(theme, newTheme)
   }
+
   return (
-    <S.Wrapper title={`Tema ${theme === 'darkTheme' ? 'claro' : 'escuro'}`}>
+    <S.Wrapper title={`Tema ${theme === 'dark' ? 'claro' : 'escuro'}`}>
       <input
         type='checkbox'
         onChange={toggleTheme}
-        checked={theme === 'darkTheme'}
+        checked={theme === 'dark'}
       />
       <S.Handle />
     </S.Wrapper>

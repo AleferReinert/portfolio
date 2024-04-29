@@ -44,7 +44,7 @@ export const menu = [
 
 export const about = {
   name: 'Alefer Reinert',
-  role: 'Desenvolvedor front end',
+  role: 'Desenvolvedor front-end',
   description: `
       Escrevo códigos desde 2012, adquiri experiência em duas empresas e em
       projetos pessoais. Desenvolvi e-commerces, websites, wordpress e e-mail
@@ -59,7 +59,7 @@ export const projects = [
     year: '2024',
     description: `
         Aplicação para gestão de participantes em eventos presenciais. 
-        Desenvolvido durante o NLW Unite da Rocketseat.`,
+        Desenvolvido durante o NLW Unite da Rocketseat, foram feitas as trilhas de React e Node.js.`,
     skills: 'React TypeScript Node.js',
     projectLink: 'https://pass-in-nlw-unite.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/pass.in-react',

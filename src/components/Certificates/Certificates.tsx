@@ -3,7 +3,7 @@ import Certificate, {
 } from 'components/Certificate/Certificate'
 import * as S from './Certificates.styles'
 
-type CertificatesProps = {
+interface CertificatesProps {
   certificates: CertificateProps[]
 }
 

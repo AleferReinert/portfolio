@@ -1,6 +1,6 @@
 import * as S from './Heading.styles'
 
-export type HeadingProps = {
+export interface HeadingProps {
   children: string
 }
 

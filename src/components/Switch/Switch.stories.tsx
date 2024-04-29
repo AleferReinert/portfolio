@@ -20,16 +20,16 @@ export const Switch: Story = {
     await step('Switch ON with theme dark as default', () => {
       expect(checkbox).toBeChecked()
       expect(checkbox.parentElement).toHaveAttribute('title', 'Tema claro')
-      expect(document.body).not.toHaveClass('lightTheme')
+      expect(document.body).not.toHaveClass('light')
     })
 
     await step('Change theme', async () => {
       await userEvent.click(checkbox)
-      expect(document.body).toHaveClass('lightTheme')
+      expect(document.body).toHaveClass('light')
       expect(checkbox.parentElement).toHaveAttribute('title', 'Tema escuro')
 
       await userEvent.click(checkbox)
-      expect(document.body).not.toHaveClass('lightTheme')
+      expect(document.body).not.toHaveClass('light')
       expect(checkbox.parentElement).toHaveAttribute('title', 'Tema claro')
     })
   }

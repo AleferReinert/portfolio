@@ -6,7 +6,7 @@ import MenuMobile from 'components/MenuMobile/MenuMobile'
 import Switch from 'components/Switch/Switch'
 import * as S from './Header.styles'
 
-type HeaderProps = {
+interface HeaderProps {
   menu: NavMenuItemProps[]
   socials: SocialItemProps[]
 }

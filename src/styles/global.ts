@@ -45,7 +45,8 @@ const GlobalStyles = createGlobalStyle`
         --color-text: #829BA6;
     }
 
-    .lightTheme {
+    // Theme Light
+    .light {
         --color-primary: #00344a;
         --color-background: #f5f5f5;
         --color-background-secondary: rgba(0, 0, 0, 0.05);

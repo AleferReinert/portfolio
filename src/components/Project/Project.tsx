@@ -5,7 +5,7 @@ import Link from 'next/link'
 import * as S from './Project.styles'
 import { breakpoints } from 'styles/global'
 
-export type ProjectProps = {
+export interface ProjectProps {
   title: string
   year: string
   description: String
@@ -36,8 +36,9 @@ const Project = ({
           alt='Imagem do projeto'
           priority={lazy}
           fill
-          sizes={`
-            (min-width: ${breakpoints.xsmall}) 328px,
+          quality={100}
+          sizes={`240px,
+            (min-width: ${breakpoints.xsmall}) 280px,
             (min-width: ${breakpoints.small}) 240px, 
             (min-width: ${breakpoints.medium}) 280px,
             288px`}

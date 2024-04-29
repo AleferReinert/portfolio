@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='description'
-          content='Dev com experiência em React, Next.js, Storybook, etc.'
+          content='Desenvolvedor com experiência em React, Next.js, Storybook e TypeScript'
         />
         <meta
           name='keywords'
