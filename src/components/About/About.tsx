@@ -17,7 +17,10 @@ const About = ({ name, role, description }: AboutProps) => {
         <S.Role>{role}</S.Role>
       </S.TitleWrapper>
       <S.Subtitle>Sobre mim</S.Subtitle>
-      <S.Description role='paragraph'>{description}</S.Description>
+      <S.Description
+        role='paragraph'
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
     </S.Wrapper>
   )
 }

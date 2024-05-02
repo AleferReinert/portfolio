@@ -11,15 +11,15 @@ import {
   ReactLogo,
   Nextdotjs,
   Jest,
-  Jquery,
-  Grunt,
-  Gulp,
+  //   Jquery,
+  //   Grunt,
+  //   Gulp,
   Storybook,
-  Bootstrap,
+  //   Bootstrap,
   Git,
   Adobephotoshop,
-  Graphql,
-  Strapi,
+  //   Graphql,
+  //   Strapi,
   Figma
 } from '@styled-icons/simple-icons'
 
@@ -46,11 +46,10 @@ export const about = {
   name: 'Alefer Reinert',
   role: 'Desenvolvedor front-end',
   description: `
-      Escrevo códigos desde 2012, adquiri experiência em duas empresas e em
-      projetos pessoais. Desenvolvi e-commerces, websites, wordpress e e-mail
-      marketing. Atualmente estou me aprofundando em React e Next.js.
-      Além de codificar, sou uma pessoa apaixonada por animais, música e saúde
-      mental.`
+      Desenvolvedor front-end há 12 anos. Já desenvolvi e-commerces, websites, wordpress e e-mail
+      marketing. Atualmente estou me aprofundando em React e tecnologias relacionadas, como Next.js, TypeScript e Storybook.
+      <br />
+      Além de codificar, sou uma pessoa apaixonada por animais, música e saúde mental.`
 }
 
 export const projects = [
@@ -60,7 +59,7 @@ export const projects = [
     description: `
         Aplicação para gestão de participantes em eventos presenciais. 
         Desenvolvido durante o NLW Unite da Rocketseat, foram feitas as trilhas de React e Node.js.`,
-    skills: 'React TypeScript Node.js',
+    skills: 'React TypeScript Node.js Prisma Fastify',
     projectLink: 'https://pass-in-nlw-unite.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/pass.in-react',
     img: '/img/projects/pass-in.webp'
@@ -80,7 +79,7 @@ export const projects = [
   {
     title: 'Portfólio',
     year: '2023',
-    description: 'Veja como foi o desenvolvimento do meu portfólio.',
+    description: 'Veja como foi o desenvolvimento deste portfólio.',
     skills: 'React Next.js TypeScript StyledComponents Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
@@ -90,7 +89,7 @@ export const projects = [
     title: 'Landing Page',
     year: '2023',
     description: `Página de apresentação do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
-        Foi um projeto extra com o objetivo de iniciar no Strapi, substituindo dados estáticos por dinâmicos através de uma API.`,
+        É um projeto extra com o objetivo de iniciar no Strapi, substituindo dados estáticos por dinâmicos através de uma API.`,
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
@@ -117,11 +116,11 @@ export const projects = [
 ]
 
 export const certificates = [
-  {
-    title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
-    organization: 'Udemy',
-    conclusionDate: 'Cursando'
-  },
+  //   {
+  //     title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
+  //     organization: 'Udemy',
+  //     conclusionDate: 'Cursando'
+  //   },
   {
     title: 'Trilha fluêncIA',
     organization: 'ENAP',
@@ -140,24 +139,24 @@ export const certificates = [
     conclusionDate: 'Abril/2024',
     link: 'https://drive.google.com/file/d/19E4pMUcpfhewk0dFpbHczLk01zM0znA4/view?usp=sharing'
   },
-  {
-    title: 'Curso Introdução ao React',
-    organization: 'Refatorando',
-    conclusionDate: 'Março/2024',
-    link: 'https://drive.google.com/file/d/1QY9usp1Wvj3EwK6RDuSTb0LbUDnImg0u/view?usp=sharing'
-  },
+  //   {
+  //     title: 'Curso Introdução ao React',
+  //     organization: 'Refatorando',
+  //     conclusionDate: 'Março/2024',
+  //     link: 'https://drive.google.com/file/d/1QY9usp1Wvj3EwK6RDuSTb0LbUDnImg0u/view?usp=sharing'
+  //   },
   {
     title: 'Curso Introdução ao TypeScript',
     organization: 'Refatorando',
     conclusionDate: 'Março/2024',
     link: 'https://drive.google.com/file/d/1d3-MN9qgV0cW93yQf3xFDlRAWqzAHGeI/view?usp=sharing'
   },
-  {
-    title: 'Curso Introdução ao Git e Github',
-    organization: 'Refatorando',
-    conclusionDate: 'Março/2024',
-    link: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view?usp=sharing'
-  },
+  //   {
+  //     title: 'Curso Introdução ao Git e Github',
+  //     organization: 'Refatorando',
+  //     conclusionDate: 'Março/2024',
+  //     link: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view?usp=sharing'
+  //   },
   {
     title: 'Organização de Produtividade Remota',
     organization: 'Descomplica',
@@ -170,18 +169,18 @@ export const certificates = [
     conclusionDate: 'Janeiro/2024',
     link: 'https://drive.google.com/file/d/168BBYFD8yjjCRLlZx608FqsNLAATOTY1/view?usp=sharing'
   },
-  {
-    title: 'PHP - MYSQL - INICIANTE ',
-    organization: 'Unova Cursos',
-    conclusionDate: 'Novembro/2023',
-    link: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view?usp=drivesdk'
-  },
-  {
-    title: 'Javascript Para Iniciantes',
-    organization: 'Unova Cursos',
-    conclusionDate: 'Outubro/2022',
-    link: 'https://drive.google.com/file/d/1JlXW0mOzE2BANTBJE-EuKvALBTx1y0OF/view?usp=drivesdk'
-  },
+  //   {
+  //     title: 'PHP - MYSQL - INICIANTE ',
+  //     organization: 'Unova Cursos',
+  //     conclusionDate: 'Novembro/2023',
+  //     link: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view?usp=drivesdk'
+  //   },
+  //   {
+  //     title: 'Javascript Para Iniciantes',
+  //     organization: 'Unova Cursos',
+  //     conclusionDate: 'Outubro/2022',
+  //     link: 'https://drive.google.com/file/d/1JlXW0mOzE2BANTBJE-EuKvALBTx1y0OF/view?usp=drivesdk'
+  //   },
   {
     title: 'CC50: Introdução à Ciência da Computação',
     organization: 'Fundação Estudar',
@@ -199,7 +198,7 @@ export const certificates = [
 export const skills = [
   { title: 'HTML5', icon: <Html5 aria-hidden /> },
   { title: 'CSS3', icon: <Css3 aria-hidden /> },
-  { title: 'JQuery', icon: <Jquery aria-hidden /> },
+  //   { title: 'JQuery', icon: <Jquery aria-hidden /> },
   { title: 'JavaScript', icon: <Javascript aria-hidden /> },
   { title: 'TypeScript', icon: <Typescript aria-hidden /> },
   { title: 'LESS', icon: <Less aria-hidden /> },
@@ -209,12 +208,12 @@ export const skills = [
   { title: 'Storybook', icon: <Storybook aria-hidden /> },
   { title: 'Git', icon: <Git aria-hidden /> },
   { title: 'Jest', icon: <Jest aria-hidden /> },
-  { title: 'GraphQL', icon: <Graphql aria-hidden /> },
+  //   { title: 'GraphQL', icon: <Graphql aria-hidden /> },
   { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
-  { title: 'Gulp', icon: <Gulp aria-hidden /> },
-  { title: 'Grunt', icon: <Grunt aria-hidden /> },
-  { title: 'Strapi', icon: <Strapi aria-hidden /> },
-  { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> },
+  //   { title: 'Gulp', icon: <Gulp aria-hidden /> },
+  //   { title: 'Grunt', icon: <Grunt aria-hidden /> },
+  //   { title: 'Strapi', icon: <Strapi aria-hidden /> },
+  //   { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> },
   { title: 'Figma', icon: <Figma aria-hidden /> },
   { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
 ]
