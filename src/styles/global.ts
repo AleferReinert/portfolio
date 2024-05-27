@@ -10,107 +10,109 @@ export const breakpoints = {
 }
 
 const GlobalStyles = createGlobalStyle`
-    :root {
-        --font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        --font-light: 300;
-        --font-regular: 400;
-        --font-bold: 700;
-        --font-extrabold: 800;
-        --font-xxs: 1.4rem;
-        --font-xs: 1.6rem;
-        --font-sm: 1.8rem;
-        --font-md: 2rem;
-        --font-lg: 2.4rem;
-        --font-xl: 2.8rem;
-        --font-xxl: 3.6rem;
-        --font-huge: 4.4rem;
-        --spacing-xxs: 0.4rem;
-        --spacing-xs: 0.8rem;
-        --spacing-sm: 1.6rem;
-        --spacing-md: 2.4rem;
-        --spacing-lg: 3.2rem;
-        --spacing-xl: 4rem;
-        --spacing-xxl: 4.8rem;
-        --spacing-huge: 8rem;
-        --transition-effect: linear;
-        --transition-duration-slow: .3s;
-        --transition-duration-default: .15s;
-        --icon-sm: 2.8rem;
-        --icon-md: 3.6rem;
-        --icon-lg: 4.4rem;
-        --color-primary: #48e194;
-        --color-background: #00344a;
-        --color-background-secondary: rgba(0, 0, 0, 0.25);
-        --color-heading: rgba(255,255,255,0.85);
-        --color-text: #829BA6;
-    }
+	:root {
+		--font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		--font-light: 300;
+		--font-regular: 400;
+		--font-bold: 700;
+		--font-extrabold: 800;
+		--font-xxs: 1.4rem;
+		--font-xs: 1.6rem;
+		--font-sm: 1.8rem;
+		--font-md: 2rem;
+		--font-lg: 2.4rem;
+		--font-xl: 2.8rem;
+		--font-xxl: 3.6rem;
+		--font-huge: 4.4rem;
+		--spacing-xxs: 0.4rem;
+		--spacing-xs: 0.8rem;
+		--spacing-sm: 1.6rem;
+		--spacing-md: 2.4rem;
+		--spacing-lg: 3.2rem;
+		--spacing-xl: 4rem;
+		--spacing-xxl: 4.8rem;
+		--spacing-huge: 8rem;
+		--transition-effect: linear;
+		--transition-duration-slow: .3s;
+		--transition-duration-default: .15s;
+		--icon-sm: 2.8rem;
+		--icon-md: 3.6rem;
+		--icon-lg: 4.4rem;
+		
+		// Themes (obs: Tailwind classes reference)
+		--color-primary: #4ade80; // green-400
+		--color-background: #082f49; // sky-900
+		--color-background-secondary: rgba(0, 0, 0, 0.25);
+		--color-heading: #cbd5e1; // slate-300
+		--color-text: #94a3b8; // slate-400
+	}
 
-    // Theme Light
-    .light {
-        --color-primary: #00344a;
-        --color-background: #f5f5f5;
-        --color-background-secondary: rgba(0, 0, 0, 0.05);
-        --color-heading: #313131;
-        --color-text: #595959;
-    }
+	.light {
+		--color-primary: #0c4a6e; // sky-900
+		--color-background: #f5f5f5;
+		--color-background-secondary: rgba(0, 0, 0, 0.05);
+		--color-heading: #313131;
+		--color-text: #595959;
+	}
 
-      html {
-        font-size: 62.5%;
+	html {
+		font-size: 62.5%;
 
-        @media (min-width: ${breakpoints.small}) {
-          scroll-behavior: smooth;
-        }
-      }
+		@media (min-width: ${breakpoints.small}) {
+			scroll-behavior: smooth;
+		}
+	}
 
-      body {
-        color: var(--color-text);
-        font-family: var(--font-family);
-        font-size: var(--font-sm);
-        font-weight: var(--font-light);
-        background-color: var(--color-background);
-        overflow-x: hidden;
-      }
+	body {
+		color: var(--color-text);
+		font-family: var(--font-family);
+		font-size: var(--font-sm);
+		font-weight: var(--font-light);
+		background-color: var(--color-background);
+		letter-spacing: 0.025rem;
+		overflow-x: hidden;
+	}
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-tap-highlight-color: transparent;
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-tap-highlight-color: transparent;
 
-        &::before,
-        &::after {
-          box-sizing: inherit;
-        }
-      }
+		&::before,
+		&::after {
+			box-sizing: inherit;
+		}
+	}
 
-      button {
-        cursor: pointer;
-        background-color: transparent;
-        border: 0;
-        font-family: inherit;
-      }
+	button {
+		cursor: pointer;
+		background-color: transparent;
+		border: 0;
+		font-family: inherit;
+	}
 
-      label {
-        cursor: pointer;
-      }
+	label {
+		cursor: pointer;
+	}
 
-      a:focus-visible,
-      button:focus,
-      svg:focus {
-        outline: none;
-      }
+	a:focus-visible,
+	button:focus,
+	svg:focus {
+		outline: none;
+	}
 
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
 
-      ::selection {
-            color: rgba(255,255,255,0.85);
-            background: var(--color-primary);
-        }
+	::selection {
+		color: rgba(255,255,255,0.85);
+		background: var(--color-primary);
+	}
 `
 
 export default GlobalStyles

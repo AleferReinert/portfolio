@@ -16,14 +16,16 @@ const Switch = () => {
   }
 
   return (
-    <S.Wrapper title={`Tema ${theme === 'dark' ? 'claro' : 'escuro'}`}>
-      <input
-        type='checkbox'
-        onChange={toggleTheme}
-        checked={theme === 'dark'}
-      />
-      <S.Handle />
-    </S.Wrapper>
+    <>
+      <S.Wrapper title={`Tema ${theme === 'dark' ? 'claro' : 'escuro'}`}>
+        <input
+          type='checkbox'
+          onChange={toggleTheme}
+          checked={theme === 'dark'}
+        />
+        <S.Handle />
+      </S.Wrapper>
+    </>
   )
 }
 

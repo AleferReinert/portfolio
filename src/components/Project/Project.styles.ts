@@ -62,7 +62,7 @@ export const Title = styled.h3`
   justify-content: space-between;
   align-items: baseline;
   font-size: var(--font-lg);
-  font-weight: var(--font-extrabold);
+  font-weight: var(--font-bold);
   margin-bottom: var(--spacing-sm);
 
   @media (min-width: ${breakpoints.medium}) {

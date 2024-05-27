@@ -10,7 +10,7 @@
     "plop": "plop",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook",
+    "test": "test-storybook",
     "prettier": "prettier . --write",
     "prepare": "husky install",
     "chromatic": "chromatic"

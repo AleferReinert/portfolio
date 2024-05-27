@@ -3,7 +3,7 @@ import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: var(--spacing-xs);
   row-gap: var(--spacing-lg);
   justify-content: space-around;
@@ -25,12 +25,13 @@ export const Skill = styled.div`
 
 export const Title = styled.h3`
   margin-top: var(--spacing-xs);
-  font-size: var(--font-xs);
+  font-size: var(--font-xxs);
   font-weight: var(--font-regular);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  opacity: 0.5;
 `
 
 export const IconWrapper = styled.div`

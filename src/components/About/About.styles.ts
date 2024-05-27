@@ -7,8 +7,8 @@ export const TitleWrapper = styled.div`
   margin-bottom: var(--spacing-xl);
 
   @media (min-width: ${breakpoints.small}) {
-    margin-bottom: var(--spacing-huge);
     margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xll);
   }
 `
 
@@ -47,24 +47,31 @@ export const Subtitle = styled.h3`
   @media (min-width: ${breakpoints.small}) {
     text-align: center;
     color: var(--color-heading);
-    font-size: var(--font-xxl);
+    font-size: var(--font-xl);
     display: block;
   }
 `
 
 export const Description = styled.p`
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-
-  p::first-letter {
-    margin-left: var(--spacing-md);
+  .tecnologies {
+    span {
+      color: var(--color-primary);
+      display: inline;
+    }
   }
 
   @media (min-width: ${breakpoints.small}) {
     text-align: center;
     max-width: 80rem;
-    margin: var(--spacing-xl) auto;
+    margin: var(--spacing-lg) auto 0;
     font-size: var(--font-md);
+
+    .tecnologies {
+      display: block;
+
+      & + br {
+        display: none;
+      }
+    }
   }
 `

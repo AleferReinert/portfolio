@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app'
-import { GoogleAnalytics } from 'nextjs-google-analytics'
 import { Inter } from 'next/font/google'
-import GlobalStyles from 'styles/global'
 import Head from 'next/head'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
+import GlobalStyles from 'styles/global'
 
 const inter = Inter({
   weight: ['300', '400', '700', '800'],
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta
           name='keywords'
-          content='HTML, CSS, JavaScript, TypeScript, Less, Sass, React, Next.js, Styled Components, Storybook, Jest, Testing Library, GraphQL, Photoshop, Grunt, Gulp, Figma, Jquery, Git, Bootstrap, Strapi'
+          content='HTML, CSS, JavaScript, TypeScript, Less, Sass, React, Next.js, Styled Components, Storybook, Jest, Testing Library, GraphQL, Photoshop, Grunt, Gulp, Figma, Jquery, Git, Bootstrap, Strapi, Tailwind'
         ></meta>
         <meta property='og:url' content='https://aleferreinert.netlify.app' />
         <meta property='og:type' content='website' />

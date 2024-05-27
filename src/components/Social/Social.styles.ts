@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import Link from 'next/link'
+import styled from 'styled-components'
 import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.nav`

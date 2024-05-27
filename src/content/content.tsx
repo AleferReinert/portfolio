@@ -1,26 +1,27 @@
-import { Github, Mail, Linkedin } from '@styled-icons/feather'
 import { Whatsapp } from '@styled-icons/boxicons-logos'
+import { Github, Linkedin, Mail } from '@styled-icons/feather'
 import {
-  Html5,
-  Css3,
-  Less,
-  Sass,
-  Styledcomponents,
-  Javascript,
-  Typescript,
-  ReactLogo,
-  Nextdotjs,
-  Jest,
-  //   Jquery,
-  //   Grunt,
-  //   Gulp,
-  Storybook,
-  //   Bootstrap,
-  Git,
   Adobephotoshop,
+  //   Bootstrap,
+  Css3,
   //   Graphql,
   //   Strapi,
-  Figma
+  Figma,
+  Git,
+  //   Grunt,
+  Gulp,
+  Html5,
+  Javascript,
+  Jest,
+  //   Jquery,
+  Less,
+  Nextdotjs,
+  ReactLogo,
+  Sass,
+  Storybook,
+  Styledcomponents,
+  Tailwindcss,
+  Typescript
 } from '@styled-icons/simple-icons'
 
 export const menu = [
@@ -46,23 +47,41 @@ export const about = {
   name: 'Alefer Reinert',
   role: 'Desenvolvedor front-end',
   description: `
-      Desenvolvedor front-end há 12 anos. Já desenvolvi e-commerces, websites, wordpress e e-mail
-      marketing. Atualmente estou me aprofundando em React e tecnologias relacionadas, como Next.js, TypeScript e Storybook.
+      Desenvolvedor front-end há 12 anos com experiência em e-commerces e websites. 
+			<br />
+			Com aprendizado contínuo,  tenho me aprimorado em
+			<span class='tecnologies'>
+				<span>React</span>,
+				<span>Next.js</span>, 
+				<span>TypeScript</span> e 
+				<span>Storybook</span>.
+			</span>
       <br />
       Além de codificar, sou uma pessoa apaixonada por animais, música e saúde mental.`
 }
 
 export const projects = [
   {
+    title: 'Notes',
+    year: '2024',
+    description: `
+        Aplicação web para criar e gerenciar notas utilizando texto digitado ou gravações de áudio. 
+        Desenvolvido através do NLW Expert da Rocketseat na trilha React.`,
+    skills: 'React TypeScript Tailwind Radix Sonner',
+    projectLink: 'https://nlw-expert-notes-ar.vercel.app',
+    repositoryLink: 'https://github.com/AleferReinert/nlw-expert-notes',
+    img: '/img/projects/nlw-expert-notes.webp'
+  },
+  {
     title: 'Pass In',
     year: '2024',
     description: `
         Aplicação para gestão de participantes em eventos presenciais. 
         Desenvolvido durante o NLW Unite da Rocketseat, foram feitas as trilhas de React e Node.js.`,
-    skills: 'React TypeScript Node.js Prisma Fastify',
+    skills: 'React TypeScript Tailwind Node.js Prisma Fastify',
     projectLink: 'https://pass-in-nlw-unite.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/pass.in-react',
-    img: '/img/projects/pass-in.webp'
+    img: '/img/projects/nlw-unite-pass-in.webp'
   },
   {
     title: 'Won Games',
@@ -116,11 +135,12 @@ export const projects = [
 ]
 
 export const certificates = [
-  //   {
-  //     title: 'React Avançado: Crie aplicações com Next.js, Strapi e mais',
-  //     organization: 'Udemy',
-  //     conclusionDate: 'Cursando'
-  //   },
+  {
+    title: 'Imersão Inteligência Artificial',
+    organization: 'Alura',
+    conclusionDate: 'Maio/2024',
+    link: 'https://drive.google.com/file/d/14vRBD2eydc9Q2aixTQ6HMy24481nVMLb/view?usp=sharing'
+  },
   {
     title: 'Trilha fluêncIA',
     organization: 'ENAP',
@@ -139,24 +159,24 @@ export const certificates = [
     conclusionDate: 'Abril/2024',
     link: 'https://drive.google.com/file/d/19E4pMUcpfhewk0dFpbHczLk01zM0znA4/view?usp=sharing'
   },
-  //   {
-  //     title: 'Curso Introdução ao React',
-  //     organization: 'Refatorando',
-  //     conclusionDate: 'Março/2024',
-  //     link: 'https://drive.google.com/file/d/1QY9usp1Wvj3EwK6RDuSTb0LbUDnImg0u/view?usp=sharing'
-  //   },
+  {
+    title: 'Curso Introdução ao React',
+    organization: 'Refatorando',
+    conclusionDate: 'Março/2024',
+    link: 'https://drive.google.com/file/d/1QY9usp1Wvj3EwK6RDuSTb0LbUDnImg0u/view?usp=sharing'
+  },
   {
     title: 'Curso Introdução ao TypeScript',
     organization: 'Refatorando',
     conclusionDate: 'Março/2024',
     link: 'https://drive.google.com/file/d/1d3-MN9qgV0cW93yQf3xFDlRAWqzAHGeI/view?usp=sharing'
   },
-  //   {
-  //     title: 'Curso Introdução ao Git e Github',
-  //     organization: 'Refatorando',
-  //     conclusionDate: 'Março/2024',
-  //     link: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view?usp=sharing'
-  //   },
+  {
+    title: 'Curso Introdução ao Git e Github',
+    organization: 'Refatorando',
+    conclusionDate: 'Março/2024',
+    link: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view?usp=sharing'
+  },
   {
     title: 'Organização de Produtividade Remota',
     organization: 'Descomplica',
@@ -169,18 +189,18 @@ export const certificates = [
     conclusionDate: 'Janeiro/2024',
     link: 'https://drive.google.com/file/d/168BBYFD8yjjCRLlZx608FqsNLAATOTY1/view?usp=sharing'
   },
-  //   {
-  //     title: 'PHP - MYSQL - INICIANTE ',
-  //     organization: 'Unova Cursos',
-  //     conclusionDate: 'Novembro/2023',
-  //     link: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view?usp=drivesdk'
-  //   },
-  //   {
-  //     title: 'Javascript Para Iniciantes',
-  //     organization: 'Unova Cursos',
-  //     conclusionDate: 'Outubro/2022',
-  //     link: 'https://drive.google.com/file/d/1JlXW0mOzE2BANTBJE-EuKvALBTx1y0OF/view?usp=drivesdk'
-  //   },
+  {
+    title: 'PHP - MYSQL - INICIANTE ',
+    organization: 'Unova Cursos',
+    conclusionDate: 'Novembro/2023',
+    link: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view?usp=drivesdk'
+  },
+  {
+    title: 'Javascript Para Iniciantes',
+    organization: 'Unova Cursos',
+    conclusionDate: 'Outubro/2022',
+    link: 'https://drive.google.com/file/d/1JlXW0mOzE2BANTBJE-EuKvALBTx1y0OF/view?usp=drivesdk'
+  },
   {
     title: 'CC50: Introdução à Ciência da Computação',
     organization: 'Fundação Estudar',
@@ -203,6 +223,7 @@ export const skills = [
   { title: 'TypeScript', icon: <Typescript aria-hidden /> },
   { title: 'LESS', icon: <Less aria-hidden /> },
   { title: 'SASS', icon: <Sass aria-hidden /> },
+  { title: 'Tailwind', icon: <Tailwindcss aria-hidden /> },
   { title: 'React', icon: <ReactLogo aria-hidden /> },
   { title: 'Next.js', icon: <Nextdotjs aria-hidden /> },
   { title: 'Storybook', icon: <Storybook aria-hidden /> },
@@ -210,7 +231,7 @@ export const skills = [
   { title: 'Jest', icon: <Jest aria-hidden /> },
   //   { title: 'GraphQL', icon: <Graphql aria-hidden /> },
   { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
-  //   { title: 'Gulp', icon: <Gulp aria-hidden /> },
+  { title: 'Gulp', icon: <Gulp aria-hidden /> },
   //   { title: 'Grunt', icon: <Grunt aria-hidden /> },
   //   { title: 'Strapi', icon: <Strapi aria-hidden /> },
   //   { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> },
