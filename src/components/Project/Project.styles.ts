@@ -78,6 +78,7 @@ export const Year = styled.span`
 
 export const Description = styled.p`
   font-size: var(--font-sm);
+  opacity: 0.85;
 `
 
 export const Skills = styled.p`

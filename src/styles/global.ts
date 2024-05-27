@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
 		--font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		--font-light: 300;
 		--font-regular: 400;
+		--font-medium: 500;
 		--font-bold: 700;
 		--font-extrabold: 800;
 		--font-xxs: 1.4rem;
@@ -41,14 +42,14 @@ const GlobalStyles = createGlobalStyle`
 		
 		// Themes (obs: Tailwind classes reference)
 		--color-primary: #4ade80; // green-400
-		--color-background: #082f49; // sky-900
+		--color-background: #083344; // cyan-950
 		--color-background-secondary: rgba(0, 0, 0, 0.25);
 		--color-heading: #cbd5e1; // slate-300
 		--color-text: #94a3b8; // slate-400
 	}
 
 	.light {
-		--color-primary: #0c4a6e; // sky-900
+		--color-primary: #083344; // cyan-950
 		--color-background: #f5f5f5;
 		--color-background-secondary: rgba(0, 0, 0, 0.05);
 		--color-heading: #313131;

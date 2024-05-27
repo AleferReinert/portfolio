@@ -5,7 +5,7 @@ import { GoogleAnalytics } from 'nextjs-google-analytics'
 import GlobalStyles from 'styles/global'
 
 const inter = Inter({
-  weight: ['300', '400', '700', '800'],
+  weight: ['300', '400', '500', '700', '800'],
   subsets: ['latin'],
   display: 'swap'
 })

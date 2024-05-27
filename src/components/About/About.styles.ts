@@ -53,10 +53,11 @@ export const Subtitle = styled.h3`
 `
 
 export const Description = styled.p`
-  .tecnologies {
-    span {
-      color: var(--color-primary);
+  span {
+    strong {
       display: inline;
+      color: var(--color-primary);
+      font-weight: var(--font-regular);
     }
   }
 
@@ -66,7 +67,7 @@ export const Description = styled.p`
     margin: var(--spacing-lg) auto 0;
     font-size: var(--font-md);
 
-    .tecnologies {
+    span {
       display: block;
 
       & + br {

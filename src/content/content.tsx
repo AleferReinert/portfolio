@@ -50,11 +50,11 @@ export const about = {
       Desenvolvedor front-end há 12 anos com experiência em e-commerces e websites. 
 			<br />
 			Com aprendizado contínuo,  tenho me aprimorado em
-			<span class='tecnologies'>
-				<span>React</span>,
-				<span>Next.js</span>, 
-				<span>TypeScript</span> e 
-				<span>Storybook</span>.
+			<span>
+				<strong>React</strong>,
+				<strong>Next.js</strong>, 
+				<strong>TypeScript</strong> e 
+				<strong>Storybook</strong>.
 			</span>
       <br />
       Além de codificar, sou uma pessoa apaixonada por animais, música e saúde mental.`
@@ -98,7 +98,7 @@ export const projects = [
   {
     title: 'Portfólio',
     year: '2023',
-    description: 'Veja como foi o desenvolvimento deste portfólio.',
+    description: 'Confira o processo de criação deste portfólio.',
     skills: 'React Next.js TypeScript StyledComponents Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
@@ -108,7 +108,7 @@ export const projects = [
     title: 'Landing Page',
     year: '2023',
     description: `Página de apresentação do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
-        É um projeto extra com o objetivo de iniciar no Strapi, substituindo dados estáticos por dinâmicos através de uma API.`,
+        Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados dinâmicos por meio de uma API.`,
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
