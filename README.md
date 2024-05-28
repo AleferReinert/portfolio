@@ -1,25 +1,45 @@
 # Portfolio
 
-React, Next.js, TypeScript, Styled Components and Storybook.
+Este projeto foi desenvolvido utilizando Next.js, React, Styled-components, Storybook, ESLint, Prettier, Husky, Plop e Chromatic.
 
-## Development
+## Como Rodar o Projeto
 
-### Install dependencies:
+1. Clone o repositório:
+   ```
+   git clone https://github.com/AleferReinert/portfolio.git
+   ```
+2. Entre no diretório do projeto:
+   ```
+   cd portfolio
+   ```
+3. Instale as dependências:
+   ```
+    npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
 
-`npm run install`
+   ```
+   npm run dev
+   ```
 
-### Run server:
+5. Inicie o Storybook:
 
-`npm run dev`
+   ```
+   npm run storybook
+   ```
 
-### Run Storybook:
+6. Execute os testes do Storybook:
 
-`npm run storybook`
+   ```
+   npm run test-storybook --watch
+   ```
 
-### Watching tests:
+7. Crie um componente:
 
-`npm run test-storybook --watch`
+   ```
+   npm run plop
+   ```
 
-### Create new component:
+## URL do Projeto
 
-`npm run plop`
+Explore o projeto no link: [Meu Portfolio](https://aleferreinert.netlify.app)
