@@ -2,8 +2,8 @@ import { Github as GithubIcon, Link as LinkIcon } from '@styled-icons/feather'
 import { Storybook as StorybookIcon } from '@styled-icons/simple-icons'
 import Image from 'next/image'
 import Link from 'next/link'
-import * as S from './Project.styles'
 import { breakpoints } from 'styles/global'
+import * as S from './Project.styles'
 
 export interface ProjectProps {
   title: string
@@ -70,7 +70,7 @@ const Project = ({
             </Link>
           )}
           {projectLink && (
-            <Link href={projectLink} title='Projeto' target='_blank'>
+            <Link href={projectLink} title='Visualizar' target='_blank'>
               <LinkIcon aria-hidden />
             </Link>
           )}

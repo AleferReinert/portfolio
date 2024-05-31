@@ -47,9 +47,9 @@ export const about = {
   name: 'Alefer Reinert',
   role: 'Desenvolvedor front-end',
   description: `
-      Desenvolvedor front-end há 12 anos com experiência em e-commerces e websites. 
+      Desenvolvedor front-end com mais de 8 anos de experiência em e-commerces e websites. 
 			<br />
-			Com aprendizado contínuo,  tenho me aprimorado em
+			Com aprendizado contínuo, tenho me aprimorado em
 			<span>
 				<strong>React</strong>,
 				<strong>Next.js</strong>, 
@@ -135,6 +135,12 @@ export const projects = [
 ]
 
 export const certificates = [
+  {
+    title: 'Practical GitHub Copilot',
+    organization: 'LinkedIn Learning',
+    conclusionDate: 'Maio/2024',
+    link: 'https://drive.google.com/file/d/17LqJtoJGFjBWDbPYZmK_h3GWA6Q5UPU8/view?usp=sharing'
+  },
   {
     title: 'Imersão Inteligência Artificial',
     organization: 'Alura',

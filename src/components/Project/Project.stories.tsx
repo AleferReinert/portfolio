@@ -1,6 +1,5 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/test'
-import { expect } from '@storybook/test'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, within } from '@storybook/test'
 import Container from 'components/Container/Container'
 import ProjectComponent from './Project'
 
@@ -80,7 +79,7 @@ export const WithProjectLink: Story = {
   play: ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const projectLink = canvas.getByRole('link', {
-      name: 'Projeto'
+      name: 'Visualizar'
     })
 
     expect(projectLink).toHaveAttribute('href', '/project-link')

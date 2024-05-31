@@ -1,27 +1,27 @@
-import {
-  certificates,
-  projects,
-  skills,
-  social,
-  about,
-  menu
-} from 'content/content'
 import About from 'components/About/About'
 import Certificates from 'components/Certificates/Certificates'
 import Container from 'components/Container/Container'
 import Header from 'components/Header/Header'
 import Heading from 'components/Heading/Heading'
-import Head from 'next/head'
 import Projects from 'components/Projects/Projects'
 import Skills from 'components/Skills/Skills'
 import Social from 'components/Social/Social'
+import {
+  about,
+  certificates,
+  menu,
+  projects,
+  skills,
+  social
+} from 'content/content'
+import Head from 'next/head'
 import * as S from 'styles/home'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Alefer Reinert - Desenvolvedor Front-end</title>
+        <title>Portfólio | Alefer Reinert - Desenvolvedor Front-end</title>
       </Head>
       <Header menu={menu} socials={social} />
       <S.Wrapper>

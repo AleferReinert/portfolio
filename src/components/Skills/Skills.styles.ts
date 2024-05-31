@@ -10,12 +10,8 @@ export const Wrapper = styled.div`
   justify-items: center;
 
   @media (min-width: ${breakpoints.small}) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     row-gap: var(--spacing-xl);
-  }
-
-  @media (min-width: ${breakpoints.medium}) {
-    grid-template-columns: repeat(5, 1fr);
   }
 `
 
@@ -26,6 +22,7 @@ export const Skill = styled.div`
 export const Title = styled.h3`
   margin-top: var(--spacing-xs);
   font-size: var(--font-xxs);
+  line-height: var(--font-xxs);
   font-weight: var(--font-regular);
   display: flex;
   justify-content: center;
