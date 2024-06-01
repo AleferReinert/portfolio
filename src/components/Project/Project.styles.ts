@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background-color: var(--color-background-secondary);
   width: 100%;
-  max-width: 32.8rem;
+  /* max-width: 32.8rem; */
   align-self: center;
   align-items: center;
   padding: var(--spacing-md);
@@ -36,10 +36,7 @@ export const ImageWrapper = styled.div`
   width: 100%;
   height: min-content;
   aspect-ratio: 25/17;
-
-  img {
-    object-fit: contain;
-  }
+  max-width: 28rem;
 
   @media (min-width: ${breakpoints.small}) {
     max-width: 24rem;
@@ -55,6 +52,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-self: center;
   margin: 0 auto;
+  width: 100%;
 `
 
 export const Title = styled.h3`
