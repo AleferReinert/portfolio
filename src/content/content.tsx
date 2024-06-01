@@ -196,7 +196,7 @@ export const certificates = [
     link: 'https://drive.google.com/file/d/168BBYFD8yjjCRLlZx608FqsNLAATOTY1/view?usp=sharing'
   },
   {
-    title: 'PHP - MYSQL - INICIANTE ',
+    title: 'PHP - MYSQL - Iniciante',
     organization: 'Unova Cursos',
     conclusionDate: 'Novembro/2023',
     link: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view?usp=drivesdk'

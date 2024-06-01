@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
 		--color-primary: #4ade80; // green-400
 		--color-background: #083344; // cyan-950
 		--color-background-secondary: rgba(0, 0, 0, 0.25);
-		--color-heading: #cbd5e1; // slate-300
+		--color-heading: #e2e8f0; // slate-200
 		--color-text: #94a3b8; // slate-400
 	}
 
@@ -72,6 +72,11 @@ const GlobalStyles = createGlobalStyle`
 		background-color: var(--color-background);
 		letter-spacing: 0.025rem;
 		overflow-x: hidden;
+		text-align: center;
+
+		@media (min-width: ${breakpoints.small}) {
+			text-align: left;
+		}
 	}
 
 	* {

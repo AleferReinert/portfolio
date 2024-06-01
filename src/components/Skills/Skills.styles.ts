@@ -3,8 +3,8 @@ import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: var(--spacing-xs);
+  grid-template-columns: repeat(2, 1fr);
+
   row-gap: var(--spacing-lg);
   justify-content: space-around;
   justify-items: center;
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
 `
 
 export const Skill = styled.div`
-  width: 9.2rem;
+  /* width: 9.2rem; */
 `
 
 export const Title = styled.h3`

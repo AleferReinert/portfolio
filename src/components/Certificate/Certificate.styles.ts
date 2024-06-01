@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  &:hover h3 {
+    color: var(--color-primary);
+  }
+`
 
 export const Title = styled.h3`
-  color: var(--color-primary);
   font-size: var(--font-sm);
-  font-weight: var(--font-regular);
-  /* margin-top: calc(var(--spacing-xxs) * -1);
-  margin-bottom: var(--spacing-xxs); */
+  font-weight: var(--font-bold);
+  transition: all var(--transition-duration-default) var(--transition-effect);
 `
 
 export const Description = styled.p`

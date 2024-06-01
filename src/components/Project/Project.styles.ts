@@ -22,10 +22,6 @@ export const Wrapper = styled.div`
   }
 
   @media (min-width: ${breakpoints.medium}) {
-    justify-content: space-between;
-    flex-direction: row;
-    max-width: none;
-    align-self: auto;
     padding: var(--spacing-xxl);
     gap: var(--spacing-xxl);
   }
@@ -56,32 +52,34 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h3`
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   font-size: var(--font-lg);
   font-weight: var(--font-bold);
   margin-bottom: var(--spacing-sm);
 
-  @media (min-width: ${breakpoints.medium}) {
-    font-size: var(--font-lg);
-    margin-bottom: var(--spacing-sm);
+  @media (min-width: ${breakpoints.small}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 `
 
 export const Year = styled.span`
   font-size: var(--font-xxs);
   font-weight: var(--font-light);
+  display: block;
+
+  @media (min-width: ${breakpoints.small}) {
+    display: inline;
+  }
 `
 
 export const Description = styled.p`
   font-size: var(--font-sm);
-  opacity: 0.85;
 `
 
 export const Skills = styled.p`
   color: var(--color-primary);
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   font-weight: var(--font-regular);
   margin: var(--spacing-md) 0;
 
@@ -93,6 +91,7 @@ export const Skills = styled.p`
 export const IconsWrapper = styled.div`
   display: flex;
   gap: var(--spacing-sm);
+  justify-content: center;
 
   svg {
     height: var(--font-lg);
@@ -114,5 +113,9 @@ export const IconsWrapper = styled.div`
     to {
       transform: rotate(0) scale(1);
     }
+  }
+
+  @media (min-width: ${breakpoints.small}) {
+    justify-content: left;
   }
 `
