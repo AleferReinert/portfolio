@@ -8,7 +8,8 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h3`
   font-size: var(--font-sm);
-  font-weight: var(--font-bold);
+  font-weight: var(--font-regular);
+  color: var(--color-primary);
   transition: all var(--transition-duration-default) var(--transition-effect);
 `
 
