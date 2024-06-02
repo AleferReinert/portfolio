@@ -1,0 +1,279 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alefer Reinert",
+  "jobTitle": "Desenvolvedor front-end",
+  "description": "Desenvolvedor front-end com mais de 8 anos de experiência em e-commerces e websites. Com aprendizado contínuo, tenho me aprimorado em React, Next.js, TypeScript e Storybook. Além de codificar, sou uma pessoa apaixonada por animais, música e saúde mental.",
+  "url": "https://www.linkedin.com/in/aleferreinert/",
+  "email": "mailto:aleferreinert@gmail.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Freelancer"
+  },
+  "skills": [
+    {
+      "@type": "Skill",
+      "name": "HTML"
+    },
+    {
+      "@type": "Skill",
+      "name": "CSS"
+    },
+    {
+      "@type": "Skill",
+      "name": "JavaScript"
+    },
+    {
+      "@type": "Skill",
+      "name": "TypeScript"
+    },
+    {
+      "@type": "Skill",
+      "name": "Tailwind CSS"
+    },
+    {
+      "@type": "Skill",
+      "name": "React"
+    },
+    {
+      "@type": "Skill",
+      "name": "Next.js"
+    },
+    {
+      "@type": "Skill",
+      "name": "Styled Components"
+    },
+    {
+      "@type": "Skill",
+      "name": "Gulp"
+    },
+    {
+      "@type": "Skill",
+      "name": "Figma"
+    },
+    {
+      "@type": "Skill",
+      "name": "LESS"
+    },
+    {
+      "@type": "Skill",
+      "name": "SASS"
+    },
+    {
+      "@type": "Skill",
+      "name": "Storybook"
+    },
+    {
+      "@type": "Skill",
+      "name": "Git"
+    },
+    {
+      "@type": "Skill",
+      "name": "Jest"
+    },
+    {
+      "@type": "Skill",
+      "name": "Photoshop"
+    }
+  ],
+  "awards": [
+    {
+      "@type": "Award",
+      "name": "Practical GitHub Copilot",
+      "awardOrganization": "LinkedIn Learning",
+      "date": "Maio/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "Trilha fluência IA",
+      "awardOrganization": "ENAP",
+      "date": "Abril/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "NLW Unite - ReactJS",
+      "awardOrganization": "Rocketseat",
+      "date": "Abril/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "Curso Introdução ao TypeScript",
+      "awardOrganization": "Refatorando",
+      "date": "Março/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "Curso Introdução ao React",
+      "awardOrganization": "Refatorando",
+      "date": "Março/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "Refatorando ao Git e Github",
+      "awardOrganization": "Refatorando",
+      "date": "Março/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "Fundamentos de Banco de Dados",
+      "awardOrganization": "Descomplica",
+      "date": "Janeiro/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "Imerssão Inteligência Artificial",
+      "awardOrganization": "Alura",
+      "date": "Maio/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "NLW Unite - NodeJS",
+      "awardOrganization": "Rocketseat",
+      "date": "Abril/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "Organização de Produtividade Remota",
+      "awardOrganization": "Descomplica",
+      "date": "Janeiro/2024"
+    },
+    {
+      "@type": "Award",
+      "name": "PHP - MySQL - Iniciante",
+      "awardOrganization": "Unova Cursos",
+      "date": "Novembro/2023"
+    },
+    {
+      "@type": "Award",
+      "name": "Javascript Para Iniciantes",
+      "awardOrganization": "Unova Cursos",
+      "date": "Outubro/2022"
+    },
+    {
+      "@type": "Award",
+      "name": "CC50: Introdução à Ciência da Computação",
+      "awardOrganization": "Fundação Estudar",
+      "date": "Setembro/2022"
+    },
+    {
+      "@type": "Award",
+      "name": "Formação Design Gráfico",
+      "awardOrganization": "ProWay Informatica",
+      "date": "Fevereiro/2012"
+    }
+  ],
+  "projects": [
+    {
+      "@type": "Project",
+      "name": "Notes",
+      "description": "Aplicação web para criar e gerenciar notas utilizando texto digitado ou gravações de áudio. Desenvolvido através do NLW Expert da Rocketseat na trilha React.",
+      "url": "https://www.example.com/notes",
+      "image": "https://www.example.com/notes-image.jpg",
+      "dateCreated": "2024-01-01",
+      "keywords": ["React", "TypeScript", "Tailwind", "Radix", "Sonner"],
+      "isPartOf": {
+        "@type": "Event",
+        "name": "NLW Expert"
+      }
+    },
+    {
+      "@type": "Project",
+      "name": "Pass In",
+      "description": "Aplicação para gestão de participantes em eventos presenciais. Desenvolvido durante o NLW Unite da Rocketseat, foram feitas as trilhas de React e Node.js.",
+      "url": "https://www.example.com/passin",
+      "image": "https://www.example.com/passin-image.jpg",
+      "dateCreated": "2024-01-01",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Node.js",
+        "Prisma",
+        "Fastify"
+      ],
+      "isPartOf": {
+        "@type": "Event",
+        "name": "NLW Unite"
+      }
+    },
+    {
+      "@type": "Project",
+      "name": "Won Games",
+      "description": "Projeto principal do curso \"React Avançado: Crie aplicações com Next.js, Strapi e mais\". Won Games é um e-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Em desenvolvimento.",
+      "url": "https://www.example.com/wongoingames",
+      "image": "https://www.example.com/wongoingames-image.jpg",
+      "dateCreated": "2024-01-01",
+      "keywords": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Styled Components",
+        "Storybook",
+        "Jest",
+        "Strapi",
+        "GraphQL"
+      ],
+      "isPartOf": {
+        "@type": "Course",
+        "name": "React Avançado: Crie aplicações com Next.js, Strapi e mais"
+      }
+    },
+    {
+      "@type": "Project",
+      "name": "Portfólio",
+      "description": "Confira o processo de criação deste portfólio.",
+      "url": "https://www.example.com/portfolio",
+      "image": "https://www.example.com/portfolio-image.jpg",
+      "dateCreated": "2023-01-01",
+      "keywords": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Styled Components",
+        "Storybook",
+        "Jest"
+      ],
+      "isPartOf": {
+        "@type": "Course",
+        "name": "React Avançado: Crie aplicações com Next.js, Strapi e mais"
+      }
+    },
+    {
+      "@type": "Project",
+      "name": "Landing Page",
+      "description": "Página de apresentação do curso \"React Avançado: Crie aplicações com Next.js, Strapi e mais\". Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados dinâmicos por meio de uma API.",
+      "url": "https://www.example.com/landingpage",
+      "image": "https://www.example.com/landingpage-image.jpg",
+      "dateCreated": "2023-01-01",
+      "keywords": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Styled Components",
+        "Strapi"
+      ],
+      "isPartOf": {
+        "@type": "Course",
+        "name": "React Avançado: Crie aplicações com Next.js, Strapi e mais"
+      }
+    },
+    {
+      "@type": "Project",
+      "name": "Single Page",
+      "description": "Website genérico de página única. Apresenta informações sobre uma empresa destacando seus projetos e serviços. Além disso, é apresentado sua história, redes sociais e formulário para contato, tudo de forma minimalista e objetiva.",
+      "url": "https://www.example.com/singlepage",
+      "image": "https://www.example.com/singlepage-image.jpg",
+      "dateCreated": "2022-01-01",
+      "keywords": ["HTML", "LESS", "JavaScript", "Gulp"]
+    },
+    {
+      "@type": "Project",
+      "name": "Metronome",
+      "description": "Metrônomo com diversas configurações. Além do andamento, é possível definir a fórmula de compasso, quantidade de compassos a serem executados e limite de tempo em minutos. Também é possível controlar o volume dos tempos, contratiempos e tercinas separadamente.",
+      "url": "https://www.example.com/metronome",
+      "image": "https://www.example.com/metronome-image.jpg",
+      "dateCreated": "2022-01-01",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    }
+  ]
+}
