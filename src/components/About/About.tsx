@@ -10,11 +10,11 @@ const About = ({ name, role, description }: AboutProps) => {
   return (
     <S.Wrapper>
       <S.TitleWrapper>
+        <S.FirstLine>Olá, meu nome é </S.FirstLine>
         <S.Title>
-          <S.FirstLine>Olá, meu nome é</S.FirstLine>
           <S.Name>{name}</S.Name>
+          <S.Role>{role}</S.Role>
         </S.Title>
-        <S.Role>{role}</S.Role>
       </S.TitleWrapper>
       <S.Subtitle>Sobre mim</S.Subtitle>
       <S.Description

@@ -14,9 +14,12 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled.h1`
   color: var(--color-heading);
+  display: flex;
+  flex-direction: column;
 `
 
 export const FirstLine = styled.div`
+  color: var(--color-heading);
   font-size: var(--font-lg);
   font-weight: var(--font-light);
 `
@@ -31,7 +34,7 @@ export const Name = styled.div`
   }
 `
 
-export const Role = styled.h2`
+export const Role = styled.span`
   color: var(--color-primary);
   font-size: var(--font-sm);
   margin-bottom: var(--spacing-xl);
@@ -41,7 +44,7 @@ export const Role = styled.h2`
   }
 `
 
-export const Subtitle = styled.h3`
+export const Subtitle = styled.h2`
   display: none;
 
   @media (min-width: ${breakpoints.small}) {
