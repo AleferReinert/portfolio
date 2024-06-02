@@ -170,11 +170,7 @@
       "url": "https://www.example.com/notes",
       "image": "https://www.example.com/notes-image.jpg",
       "dateCreated": "2024-01-01",
-      "keywords": ["React", "TypeScript", "Tailwind", "Radix", "Sonner"],
-      "isPartOf": {
-        "@type": "Event",
-        "name": "NLW Expert"
-      }
+      "keywords": ["React", "TypeScript", "Tailwind", "Radix", "Sonner"]
     },
     {
       "@type": "Project",
@@ -190,11 +186,7 @@
         "Node.js",
         "Prisma",
         "Fastify"
-      ],
-      "isPartOf": {
-        "@type": "Event",
-        "name": "NLW Unite"
-      }
+      ]
     },
     {
       "@type": "Project",
