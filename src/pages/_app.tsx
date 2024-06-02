@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import GlobalStyles from 'styles/global'
+import imageSocialShare from './../../public/img/social-share.webp'
 
 const inter = Inter({
   weight: ['300', '400', '500', '700', '800'],
@@ -33,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://aleferreinert.netlify.app' />
-        <meta property='og:image' content='/img/social-share.webp' />
+        <meta property='og:image' content={imageSocialShare.src} />
         <meta
           name='og:image:alt'
           content='Imagem que mostra o site responsivo em um celular, tablet e notebook.'
