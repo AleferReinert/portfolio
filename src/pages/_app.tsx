@@ -23,12 +23,15 @@ export default function App({ Component, pageProps }: AppProps) {
           name='keywords'
           content='HTML, CSS, JavaScript, TypeScript, Less, Sass, React, Next.js, Styled Components, Storybook, Jest, Testing Library, GraphQL, Photoshop, Grunt, Gulp, Figma, Jquery, Git, Bootstrap, Strapi, Tailwind'
         ></meta>
+        <meta name='theme-color' content='#083344' />
+
+        {/* Visualização de compartilhamento em redes sociais */}
         <meta property='og:url' content='https://aleferreinert.netlify.app' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Alefer Reinert - Portfólio' />
+        <meta property='og:title' content='Portfólio - Alefer Reinert' />
         <meta
           property='og:description'
-          content='Desenvolvedor front end com experiência em React, Next.js, Styled Components, Storybook, Testing Library e outros.'
+          content='Desenvolvedor front-end com experiência em React, Next.js, Styled Components, Storybook, Testing Library e outros.'
         />
         <meta
           property='og:image'

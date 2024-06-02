@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background-color: var(--color-background-secondary);
   width: 100%;
-  /* max-width: 32.8rem; */
   align-self: center;
   align-items: center;
   padding: var(--spacing-md);

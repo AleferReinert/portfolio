@@ -21,6 +21,7 @@ export const Wrapper = styled.nav`
   @media (min-width: ${breakpoints.small}) {
     flex-direction: row;
     font-size: var(--font-xs);
+    font-weight: var(--font-regular);
     gap: var(--spacing-lg);
   }
 `

@@ -6,7 +6,18 @@ const Switch = () => {
 
   useEffect(() => {
     document.body.classList.add(theme)
-  }, [])
+    updateMetaTagThemeColor()
+  }, [theme])
+
+  const updateMetaTagThemeColor = () => {
+    const themeMetaTag = document.querySelector("meta[name='theme-color']")
+    const rootStyle = getComputedStyle(document.body)
+    const themeColor = rootStyle.getPropertyValue('--color-background').trim()
+
+    if (themeMetaTag) {
+      themeMetaTag.setAttribute('content', themeColor)
+    }
+  }
 
   function toggleTheme() {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
