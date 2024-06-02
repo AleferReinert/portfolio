@@ -1,5 +1,6 @@
-import { Github as GithubIcon, Link as LinkIcon } from '@styled-icons/feather'
-import { Storybook as StorybookIcon } from '@styled-icons/simple-icons'
+import { Github as GithubIcon } from '@styled-icons/feather/Github'
+import { Link as LinkIcon } from '@styled-icons/feather/Link'
+import { Storybook as StorybookIcon } from '@styled-icons/simple-icons/Storybook'
 import Image from 'next/image'
 import Link from 'next/link'
 import { breakpoints } from 'styles/global'

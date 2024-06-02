@@ -1,9 +1,9 @@
-import { SocialItemProps } from 'components/Social/Social'
-import { useEffect, useState } from 'react'
-import { Menu as MenuIcon } from '@styled-icons/feather'
-import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
+import { Menu as MenuIcon } from '@styled-icons/feather/Menu'
 import MenuMobile from 'components/MenuMobile/MenuMobile'
+import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
+import { SocialItemProps } from 'components/Social/Social'
 import Switch from 'components/Switch/Switch'
+import { useEffect, useState } from 'react'
 import * as S from './Header.styles'
 
 interface HeaderProps {

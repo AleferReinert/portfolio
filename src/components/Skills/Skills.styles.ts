@@ -28,7 +28,6 @@ export const Title = styled.h3`
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0.5;
 `
 
 export const IconWrapper = styled.div`

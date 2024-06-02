@@ -1,4 +1,4 @@
-import { Whatsapp } from '@styled-icons/boxicons-logos'
+import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp'
 import { Github, Linkedin, Mail } from '@styled-icons/feather'
 import {
   Adobephotoshop,

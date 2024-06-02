@@ -1,7 +1,7 @@
-import type { Dispatch, SetStateAction } from 'react'
-import { X as CloseIcon } from '@styled-icons/feather'
+import { X as CloseIcon } from '@styled-icons/feather/X'
 import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import Social, { SocialItemProps } from 'components/Social/Social'
+import type { Dispatch, SetStateAction } from 'react'
 import * as S from './MenuMobile.styles'
 
 export interface MenuMobileProps {
