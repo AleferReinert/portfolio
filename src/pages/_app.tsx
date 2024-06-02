@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='description'
-          content='Desenvolvedor com experiência em React, Next.js, Storybook e TypeScript'
+          content='Desenvolvedor com experiência em React, Next.js, Storybook e TypeScript.'
         />
         <meta
           name='keywords'
@@ -45,6 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta name='twitter:card' content='summary_large_image' />
+        <link rel='canonical' href='https://aleferreinert.netlify.app' />
       </Head>
       <GlobalStyles />
       <Component className={inter.className} {...pageProps} />
