@@ -9,6 +9,11 @@ const inter = Inter({
   display: 'swap'
 })
 
+const getCurrentISODate = (): string => {
+  const currentDate = new Date()
+  return currentDate.toISOString()
+}
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -43,10 +48,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta name='author' content='Alefer Reinert' />
+        {/* todo: ao testar no inspetor do linkedin, publish date não é reconhecido */}
         <meta
           name='publish_date'
-          property='og:publish_date'
-          content='2023-08-07'
+          property='article:published_time'
+          content={getCurrentISODate()}
         />
       </Head>
       <GlobalStyles />
