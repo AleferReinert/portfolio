@@ -26,7 +26,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='theme-color' content='#083344' />
 
         {/* Visualização de compartilhamento em redes sociais */}
-        <meta property='og:title' content='Portfólio - Alefer Reinert' />
+        <meta
+          property='og:title'
+          content='Portfólio | Alefer Reinert - Desenvolvedor Front-end'
+        />
         <meta name='author' content='Alefer Reinert' />
         <meta
           property='og:description'
@@ -41,6 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
+        <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <GlobalStyles />
       <Component className={inter.className} {...pageProps} />
