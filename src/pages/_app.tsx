@@ -1,7 +1,6 @@
 import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
-import { GoogleAnalytics } from 'nextjs-google-analytics'
 import GlobalStyles from 'styles/global'
 
 const inter = Inter({
@@ -51,7 +50,6 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <GoogleAnalytics trackPageViews />
       <Component className={inter.className} {...pageProps} />
     </>
   )
