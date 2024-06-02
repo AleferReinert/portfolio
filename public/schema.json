@@ -212,11 +212,7 @@
         "Jest",
         "Strapi",
         "GraphQL"
-      ],
-      "isPartOf": {
-        "@type": "Course",
-        "name": "React Avançado: Crie aplicações com Next.js, Strapi e mais"
-      }
+      ]
     },
     {
       "@type": "Project",
@@ -232,11 +228,7 @@
         "Styled Components",
         "Storybook",
         "Jest"
-      ],
-      "isPartOf": {
-        "@type": "Course",
-        "name": "React Avançado: Crie aplicações com Next.js, Strapi e mais"
-      }
+      ]
     },
     {
       "@type": "Project",
@@ -251,11 +243,7 @@
         "TypeScript",
         "Styled Components",
         "Strapi"
-      ],
-      "isPartOf": {
-        "@type": "Course",
-        "name": "React Avançado: Crie aplicações com Next.js, Strapi e mais"
-      }
+      ]
     },
     {
       "@type": "Project",
