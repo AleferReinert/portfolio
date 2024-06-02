@@ -16,13 +16,11 @@ import {
 } from 'content/content'
 import Head from 'next/head'
 import * as S from 'styles/home'
-import schema from '../../public/schema.json'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <script type='application/ld+json'>{JSON.stringify(schema)}</script>
         <title>Portfólio | Alefer Reinert - Desenvolvedor Front-end</title>
       </Head>
       <Header menu={menu} socials={social} />

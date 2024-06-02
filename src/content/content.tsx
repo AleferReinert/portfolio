@@ -2,18 +2,13 @@ import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp'
 import { Github, Linkedin, Mail } from '@styled-icons/feather'
 import {
   Adobephotoshop,
-  //   Bootstrap,
   Css3,
-  //   Graphql,
-  //   Strapi,
   Figma,
   Git,
-  //   Grunt,
   Gulp,
   Html5,
   Javascript,
   Jest,
-  //   Jquery,
   Less,
   Nextdotjs,
   ReactLogo,
@@ -224,7 +219,6 @@ export const certificates = [
 export const skills = [
   { title: 'HTML5', icon: <Html5 aria-hidden /> },
   { title: 'CSS3', icon: <Css3 aria-hidden /> },
-  //   { title: 'JQuery', icon: <Jquery aria-hidden /> },
   { title: 'JavaScript', icon: <Javascript aria-hidden /> },
   { title: 'TypeScript', icon: <Typescript aria-hidden /> },
   { title: 'LESS', icon: <Less aria-hidden /> },
@@ -235,26 +229,22 @@ export const skills = [
   { title: 'Storybook', icon: <Storybook aria-hidden /> },
   { title: 'Git', icon: <Git aria-hidden /> },
   { title: 'Jest', icon: <Jest aria-hidden /> },
-  //   { title: 'GraphQL', icon: <Graphql aria-hidden /> },
   { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
   { title: 'Gulp', icon: <Gulp aria-hidden /> },
-  //   { title: 'Grunt', icon: <Grunt aria-hidden /> },
-  //   { title: 'Strapi', icon: <Strapi aria-hidden /> },
-  //   { title: 'Bootstrap', icon: <Bootstrap aria-hidden /> },
   { title: 'Figma', icon: <Figma aria-hidden /> },
   { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
 ]
 
 export const social = [
   {
-    name: 'Github',
-    link: 'https://github.com/AleferReinert',
-    icon: <Github aria-hidden />
-  },
-  {
     name: 'E-mail',
     link: 'mailto:aleferreinert@gmail.com',
     icon: <Mail aria-hidden />
+  },
+  {
+    name: 'Github',
+    link: 'https://github.com/AleferReinert',
+    icon: <Github aria-hidden />
   },
   {
     name: 'LinkedIn',
