@@ -57,6 +57,16 @@ export const about = {
 
 export const projects = [
   {
+    title: 'Findbook',
+    year: '2024',
+    description: `
+        Aplicação web que utiliza inteligência artificial para recomendar livros a partir da busca do usuário.`,
+    skills: 'React TypeScript Tailwind OpenAI Express MongoDB',
+    projectLink: 'https://findbook-ar.netlify.app',
+    repositoryLink: 'https://github.com/AleferReinert/findbook',
+    img: '/img/projects/findbook.webp'
+  },
+  {
     title: 'Notes',
     year: '2024',
     description: `

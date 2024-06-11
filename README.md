@@ -1,8 +1,18 @@
 # Portfolio
 
-Este projeto foi desenvolvido utilizando Next.js, React, Styled-components, Storybook, ESLint, Prettier, Husky, Plop e Chromatic.
+Este projeto foi desenvolvido utilizando:
 
-## Como Rodar o Projeto
+- Next.js
+- React
+- Styled-components
+- Storybook
+- ESLint
+- Prettier
+- Husky
+- Plop
+- Chromatic
+
+## Começando
 
 1. Clone o repositório:
    ```
@@ -22,23 +32,25 @@ Este projeto foi desenvolvido utilizando Next.js, React, Styled-components, Stor
    npm run dev
    ```
 
-5. Inicie o Storybook:
+# Scripts
 
-   ```
-   npm run storybook
-   ```
+- Inicie o Storybook:
 
-6. Execute os testes do Storybook:
+  ```
+  npm run storybook
+  ```
 
-   ```
-   npm run test-storybook --watch
-   ```
+- Execute os testes do Storybook:
 
-7. Crie um componente:
+  ```
+  npm run test --watch
+  ```
 
-   ```
-   npm run plop
-   ```
+- Crie um componente:
+
+  ```
+  npm run plop
+  ```
 
 ## URL do Projeto
 
