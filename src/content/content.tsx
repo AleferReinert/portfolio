@@ -141,6 +141,12 @@ export const projects = [
 
 export const certificates = [
   {
+    title: 'Trilha Digital | Coders 24 | Front End',
+    organization: 'Ada Tech',
+    conclusionDate: 'Junho/2024',
+    link: 'https://drive.google.com/file/d/1iWBufAzOH938Wp6KzXle8IAMC6D1cpTR/view'
+  },
+  {
     title: 'Semana do Herói Edição 04',
     organization: 'Hero Code',
     conclusionDate: 'Junho/2024',
