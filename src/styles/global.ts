@@ -73,10 +73,6 @@ const GlobalStyles = createGlobalStyle`
 		letter-spacing: 0.025rem;
 		overflow-x: hidden;
 		text-align: center;
-
-		@media (min-width: ${breakpoints.small}) {
-			text-align: left;
-		}
 	}
 
 	* {

@@ -13,7 +13,7 @@ interface SocialProps {
 
 const Social = ({ socials }: SocialProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid='social-component'>
       {socials.map((social, index) => (
         <S.SocialItem
           key={index}

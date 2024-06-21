@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints } from './global'
+import { breakpoints } from '../../styles/global'
 
 export const Wrapper = styled.div`
   @media (min-width: ${breakpoints.medium}) {
@@ -19,31 +19,16 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   order: 2;
-`
-
-export const Section = styled.section`
-  padding: var(--spacing-xl) 0;
-
-  &:first-child {
-    padding-top: var(--spacing-huge);
-  }
-
-  &:last-child {
-    padding-bottom: var(--spacing-xxl);
-  }
+  padding-top: var(--spacing-huge);
+  padding-bottom: var(--spacing-xxl);
 
   @media (min-width: ${breakpoints.small}) {
-    padding: var(--spacing-huge) 0 0;
-
-    &:last-child {
-      padding-bottom: 0;
-    }
+    text-align: left;
+    padding-bottom: 0;
   }
 
   @media (min-width: ${breakpoints.medium}) {
-    &:last-child {
-      padding-bottom: var(--spacing-xxl);
-    }
+    padding-bottom: var(--spacing-xxl);
   }
 `
 

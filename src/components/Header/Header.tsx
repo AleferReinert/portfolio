@@ -29,7 +29,7 @@ const Header = ({ menu, socials }: HeaderProps) => {
   })
 
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid='header-component'>
       <S.Fixed className={fixedHeader}>
         <S.SwitchWrapper>
           <Switch />
