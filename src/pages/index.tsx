@@ -6,7 +6,7 @@ import Layout from 'components/Layout/Layout'
 import Projects from 'components/Projects/Projects'
 import Skills from 'components/Skills/Skills'
 import { about, certificates, projects, skills } from 'content/content'
-import * as S from './Home.styles'
+import * as S from './home/Home.styles'
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints } from '../styles/global'
+import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.div`
   display: flex;
