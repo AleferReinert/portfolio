@@ -8,7 +8,7 @@ import Skills from 'components/Skills/Skills'
 import { about, certificates, projects, skills } from 'content/content'
 import * as S from './Home.styles'
 
-export default function Home() {
+export function Home() {
   return (
     <Layout>
       <S.Wrapper>
