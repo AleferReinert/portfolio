@@ -21,19 +21,19 @@ import {
 
 export const menu = [
   {
-    link: '#about',
+    link: '/#about',
     children: 'Sobre mim'
   },
   {
-    link: '#projects',
+    link: '/#projects',
     children: 'Projetos'
   },
   {
-    link: '#certificates',
+    link: '/#certificates',
     children: 'Certificados'
   },
   {
-    link: '#skills',
+    link: '/#skills',
     children: 'Habilidades'
   }
 ]
@@ -41,7 +41,7 @@ export const menu = [
 export const about = {
   name: 'Alefer Reinert ',
   role: 'Desenvolvedor front-end',
-  description: `
+  shortDescription: `
       Desenvolvedor front-end com mais de 8 anos de experiência em e-commerces e websites. 
 			<br />
 			Com aprendizado contínuo, tenho me aprimorado em
@@ -57,19 +57,21 @@ export const about = {
 
 export const projects = [
   {
+    slug: 'findbook',
     title: 'Findbook',
     year: '2024',
-    description: `
+    shortDescription: `
         Aplicação web que utiliza inteligência artificial para recomendar livros a partir da busca do usuário.`,
-    skills: 'React TypeScript Tailwind OpenAI Express MongoDB',
+    skills: 'React TypeScript Tailwind Radix Vite OpenAI Express MongoDB',
     projectLink: 'https://findbook-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/findbook',
     img: '/img/projects/findbook.webp'
   },
   {
+    slug: 'notes',
     title: 'Notes',
     year: '2024',
-    description: `
+    shortDescription: `
         Aplicação web para criar e gerenciar notas utilizando texto digitado ou gravações de áudio. 
         Desenvolvido através do NLW Expert da Rocketseat na trilha React.`,
     skills: 'React TypeScript Tailwind Radix Sonner',
@@ -78,9 +80,10 @@ export const projects = [
     img: '/img/projects/nlw-expert-notes.webp'
   },
   {
+    slug: 'pass-in',
     title: 'Pass In',
     year: '2024',
-    description: `
+    shortDescription: `
         Aplicação para gestão de participantes em eventos presenciais. 
         Desenvolvido durante o NLW Unite da Rocketseat, foram feitas as trilhas de React e Node.js.`,
     skills: 'React TypeScript Tailwind Node.js Prisma Fastify',
@@ -89,9 +92,10 @@ export const projects = [
     img: '/img/projects/nlw-unite-pass-in.webp'
   },
   {
+    slug: 'won-games',
     title: 'Won Games',
     year: '2024',
-    description: `
+    shortDescription: `
         Projeto principal do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br>
         Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Em desenvolvimento.`,
     skills:
@@ -101,18 +105,20 @@ export const projects = [
     img: '/img/projects/won-games.webp'
   },
   {
+    slug: 'portfolio',
     title: 'Portfólio',
     year: '2023',
-    description: 'Confira o processo de criação deste portfólio.',
+    shortDescription: 'Confira o processo de criação deste portfólio.',
     skills: 'React Next.js TypeScript StyledComponents Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
     img: '/img/projects/portfolio.webp'
   },
   {
+    slug: 'landing-page',
     title: 'Landing Page',
     year: '2023',
-    description: `Página de apresentação do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
+    shortDescription: `Página de apresentação do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
         Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados dinâmicos por meio de uma API.`,
     skills: 'React Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
@@ -120,18 +126,20 @@ export const projects = [
     img: '/img/projects/landing-page.webp'
   },
   {
+    slug: 'single-page',
     title: 'Single Page',
     year: '2022',
-    description: `Website genérico de página única. Apresenta informações sobre uma empresa destacando seus projetos e serviços. Além disso, é apresentado sua história, redes sociais e formulário para contato, tudo de forma minimalista e objetiva.`,
+    shortDescription: `Website genérico de página única. Apresenta informações sobre uma empresa destacando seus projetos e serviços. Além disso, é apresentado sua história, redes sociais e formulário para contato, tudo de forma minimalista e objetiva.`,
     skills: 'HTML Less JavaScript Gulp',
     projectLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
     img: '/img/projects/single-page.webp'
   },
   {
+    slug: 'metronome',
     title: 'Metronome',
     year: '2022',
-    description: `Metrônomo com diversas configurações. Além do andamento, é possível definir a fórmula de compasso, quantidade de compassos a serem executados e limite de tempo em minutos. Também é possível controlar o volume dos tempos, contratempos e tercinas separadamente.`,
+    shortDescription: `Metrônomo com diversas configurações. Além do andamento, é possível definir a fórmula de compasso, quantidade de compassos a serem executados e limite de tempo em minutos. Também é possível controlar o volume dos tempos, contratempos e tercinas separadamente.`,
     skills: 'HTML CSS JavaScript',
     projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
@@ -140,6 +148,12 @@ export const projects = [
 ]
 
 export const certificates = [
+  {
+    title: 'Inteligência Artificial',
+    organization: 'Conquer',
+    conclusionDate: 'Junho/2024',
+    link: 'https://drive.google.com/file/d/137EE6bccnz99u-ZZ0PHgtHICVpcZE_su/view'
+  },
   {
     title: 'Trilha Digital | Coders 24 | Front End',
     organization: 'Ada Tech',
