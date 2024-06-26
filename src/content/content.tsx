@@ -41,7 +41,7 @@ export const menu = [
 export const about = {
   name: 'Alefer Reinert ',
   role: 'Desenvolvedor front-end',
-  shortDescription: `
+  description: `
       Desenvolvedor front-end com mais de 8 anos de experiência em e-commerces e websites. 
 			<br />
 			Com aprendizado contínuo, tenho me aprimorado em
