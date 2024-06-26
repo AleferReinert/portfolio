@@ -9,7 +9,7 @@ const meta: Meta<typeof ProjectComponent> = {
   args: {
     title: 'My project',
     year: '2023',
-    description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    shortDescription: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     skills: 'React Next.js Jest',
     repositoryLink: '/repository-link',
     img: '/img/projects/portfolio.webp'
@@ -32,56 +32,24 @@ export default meta
 
 type Story = StoryObj<typeof ProjectComponent>
 
-export const Default: Story = {
+export const Project: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const title = canvas.getByRole('heading', { name: /my project/i })
     const year = canvas.getByLabelText('ano')
-    const description = canvas.getByRole('paragraph')
+    const shortDescription = canvas.getByRole('paragraph')
     const skills = canvas.getByLabelText(/skills utilizadas/i)
-    const repositoryLink = canvas.getByRole('link', {
-      name: 'Repositório'
-    })
     const img = canvas.getByRole('img', { name: /imagem do projeto/i })
 
     await step(
-      'Render title, year, description, skills, repository and image',
+      'Render title, year, shortDescription, skills, repository and image',
       () => {
         expect(title).toBeInTheDocument()
         expect(year).toBeInTheDocument()
-        expect(description).toHaveTextContent(/lorem ipsum dolor sit/i)
+        expect(shortDescription).toHaveTextContent(/lorem ipsum dolor sit/i)
         expect(skills).toBeInTheDocument()
-        expect(repositoryLink).toHaveAttribute('href', '/repository-link')
         expect(img).toBeInTheDocument()
       }
     )
-  }
-}
-
-export const WithStorybookLink: Story = {
-  args: {
-    storybookLink: '/storybook-link'
-  },
-  play: ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const storybookLink = canvas.getByRole('link', {
-      name: 'Storybook'
-    })
-
-    expect(storybookLink).toHaveAttribute('href', '/storybook-link')
-  }
-}
-
-export const WithProjectLink: Story = {
-  args: {
-    projectLink: '/project-link'
-  },
-  play: ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const projectLink = canvas.getByRole('link', {
-      name: 'Visualizar'
-    })
-
-    expect(projectLink).toHaveAttribute('href', '/project-link')
   }
 }

@@ -3,7 +3,7 @@ import { expect, within } from '@storybook/test'
 import LayoutComponent from './Layout'
 
 const meta: Meta<typeof LayoutComponent> = {
-  title: 'Pages/Layout',
+  title: 'Components/Layout',
   component: LayoutComponent,
   args: {
     children: <h1>Children</h1>

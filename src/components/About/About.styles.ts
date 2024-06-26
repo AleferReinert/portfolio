@@ -7,7 +7,6 @@ export const TitleWrapper = styled.div`
   margin-bottom: var(--spacing-xl);
 
   @media (min-width: ${breakpoints.small}) {
-    margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-xll);
   }
 `

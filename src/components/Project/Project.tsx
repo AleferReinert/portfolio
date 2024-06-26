@@ -1,15 +1,13 @@
-import { Github as GithubIcon } from '@styled-icons/feather/Github'
-import { Link as LinkIcon } from '@styled-icons/feather/Link'
-import { Storybook as StorybookIcon } from '@styled-icons/simple-icons/Storybook'
+import { ProjectLinks } from 'components/ProjectLinks/ProjectLinks'
 import Image from 'next/image'
-import Link from 'next/link'
 import { breakpoints } from 'styles/global'
 import * as S from './Project.styles'
 
 export interface ProjectProps {
+  slug: string
   title: string
   year: string
-  description: String
+  shortDescription: string
   skills: string
   repositoryLink: string
   storybookLink?: string
@@ -21,7 +19,7 @@ export interface ProjectProps {
 const Project = ({
   title,
   year,
-  description,
+  shortDescription,
   skills,
   repositoryLink,
   storybookLink,
@@ -54,28 +52,19 @@ const Project = ({
         <S.Description
           role='paragraph'
           aria-label='descrição'
-          dangerouslySetInnerHTML={{ __html: description }}
+          dangerouslySetInnerHTML={{ __html: shortDescription }}
         ></S.Description>
 
         <S.Skills aria-label='skills utilizadas' title='Tecnologias utilizadas'>
           {skills}
         </S.Skills>
 
-        <S.IconsWrapper>
-          <Link href={repositoryLink} title='Repositório' target='_blank'>
-            <GithubIcon aria-hidden />
-          </Link>
-          {storybookLink && (
-            <Link href={storybookLink} title='Storybook' target='_blank'>
-              <StorybookIcon aria-hidden />
-            </Link>
-          )}
-          {projectLink && (
-            <Link href={projectLink} title='Visualizar' target='_blank'>
-              <LinkIcon aria-hidden />
-            </Link>
-          )}
-        </S.IconsWrapper>
+        <ProjectLinks
+          repositoryLink={repositoryLink}
+          storybookLink={storybookLink}
+          projectLink={projectLink}
+        />
+        {/* <Link href={'project/' + slug}>Ver detalhes</Link> */}
       </S.Content>
     </S.Wrapper>
   )

@@ -4,6 +4,7 @@ import { breakpoints } from 'styles/global'
 
 export const Wrapper = styled.nav`
   display: flex;
+  overflow: hidden;
   gap: var(--spacing-sm);
   align-items: center;
   justify-content: center;

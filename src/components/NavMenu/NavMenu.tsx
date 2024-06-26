@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import * as S from './NavMenu.styles'
 import { Dispatch, SetStateAction } from 'react'
+import * as S from './NavMenu.styles'
 
 export interface NavMenuItemProps {
   link: string

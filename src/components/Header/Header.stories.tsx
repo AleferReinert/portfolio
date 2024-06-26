@@ -1,9 +1,8 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { userEvent, waitFor, within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import { jsMediaQuery } from 'utils/helpers'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, userEvent, waitFor, within } from '@storybook/test'
 import { menu, social } from 'content/content'
 import { breakpoints } from 'styles/global'
+import { jsMediaQuery } from 'utils/helpers'
 import HeaderComponent from './Header'
 
 const meta: Meta<typeof HeaderComponent> = {
@@ -63,6 +62,11 @@ export const Mobile: Story = {
 }
 
 export const Desktop: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: 'responsive'
+    }
+  },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const openMenuButton = canvas.queryByRole('img', { name: /abrir menu/i })

@@ -48,6 +48,10 @@ export const Content = styled.div`
   align-self: center;
   margin: 0 auto;
   width: 100%;
+
+  @media (min-width: ${breakpoints.small}) {
+    text-align: left;
+  }
 `
 
 export const Title = styled.h3`
@@ -84,37 +88,5 @@ export const Skills = styled.p`
 
   @media (min-width: ${breakpoints.medium}) {
     margin: var(--spacing-lg) 0;
-  }
-`
-
-export const IconsWrapper = styled.div`
-  display: flex;
-  gap: var(--spacing-sm);
-  justify-content: center;
-
-  svg {
-    height: var(--font-lg);
-    transition: all var(--transition-duration-default) var(--transition-effect);
-  }
-
-  a:hover {
-    color: var(--color-primary);
-
-    svg {
-      animation: rotateFrom180 var(--transition-duration-slow);
-    }
-  }
-
-  @keyframes rotateFrom180 {
-    from {
-      transform: rotate(-180deg) scale(0.75);
-    }
-    to {
-      transform: rotate(0) scale(1);
-    }
-  }
-
-  @media (min-width: ${breakpoints.small}) {
-    justify-content: left;
   }
 `

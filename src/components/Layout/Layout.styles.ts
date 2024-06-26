@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
   @media (min-width: ${breakpoints.large}) {
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content 1fr;
     justify-content: center;
     gap: var(--spacing-huge);
   }
@@ -24,6 +24,7 @@ export const Main = styled.main`
 
   @media (min-width: ${breakpoints.small}) {
     text-align: left;
+    padding-top: calc(var(--spacing-huge) + var(--spacing-lg));
     padding-bottom: 0;
   }
 
