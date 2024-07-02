@@ -42,17 +42,18 @@ export const about = {
   name: 'Alefer Reinert ',
   role: 'Desenvolvedor front-end',
   description: `
-      Desenvolvedor front-end com mais de 8 anos de experiência em e-commerces e websites. 
-			<br />
-			Com aprendizado contínuo, tenho me aprimorado em
+      Desenvolvedor front-end com mais de 8 anos de experiência em aplicações web responsivas. 
+			Possui habilidades em
 			<span>
 				<strong>React</strong>,
 				<strong>Next.js</strong>, 
-				<strong>TypeScript</strong> e 
-				<strong>Storybook</strong>.
+				<strong>TypeScript</strong>,
+				<strong>Jest</strong>,
+				<strong>Storybook</strong> e
+				<strong>inteligência artificial</strong>.
 			</span>
       <br />
-      Além de codificar, sou uma pessoa apaixonada por animais, música e saúde mental.`
+      Atuou em diversos sites e e-commerces, além de projetos pessoais, sempre estudando e buscando evoluir constantemente.`
 }
 
 export const projects = [
