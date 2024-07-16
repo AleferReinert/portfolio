@@ -150,6 +150,12 @@ export const projects = [
 
 export const certificates = [
   {
+    title: 'NLW Journey - Reactjs',
+    organization: 'Rocketseat',
+    conclusionDate: 'Julho/2024',
+    link: 'https://drive.google.com/file/d/1Mb9BBVSVnR-fbB8ikJq73DhpK3spvQG1/view'
+  },
+  {
     title: 'Inteligência Artificial',
     organization: 'Conquer',
     conclusionDate: 'Junho/2024',
