@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta
           name='keywords'
           content='HTML, CSS, JavaScript, TypeScript, Less, Sass, React, Next.js, Styled Components, Storybook, Jest, Testing Library, GraphQL, Photoshop, Grunt, Gulp, Figma, Jquery, Git, Bootstrap, Strapi, Tailwind'
-        ></meta>
+        />
         <meta name='theme-color' content='#083344' />
 
         {/* Visualização de compartilhamento em redes sociais */}

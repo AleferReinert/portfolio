@@ -36,10 +36,11 @@ const Project = ({
           priority={lazy}
           fill
           quality={100}
-          sizes={`240px,
+          sizes={`(min-width: ${breakpoints.xxsmall}) 240px,
             (min-width: ${breakpoints.xsmall}) 280px,
             (min-width: ${breakpoints.small}) 240px, 
-            (min-width: ${breakpoints.medium}) 280px`}
+            (min-width: ${breakpoints.medium}) 280px,
+            288px`}
         />
       </S.ImageWrapper>
       <S.Content>
