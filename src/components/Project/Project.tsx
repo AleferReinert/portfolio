@@ -39,8 +39,7 @@ const Project = ({
           sizes={`240px,
             (min-width: ${breakpoints.xsmall}) 280px,
             (min-width: ${breakpoints.small}) 240px, 
-            (min-width: ${breakpoints.medium}) 280px,
-            288px`}
+            (min-width: ${breakpoints.medium}) 280px`}
         />
       </S.ImageWrapper>
       <S.Content>

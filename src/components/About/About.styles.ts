@@ -23,7 +23,7 @@ export const FirstLine = styled.div`
   font-weight: var(--font-light);
 `
 
-export const Name = styled.div`
+export const Name = styled.span`
   font-size: var(--font-huge);
   font-weight: var(--font-extrabold);
   margin-bottom: var(--spacing-xs);
