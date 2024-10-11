@@ -150,6 +150,12 @@ export const projects = [
 
 export const certificates = [
   {
+    title: 'Inteligência Emocional na Prática',
+    organization: 'Fundação Estudar',
+    conclusionDate: 'Outubro/2024',
+    link: 'https://drive.google.com/file/d/1HRajJCl-eQGE-1a4bPsjE1PGNP8viWO-/view'
+  },
+  {
     title: 'NLW Journey - Reactjs',
     organization: 'Rocketseat',
     conclusionDate: 'Julho/2024',
