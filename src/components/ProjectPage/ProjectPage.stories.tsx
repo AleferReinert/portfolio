@@ -14,7 +14,7 @@ type Story = StoryObj<typeof ProjectPageComponent>
 
 export const Project: Story = {
   args: {
-    project: projects[0]
+    project: projects[1]
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)

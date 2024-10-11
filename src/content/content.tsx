@@ -58,6 +58,16 @@ export const about = {
 
 export const projects = [
   {
+    slug: 'impacta-tecnologia',
+    title: 'Impacta Tecnologia',
+    year: '2024',
+    shortDescription: `Website institucional para uma empresa de tecnologia, destacando seus serviços e soluções personalizadas, com uma interface intuitiva e gerenciamento de conteúdo via CMS.`,
+    skills: 'Next.js TypeScript Tailwind Storybook Strapi Apollo GraphQL',
+    projectLink: 'https://impacta-tecnologia.vercel.app',
+    repositoryLink: 'https://github.com/AleferReinert/impacta-tecnologia',
+    img: '/img/projects/impacta-tecnologia.webp'
+  },
+  {
     slug: 'findbook',
     title: 'Findbook',
     year: '2024',
@@ -99,8 +109,7 @@ export const projects = [
     shortDescription: `
         Projeto principal do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br>
         Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Em desenvolvimento.`,
-    skills:
-      'React Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
+    skills: 'Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
     repositoryLink: 'https://github.com/AleferReinert/won-games',
     storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com/',
     img: '/img/projects/won-games.webp'
@@ -110,7 +119,7 @@ export const projects = [
     title: 'Portfólio',
     year: '2023',
     shortDescription: 'Confira o processo de criação deste portfólio.',
-    skills: 'React Next.js TypeScript StyledComponents Storybook Jest',
+    skills: 'Next.js TypeScript StyledComponents Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
     img: '/img/projects/portfolio.webp'
@@ -121,7 +130,7 @@ export const projects = [
     year: '2023',
     shortDescription: `Página de apresentação do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
         Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados dinâmicos por meio de uma API.`,
-    skills: 'React Next.js TypeScript StyledComponents Strapi',
+    skills: 'Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
     img: '/img/projects/landing-page.webp'
