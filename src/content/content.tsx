@@ -18,8 +18,14 @@ import {
   Tailwindcss,
   Typescript
 } from '@styled-icons/simple-icons'
+import { AboutProps } from 'components/About/About'
+import { CertificateProps } from 'components/Certificate/Certificate'
+import { NavMenuItemProps } from 'components/NavMenu/NavMenu'
+import { ProjectProps } from 'components/Project/Project'
+import { SkillProps } from 'components/Skills/Skills'
+import { SocialItemProps } from 'components/Social/Social'
 
-export const menu = [
+export const menu: NavMenuItemProps[] = [
   {
     link: '/#about',
     children: 'Sobre mim'
@@ -38,7 +44,7 @@ export const menu = [
   }
 ]
 
-export const about = {
+export const about: AboutProps = {
   name: 'Alefer Reinert ',
   role: 'Desenvolvedor front-end',
   description: `
@@ -56,7 +62,7 @@ export const about = {
       Atuou em diversos sites e e-commerces, além de projetos pessoais, sempre estudando e buscando evoluir constantemente.`
 }
 
-export const projects = [
+export const projects: ProjectProps[] = [
   {
     slug: 'impacta-tecnologia',
     title: 'Impacta Tecnologia',
@@ -65,6 +71,7 @@ export const projects = [
     skills: 'Next.js TypeScript Tailwind Storybook Strapi Apollo GraphQL',
     projectLink: 'https://impacta-tecnologia.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/impacta-tecnologia',
+    storybookLink: 'https://670946a91c483c5167ccb017-xrgkkrbcaz.chromatic.com',
     img: '/img/projects/impacta-tecnologia.webp'
   },
   {
@@ -111,7 +118,7 @@ export const projects = [
         Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Em desenvolvimento.`,
     skills: 'Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
     repositoryLink: 'https://github.com/AleferReinert/won-games',
-    storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com/',
+    storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com',
     img: '/img/projects/won-games.webp'
   },
   {
@@ -157,7 +164,7 @@ export const projects = [
   }
 ]
 
-export const certificates = [
+export const certificates: CertificateProps[] = [
   {
     title: 'Inteligência Emocional na Prática',
     organization: 'Fundação Estudar',
@@ -274,7 +281,7 @@ export const certificates = [
   }
 ]
 
-export const skills = [
+export const skills: SkillProps[] = [
   { title: 'HTML5', icon: <Html5 aria-hidden /> },
   { title: 'CSS3', icon: <Css3 aria-hidden /> },
   { title: 'JavaScript', icon: <Javascript aria-hidden /> },
@@ -293,7 +300,7 @@ export const skills = [
   { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
 ]
 
-export const social = [
+export const social: SocialItemProps[] = [
   {
     name: 'E-mail',
     link: 'mailto:aleferreinert@gmail.com',

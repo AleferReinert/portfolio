@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import * as S from './Skills.styles'
 
-interface SkillProps {
+export interface SkillProps {
   title: string
   icon: ReactNode
 }
