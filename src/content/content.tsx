@@ -2,9 +2,11 @@ import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp'
 import { Github, Linkedin, Mail } from '@styled-icons/feather'
 import {
   Adobephotoshop,
+  Apollographql,
   Css3,
   Figma,
   Git,
+  Graphql,
   Gulp,
   Html5,
   Javascript,
@@ -14,8 +16,10 @@ import {
   ReactLogo,
   Sass,
   Storybook,
+  Strapi,
   Styledcomponents,
   Tailwindcss,
+  Testinglibrary,
   Typescript
 } from '@styled-icons/simple-icons'
 import { AboutProps } from 'components/About/About'
@@ -294,8 +298,12 @@ export const skills: SkillProps[] = [
   { title: 'Storybook', icon: <Storybook aria-hidden /> },
   { title: 'Git', icon: <Git aria-hidden /> },
   { title: 'Jest', icon: <Jest aria-hidden /> },
+  { title: 'TestingLibrary', icon: <Testinglibrary aria-hidden /> },
   { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
   { title: 'Gulp', icon: <Gulp aria-hidden /> },
+  { title: 'Strapi', icon: <Strapi aria-hidden /> },
+  { title: 'GraphQL', icon: <Graphql aria-hidden /> },
+  { title: 'Apollo', icon: <Apollographql aria-hidden /> },
   { title: 'Figma', icon: <Figma aria-hidden /> },
   { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
 ]
