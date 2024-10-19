@@ -1,43 +1,36 @@
 import { useEffect, useState } from 'react'
-import * as S from './Switch.styles'
+import twColors from 'tailwindcss/colors'
 
-const Switch = () => {
+export function Switch() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
 
   useEffect(() => {
-    document.body.classList.add(theme)
-    updateMetaTagThemeColor()
-  }, [theme])
-
-  const updateMetaTagThemeColor = () => {
     const themeMetaTag = document.querySelector("meta[name='theme-color']")
-    const rootStyle = getComputedStyle(document.body)
-    const themeColor = rootStyle.getPropertyValue('--color-background').trim()
+    const currentColor =
+      theme === 'light' ? twColors.neutral[100] : twColors.cyan[950]
 
-    if (themeMetaTag) {
-      themeMetaTag.setAttribute('content', themeColor)
-    }
-  }
+    themeMetaTag?.setAttribute('content', currentColor)
+    document.documentElement.classList.add(theme)
+  }, [theme])
 
   function toggleTheme() {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
-
     setTheme(newTheme)
-    document.body.classList.replace(theme, newTheme)
+    document.documentElement.classList.replace(theme, newTheme)
   }
 
   return (
-    <>
-      <S.Wrapper title={`Tema ${theme === 'dark' ? 'claro' : 'escuro'}`}>
-        <input
-          type='checkbox'
-          onChange={toggleTheme}
-          checked={theme === 'dark'}
-        />
-        <S.Handle />
-      </S.Wrapper>
-    </>
+    <label
+      data-testid='SwitchComponent'
+      className='inline-flex w-10 h-5 rounded-full relative cursor-pointer bg-zinc-600 dark:bg-slate-400'
+      title={`Tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
+      onClick={toggleTheme}
+    >
+      <div
+        className={`w-5 h-5 bg-slate-100 dark:bg-cyan-950 border-2 border-zinc-600 dark:border-slate-400 rounded-full transform transition-transform duration-300 ${
+          theme === 'light' ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      />
+    </label>
   )
 }
-
-export default Switch

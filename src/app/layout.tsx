@@ -1,19 +1,29 @@
-import type { AppProps } from 'next/app'
+import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Head from 'next/head'
-import GlobalStyles from 'styles/global'
+import { ReactNode } from 'react'
+import twColors from 'tailwindcss/colors'
 import imageSocialShare from './../../public/img/social-share.webp'
+import './globals.css'
 
 const inter = Inter({
-  weight: ['300', '400', '500', '700', '800'],
+  weight: ['300', '400', '500', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap'
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+export const metadata: Metadata = {
+  title: 'Portfólio | Alefer Reinert - Desenvolvedor Front-end'
+}
+
+export const bodyStyles =
+  'overflow-x-hidden tracking-wide leading-normal font-light text-neutral-600 dark:text-slate-400 bg-neutral-100 dark:bg-cyan-950'
+
+export default async function RootLayout({
+  children
+}: Readonly<{ children: ReactNode }>) {
   return (
-    <>
-      <Head>
+    <html lang='pt-BR' className='scroll-smooth dark'>
+      <head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='description'
@@ -23,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
           name='keywords'
           content='HTML, CSS, JavaScript, TypeScript, Less, Sass, React, Next.js, Styled Components, Storybook, Jest, Testing Library, GraphQL, Photoshop, Grunt, Gulp, Figma, Jquery, Git, Bootstrap, Strapi, Tailwind'
         />
-        <meta name='theme-color' content='#083344' />
+        <meta name='theme-color' content={twColors.cyan[950]} />
 
         {/* Visualização de compartilhamento em redes sociais */}
         <meta
@@ -46,9 +56,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:image:height' content='630' />
         <meta name='twitter:card' content='summary_large_image' />
         <link rel='canonical' href='https://aleferreinert.netlify.app' />
-      </Head>
-      <GlobalStyles />
-      <Component className={inter.className} {...pageProps} />
-    </>
+      </head>
+      <body className={`${inter.className} ${bodyStyles}`}>{children}</body>
+    </html>
   )
 }

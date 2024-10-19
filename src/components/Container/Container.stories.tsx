@@ -1,11 +1,10 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import ContainerComponent from './Container'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, within } from '@storybook/test'
+import { Container } from './Container'
 
-const meta: Meta<typeof ContainerComponent> = {
+const meta: Meta<typeof Container> = {
   title: 'Components/Container',
-  component: ContainerComponent,
+  component: Container,
   args: {
     children: (
       <div
@@ -35,9 +34,10 @@ const meta: Meta<typeof ContainerComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof ContainerComponent>
+type Story = StoryObj<typeof Container>
 
-export const Container: Story = {
+export const Default: Story = {
+  name: 'Container',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const children = canvas.getByText('children')

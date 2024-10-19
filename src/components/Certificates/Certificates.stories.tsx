@@ -1,12 +1,11 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import CertificatesComponent from './Certificates'
-import { certificates } from 'content/content'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, within } from '@storybook/test'
+import { certificates } from 'app/content'
+import { Certificates } from './Certificates'
 
-const meta: Meta<typeof CertificatesComponent> = {
+const meta: Meta<typeof Certificates> = {
   title: 'Components/Certificates',
-  component: CertificatesComponent,
+  component: Certificates,
   args: {
     certificates: certificates
   }
@@ -14,9 +13,10 @@ const meta: Meta<typeof CertificatesComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof CertificatesComponent>
+type Story = StoryObj<typeof Certificates>
 
-export const Certificates: Story = {
+export const Default: Story = {
+  name: 'Certificates',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const titles = canvas.getAllByRole('heading')

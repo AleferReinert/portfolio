@@ -1,9 +1,13 @@
-import * as S from './{{pascalCase name}}.styles' 
+import { ReactNode } from 'react'
 
-export const {{pascalCase name}} = () => { 
+interface {{pascalCase name}}Props {
+	children: ReactNode
+}
+
+export function {{pascalCase name}} ({ children }:{{pascalCase name}}Props) { 
     return (
-        <S.Wrapper>
-            <h1>{{pascalCase name}}</h1>
-        </S.Wrapper>
+        <>
+            <h1>{children}</h1>
+        </>
     )
 }

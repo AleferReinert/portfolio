@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Dispatch, SetStateAction } from 'react'
-import * as S from './NavMenu.styles'
 
 export interface NavMenuItemProps {
   link: string
@@ -12,22 +11,23 @@ interface NavMenuProps {
   setShowMobileMenu: Dispatch<SetStateAction<boolean>>
 }
 
-const NavMenu = ({ menu, setShowMobileMenu }: NavMenuProps) => {
+export function NavMenu({ menu, setShowMobileMenu }: NavMenuProps) {
   return (
-    <S.Wrapper role='menu'>
+    <nav
+      data-testid='NavMenuComponent'
+      className='flex flex-col gap-6 text-center text-2xl font-light md:flex-row md:text-base md:font-normal'
+    >
       {menu.map((item, index) => (
         <Link
           key={index}
           href={item.link}
-          scroll={false}
+          scroll={true}
           onClick={() => setShowMobileMenu(false)}
-          role='menuitem'
+          className='transition-colors ease-linear hover:text-green-400'
         >
           {item.children}
         </Link>
       ))}
-    </S.Wrapper>
+    </nav>
   )
 }
-
-export default NavMenu

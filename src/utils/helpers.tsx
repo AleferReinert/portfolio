@@ -1,31 +1,14 @@
-export const pxToNumber = (numberWithPx: string) => {
-  return Number(numberWithPx.replace('px', ''))
-}
+export function formatPhone(phone: string): string {
+  const cleaned = phone.replace(/\D/g, '')
+  const isTenDigits = cleaned.length === 10
 
-export const hexToRGB = (hexCode: string) => {
-  let hex = hexCode.replace('#', '')
-
-  if (hex.length === 3) {
-    hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`
+  if (cleaned.length < 10 || cleaned.length > 11) {
+    return `Erro: o telefone deve conter 10 ou 11 digitos, contém ${cleaned.length}.`
   }
 
-  const r = parseInt(hex.substring(0, 2), 16)
-  const g = parseInt(hex.substring(2, 4), 16)
-  const b = parseInt(hex.substring(4, 6), 16)
-
-  return `rgb(${r}, ${g}, ${b})`
-}
-
-// Scripts only media queries passed
-export const jsMediaQuery = {
-  lessThan: (breakpoint: string, myFunction: () => void) => {
-    if (innerWidth < pxToNumber(breakpoint)) {
-      myFunction()
-    }
-  },
-  greaterThan: (breakpoint: string, myFunction: () => void) => {
-    if (innerWidth >= pxToNumber(breakpoint)) {
-      myFunction()
-    }
+  if (isTenDigits) {
+    return cleaned.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3')
+  } else {
+    return cleaned.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3')
   }
 }

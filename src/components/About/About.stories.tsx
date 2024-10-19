@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { expect, within } from '@storybook/test'
-import Container from 'components/Container/Container'
-import { about } from 'content/content'
-import { jsMediaQuery } from 'utils/helpers'
-import AboutComponent from './About'
+import { expect, waitFor, within } from '@storybook/test'
+import { about } from 'app/content'
+import { Container } from 'components/Container/Container'
+import { About } from './About'
 
-const meta: Meta<typeof AboutComponent> = {
+const meta: Meta<typeof About> = {
   title: 'Components/About',
-  component: AboutComponent,
+  component: About,
   args: about,
   decorators: [
     (Story) => (
@@ -20,16 +19,19 @@ const meta: Meta<typeof AboutComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof AboutComponent>
+type Story = StoryObj<typeof About>
 
-export const About: Story = {
+export const Mobile: Story = {
+  parameters: {
+    viewport: { defaultViewport: 'xxsmall' }
+  },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const name = canvas.getByRole('heading', { name: /alefer reinert/i })
     const role = canvas.getByRole('heading', {
       name: /desenvolvedor front-end/i
     })
-    const subtitle = canvas.queryByRole('heading', { name: /sobre mim/i })
+
     const description = canvas.getByRole('paragraph')
 
     await step('Render name, role and description', () => {
@@ -38,16 +40,26 @@ export const About: Story = {
       expect(description).toBeInTheDocument()
     })
 
-    jsMediaQuery.lessThan('small', async () => {
-      await step('Without subtitle on mobile', () => {
+    await step('Not render subtitle', () => {
+      waitFor(() => {
+        const subtitle = canvas.queryByRole('heading', {
+          name: 'Sobre mim',
+          level: 2,
+          hidden: true
+        })
         expect(subtitle).not.toBeInTheDocument()
       })
     })
+  }
+}
 
-    jsMediaQuery.greaterThan('small', async () => {
-      await step('Render subtitle on desktop', () => {
-        expect(subtitle).toBeInTheDocument()
-      })
+export const Desktop: Story = {
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement)
+    const subtitle = canvas.getByRole('heading', { name: /sobre mim/i })
+
+    await step('Render subtitle', () => {
+      expect(subtitle).toBeVisible()
     })
   }
 }

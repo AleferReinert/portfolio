@@ -1,20 +1,18 @@
-import Certificate, {
+import {
+  Certificate,
   CertificateProps
 } from 'components/Certificate/Certificate'
-import * as S from './Certificates.styles'
 
 interface CertificatesProps {
   certificates: CertificateProps[]
 }
 
-const Certificates = ({ certificates }: CertificatesProps) => {
+export function Certificates({ certificates }: CertificatesProps) {
   return (
-    <S.Wrapper role='list'>
+    <ul className='flex flex-col gap-4 md:grid md:grid-cols-2'>
       {certificates.map((certificate, index) => (
         <Certificate key={index} {...certificate} />
       ))}
-    </S.Wrapper>
+    </ul>
   )
 }
-
-export default Certificates

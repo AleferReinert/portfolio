@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+li {
+  @apply list-none;
+}
+
+|*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  @apply cursor-pointer bg-transparent border-0;
+}
+
+label {
+  @apply cursor-pointer;
+}
+
+a:focus-visible,
+button:focus,
+svg:focus {
+  @apply outline-none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  @apply text-white/85 bg-cyan-950 dark:bg-green-400;
+}

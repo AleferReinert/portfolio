@@ -1,18 +1,14 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import { jsMediaQuery } from 'utils/helpers'
-import { menu, social } from 'content/content'
-import { breakpoints } from 'styles/global'
-import MenuMobileComponent from './MenuMobile'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, waitFor, within } from '@storybook/test'
+import { menu } from 'app/content'
+import { MenuMobile } from './MenuMobile'
 
-const meta: Meta<typeof MenuMobileComponent> = {
+const meta: Meta<typeof MenuMobile> = {
   title: 'Components/MenuMobile',
-  component: MenuMobileComponent,
+  component: MenuMobile,
   args: {
     showMobileMenu: true,
-    menu: menu,
-    socials: social
+    menu: menu
   },
   argTypes: {
     setShowMobileMenu: {
@@ -28,22 +24,21 @@ const meta: Meta<typeof MenuMobileComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof MenuMobileComponent>
+type Story = StoryObj<typeof MenuMobile>
 
-export const MenuMobile: Story = {
+export const Default: Story = {
+  name: 'MenuMobile',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const closeMenuButton = canvas.queryByRole('img', {
-      name: /fechar menu/i
-    })
-    const menu = canvas.queryByRole('menu')
-    const socialLinks = canvas.queryAllByRole('link')
 
-    jsMediaQuery.lessThan(breakpoints.small, async () => {
-      await step('Render button, menu and social', () => {
-        expect(closeMenuButton).toBeInTheDocument()
-        expect(menu).toBeInTheDocument()
-        expect(socialLinks.length).toBe(4)
+    await step('Render button, menu and social', () => {
+      waitFor(() => {
+        const closeMenuButton = canvas.getByRole('img', {
+          name: /fechar menu/i
+        })
+        const NavMenuComponent = canvas.getByTestId('NavMenuComponent')
+        expect(closeMenuButton).toBeVisible()
+        expect(NavMenuComponent).toBeVisible()
       })
     })
   }

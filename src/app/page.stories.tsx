@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect } from '@storybook/test'
-import HomeComponent from '../../pages/index'
+import HomeComponent from './page'
 
 const meta: Meta<typeof HomeComponent> = {
   title: 'Pages/Home',

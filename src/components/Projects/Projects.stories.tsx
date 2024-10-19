@@ -1,15 +1,12 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import { jsMediaQuery } from 'utils/helpers'
-import { projects } from 'content/content'
-import { breakpoints } from 'styles/global'
-import Container from 'components/Container/Container'
-import ProjectsComponent from './Projects'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, within } from '@storybook/test'
+import { projects } from 'app/content'
+import { Container } from 'components/Container/Container'
+import { Projects } from './Projects'
 
-const meta: Meta<typeof ProjectsComponent> = {
+const meta: Meta<typeof Projects> = {
   title: 'Components/Projects',
-  component: ProjectsComponent,
+  component: Projects,
   args: {
     projects: projects
   },
@@ -24,9 +21,10 @@ const meta: Meta<typeof ProjectsComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof ProjectsComponent>
+type Story = StoryObj<typeof Projects>
 
-export const Projects: Story = {
+export const Default: Story = {
+  name: 'Projects',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const projects = canvas.getAllByRole('listitem')
@@ -40,16 +38,14 @@ export const Projects: Story = {
       expect(firstImage).not.toHaveAttribute('loading')
     })
 
-    jsMediaQuery.greaterThan(breakpoints.small, async () => {
-      await step('Alternate alignment between right and left', () => {
-        for (let i = 0; i < projects.length; i++) {
-          if (i % 2 === 0) {
-            expect(projects[i]).toHaveStyle({ flexDirection: 'row' })
-          } else {
-            expect(projects[i]).toHaveStyle({ flexDirection: 'row-reverse' })
-          }
+    await step('Alternate alignment between right and left', () => {
+      for (let i = 0; i < projects.length; i++) {
+        if (i % 2 === 0) {
+          expect(projects[i]).toHaveStyle({ flexDirection: 'row' })
+        } else {
+          expect(projects[i]).toHaveStyle({ flexDirection: 'row-reverse' })
         }
-      })
+      }
     })
   }
 }

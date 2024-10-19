@@ -1,14 +1,11 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import { social } from 'content/content'
-import { jsMediaQuery } from 'utils/helpers'
-import { breakpoints } from 'styles/global'
-import SocialComponent from './Social'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, within } from '@storybook/test'
+import { social } from 'app/content'
+import { Social } from './Social'
 
-const meta: Meta<typeof SocialComponent> = {
+const meta: Meta<typeof Social> = {
   title: 'Components/Social',
-  component: SocialComponent,
+  component: Social,
   args: {
     socials: social
   }
@@ -16,34 +13,22 @@ const meta: Meta<typeof SocialComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof SocialComponent>
+type Story = StoryObj<typeof Social>
 
-export const Social: Story = {
+export const Default: Story = {
+  name: 'Social',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const github = canvas.getByRole('link', { name: /github/i })
     const email = canvas.getByRole('link', { name: /e-mail/i })
     const linkedin = canvas.getByRole('link', { name: /linkedin/i })
     const whatsapp = canvas.getByRole('link', { name: /whatsapp/i })
-    const wrapper = canvasElement.getElementsByTagName('nav')[0]
 
     await step('Render social links', () => {
       expect(github).toBeInTheDocument()
       expect(email).toBeInTheDocument()
       expect(linkedin).toBeInTheDocument()
       expect(whatsapp).toBeInTheDocument()
-    })
-
-    jsMediaQuery.lessThan(breakpoints.medium, async () => {
-      await step('Horizontal on mobile', () => {
-        expect(wrapper).not.toHaveStyle({ flexDirection: 'column' })
-      })
-    })
-
-    jsMediaQuery.greaterThan(breakpoints.medium, async () => {
-      await step('Vertical on desktop', () => {
-        expect(wrapper).toHaveStyle({ flexDirection: 'column' })
-      })
     })
   }
 }

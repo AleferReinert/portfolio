@@ -1,21 +1,18 @@
-import Project, { ProjectProps } from 'components/Project/Project'
-import * as S from './Projects.styles'
+import { Project, ProjectProps } from 'components/Project/Project'
 
 interface ProjectsProps {
-  projects: ProjectProps[]
+  projects: Omit<ProjectProps, 'index'>[]
 }
 
-const Projects = ({ projects }: ProjectsProps) => {
+export function Projects({ projects }: ProjectsProps) {
   return (
-    <S.Wrapper role='list'>
+    <ul className='flex flex-col gap-6'>
       {projects.map((project, index) => {
-        // Disable loading lazy for the first element
-        project.lazy = index === 0 ?? false
+        // Disable loading lazy for the first elements
+        project.lazy = index === 0 || false
 
-        return <Project key={index} {...project} />
+        return <Project key={index} {...project} index={index} />
       })}
-    </S.Wrapper>
+    </ul>
   )
 }
-
-export default Projects

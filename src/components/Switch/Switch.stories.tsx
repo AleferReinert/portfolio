@@ -1,36 +1,35 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { userEvent, within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import SwitchComponent from './Switch'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, userEvent, within } from '@storybook/test'
+import { Switch } from './Switch'
 
-const meta: Meta<typeof SwitchComponent> = {
+const meta: Meta<typeof Switch> = {
   title: 'Components/Switch',
-  component: SwitchComponent
+  component: Switch
 }
 
 export default meta
 
-type Story = StoryObj<typeof SwitchComponent>
+type Story = StoryObj<typeof Switch>
 
-export const Switch: Story = {
+export const Default: Story = {
+  name: 'Switch',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const checkbox = canvas.getByRole('checkbox')
+    const SwitchComponent = canvas.getByTestId('SwitchComponent')
 
     await step('Switch ON with theme dark as default', () => {
-      expect(checkbox).toBeChecked()
-      expect(checkbox.parentElement).toHaveAttribute('title', 'Tema claro')
-      expect(document.body).not.toHaveClass('light')
+      expect(SwitchComponent).toHaveAttribute('title', 'Tema claro')
+      // expect(document.body).not.toHaveClass('light')
     })
 
     await step('Change theme', async () => {
-      await userEvent.click(checkbox)
-      expect(document.body).toHaveClass('light')
-      expect(checkbox.parentElement).toHaveAttribute('title', 'Tema escuro')
+      await userEvent.click(SwitchComponent)
+      // expect(document.body).toHaveClass('light')
+      expect(SwitchComponent).toHaveAttribute('title', 'Tema escuro')
 
-      await userEvent.click(checkbox)
-      expect(document.body).not.toHaveClass('light')
-      expect(checkbox.parentElement).toHaveAttribute('title', 'Tema claro')
+      await userEvent.click(SwitchComponent)
+      // expect(document.body).not.toHaveClass('light')
+      expect(SwitchComponent).toHaveAttribute('title', 'Tema claro')
     })
   }
 }

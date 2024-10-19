@@ -1,59 +1,67 @@
-import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp'
-import { Github, Linkedin, Mail } from '@styled-icons/feather'
-import {
-  Adobephotoshop,
-  Apollographql,
-  Css3,
-  Figma,
-  Git,
-  Graphql,
-  Gulp,
-  Html5,
-  Javascript,
-  Jest,
-  Less,
-  Nextdotjs,
-  ReactLogo,
-  Sass,
-  Storybook,
-  Strapi,
-  Styledcomponents,
-  Tailwindcss,
-  Testinglibrary,
-  Typescript
-} from '@styled-icons/simple-icons'
 import { AboutProps } from 'components/About/About'
 import { CertificateProps } from 'components/Certificate/Certificate'
 import { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import { ProjectProps } from 'components/Project/Project'
 import { SkillProps } from 'components/Skills/Skills'
 import { SocialItemProps } from 'components/Social/Social'
+import { FaEnvelope } from 'react-icons/fa'
+import {
+  SiAdobephotoshop,
+  SiApollographql,
+  SiCss3,
+  SiFigma,
+  SiGit,
+  SiGithub,
+  SiGraphql,
+  SiGulp,
+  SiHtml5,
+  SiJavascript,
+  SiJest,
+  SiLess,
+  SiLinkedin,
+  SiNextdotjs,
+  SiReact,
+  SiSass,
+  SiStorybook,
+  SiStrapi,
+  SiStyledcomponents,
+  SiTailwindcss,
+  SiTestinglibrary,
+  SiTypescript,
+  SiWhatsapp
+} from 'react-icons/si'
 
 export const menu: NavMenuItemProps[] = [
   {
-    link: '/#about',
+    link: '#about',
     children: 'Sobre mim'
   },
   {
-    link: '/#projects',
+    link: '#projects',
     children: 'Projetos'
   },
   {
-    link: '/#certificates',
+    link: '#certificates',
     children: 'Certificados'
   },
   {
-    link: '/#skills',
+    link: '#skills',
     children: 'Habilidades'
+  },
+  {
+    link: '#contact',
+    children: 'Contato'
   }
 ]
 
 export const about: AboutProps = {
   name: 'Alefer Reinert ',
   role: 'Desenvolvedor front-end',
+  email: 'aleferreinert@gmail.com',
+  phone: '47999558118',
   description: `
-      Desenvolvedor front-end com mais de 8 anos de experiência em aplicações web responsivas. 
-			Possui habilidades em
+      Desenvolvedor front-end com mais de 8 anos de experiência em aplicações web responsivas. <br />
+			Minhas principais habilidades incluem
 			<span>
 				<strong>React</strong>,
 				<strong>Next.js</strong>, 
@@ -63,10 +71,11 @@ export const about: AboutProps = {
 				<strong>inteligência artificial</strong>.
 			</span>
       <br />
-      Atuou em diversos sites e e-commerces, além de projetos pessoais, sempre estudando e buscando evoluir constantemente.`
+      Possuo experiência em desenvolvimento de sites e e-commerces para empresas e projetos pessoais, 
+			sempre me atualizando nas principais tecnologias.`
 }
 
-export const projects: ProjectProps[] = [
+export const projects: Omit<ProjectProps, 'index'>[] = [
   {
     slug: 'impacta-tecnologia',
     title: 'Impacta Tecnologia',
@@ -128,9 +137,9 @@ export const projects: ProjectProps[] = [
   {
     slug: 'portfolio',
     title: 'Portfólio',
-    year: '2023',
+    year: '2024',
     shortDescription: 'Confira o processo de criação deste portfólio.',
-    skills: 'Next.js TypeScript StyledComponents Storybook Jest',
+    skills: 'Next.js TypeScript Tailwind Storybook Jest',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
     img: '/img/projects/portfolio.webp'
@@ -286,47 +295,51 @@ export const certificates: CertificateProps[] = [
 ]
 
 export const skills: SkillProps[] = [
-  { title: 'HTML5', icon: <Html5 aria-hidden /> },
-  { title: 'CSS3', icon: <Css3 aria-hidden /> },
-  { title: 'JavaScript', icon: <Javascript aria-hidden /> },
-  { title: 'TypeScript', icon: <Typescript aria-hidden /> },
-  { title: 'LESS', icon: <Less aria-hidden /> },
-  { title: 'SASS', icon: <Sass aria-hidden /> },
-  { title: 'Tailwind', icon: <Tailwindcss aria-hidden /> },
-  { title: 'React', icon: <ReactLogo aria-hidden /> },
-  { title: 'Next.js', icon: <Nextdotjs aria-hidden /> },
-  { title: 'Storybook', icon: <Storybook aria-hidden /> },
-  { title: 'Git', icon: <Git aria-hidden /> },
-  { title: 'Jest', icon: <Jest aria-hidden /> },
-  { title: 'TestingLibrary', icon: <Testinglibrary aria-hidden /> },
-  { title: 'Styled Components', icon: <Styledcomponents aria-hidden /> },
-  { title: 'Gulp', icon: <Gulp aria-hidden /> },
-  { title: 'Strapi', icon: <Strapi aria-hidden /> },
-  { title: 'GraphQL', icon: <Graphql aria-hidden /> },
-  { title: 'Apollo', icon: <Apollographql aria-hidden /> },
-  { title: 'Figma', icon: <Figma aria-hidden /> },
-  { title: 'Photoshop', icon: <Adobephotoshop aria-hidden /> }
+  { title: 'HTML5', icon: SiHtml5 },
+  { title: 'CSS3', icon: SiCss3 },
+  { title: 'JavaScript', icon: SiJavascript },
+  { title: 'TypeScript', icon: SiTypescript },
+  { title: 'LESS', icon: SiLess },
+  { title: 'SASS', icon: SiSass },
+  { title: 'Tailwind', icon: SiTailwindcss },
+  { title: 'React', icon: SiReact },
+  { title: 'Next.js', icon: SiNextdotjs },
+  { title: 'Storybook', icon: SiStorybook },
+  { title: 'Git', icon: SiGit },
+  { title: 'Jest', icon: SiJest },
+  { title: 'Photoshop', icon: SiAdobephotoshop },
+  { title: 'TestingLibrary', icon: SiTestinglibrary },
+  { title: 'Gulp', icon: SiGulp },
+  { title: 'Strapi', icon: SiStrapi },
+  { title: 'GraphQL', icon: SiGraphql },
+  { title: 'Apollo GraphQL', icon: SiApollographql, shortTitle: 'Apollo' },
+  { title: 'Figma', icon: SiFigma },
+  {
+    title: 'Styled Components',
+    icon: SiStyledcomponents,
+    shortTitle: 'CSSinJS'
+  }
 ]
 
 export const social: SocialItemProps[] = [
   {
     name: 'E-mail',
     link: 'mailto:aleferreinert@gmail.com',
-    icon: <Mail aria-hidden />
+    icon: FaEnvelope
   },
   {
     name: 'Github',
     link: 'https://github.com/AleferReinert',
-    icon: <Github aria-hidden />
+    icon: SiGithub
   },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/aleferreinert',
-    icon: <Linkedin aria-hidden />
+    icon: SiLinkedin
   },
   {
     name: 'Whatsapp',
-    link: 'https://wa.me/message/FSN72FDKNRO3O1',
-    icon: <Whatsapp aria-hidden />
+    link: `https://wa.me/55${about.phone}`,
+    icon: SiWhatsapp
   }
 ]

@@ -1,59 +1,16 @@
 import type { Preview } from '@storybook/react'
-import { ThemeProvider } from 'styled-components'
-import GlobalStyles, { breakpoints } from '../src/styles/global'
 import React from 'react'
-
-const customViewports = {
-  xxsmall: {
-    name: `320 x 480`,
-    styles: {
-      width: breakpoints.xxsmall,
-      height: '480px'
-    }
-  },
-  xsmall: {
-    name: `360 x 640`,
-    styles: {
-      width: breakpoints.xsmall,
-      height: '640px'
-    }
-  },
-  small: {
-    name: `768 x 1024`,
-    styles: {
-      width: breakpoints.small,
-      height: '1024px'
-    }
-  },
-  medium: {
-    name: `1024 x 768`,
-    styles: {
-      width: breakpoints.medium,
-      height: '768px'
-    }
-  },
-  large: {
-    name: `1366 x 768`,
-    styles: {
-      width: breakpoints.large,
-      height: '768px'
-    }
-  },
-  xlarge: {
-    name: `1920 x 1080`,
-    styles: {
-      width: breakpoints.xlarge,
-      height: '1080px'
-    }
-  }
-}
+import twColors from 'tailwindcss/colors'
+import '../src/app/globals.css'
+import { bodyStyles } from '../src/app/layout'
 
 export const decorators = [
   (Story) => (
-    <>
-      <GlobalStyles />
-      <Story />
-    </>
+    <div className='dark'>
+      <div className={bodyStyles}>
+        <Story />
+      </div>
+    </div>
   )
 ]
 
@@ -63,13 +20,14 @@ const preview: Preview = {
       values: [
         {
           name: 'Light',
-          value: '#f5f5f5'
+          value: twColors.neutral[100]
         },
         {
           name: 'Dark',
-          value: '#00344a'
+          value: twColors.cyan[950]
         }
-      ]
+      ],
+      default: 'Dark'
     },
     controls: {
       hideNoControlsWarning: true
@@ -81,7 +39,48 @@ const preview: Preview = {
     },
     viewport: {
       viewports: {
-        ...customViewports
+        xxsmall: {
+          name: `320 x 640`,
+          styles: {
+            width: '320px',
+            height: '640px'
+          }
+        },
+        xsmall: {
+          name: `360 x 640`,
+          styles: {
+            width: '360px',
+            height: '640px'
+          }
+        },
+        small: {
+          name: `768 x 1024`,
+          styles: {
+            width: '768px',
+            height: '1024px'
+          }
+        },
+        medium: {
+          name: `1024 x 768`,
+          styles: {
+            width: '1024px',
+            height: '768px'
+          }
+        },
+        large: {
+          name: `1366 x 768`,
+          styles: {
+            width: '1366px',
+            height: '768px'
+          }
+        },
+        xlarge: {
+          name: `1920 x 1080`,
+          styles: {
+            width: '1920px',
+            height: '1080px'
+          }
+        }
       }
     }
   }

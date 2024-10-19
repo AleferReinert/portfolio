@@ -1,50 +1,31 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/test'
-import { expect } from '@storybook/test'
-import CertificateComponent from './Certificate'
-import { certificates } from 'content/content'
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, within } from '@storybook/test'
+import { certificates } from 'app/content'
+import { Certificate } from './Certificate'
 
-const meta: Meta<typeof CertificateComponent> = {
+const meta: Meta<typeof Certificate> = {
   title: 'Components/Certificate',
-  component: CertificateComponent,
+  component: Certificate,
   args: {
-    ...certificates[0],
-    link: ''
+    ...certificates[0]
   }
 }
 
 export default meta
 
-type Story = StoryObj<typeof CertificateComponent>
+type Story = StoryObj<typeof Certificate>
 
 export const Default: Story = {
+  name: 'Certificate',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const title = canvas.getByRole('heading')
     const description = canvas.getByRole('paragraph')
     const link = canvas.queryByRole('link')
 
-    await step('Render title and description', () => {
+    await step('Render title, description and link', () => {
       expect(title).toBeInTheDocument()
       expect(description).toBeInTheDocument()
-    })
-
-    await step('Without link as default', () => {
-      expect(link).not.toBeInTheDocument()
-    })
-  }
-}
-
-export const WithLink: Story = {
-  args: {
-    link: '/link'
-  },
-  play: async ({ canvasElement, step }) => {
-    const canvas = within(canvasElement)
-    const link = canvas.getByRole('link')
-
-    await step('Has link with title', () => {
-      expect(link).toHaveAttribute('href', '/link')
       expect(link).toHaveAttribute('title', 'Visualizar certificado')
     })
   }

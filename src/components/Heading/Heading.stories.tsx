@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import HeadingComponent from './Heading'
+import { Heading } from './Heading'
 
-const meta: Meta<typeof HeadingComponent> = {
+const meta: Meta<typeof Heading> = {
   title: 'Components/Heading',
-  component: HeadingComponent,
+  component: Heading,
   args: {
     children: 'Heading'
   }
@@ -12,16 +12,17 @@ const meta: Meta<typeof HeadingComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof HeadingComponent>
+type Story = StoryObj<typeof Heading>
 
-export const Heading: Story = {
+export const Default: Story = {
+  name: 'Heading',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const title = canvas.getByRole('heading')
+    const heading = canvas.getByRole('heading', { level: 2 })
 
-    await step('Render heading', () => {
-      expect(title).toBeInTheDocument()
-      expect(title).toHaveStyle({
+    await step('Render h2', () => {
+      expect(heading).toHaveTextContent('Heading')
+      expect(heading).toHaveStyle({
         borderBottomWidth: '1px'
       })
     })

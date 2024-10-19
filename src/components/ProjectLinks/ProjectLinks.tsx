@@ -1,34 +1,60 @@
-import { Github as GithubIcon } from '@styled-icons/feather/Github'
-import { Link as LinkIcon } from '@styled-icons/feather/Link'
-import { Storybook as StorybookIcon } from '@styled-icons/simple-icons/Storybook'
 import Link from 'next/link'
-import * as S from './ProjectLinks.styles'
+import { IoIosLink } from 'react-icons/io'
+import { SiGithub, SiStorybook } from 'react-icons/si'
 
 interface ProjectLinksProps {
   repositoryLink: string
   storybookLink?: string
   projectLink?: string
+  index: number
 }
-export const ProjectLinks = ({
+
+export function ProjectLinks({
   repositoryLink,
   storybookLink,
-  projectLink
-}: ProjectLinksProps) => {
+  projectLink,
+  index
+}: ProjectLinksProps) {
+  const linkStyles = 'group'
+  const svgStyles =
+    'size-7 transition ease-linear group-hover:animate-rotateFrom180'
+
   return (
-    <S.Wrapper>
-      <Link href={repositoryLink} title='Repositório' target='_blank'>
-        <GithubIcon aria-hidden />
+    <div
+      className={`flex gap-4 justify-end w-full
+				[&>a:hover]:text-cyan-950 dark:[&>a:hover]:text-green-400
+				sm:justify-start ${index % 2 === 0 ? 'lg:justify-end' : ''}`}
+    >
+      <Link
+        href={repositoryLink}
+        title='Repositório'
+        target='_blank'
+        className={linkStyles}
+      >
+        <SiGithub className={svgStyles} />
       </Link>
+
       {storybookLink && (
-        <Link href={storybookLink} title='Storybook' target='_blank'>
-          <StorybookIcon aria-hidden />
+        <Link
+          href={storybookLink}
+          title='Storybook'
+          target='_blank'
+          className={linkStyles}
+        >
+          <SiStorybook className={svgStyles} />
         </Link>
       )}
+
       {projectLink && (
-        <Link href={projectLink} title='Visualizar' target='_blank'>
-          <LinkIcon aria-hidden />
+        <Link
+          href={projectLink}
+          title='Visualizar'
+          target='_blank'
+          className={linkStyles}
+        >
+          <IoIosLink className={svgStyles} />
         </Link>
       )}
-    </S.Wrapper>
+    </div>
   )
 }

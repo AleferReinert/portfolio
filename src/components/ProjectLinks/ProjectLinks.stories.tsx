@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import { ProjectLinks as ProjectLinksComponent } from './ProjectLinks'
+import { ProjectLinks } from './ProjectLinks'
 
-const meta: Meta<typeof ProjectLinksComponent> = {
+const meta: Meta<typeof ProjectLinks> = {
   title: 'Components/ProjectLinks',
   args: {
     repositoryLink: '/repository-link'
   },
-  component: ProjectLinksComponent
+  component: ProjectLinks
 }
 
 export default meta
 
-type Story = StoryObj<typeof ProjectLinksComponent>
+type Story = StoryObj<typeof ProjectLinks>
 
 export const Default: Story = {
   play: async ({ canvasElement, step }) => {
@@ -43,7 +43,7 @@ export const WithStorybook: Story = {
   }
 }
 
-export const WithProject: Story = {
+export const WithWebsite: Story = {
   args: {
     projectLink: '/project-link'
   },
@@ -53,7 +53,7 @@ export const WithProject: Story = {
       name: 'Visualizar'
     })
 
-    await step('Render project', () => {
+    await step('Render website', () => {
       expect(projectLink).toHaveAttribute('href', '/project-link')
     })
   }

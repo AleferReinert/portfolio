@@ -1,26 +1,34 @@
-import { ReactNode } from 'react'
-import * as S from './Skills.styles'
+import { IconType } from 'react-icons'
 
 export interface SkillProps {
   title: string
-  icon: ReactNode
+  icon: IconType
+  shortTitle?: string
 }
 
 interface SkillsProps {
   skills: SkillProps[]
 }
 
-const Skills = ({ skills }: SkillsProps) => {
+export function Skills({ skills }: SkillsProps) {
   return (
-    <S.Wrapper role='list'>
-      {skills.map((skill, index) => (
-        <S.Skill key={index} role='listitem'>
-          <S.IconWrapper>{skill.icon}</S.IconWrapper>
-          <S.Title>{skill.title}</S.Title>
-        </S.Skill>
-      ))}
-    </S.Wrapper>
+    <ul className='grid grid-cols-[repeat(5,min-content)] gap-y-4 justify-between sm:grid-cols-[repeat(10,min-content)] sm:gap-y-6 lg:gap-y-10'>
+      {skills.map((skill, index) => {
+        const Icon = skill.icon
+
+        return (
+          <li
+            key={index}
+            title={skill.title}
+            className='flex flex-col items-center gap-3'
+          >
+            <Icon aria-hidden className='size-8' />
+            <h3 className='hidden text-sm leading-none font-normal text-center lg:block'>
+              {skill.shortTitle ?? skill.title}
+            </h3>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
-
-export default Skills

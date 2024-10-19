@@ -1,17 +1,16 @@
-import { Menu as MenuIcon } from '@styled-icons/feather/Menu'
-import MenuMobile from 'components/MenuMobile/MenuMobile'
-import NavMenu, { NavMenuItemProps } from 'components/NavMenu/NavMenu'
-import { SocialItemProps } from 'components/Social/Social'
-import Switch from 'components/Switch/Switch'
+'use client'
+import { Container } from 'components/Container/Container'
+import { MenuMobile } from 'components/MenuMobile/MenuMobile'
+import { NavMenu, NavMenuItemProps } from 'components/NavMenu/NavMenu'
+import { Switch } from 'components/Switch/Switch'
 import { useEffect, useState } from 'react'
-import * as S from './Header.styles'
+import { IoMenuOutline } from 'react-icons/io5'
 
 interface HeaderProps {
   menu: NavMenuItemProps[]
-  socials: SocialItemProps[]
 }
 
-const Header = ({ menu, socials }: HeaderProps) => {
+export function Header({ menu }: HeaderProps) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [fixedHeader, setFixedHeader] = useState('fixed')
 
@@ -29,32 +28,36 @@ const Header = ({ menu, socials }: HeaderProps) => {
   })
 
   return (
-    <S.Wrapper data-testid='header-component'>
-      <S.Fixed className={fixedHeader}>
-        <S.SwitchWrapper>
-          <Switch />
-        </S.SwitchWrapper>
-
-        <S.IconWrapper>
-          <MenuIcon
-            title='Abrir menu'
-            onClick={() => setShowMobileMenu(true)}
-          />
-        </S.IconWrapper>
-
-        <S.MenuDesktop>
-          <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
-        </S.MenuDesktop>
-      </S.Fixed>
+    <header data-testid='header-component'>
+      <div
+        className={`
+						${fixedHeader ? 'translate-y-0' : '-translate-y-full'} 
+						 py-2 fixed top-0 left-0 right-0 z-10 transform transition-transform duration-300
+						bg-slate-100 dark:bg-cyan-950 md:py-4`}
+      >
+        <Container className='flex justify-between items-center'>
+          <div className='flex h-min'>
+            <Switch />
+          </div>
+          <div className='md:hidden'>
+            <IoMenuOutline
+              title='Abrir menu'
+              role='img'
+              onClick={() => setShowMobileMenu(true)}
+              className='size-9 text-cyan-950 dark:text-green-400 cursor-pointer'
+            />
+          </div>
+          <div className='hidden md:flex'>
+            <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
+          </div>
+        </Container>
+      </div>
 
       <MenuMobile
         showMobileMenu={showMobileMenu}
         setShowMobileMenu={setShowMobileMenu}
-        socials={socials}
         menu={menu}
       />
-    </S.Wrapper>
+    </header>
   )
 }
-
-export default Header
