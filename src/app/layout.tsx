@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   title: 'Portfólio | Alefer Reinert - Desenvolvedor Front-end'
 }
 
-export const bodyStyles =
-  'overflow-x-hidden tracking-wide leading-normal font-light text-neutral-600 dark:text-slate-400 bg-neutral-100 dark:bg-cyan-950'
-
 export default async function RootLayout({
   children
 }: Readonly<{ children: ReactNode }>) {
@@ -57,7 +54,7 @@ export default async function RootLayout({
         <meta name='twitter:card' content='summary_large_image' />
         <link rel='canonical' href='https://aleferreinert.netlify.app' />
       </head>
-      <body className={`${inter.className} ${bodyStyles}`}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

@@ -11,6 +11,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+body {
+  @apply overflow-x-hidden tracking-wide leading-normal font-light text-neutral-600 dark:text-slate-400 bg-neutral-100 dark:bg-cyan-950;
+}
+
 li {
   @apply list-none;
 }

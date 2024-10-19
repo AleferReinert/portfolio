@@ -23,7 +23,7 @@ export function NavMenu({ menu, setShowMobileMenu }: NavMenuProps) {
           href={item.link}
           scroll={true}
           onClick={() => setShowMobileMenu(false)}
-          className='transition-colors ease-linear hover:text-green-400'
+          className='transition-colors ease-linear hover:text-cyan-950 dark:hover:text-green-400'
         >
           {item.children}
         </Link>
