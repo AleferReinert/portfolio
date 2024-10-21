@@ -12,7 +12,7 @@ export function Skills({ skills }: SkillsProps) {
       <Container>
         <Heading>Habilidades</Heading>
 
-        <ul className='grid grid-cols-[repeat(5,min-content)] gap-y-4 justify-between sm:grid-cols-[repeat(10,min-content)] sm:gap-y-6 lg:gap-y-10'>
+        <ul className='grid grid-cols-3 gap-1 justify-between sm:grid-cols-6'>
           {skills.map((skill, index) => {
             return <Skill key={index} {...skill} />
           })}

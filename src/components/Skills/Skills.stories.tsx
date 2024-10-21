@@ -15,8 +15,7 @@ export default meta
 
 type Story = StoryObj<typeof Skills>
 
-export const Default: Story = {
-  name: 'Skills',
+export const Mobile: Story = {
   parameters: {
     viewport: { defaultViewport: 'xs' }
   },
@@ -28,9 +27,25 @@ export const Default: Story = {
       expect(HeadingComponent).toHaveTextContent('Habilidades')
     })
 
-    await step('Render 20 skills', () => {
+    await step('Render 18 skills', () => {
       const skills = canvas.getAllByRole('listitem')
-      expect(skills.length).toBeGreaterThanOrEqual(20)
+      expect(skills.length).toBeGreaterThanOrEqual(18)
+    })
+
+    await step('3 columns', () => {
+      const list = canvas.getByRole('list')
+      expect(list).toHaveClass('grid-cols-3')
+    })
+  }
+}
+
+export const Desktop: Story = {
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement)
+
+    await step('6 columns', () => {
+      const list = canvas.getByRole('list')
+      expect(list).toHaveClass('sm:grid-cols-6')
     })
   }
 }

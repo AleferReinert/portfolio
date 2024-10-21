@@ -16,9 +16,7 @@ export const metadata: Metadata = {
   title: `Portfólio | ${about.name} - ${about.role}`
 }
 
-export default async function RootLayout({
-  children
-}: Readonly<{ children: ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang='pt-BR' className='scroll-smooth dark'>
       <head>
@@ -34,19 +32,13 @@ export default async function RootLayout({
         <meta name='theme-color' content={twColors.cyan[950]} />
 
         {/* Visualização de compartilhamento em redes sociais */}
-        <meta
-          property='og:title'
-          content={`Portfólio | ${about.name} - ${about.role}`}
-        />
+        <meta property='og:title' content={`Portfólio | ${about.name} - ${about.role}`} />
         <meta name='author' content={about.name} />
         <meta property='og:description' content={about.googleDescription} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={about.websiteLink} />
         <meta property='og:image' content={imageSocialShare.src} />
-        <meta
-          name='og:image:alt'
-          content='Imagem que mostra o site responsivo em um celular, tablet e notebook.'
-        />
+        <meta name='og:image:alt' content='Imagem que mostra o site responsivo em um celular, tablet e notebook.' />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta name='twitter:card' content='summary_large_image' />

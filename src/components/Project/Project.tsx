@@ -52,18 +52,11 @@ export function Project({
       </div>
       <div className='flex flex-col flex-shrink items-center gap-4 mx-auto w-full tex-center md:text-left'>
         <h3 className='w-full flex justify-between items-baseline'>
-          <span className='text-2xl font-bold'>{title}</span>
+          <span className='text-2xl font-bold dark:text-slate-50'>{title}</span>
           <span aria-label='ano'>{year}</span>
         </h3>
-        <p
-          aria-label='descrição'
-          className='leading-5 w-full'
-          dangerouslySetInnerHTML={{ __html: shortDescription }}
-        />
-        <p
-          className='w-full text-cyan-950 dark:text-green-400 font-normal'
-          title='Tecnologias utilizadas'
-        >
+        <p aria-label='descrição' className='leading-5 w-full' dangerouslySetInnerHTML={{ __html: shortDescription }} />
+        <p className='w-full text-cyan-950 dark:text-green-400 font-normal' title='Tecnologias utilizadas'>
           {skills}
         </p>
         <ProjectLinks
