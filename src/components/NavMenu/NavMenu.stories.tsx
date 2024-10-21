@@ -8,25 +8,19 @@ const meta: Meta<typeof NavMenu> = {
   component: NavMenu,
   args: {
     menu: menu
-  },
-  argTypes: {
-    setShowMobileMenu: {
-      table: { disable: true }
-    }
   }
 }
 
 export default meta
-
 type Story = StoryObj<typeof NavMenu>
 
 export const Default: Story = {
   name: 'NavMenu',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const links = canvas.getAllByRole('link')
 
     await step('Render links', () => {
+      const links = canvas.getAllByRole('link')
       expect(links.length).toBe(5)
     })
   }

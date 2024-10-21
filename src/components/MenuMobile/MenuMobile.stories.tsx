@@ -10,20 +10,14 @@ const meta: Meta<typeof MenuMobile> = {
     showMobileMenu: true,
     menu: menu
   },
-  argTypes: {
-    setShowMobileMenu: {
-      table: { disable: true }
-    }
-  },
   parameters: {
     viewport: {
-      defaultViewport: 'xxsmall'
+      defaultViewport: 'xs'
     }
   }
 }
 
 export default meta
-
 type Story = StoryObj<typeof MenuMobile>
 
 export const Default: Story = {
@@ -31,13 +25,16 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render button, menu and social', () => {
+    await step('Visible closeButton ', () => {
+      const closeMenuButton = canvas.getByLabelText('Fechar menu')
       waitFor(() => {
-        const closeMenuButton = canvas.getByRole('img', {
-          name: /fechar menu/i
-        })
-        const NavMenuComponent = canvas.getByTestId('NavMenuComponent')
         expect(closeMenuButton).toBeVisible()
+      })
+    })
+
+    await step('Visible menu', () => {
+      const NavMenuComponent = canvas.getByTestId('NavMenuComponent')
+      waitFor(() => {
         expect(NavMenuComponent).toBeVisible()
       })
     })

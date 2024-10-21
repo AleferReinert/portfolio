@@ -11,17 +11,16 @@ const meta: Meta<typeof ProjectLinks> = {
 }
 
 export default meta
-
 type Story = StoryObj<typeof ProjectLinks>
 
 export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const repositoryLink = canvas.getByRole('link', {
-      name: 'Repositório'
-    })
 
     await step('Render GitHub', () => {
+      const repositoryLink = canvas.getByRole('link', {
+        name: 'Repositório'
+      })
       expect(repositoryLink).toHaveAttribute('href', '/repository-link')
     })
   }
@@ -33,11 +32,11 @@ export const WithStorybook: Story = {
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const storybookLink = canvas.getByRole('link', {
-      name: 'Storybook'
-    })
 
     await step('Render Storybook', () => {
+      const storybookLink = canvas.getByRole('link', {
+        name: 'Storybook'
+      })
       expect(storybookLink).toHaveAttribute('href', '/storybook-link')
     })
   }
@@ -49,11 +48,11 @@ export const WithWebsite: Story = {
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const projectLink = canvas.getByRole('link', {
-      name: 'Visualizar'
-    })
 
     await step('Render website', () => {
+      const projectLink = canvas.getByRole('link', {
+        name: 'Visualizar'
+      })
       expect(projectLink).toHaveAttribute('href', '/project-link')
     })
   }

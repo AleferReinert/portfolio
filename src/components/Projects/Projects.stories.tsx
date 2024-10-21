@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
 import { projects } from 'app/content'
-import { Container } from 'components/Container/Container'
 import { Projects } from './Projects'
 
 const meta: Meta<typeof Projects> = {
@@ -9,41 +8,40 @@ const meta: Meta<typeof Projects> = {
   component: Projects,
   args: {
     projects: projects
-  },
-  decorators: [
-    (Story) => (
-      <Container>
-        <Story />
-      </Container>
-    )
-  ]
+  }
 }
 
 export default meta
-
 type Story = StoryObj<typeof Projects>
 
 export const Default: Story = {
   name: 'Projects',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const projects = canvas.getAllByRole('listitem')
-    const firstImage = canvas.getAllByRole('img')[0]
+    const ProjectComponents = canvas.getAllByTestId('ProjectComponent')
 
-    await step('Minimal two projects', () => {
-      expect(projects.length).toBeGreaterThan(1)
+    await step('Render heading', () => {
+      const HeadingComponent = canvas.getByTestId('HeadingComponent')
+      expect(HeadingComponent).toHaveTextContent('Projetos')
     })
 
-    await step('First image without loading lazy', () => {
+    await step('Minimal 5 projects', () => {
+      expect(ProjectComponents.length).toBeGreaterThanOrEqual(5)
+    })
+
+    await step('Image of first project without loading lazy', () => {
+      const firstImage = canvas.getAllByRole('img')[0]
       expect(firstImage).not.toHaveAttribute('loading')
     })
 
     await step('Alternate alignment between right and left', () => {
-      for (let i = 0; i < projects.length; i++) {
+      for (let i = 0; i < ProjectComponents.length; i++) {
         if (i % 2 === 0) {
-          expect(projects[i]).toHaveStyle({ flexDirection: 'row' })
+          expect(ProjectComponents[i]).toHaveStyle({ flexDirection: 'row' })
         } else {
-          expect(projects[i]).toHaveStyle({ flexDirection: 'row-reverse' })
+          expect(ProjectComponents[i]).toHaveStyle({
+            flexDirection: 'row-reverse'
+          })
         }
       }
     })

@@ -24,9 +24,10 @@ export function MenuMobile({
     >
       <IoCloseOutline
         title='Fechar menu'
+        aria-label='Fechar menu'
         role='img'
         onClick={() => setShowMobileMenu(false)}
-        className='size-9 text-cyan-950 dark:text-green-400 cursor-pointer absolute top-2 right-4'
+        className='size-9 text-cyan-950 dark:text-green-400 cursor-pointer absolute top-2 right-4 pointer-events-auto'
       />
       <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
     </div>

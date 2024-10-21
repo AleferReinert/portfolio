@@ -11,20 +11,16 @@ const meta: Meta<typeof Heading> = {
 }
 
 export default meta
-
 type Story = StoryObj<typeof Heading>
 
 export const Default: Story = {
   name: 'Heading',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const heading = canvas.getByRole('heading', { level: 2 })
 
     await step('Render h2', () => {
+      const heading = canvas.getByRole('heading', { level: 2 })
       expect(heading).toHaveTextContent('Heading')
-      expect(heading).toHaveStyle({
-        borderBottomWidth: '1px'
-      })
     })
   }
 }

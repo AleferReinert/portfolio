@@ -12,17 +12,23 @@ const meta: Meta<typeof Certificates> = {
 }
 
 export default meta
-
 type Story = StoryObj<typeof Certificates>
 
 export const Default: Story = {
   name: 'Certificates',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const titles = canvas.getAllByRole('heading')
+
+    await step('Render heading', () => {
+      const HeadingComponent = canvas.getByTestId('HeadingComponent')
+      expect(HeadingComponent).toHaveTextContent('Certificados')
+    })
 
     await step('Minimal two certificates', () => {
-      expect(titles.length).toBeGreaterThan(1)
+      const CertificateComponents = canvas.getAllByTestId(
+        'CertificateComponent'
+      )
+      expect(CertificateComponents.length).toBeGreaterThan(1)
     })
   }
 }

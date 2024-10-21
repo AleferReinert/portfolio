@@ -14,7 +14,7 @@ export function Certificate({
   link
 }: CertificateProps) {
   return (
-    <li>
+    <li data-testid='CertificateComponent'>
       <Link
         title='Visualizar certificado'
         href={link!}
@@ -22,7 +22,7 @@ export function Certificate({
         className='relative group'
       >
         <span className='w-[1px] h-full duration-300 group-hover:bg-cyan-950 dark:group-hover:bg-green-400 max-h-[0%] group-hover:max-h-full transition-all absolute left-0 top-0'></span>
-        <h3 className='text-cyan-950 dark:text-green-400 font-medium leading-5 group-hover:translate-x-3 transition'>
+        <h3 className='text-neutral-800 dark:text-white font-medium leading-5 group-hover:translate-x-3 group-hover:text-cyan-950 dark:group-hover:text-green-400 transition'>
           {title}
         </h3>
         <p className='text-sm group-hover:translate-x-3 transition duration-300'>

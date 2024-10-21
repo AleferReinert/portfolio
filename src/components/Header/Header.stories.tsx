@@ -12,24 +12,22 @@ const meta: Meta<typeof Header> = {
 }
 
 export default meta
-
 type Story = StoryObj<typeof Header>
 
 export const Mobile: Story = {
   parameters: {
     viewport: {
-      defaultViewport: 'xsmall'
+      defaultViewport: 'xs'
     }
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
+    const openMenuButton = canvas.getByLabelText('Abrir menu')
+    const closeMenuButton = canvas.getByLabelText('Fechar menu')
     const MenuMobileComponent = canvas.getByTestId('MenuMobileComponent')
 
     await step('Render buttonOpenMenu', () => {
-      waitFor(() => {
-        const openMenuButton = canvas.getByRole('img', { name: 'Abrir menu' })
-        expect(openMenuButton).toBeVisible()
-      })
+      waitFor(() => expect(openMenuButton).toBeVisible())
     })
 
     await step('Hidden MenuMobile as default', () => {
@@ -37,22 +35,20 @@ export const Mobile: Story = {
     })
 
     await step('Show MenuMobile on buttonOpenMenu click', async () => {
-      waitFor(async () => {
-        const openMenuButton = canvas.getByRole('img', { name: 'Abrir menu' })
-        await userEvent.click(openMenuButton)
-        await waitFor(() => {
-          expect(MenuMobileComponent).toBeVisible()
+      userEvent.click(openMenuButton)
+
+      await waitFor(() => {
+        expect(MenuMobileComponent).toHaveStyle({
+          opacity: '1',
+          'pointer-events': 'auto'
         })
       })
     })
 
     await step('Close menu on buttonCloseMenu click', async () => {
-      waitFor(async () => {
-        const closeMenuButton = canvas.getByRole('img', { name: 'Fechar menu' })
-        await userEvent.click(closeMenuButton)
-        await waitFor(() => {
-          expect(MenuMobileComponent).not.toBeVisible()
-        })
+      userEvent.click(closeMenuButton)
+      waitFor(() => {
+        expect(MenuMobileComponent).not.toBeVisible()
       })
     })
   }
@@ -68,12 +64,8 @@ export const Desktop: Story = {
     const canvas = within(canvasElement)
 
     await step('Hidden button to open menu', () => {
-      waitFor(() => {
-        const openMenuButton = canvas.queryByRole('img', {
-          name: 'Abrir menu'
-        })
-        expect(openMenuButton).not.toBeInTheDocument()
-      })
+      const openMenuButton = canvas.getByLabelText('Abrir menu')
+      expect(openMenuButton).not.toBeVisible()
     })
 
     await step('Render only one NavMenuComponent', () => {

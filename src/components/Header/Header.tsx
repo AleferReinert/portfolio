@@ -33,15 +33,16 @@ export function Header({ menu }: HeaderProps) {
         className={`
 						${fixedHeader ? 'translate-y-0' : '-translate-y-full'} 
 						 py-2 fixed top-0 left-0 right-0 z-10 transform transition-transform duration-300
-						bg-slate-100 dark:bg-cyan-950 md:py-4`}
+						bg-slate-50 dark:bg-cyan-950 md:py-4`}
       >
-        <Container className='flex justify-between items-center'>
+        <Container fluid className='flex justify-between items-center'>
           <div className='flex h-min'>
             <Switch />
           </div>
           <div className='md:hidden'>
             <IoMenuOutline
               title='Abrir menu'
+              aria-label='Abrir menu'
               role='img'
               onClick={() => setShowMobileMenu(true)}
               className='size-9 text-cyan-950 dark:text-green-400 cursor-pointer'

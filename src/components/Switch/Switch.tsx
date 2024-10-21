@@ -7,7 +7,7 @@ export function Switch() {
   useEffect(() => {
     const themeMetaTag = document.querySelector("meta[name='theme-color']")
     const currentColor =
-      theme === 'light' ? twColors.neutral[100] : twColors.cyan[950]
+      theme === 'light' ? twColors.slate[50] : twColors.cyan[950]
 
     themeMetaTag?.setAttribute('content', currentColor)
     document.documentElement.classList.add(theme)

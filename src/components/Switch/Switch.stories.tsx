@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { expect, userEvent, within } from '@storybook/test'
+import { expect, userEvent, waitFor, within } from '@storybook/test'
 import { Switch } from './Switch'
 
 const meta: Meta<typeof Switch> = {
@@ -8,7 +8,6 @@ const meta: Meta<typeof Switch> = {
 }
 
 export default meta
-
 type Story = StoryObj<typeof Switch>
 
 export const Default: Story = {
@@ -16,20 +15,25 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const SwitchComponent = canvas.getByTestId('SwitchComponent')
+    const html = document.documentElement
 
-    await step('Switch ON with theme dark as default', () => {
-      expect(SwitchComponent).toHaveAttribute('title', 'Tema claro')
-      // expect(document.body).not.toHaveClass('light')
+    await step('Default: Switch ON with theme dark', () => {
+      waitFor(() => {
+        expect(SwitchComponent).toHaveAttribute('title', 'Tema claro')
+        expect(html).toHaveClass('dark')
+      })
     })
 
     await step('Change theme', async () => {
       await userEvent.click(SwitchComponent)
-      // expect(document.body).toHaveClass('light')
+      expect(html).toHaveClass('light')
       expect(SwitchComponent).toHaveAttribute('title', 'Tema escuro')
 
       await userEvent.click(SwitchComponent)
-      // expect(document.body).not.toHaveClass('light')
-      expect(SwitchComponent).toHaveAttribute('title', 'Tema claro')
+      waitFor(() => {
+        expect(html).toHaveClass('dark')
+        expect(SwitchComponent).toHaveAttribute('title', 'Tema claro')
+      })
     })
   }
 }

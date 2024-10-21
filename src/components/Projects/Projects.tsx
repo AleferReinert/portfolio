@@ -1,3 +1,5 @@
+import { Container } from 'components/Container/Container'
+import { Heading } from 'components/Heading/Heading'
 import { Project, ProjectProps } from 'components/Project/Project'
 
 interface ProjectsProps {
@@ -6,13 +8,18 @@ interface ProjectsProps {
 
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <ul className='flex flex-col gap-6'>
-      {projects.map((project, index) => {
-        // Disable loading lazy for the first elements
-        project.lazy = index === 0 || false
+    <section id='projects'>
+      <Container>
+        <Heading>Projetos</Heading>
+        <ul className='flex flex-col gap-6'>
+          {projects.map((project, index) => {
+            // Disable loading lazy for the first elements
+            project.lazy = index === 0 || false
 
-        return <Project key={index} {...project} index={index} />
-      })}
-    </ul>
+            return <Project key={index} {...project} index={index} />
+          })}
+        </ul>
+      </Container>
+    </section>
   )
 }

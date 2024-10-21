@@ -1,10 +1,9 @@
 import { AboutProps } from 'components/About/About'
 import { CertificateProps } from 'components/Certificate/Certificate'
+import { SocialProps } from 'components/Footer/Footer'
 import { NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import { ProjectProps } from 'components/Project/Project'
-import { SkillProps } from 'components/Skills/Skills'
-import { SocialItemProps } from 'components/Social/Social'
-import { FaEnvelope } from 'react-icons/fa'
+import { SkillProps } from 'components/Skill/Skill'
 import {
   SiAdobephotoshop,
   SiApollographql,
@@ -41,12 +40,12 @@ export const menu: NavMenuItemProps[] = [
     children: 'Projetos'
   },
   {
-    link: '#certificates',
-    children: 'Certificados'
-  },
-  {
     link: '#skills',
     children: 'Habilidades'
+  },
+  {
+    link: '#certificates',
+    children: 'Certificados'
   },
   {
     link: '#contact',
@@ -55,24 +54,25 @@ export const menu: NavMenuItemProps[] = [
 ]
 
 export const about: AboutProps = {
-  name: 'Alefer Reinert ',
+  name: 'Alefer Reinert',
   role: 'Desenvolvedor front-end',
   email: 'aleferreinert@gmail.com',
+  websiteLink: 'https://aleferreinert.netlify.app',
   phone: '47999558118',
+  googleDescription:
+    'Desenvolvedor Front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, etc.',
   description: `
-      Desenvolvedor front-end com mais de 8 anos de experiência em aplicações web responsivas. <br />
+      Possuo mais de 8 anos experiência no desenvolvimento de sites e e-commerces para empresas além de projetos pessoais onde sempre estudo novas tecnologias. <br />
 			Minhas principais habilidades incluem
 			<span>
 				<strong>React</strong>,
 				<strong>Next.js</strong>, 
 				<strong>TypeScript</strong>,
-				<strong>Jest</strong>,
+				<strong>Tailwind</strong>,
 				<strong>Storybook</strong> e
-				<strong>inteligência artificial</strong>.
+				<strong>Testing Library</strong>.
 			</span>
-      <br />
-      Possuo experiência em desenvolvimento de sites e e-commerces para empresas e projetos pessoais, 
-			sempre me atualizando nas principais tecnologias.`
+      `
 }
 
 export const projects: Omit<ProjectProps, 'index'>[] = [
@@ -321,14 +321,9 @@ export const skills: SkillProps[] = [
   }
 ]
 
-export const social: SocialItemProps[] = [
+export const socials: SocialProps[] = [
   {
-    name: 'E-mail',
-    link: 'mailto:aleferreinert@gmail.com',
-    icon: FaEnvelope
-  },
-  {
-    name: 'Github',
+    name: 'GitHub',
     link: 'https://github.com/AleferReinert',
     icon: SiGithub
   },

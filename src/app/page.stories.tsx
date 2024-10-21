@@ -15,14 +15,16 @@ export const Home: Story = {
   play: async ({ step }) => {
     const about = document.getElementById('about')
     const projects = document.getElementById('projects')
-    const certificates = document.getElementById('certificates')
     const skills = document.getElementById('skills')
+    const certificates = document.getElementById('certificates')
+    const contact = document.getElementById('contact')
 
     await step('Render all sections', () => {
-      expect(about).toBeInTheDocument()
-      expect(projects).toBeInTheDocument()
-      expect(certificates).toBeInTheDocument()
-      expect(skills).toBeInTheDocument()
+      expect(about).toBeVisible()
+      expect(projects).toBeVisible()
+      expect(skills).toBeVisible()
+      expect(certificates).toBeVisible()
+      expect(contact).toBeVisible()
     })
   }
 }

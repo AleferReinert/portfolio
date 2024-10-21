@@ -1,42 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
 import { about } from 'app/content'
-import { Container } from 'components/Container/Container'
 import { About } from './About'
 
 const meta: Meta<typeof About> = {
   title: 'Components/About',
   component: About,
-  args: about,
-  decorators: [
-    (Story) => (
-      <Container>
-        <Story />
-      </Container>
-    )
-  ]
+  args: about
 }
 
 export default meta
-
 type Story = StoryObj<typeof About>
 
 export const Mobile: Story = {
   parameters: {
-    viewport: { defaultViewport: 'xxsmall' }
+    viewport: { defaultViewport: 'xs' }
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const name = canvas.getByRole('heading', { name: /alefer reinert/i })
-    const role = canvas.getByRole('heading', {
-      name: /desenvolvedor front-end/i
+
+    await step('Render name and role', () => {
+      const heading = canvas.getByRole('heading', { level: 1 })
+      expect(heading).toHaveTextContent(about.name)
+      expect(heading).toHaveTextContent(about.role)
     })
 
-    const description = canvas.getByRole('paragraph')
-
-    await step('Render name, role and description', () => {
-      expect(name).toBeInTheDocument()
-      expect(role).toBeInTheDocument()
+    await step('Render description', () => {
+      const description = canvas.getByRole('paragraph')
       expect(description).toBeInTheDocument()
     })
 
@@ -56,9 +46,12 @@ export const Mobile: Story = {
 export const Desktop: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const subtitle = canvas.getByRole('heading', { name: /sobre mim/i })
 
     await step('Render subtitle', () => {
+      const subtitle = canvas.getByRole('heading', {
+        level: 2,
+        name: /sobre mim/i
+      })
       expect(subtitle).toBeVisible()
     })
   }

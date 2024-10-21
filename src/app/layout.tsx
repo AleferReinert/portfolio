@@ -3,16 +3,17 @@ import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import twColors from 'tailwindcss/colors'
 import imageSocialShare from './../../public/img/social-share.webp'
+import { about, skills } from './content'
 import './globals.css'
 
 const inter = Inter({
-  weight: ['300', '400', '500', '700', '800', '900'],
+  weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap'
 })
 
 export const metadata: Metadata = {
-  title: 'Portfólio | Alefer Reinert - Desenvolvedor Front-end'
+  title: `Portfólio | ${about.name} - ${about.role}`
 }
 
 export default async function RootLayout({
@@ -22,28 +23,25 @@ export default async function RootLayout({
     <html lang='pt-BR' className='scroll-smooth dark'>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta
-          name='description'
-          content='Desenvolvedor com experiência em React, Next.js, Storybook e TypeScript.'
-        />
+        <meta name='description' content={about.googleDescription} />
         <meta
           name='keywords'
-          content='HTML, CSS, JavaScript, TypeScript, Less, Sass, React, Next.js, Styled Components, Storybook, Jest, Testing Library, GraphQL, Photoshop, Grunt, Gulp, Figma, Jquery, Git, Bootstrap, Strapi, Tailwind'
+          content={skills
+            .map((skill) => skill.title)
+            .join(', ')
+            .toString()}
         />
         <meta name='theme-color' content={twColors.cyan[950]} />
 
         {/* Visualização de compartilhamento em redes sociais */}
         <meta
           property='og:title'
-          content='Portfólio | Alefer Reinert - Desenvolvedor Front-end'
+          content={`Portfólio | ${about.name} - ${about.role}`}
         />
-        <meta name='author' content='Alefer Reinert' />
-        <meta
-          property='og:description'
-          content='Desenvolvedor front-end com experiência em React, Next.js, Styled Components, Storybook, Testing Library e outros.'
-        />
+        <meta name='author' content={about.name} />
+        <meta property='og:description' content={about.googleDescription} />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://aleferreinert.netlify.app' />
+        <meta property='og:url' content={about.websiteLink} />
         <meta property='og:image' content={imageSocialShare.src} />
         <meta
           name='og:image:alt'
@@ -52,7 +50,7 @@ export default async function RootLayout({
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta name='twitter:card' content='summary_large_image' />
-        <link rel='canonical' href='https://aleferreinert.netlify.app' />
+        <link rel='canonical' href={about.websiteLink} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

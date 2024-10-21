@@ -15,7 +15,7 @@ export function NavMenu({ menu, setShowMobileMenu }: NavMenuProps) {
   return (
     <nav
       data-testid='NavMenuComponent'
-      className='flex flex-col gap-6 text-center text-2xl font-light md:flex-row md:text-base md:font-normal'
+      className='flex flex-col gap-6 text-center text-2xl md:flex-row md:text-base'
     >
       {menu.map((item, index) => (
         <Link
