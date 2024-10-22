@@ -16,13 +16,11 @@ export function Header({ menu }: HeaderProps) {
 
   useEffect(() => {
     let prev = window.scrollY
-
     const fixedHeaderOnScrollUp = () => {
       let current = window.scrollY
       prev > current ? setFixedHeader('fixed') : setFixedHeader('')
       prev = current
     }
-
     window.addEventListener('scroll', fixedHeaderOnScrollUp)
     return () => window.removeEventListener('scroll', fixedHeaderOnScrollUp)
   })
@@ -54,11 +52,7 @@ export function Header({ menu }: HeaderProps) {
         </Container>
       </div>
 
-      <MenuMobile
-        showMobileMenu={showMobileMenu}
-        setShowMobileMenu={setShowMobileMenu}
-        menu={menu}
-      />
+      <MenuMobile menu={menu} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu} />
     </header>
   )
 }

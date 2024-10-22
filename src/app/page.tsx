@@ -1,11 +1,4 @@
-import {
-  about,
-  certificates,
-  menu,
-  projects,
-  skills,
-  socials
-} from 'app/content'
+import { about, certificates, menu, projects, skills, socials } from 'app/content'
 import { About } from 'components/About/About'
 import { Certificates } from 'components/Certificates/Certificates'
 import { Footer } from 'components/Footer/Footer'
