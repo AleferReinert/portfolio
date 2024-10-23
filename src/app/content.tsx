@@ -143,10 +143,10 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/img/projects/portfolio.webp'
   },
   {
-    slug: 'landing-page',
-    title: 'Landing Page',
+    slug: 'react-avançado',
+    title: 'React Avançado',
     year: '2023',
-    shortDescription: `Página de apresentação do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
+    shortDescription: `Landing page do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
         Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados dinâmicos por meio de uma API.`,
     skills: 'Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
