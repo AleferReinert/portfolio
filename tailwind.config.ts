@@ -1,9 +1,24 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
+
+export default {
   content: ['./src/**/*.tsx'],
   darkMode: 'selector',
   theme: {
     extend: {
+      colors: {
+        // Dark Theme
+        'primary-theme-dark': colors.green[400], // Cor de destaque
+        'secondary-theme-dark': colors.cyan[950], // Cor de background (body, header e theme-color)
+        'heading-theme-dark': colors.slate[50], // Headings
+        'paragraph-theme-dark': colors.slate[300], // Textos normais
+
+        // Light theme
+        'primary-theme-light': colors.cyan[950],
+        'secondary-theme-light': colors.slate[50],
+        'heading-theme-light': colors.neutral[900],
+        'paragraph-theme-light': colors.neutral[800]
+      },
       keyframes: {
         rotateFrom180: {
           from: { transform: 'rotateY(-180deg)' },
@@ -35,4 +50,4 @@ module.exports = {
     }
   },
   plugins: []
-}
+} satisfies Config

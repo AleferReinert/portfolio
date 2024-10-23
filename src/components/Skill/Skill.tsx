@@ -19,7 +19,7 @@ export function Skill({ title, icon, shortTitle }: SkillProps) {
       <Icon
         aria-label={title}
         role='img'
-        className='size-8 fill-black/90 dark:fill-slate-50 absolute left-1/2 -ml-4 top-1/2 -mt-4 
+        className='size-8 fill-heading-theme-light dark:fill-heading-theme-dark absolute left-1/2 -ml-4 top-1/2 -mt-4 
           -translate-y-2 group-hover:animate-wheelInIcon'
       />
       <div

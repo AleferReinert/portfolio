@@ -31,7 +31,7 @@ export function Header({ menu }: HeaderProps) {
         className={`
 						${fixedHeader ? 'translate-y-0' : '-translate-y-full'} 
 						 py-2 fixed top-0 left-0 right-0 z-10 transform transition-transform duration-300
-						bg-slate-50 dark:bg-cyan-950 md:py-4`}
+						bg-secondary-theme-light dark:bg-secondary-theme-dark md:py-4`}
       >
         <Container fluid className='flex justify-between items-center'>
           <div className='flex h-min'>
@@ -43,7 +43,7 @@ export function Header({ menu }: HeaderProps) {
               aria-label='Abrir menu'
               role='img'
               onClick={() => setShowMobileMenu(true)}
-              className='size-9 text-cyan-950 dark:text-green-400 cursor-pointer'
+              className='size-9 text-primary-theme-light dark:text-primary-theme-dark cursor-pointer'
             />
           </div>
           <div className='hidden md:flex'>

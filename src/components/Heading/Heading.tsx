@@ -8,7 +8,7 @@ export function Heading({ children }: HeadingProps) {
   return (
     <h2
       data-testid='HeadingComponent'
-      className='text-cyan-950 dark:text-green-400 text-2xl leading-none font-bold uppercase pt-12 pb-2 mb-6 border-b border-zinc-800/50 dark:border-slate-200/50 md:pt-16'
+      className='text-primary-theme-light dark:text-primary-theme-dark text-2xl leading-none font-bold uppercase pt-12 pb-2 mb-6 border-b border-paragraph-theme-light dark:border-paragraph-theme-dark md:pt-16'
     >
       {children}
     </h2>

@@ -20,7 +20,7 @@ export function NavMenu({ menu, setShowMobileMenu }: NavMenuProps) {
           href={item.link}
           scroll={true}
           onClick={() => setShowMobileMenu(false)}
-          className='transition-all ease-linear hover:text-cyan-950 dark:hover:text-green-400'
+          className='transition-all ease-linear hover:text-primary-theme-light dark:hover:text-primary-theme-dark'
         >
           {item.children}
         </Link>
