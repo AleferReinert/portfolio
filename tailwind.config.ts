@@ -8,16 +8,16 @@ export default {
     extend: {
       colors: {
         // Dark Theme
-        'primary-theme-dark': colors.green[400], // Cor de destaque
-        'secondary-theme-dark': colors.cyan[950], // Cor de background (body, header e theme-color)
-        'heading-theme-dark': colors.slate[50], // Headings
-        'paragraph-theme-dark': colors.slate[300], // Textos normais
+        'primary-theme-dark': colors.green[400], // Default: green-400 | Cor de destaque
+        'secondary-theme-dark': colors.cyan[950], // Default: cyan-950 | Cor de background (body, header e theme-color)
+        'heading-theme-dark': colors.slate[50], // Default: slate-50 | Headings
+        'paragraph-theme-dark': colors.slate[300], // Default: slate-300 | Textos normais
 
         // Light theme
-        'primary-theme-light': colors.cyan[950],
-        'secondary-theme-light': colors.slate[50],
-        'heading-theme-light': colors.neutral[900],
-        'paragraph-theme-light': colors.neutral[800]
+        'primary-theme-light': colors.cyan[950], // Default: cyan-950
+        'secondary-theme-light': colors.slate[50], // Default: slate-50
+        'heading-theme-light': colors.slate[900], // Default: neutral-900
+        'paragraph-theme-light': colors.slate[800] // Default: neutral-800
       },
       keyframes: {
         rotateFrom180: {

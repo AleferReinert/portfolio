@@ -53,6 +53,7 @@ Meu portfólio de desenvolvedor front-end.
 - **Prettier:** Um formatador de código opinativo que garante um estilo consistente de código.
 - **Storybook:** Uma ferramenta de desenvolvimento para construir e testar componentes de interface de usuário de forma isolada.
 - **Tailwind CSS:** Framework de utilidades CSS para estilização rápida e eficiente.
+- **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática ao código.
 
 ## URL do Projeto
 

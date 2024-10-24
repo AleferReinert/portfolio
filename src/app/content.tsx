@@ -127,7 +127,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
   //   shortDescription: `
   //       Projeto principal do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br>
   //       Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Em desenvolvimento.`,
-  //   skills: 'Next.js TypeScript StyledComponents Storybook Jest Strapi GraphQL',
+  //   skills: 'Next.js TypeScript StyledComponents Storybook TestingLibrary Strapi GraphQL',
   //   repositoryLink: 'https://github.com/AleferReinert/won-games',
   //   storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com',
   //   img: '/img/projects/won-games.webp'
@@ -137,7 +137,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     title: 'Portfólio',
     year: '2024',
     shortDescription: 'Confira o processo de criação deste portfólio.',
-    skills: 'Next.js TypeScript Tailwind Storybook Jest',
+    skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
     img: '/img/projects/portfolio.webp'
