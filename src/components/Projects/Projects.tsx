@@ -32,7 +32,7 @@ export function Projects({ projects }: ProjectsProps) {
         <Heading className='flex justify-between'>
           Projetos
           <button
-            title='Exibir filtros'
+            title={showFilters ? 'Fechar filtros' : 'Abrir filtros'}
             onClick={() => {
               setShowFilters(!showFilters)
             }}
