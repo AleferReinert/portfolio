@@ -61,7 +61,7 @@ export function Projects({ projects }: ProjectsProps) {
             })}
           </ul>
         ) : (
-          <p>Nenhum projeto encontrado com os filtros selecionados.</p>
+          <p>Nenhum projeto encontrado contendo todos os filtros selecionados.</p>
         )}
       </Container>
     </section>

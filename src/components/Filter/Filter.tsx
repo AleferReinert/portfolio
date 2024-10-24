@@ -66,14 +66,12 @@ export function Filter({
         </ul>
 
         <div className='flex justify-between overflow-hidden transition-all py-6 text-sm'>
-          {selectedSkills.length > 0 && (
-            <p>
-              Exibindo {filteredProjects.length} de {projects.length} projetos.
-            </p>
-          )}
+          <p>{`Exibindo ${filteredProjects.length} de ${projects.length} projetos.`}</p>
           <button
+            disabled={selectedSkills.length === 0}
             onClick={() => setSelectedSkills([])}
-            className='text-primary-theme-light font-medium dark:text-primary-theme-dark ml-auto'
+            className='text-primary-theme-light font-medium dark:text-primary-theme-dark ml-auto
+						disabled:hidden'
           >
             Limpar
           </button>
