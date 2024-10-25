@@ -1,5 +1,3 @@
-# Script PowerShell para facilitar a criacao de commits semanticos
-
 Write-Host "Selecione o tipo de commit:"
 Write-Host "1. feat: Novo recurso"
 Write-Host "2. fix: Correcao de bug"
@@ -32,11 +30,12 @@ switch ($commit_type) {
     11 { $type="raw" }
     12 { $type="cleanup" }
     13 { $type="remove" }
-    default { Write-Host "Tipo de commit invalido"; exit }
+    default { Write-Host "Tipo de commit inválido"; exit }
 }
 
 $message = Read-Host "Digite a mensagem do commit"
-$commit_message = "[$type]: $message"
+$commit_message = "${type}: $message"
+
 git commit -a -m "$commit_message"
 
 Write-Host "Commit criado com sucesso: $commit_message"
