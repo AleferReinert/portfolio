@@ -24,7 +24,7 @@ Meu portfólio de desenvolvedor front-end.
 
 # Scripts
 
-- Mensagem padronizada de commit:
+- Realize commits com mensagens padronizadas:
 
   ```
   npm run commit
@@ -50,14 +50,16 @@ Meu portfólio de desenvolvedor front-end.
 
 ## Tecnologias Utilizadas
 
-- **Chromatic:** Uma ferramenta para captura de tela, revisão e testes visuais automatizados para componentes de interface de usuário.
-- **ESLint:** Uma ferramenta de linting para identificar e corrigir problemas em código JavaScript/TypeScript.
-- **Husky:** Uma ferramenta para adicionar hooks de Git, como pré-commit e pré-push, para automatizar verificações de código.
-- **Next.js:** Um framework React para a construção de aplicações web estáticas e dinâmicas.
-- **React:** Uma biblioteca JavaScript para construir interfaces de usuário.
-- **Plop:** Uma ferramenta de scaffolding para gerar código e arquivos de forma consistente e automatizada.
-- **Prettier:** Um formatador de código opinativo que garante um estilo consistente de código.
-- **Storybook:** Uma ferramenta de desenvolvimento para construir e testar componentes de interface de usuário de forma isolada.
+- **Chromatic:** Ferramenta para captura de tela, revisão e testes visuais automatizados para componentes de interface de usuário.
+- **commitlint:** Ferramenta para validar e padronizar mensagens de commit.
+
+- **ESLint:** Ferramenta de linting para identificar e corrigir problemas em código JavaScript/TypeScript.
+- **Husky:** Ferramenta para adicionar hooks de Git, como pré-commit e pré-push, para automatizar verificações de código.
+- **Next.js:** Framework React para a construção de aplicações web estáticas e dinâmicas.
+- **React:** Biblioteca JavaScript para construir interfaces de usuário.
+- **Plop:** Ferramenta de scaffolding para gerar código e arquivos de forma consistente e automatizada.
+- **Prettier:** Formatador de código opinativo que garante um estilo consistente de código.
+- **Storybook:** Ferramenta de desenvolvimento para construir e testar componentes de interface de usuário de forma isolada.
 - **Tailwind CSS:** Framework de utilidades CSS para estilização rápida e eficiente.
 - **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática ao código.
 
