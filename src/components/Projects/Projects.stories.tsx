@@ -20,7 +20,7 @@ export const Default: Story = {
     const canvas = within(canvasElement)
     const ProjectComponents = canvas.getAllByTestId('ProjectComponent')
     const FilterComponent = canvas.getByTestId('FilterComponent')
-    const filterButton = canvas.getByRole('button', { name: 'Abrir filtros' })
+    const filterButton = canvas.getByRole('button', { name: 'Exibir filtros' })
 
     await step('Render heading', () => {
       const HeadingComponent = canvas.getByTestId('HeadingComponent')
@@ -58,7 +58,7 @@ export const Default: Story = {
         expect(skillsChecked.length).toBe(0)
         expect(canvas.getByText('Exibindo 8 de 8 projetos.')).toBeVisible()
         expect(clearButton).not.toBeInTheDocument()
-        expect(filterButton).toHaveAttribute('title', 'Fechar filtros')
+        expect(filterButton).toHaveAttribute('title', 'Ocultar filtros')
       })
     })
 
@@ -103,7 +103,7 @@ export const Default: Story = {
       userEvent.click(filterButton)
       await waitFor(() => {
         expect(FilterComponent).toHaveStyle({ 'max-height': '0' })
-        expect(filterButton).toHaveAttribute('title', 'Abrir filtros')
+        expect(filterButton).toHaveAttribute('title', 'Exibir filtros')
       })
     })
 

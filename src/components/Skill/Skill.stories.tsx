@@ -1,14 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
-import { SiStyledcomponents } from 'react-icons/si'
+import { SiStyledcomponents, SiTailwindcss } from 'react-icons/si'
 import { Skill } from './Skill'
 
 const meta: Meta<typeof Skill> = {
   title: 'Components/Skill',
   component: Skill,
-  args: {
-    title: 'StyledComponents',
-    icon: SiStyledcomponents
+  decorators: (Story) => {
+    return (
+      <div className='size-36'>
+        <Story />
+      </div>
+    )
   }
 }
 
@@ -16,12 +19,16 @@ export default meta
 type Story = StoryObj<typeof Skill>
 
 export const Default: Story = {
+  args: {
+    title: 'Tailwind',
+    icon: SiTailwindcss
+  },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Has title in li', () => {
+    await step('Not render title in <li>', () => {
       const listItem = canvas.getByRole('listitem')
-      expect(listItem).toHaveAttribute('title', 'StyledComponents')
+      expect(listItem).not.toHaveAttribute('title', 'Tailwind')
     })
 
     await step('Visible svg', () => {
@@ -30,7 +37,7 @@ export const Default: Story = {
     })
 
     await step('Visible skill name', () => {
-      const skillName = canvas.getByText('StyledComponents')
+      const skillName = canvas.getByText('Tailwind')
       waitFor(() => expect(skillName).toBeVisible())
     })
   }
@@ -38,6 +45,8 @@ export const Default: Story = {
 
 export const WithShortTile: Story = {
   args: {
+    title: 'StyledComponents',
+    icon: SiStyledcomponents,
     shortTitle: 'CSSinJS'
   },
   play: async ({ canvasElement, step }) => {
@@ -48,7 +57,7 @@ export const WithShortTile: Story = {
       expect(skillName).toBeVisible()
     })
 
-    await step('Normal title attribute in title', () => {
+    await step('Render title in <li>', () => {
       const listItem = canvas.getByRole('listitem')
       expect(listItem).toHaveAttribute('title', 'StyledComponents')
     })

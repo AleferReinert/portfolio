@@ -13,7 +13,7 @@ export function Skill({ title, icon, shortTitle }: SkillProps) {
   return (
     <li
       data-testid='SkillComponent'
-      title={title}
+      title={shortTitle && title}
       className='group overflow-hidden aspect-[94/87] sm:aspect-[128/87] relative bg-black bg-opacity-5 dark:bg-opacity-25'
     >
       <Icon
@@ -24,7 +24,7 @@ export function Skill({ title, icon, shortTitle }: SkillProps) {
       />
       <div
         className='whitespace-nowrap text-[0.625rem] font-normal h-6 w-full text-center absolute top-1/2 
-          mt-5 leading-none group-hover:animate-wheelInText group-hover:opacity-0 group-hover:-mt-2'
+          mt-5 leading-none group-hover:animate-wheelInText group-hover:opacity-0 group-hover:-mt-2 group-hover:font-medium'
       >
         {shortTitle ?? title}
       </div>

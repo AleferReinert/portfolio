@@ -44,8 +44,8 @@ export default {
       animation: {
         rotateFrom180: 'rotateFrom180 .4s',
         scroll: 'scroll 2s linear infinite',
-        wheelInIcon: 'wheelInIcon 2.4s infinite',
-        wheelInText: 'wheelInText 2.4s infinite 1.2s'
+        wheelInIcon: 'wheelInIcon 2.2s infinite',
+        wheelInText: 'wheelInText 2.2s infinite 1.1s'
       }
     }
   },
