@@ -24,6 +24,12 @@ Meu portfólio de desenvolvedor front-end.
 
 # Scripts
 
+- Mensagem padronizada de commit:
+
+  ```
+  npm run commit
+  ```
+
 - Inicie o Storybook:
 
   ```
