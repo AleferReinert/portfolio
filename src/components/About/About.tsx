@@ -20,14 +20,16 @@ export function About({ name, role, description }: AboutProps) {
             <span className='text-[2.75rem] text-heading-theme-light dark:text-heading-theme-dark font-black leading-snug md:text-6xl'>
               {name}
             </span>
-            <span className=' dark:text-primary-theme-dark text-lg font-bold md:text-xl'>{role}</span>
+            <span className='text-primary-theme-light dark:text-primary-theme-dark text-lg font-bold md:text-xl'>
+              {role}
+            </span>
           </h1>
         </div>
         <h2 className='hidden text-xl font-bold text-center md:block'>Sobre mim</h2>
         <p
           className='
 				[&>span>strong]:inline [&>span>strong]:text-primary-theme-light dark:[&>span>strong]:text-primary-theme-dark [&>span>strong]:font-medium
-				md:text-center md:max-w-[800px] md:mt-2 md:mx-auto
+				md:text-center md:max-w-screen-md md:mt-2 md:mx-auto
 				md:[&>span]:block md:[&>span+br]:hidden
 				'
           dangerouslySetInnerHTML={{ __html: description }}

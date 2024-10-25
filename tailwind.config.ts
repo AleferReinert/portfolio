@@ -16,8 +16,8 @@ export default {
         // Light theme
         'primary-theme-light': colors.cyan[950], // Default: cyan-950
         'secondary-theme-light': colors.slate[50], // Default: slate-50
-        'heading-theme-light': colors.slate[900], // Default: neutral-900
-        'paragraph-theme-light': colors.slate[800] // Default: neutral-800
+        'heading-theme-light': colors.slate[800], // Default: neutral-900
+        'paragraph-theme-light': colors.slate[700] // Default: neutral-800
       },
       keyframes: {
         rotateFrom180: {

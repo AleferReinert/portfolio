@@ -60,7 +60,7 @@ export const about: AboutProps = {
   googleDescription:
     'Desenvolvedor Front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, etc.',
   description: `
-      Possuo mais de 8 anos experiência no desenvolvimento de sites e e-commerces para empresas além de projetos pessoais onde sempre estudo novas tecnologias. <br />
+      Com mais de 8 anos experiência, desenvolvo sites e e-commerces utilizando as tecnologias mais atuais, focando em desempenho, acessibilidade e experiência do usuário. <br />
 			Minhas principais habilidades incluem
 			<span>
 				<strong>React</strong>,
