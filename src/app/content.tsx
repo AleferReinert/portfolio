@@ -293,26 +293,26 @@ export const certificates: CertificateProps[] = [
 ]
 
 export const skills: SkillProps[] = [
-  { title: 'HTML5', icon: SiHtml5, color: '#eb5f31' },
-  { title: 'CSS3', icon: SiCss3, color: '#39a6d6' },
-  { title: 'JavaScript', icon: SiJavascript, color: '#eed449' },
-  { title: 'TypeScript', icon: SiTypescript, color: '#1c76c7' },
-  // { title: 'SASS', icon: SiSass, color: '#cb6199' },
-  { title: 'React', icon: SiReact, color: '#217fa3' },
-  { title: 'Next.js', icon: SiNextdotjs, color: '#000000' },
-  { title: 'Tailwind', icon: SiTailwindcss, color: '#4abff6' },
-  { title: 'StyledComponents', icon: SiStyledcomponents, color: '#F6C731', shortTitle: 'CSSinJS' },
-  { title: 'Storybook', icon: SiStorybook, color: '#f93e85' },
-  // { title: 'Jest', icon: SiJest, color: '#36c326' },
-  { title: 'TestingLibrary', icon: SiTestinglibrary, color: '#e7303e' },
-  { title: 'Git', icon: SiGit, color: '#ed4730' },
-  { title: 'Strapi', icon: SiStrapi, color: '#4a4afc' },
-  { title: 'GraphQL', icon: SiGraphql, color: '#ef009a' },
-  { title: 'ApolloGraphQL', icon: SiApollographql, color: '#f64917', shortTitle: 'Apollo' },
-  { title: 'LESS', icon: SiLess, color: '#428bca' },
-  { title: 'Gulp', icon: SiGulp, color: '#ca4049' },
-  { title: 'Figma', icon: SiFigma, color: '#9D56F7' },
-  { title: 'Photoshop', icon: SiAdobephotoshop, color: '#3fa5f5' }
+  { title: 'HTML5', icon: SiHtml5 },
+  { title: 'CSS3', icon: SiCss3 },
+  { title: 'JavaScript', icon: SiJavascript },
+  { title: 'TypeScript', icon: SiTypescript },
+  // { title: 'SASS', icon: SiSass },
+  { title: 'React', icon: SiReact },
+  { title: 'Next.js', icon: SiNextdotjs },
+  { title: 'Tailwind', icon: SiTailwindcss },
+  { title: 'StyledComponents', icon: SiStyledcomponents, shortTitle: 'CSSinJS' },
+  { title: 'Storybook', icon: SiStorybook },
+  // { title: 'Jest', icon: SiJest },
+  { title: 'TestingLibrary', icon: SiTestinglibrary },
+  { title: 'Git', icon: SiGit },
+  { title: 'Strapi', icon: SiStrapi },
+  { title: 'GraphQL', icon: SiGraphql },
+  { title: 'ApolloGraphQL', icon: SiApollographql, shortTitle: 'Apollo' },
+  { title: 'LESS', icon: SiLess },
+  { title: 'Gulp', icon: SiGulp },
+  { title: 'Figma', icon: SiFigma },
+  { title: 'Photoshop', icon: SiAdobephotoshop }
 ]
 
 export const socials: SocialProps[] = [
