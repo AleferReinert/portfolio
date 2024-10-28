@@ -83,7 +83,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     projectLink: 'https://impacta-tecnologia.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/impacta-tecnologia',
     storybookLink: 'https://670946a91c483c5167ccb017-xrgkkrbcaz.chromatic.com',
-    img: '/img/projects/impacta-tecnologia.webp'
+    img: '/projects/impacta-tecnologia.webp'
   },
   {
     slug: 'findbook',
@@ -94,7 +94,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'React TypeScript Tailwind Radix Vite OpenAI Express MongoDB',
     projectLink: 'https://findbook-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/findbook',
-    img: '/img/projects/findbook.webp'
+    img: '/projects/findbook.webp'
   },
   {
     slug: 'notes',
@@ -106,7 +106,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'React TypeScript Tailwind Radix Sonner',
     projectLink: 'https://nlw-expert-notes-ar.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/nlw-expert-notes',
-    img: '/img/projects/nlw-expert-notes.webp'
+    img: '/projects/nlw-expert-notes.webp'
   },
   {
     slug: 'pass-in',
@@ -118,7 +118,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'React TypeScript Tailwind Node.js Prisma Fastify',
     projectLink: 'https://pass-in-nlw-unite.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/pass.in-react',
-    img: '/img/projects/nlw-unite-pass-in.webp'
+    img: '/projects/nlw-unite-pass-in.webp'
   },
   // {
   //   slug: 'won-games',
@@ -130,7 +130,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
   //   skills: 'Next.js TypeScript StyledComponents Storybook TestingLibrary Strapi GraphQL',
   //   repositoryLink: 'https://github.com/AleferReinert/won-games',
   //   storybookLink: 'https://64ceaf6be6c94aa14b9fe174-rwsmooqukg.chromatic.com',
-  //   img: '/img/projects/won-games.webp'
+  //   img: '/projects/won-games.webp'
   // },
   {
     slug: 'portfolio',
@@ -140,7 +140,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
-    img: '/img/projects/portfolio.webp'
+    img: '/projects/portfolio.webp'
   },
   {
     slug: 'react-avançado',
@@ -151,7 +151,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
-    img: '/img/projects/landing-page.webp'
+    img: '/projects/landing-page.webp'
   },
   {
     slug: 'single-page',
@@ -161,7 +161,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'HTML Less JavaScript Gulp',
     projectLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
-    img: '/img/projects/single-page.webp'
+    img: '/projects/single-page.webp'
   },
   {
     slug: 'metronome',
@@ -171,7 +171,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'HTML CSS JavaScript',
     projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
-    img: '/img/projects/metronome.webp'
+    img: '/projects/metronome.webp'
   }
 ]
 

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import { themes } from '../../tailwind.config'
-import imageSocialShare from './../../public/img/social-share.webp'
+import imageSocialShare from './../../public/social-share.webp'
 import { about, skills } from './content'
 import './globals.css'
 
