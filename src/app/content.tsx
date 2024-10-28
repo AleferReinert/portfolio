@@ -55,7 +55,7 @@ export const about: AboutProps = {
   name: 'Alefer Reinert',
   role: 'Desenvolvedor Front-end',
   email: 'aleferreinert@gmail.com',
-  websiteLink: 'https://aleferreinert.netlify.app',
+  websiteLink: 'https://aleferreinert.vercel.app',
   phone: '47999558118',
   googleDescription:
     'Desenvolvedor Front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, etc.',

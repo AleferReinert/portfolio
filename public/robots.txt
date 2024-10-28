@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aleferreinert.netlify.app/sitemap.xml
+Sitemap: https://aleferreinert.vercel.app/sitemap.xml

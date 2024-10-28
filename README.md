@@ -65,4 +65,4 @@ Meu portfólio de desenvolvedor front-end.
 
 ## URL do Projeto
 
-Explore o projeto no link: [Meu Portfólio](https://aleferreinert.netlify.app).
+Explore o projeto no link: [Meu Portfólio](https://aleferreinert.vercel.app).
