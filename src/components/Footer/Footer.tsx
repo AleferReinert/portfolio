@@ -2,7 +2,7 @@ import { AboutProps } from 'components/About/About'
 import { Container } from 'components/Container/Container'
 import { Heading } from 'components/Heading/Heading'
 import { IconType } from 'react-icons'
-import { formatPhone } from 'utils/helpers'
+import { formatPhone } from 'utils/formatPhone'
 
 export interface SocialProps {
   name: string
@@ -20,7 +20,7 @@ export function Footer({ phone, email, socials }: FooterProps) {
       <Container>
         <Heading>Contato</Heading>
         <div className='flex flex-col sm:flex-row sm:justify-between sm:items-end'>
-          <p className='mb-6 sm:mb-0 [&>span]:font-medium [&>a:hover]:text-primary-theme-light dark:[&>a:hover]:text-primary-theme-dark [&>a]:transition'>
+          <p className='mb-6 sm:mb-0 [&>span]:font-medium [&>a:hover]:text-primary-theme [&>a]:transition'>
             <span>Tel: </span>
             <a aria-label='telefone' href={`tel:${phone}`}>
               {formatPhone(phone)}
@@ -39,7 +39,7 @@ export function Footer({ phone, email, socials }: FooterProps) {
                   href={social.link}
                   title={social.name}
                   target='_blank'
-                  className='group flex relative transition-colors ease-linear hover:text-primary-theme-light dark:hover:text-primary-theme-dark'
+                  className='group flex relative transition-colors ease-linear hover:text-primary-theme'
                 >
                   <social.icon className='size-8 transition-all ease-linear sm:size-7 group-hover:animate-rotateFrom180' />
                 </a>

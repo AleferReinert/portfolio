@@ -12,18 +12,16 @@ interface ProjectsProps {
 
 export function Projects({ projects }: ProjectsProps) {
   const [showFilters, setShowFilters] = useState(false)
-  const allSkills = Array.from(new Set(projects.flatMap((project) => project.skills.split(' ')))).sort()
   const [selectedSkills, setSelectedSkills] = useState<string[]>([])
+  const allSkills = Array.from(new Set(projects.flatMap((project) => project.skills.split(' ')))).sort()
 
   // Retorna projetos que possuem todas skills selecionadas
   // Se nenhuma skill estiver selecionada, retorna todos
   const filteredProjects = projects.filter((project) => {
     if (selectedSkills.length > 0) {
-      const projectSkills = project.skills.split(' ')
-      return selectedSkills.every((skill) => projectSkills.includes(skill))
-    } else {
-      return true
+      return selectedSkills.every((skill) => project.skills.split(' ').includes(skill))
     }
+    return true
   })
 
   return (
@@ -33,13 +31,10 @@ export function Projects({ projects }: ProjectsProps) {
           Projetos
           <button
             title={showFilters ? 'Ocultar filtros' : 'Exibir filtros'}
-            onClick={() => {
-              setShowFilters(!showFilters)
-            }}
+            onClick={() => setShowFilters(!showFilters)}
           >
             <IoFilter
-              className={`size-6
-							${selectedSkills.length > 0 ? 'fill-primary-theme-light dark:fill-primary-theme-dark ' : 'fill-paragraph-theme-light dark:fill-paragraph-theme-dark '}`}
+              className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme '}`}
             />
           </button>
         </Heading>

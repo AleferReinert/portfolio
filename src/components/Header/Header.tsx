@@ -3,8 +3,9 @@ import { Container } from 'components/Container/Container'
 import { MenuMobile } from 'components/MenuMobile/MenuMobile'
 import { NavMenu, NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import { Switch } from 'components/Switch/Switch'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { IoMenuOutline } from 'react-icons/io5'
+import { useFixedHeader } from 'utils/scrollHeader'
 
 interface HeaderProps {
   menu: NavMenuItemProps[]
@@ -12,26 +13,16 @@ interface HeaderProps {
 
 export function Header({ menu }: HeaderProps) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [fixedHeader, setFixedHeader] = useState('fixed')
-
-  useEffect(() => {
-    let prev = window.scrollY
-    const fixedHeaderOnScrollUp = () => {
-      let current = window.scrollY
-      prev > current ? setFixedHeader('fixed') : setFixedHeader('')
-      prev = current
-    }
-    window.addEventListener('scroll', fixedHeaderOnScrollUp)
-    return () => window.removeEventListener('scroll', fixedHeaderOnScrollUp)
-  })
+  const fixedHeader = useFixedHeader()
 
   return (
     <header data-testid='header-component'>
       <div
         className={`
 						${fixedHeader ? 'translate-y-0' : '-translate-y-full'} 
-						 py-2 fixed top-0 left-0 right-0 z-10 transform transition-transform duration-300
-						bg-secondary-theme-light dark:bg-secondary-theme-dark md:py-4`}
+						py-2 fixed top-0 left-0 right-0 z-10 transform transition-transform duration-300
+						bg-secondary-theme md:py-4
+				`}
       >
         <Container fluid className='flex justify-between items-center'>
           <div className='flex h-min'>
@@ -43,7 +34,7 @@ export function Header({ menu }: HeaderProps) {
               aria-label='Abrir menu'
               role='img'
               onClick={() => setShowMobileMenu(true)}
-              className='size-9 text-primary-theme-light dark:text-primary-theme-dark cursor-pointer'
+              className='size-9 text-primary-theme cursor-pointer'
             />
           </div>
           <div className='hidden md:flex'>

@@ -4,22 +4,19 @@ export interface SkillProps {
   title: string
   icon: IconType
   shortTitle?: string
-  color?: string
 }
 
-export function Skill({ title, icon, shortTitle }: SkillProps) {
-  const Icon = icon
-
+export function Skill({ title, icon: Icon, shortTitle }: SkillProps) {
   return (
     <li
       data-testid='SkillComponent'
-      title={shortTitle && title}
+      title={shortTitle ? title : undefined}
       className='group overflow-hidden aspect-[94/87] sm:aspect-[128/87] relative bg-black bg-opacity-5 dark:bg-opacity-25'
     >
       <Icon
         aria-label={title}
         role='img'
-        className='size-8 fill-heading-theme-light dark:fill-heading-theme-dark absolute left-1/2 -ml-4 top-1/2 -mt-4 
+        className='size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 
           -translate-y-2 group-hover:animate-wheelInIcon'
       />
       <div

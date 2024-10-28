@@ -1,7 +1,4 @@
-import {
-  Certificate,
-  CertificateProps
-} from 'components/Certificate/Certificate'
+import { Certificate, CertificateProps } from 'components/Certificate/Certificate'
 import { Container } from 'components/Container/Container'
 import { Heading } from 'components/Heading/Heading'
 

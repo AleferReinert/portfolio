@@ -19,7 +19,7 @@ export const Default: Story = {
 
     await step('Render GitHub', () => {
       const repositoryLink = canvas.getByRole('link', {
-        name: 'Repositório'
+        name: 'GitHub'
       })
       expect(repositoryLink).toHaveAttribute('href', '/repository-link')
     })

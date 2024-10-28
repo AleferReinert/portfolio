@@ -1,5 +1,21 @@
 import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
+import plugin from 'tailwindcss/plugin'
+
+export const themes = {
+  light: {
+    primary: colors.cyan[950],
+    secondary: colors.slate[50],
+    heading: colors.slate[800],
+    paragraph: colors.slate[700]
+  },
+  dark: {
+    primary: colors.green[400],
+    secondary: colors.cyan[950],
+    heading: colors.slate[50],
+    paragraph: colors.slate[300]
+  }
+}
 
 export default {
   content: ['./src/**/*.tsx'],
@@ -7,17 +23,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Dark Theme
-        'primary-theme-dark': colors.green[400], // Default: green-400 | Cor de destaque
-        'secondary-theme-dark': colors.cyan[950], // Default: cyan-950 | Cor de background (body, header e theme-color)
-        'heading-theme-dark': colors.slate[50], // Default: slate-50 | Headings
-        'paragraph-theme-dark': colors.slate[300], // Default: slate-300 | Textos normais
-
-        // Light theme
-        'primary-theme-light': colors.cyan[950], // Default: cyan-950
-        'secondary-theme-light': colors.slate[50], // Default: slate-50
-        'heading-theme-light': colors.slate[800], // Default: neutral-900
-        'paragraph-theme-light': colors.slate[700] // Default: neutral-800
+        'primary-theme': 'var(--primary-theme)',
+        'secondary-theme': 'var(--secondary-theme)',
+        'heading-theme': 'var(--heading-theme)',
+        'paragraph-theme': 'var(--paragraph-theme)'
       },
       keyframes: {
         rotateFrom180: {
@@ -49,5 +58,22 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [
+    plugin(function ({ addBase }) {
+      addBase({
+        ':root': {
+          '--primary-theme': themes.light.primary,
+          '--secondary-theme': themes.light.secondary,
+          '--heading-theme': themes.light.heading,
+          '--paragraph-theme': themes.light.paragraph
+        },
+        '.dark': {
+          '--primary-theme': themes.dark.primary,
+          '--secondary-theme': themes.dark.secondary,
+          '--heading-theme': themes.dark.heading,
+          '--paragraph-theme': themes.dark.paragraph
+        }
+      })
+    })
+  ]
 } satisfies Config

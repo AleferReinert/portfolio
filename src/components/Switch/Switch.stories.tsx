@@ -26,7 +26,7 @@ export const Default: Story = {
 
     await step('Change theme', async () => {
       await userEvent.click(SwitchComponent)
-      expect(html).toHaveClass('light')
+      expect(html).not.toHaveClass('dark')
       expect(SwitchComponent).toHaveAttribute('title', 'Tema escuro')
 
       await userEvent.click(SwitchComponent)

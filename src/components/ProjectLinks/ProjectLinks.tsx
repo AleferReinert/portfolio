@@ -10,16 +10,13 @@ interface ProjectLinksProps {
 }
 
 export function ProjectLinks({ repositoryLink, storybookLink, projectLink, index }: ProjectLinksProps) {
-  const linkStyles = 'group'
+  const linkStyles = 'group hover:text-primary-theme'
   const svgStyles = 'size-7 transition ease-linear group-hover:animate-rotateFrom180'
+  const isEven = index % 2 === 0
 
   return (
-    <div
-      className={`flex gap-4 justify-end w-full
-				[&>a:hover]:text-primary-theme-light dark:[&>a:hover]:text-primary-theme-dark
-				sm:justify-start ${index % 2 === 0 ? 'lg:justify-end' : ''}`}
-    >
-      <Link href={repositoryLink} title='Repositório' target='_blank' className={linkStyles}>
+    <div className={`flex gap-4 justify-end w-full sm:justify-start ${isEven ? 'lg:justify-end' : ''}`}>
+      <Link href={repositoryLink} title='GitHub' target='_blank' className={linkStyles}>
         <SiGithub className={svgStyles} />
       </Link>
 

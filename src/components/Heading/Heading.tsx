@@ -9,8 +9,9 @@ export function Heading({ children, ...rest }: HeadingProps) {
     <h2
       {...rest}
       data-testid='HeadingComponent'
-      className={`text-primary-theme-light dark:text-primary-theme-dark text-2xl leading-none font-bold uppercase pt-12 pb-2 mb-6 border-b border-paragraph-theme-light dark:border-paragraph-theme-dark md:pt-16
-					${rest.className}
+      className={`
+				text-2xl leading-none font-bold uppercase pt-12 pb-2 mb-6 border-b text-primary-theme border-paragraph-theme md:pt-16 
+				${rest.className}
 				`}
     >
       {children}

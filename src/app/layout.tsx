@@ -1,12 +1,10 @@
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
-import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../../tailwind.config'
+import { themes } from '../../tailwind.config'
 import imageSocialShare from './../../public/img/social-share.webp'
 import { about, skills } from './content'
 import './globals.css'
-const fullConfig = resolveConfig(tailwindConfig)
 
 const inter = Inter({
   weight: ['300', '400', '500', '700', '900'],
@@ -31,7 +29,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             .join(', ')
             .toString()}
         />
-        <meta name='theme-color' content={fullConfig.theme.colors['secondary-theme-dark']} />
+        <meta name='theme-color' content={themes.dark.secondary} />
 
         {/* Visualização de compartilhamento em redes sociais */}
         <meta property='og:title' content={`Portfólio | ${about.name} - ${about.role}`} />

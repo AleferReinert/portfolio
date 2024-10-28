@@ -9,10 +9,15 @@ export interface CertificateProps {
 
 export function Certificate({ title, organization, conclusionDate, link }: CertificateProps) {
   return (
-    <li data-testid='CertificateComponent'>
+    <li data-testid='CertificateComponent' className='relative'>
       <Link title='Visualizar certificado' href={link!} target='_blank' className='relative group'>
-        <span className='w-[1px] h-full duration-300 group-hover:bg-primary-theme-light dark:group-hover:bg-primary-theme-dark max-h-[0%] group-hover:max-h-full transition-all absolute left-0 top-0'></span>
-        <h3 className='text-heading-theme-light dark:text-heading-theme-dark font-medium leading-5 group-hover:translate-x-3 group-hover:text-primary-theme-light dark:group-hover:text-primary-theme-dark transition'>
+        <span
+          className='
+						w-[1px] h-full duration-300 max-h-[0%] transition-all absolute left-0 top-0
+						group-hover:bg-primary-theme group-hover:max-h-full
+					'
+        ></span>
+        <h3 className='text-heading-theme font-medium leading-5 group-hover:translate-x-3 group-hover:text-primary-theme transition'>
           {title}
         </h3>
         <p className='text-sm group-hover:translate-x-3 transition duration-300'>

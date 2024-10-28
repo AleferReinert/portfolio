@@ -2,47 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
-}
-
 body {
-  @apply overflow-x-hidden tracking-wide leading-normal font-light text-paragraph-theme-light dark:text-paragraph-theme-dark bg-secondary-theme-light dark:bg-secondary-theme-dark;
-}
-
-li {
-  @apply list-none;
-}
-
-|*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-button {
-  @apply cursor-pointer bg-transparent border-0;
-}
-
-label {
-  @apply cursor-pointer;
+  @apply antialiased overflow-x-hidden tracking-wide leading-normal font-light text-paragraph-theme bg-secondary-theme;
 }
 
 a:focus-visible,
 button:focus,
+button:focus-visible,
 svg:focus {
   @apply outline-none;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 ::selection {
-  @apply text-white/85 bg-secondary-theme-dark dark:bg-primary-theme-dark;
+  @apply text-white bg-primary-theme;
 }

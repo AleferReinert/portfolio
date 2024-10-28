@@ -29,7 +29,7 @@ switch ($commit_type) {
     default { Write-Host "Tipo de commit invalido"; exit }
 }
 
-$message = Read-Host "Digite a mensagem do commit"
+$message = Read-Host ${type}
 $commit_message = "${type}: $message"
 
 # Passos antes do commit:
@@ -48,4 +48,5 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # Se tudo estiver ok, o commit e realizado
+git commit -m $commit_message 
 Write-Host "Commit criado com sucesso!"

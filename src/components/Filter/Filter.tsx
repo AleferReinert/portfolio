@@ -23,7 +23,6 @@ export function Filter({
   const updateSelectedSkills = (skill: string) => {
     setSelectedSkills((prevSelectedSkills) => {
       if (prevSelectedSkills.includes(skill)) {
-        //
         return prevSelectedSkills.filter((selectedSkill) => selectedSkill !== skill)
       } else {
         return [...prevSelectedSkills, skill]
@@ -44,13 +43,15 @@ export function Filter({
             return (
               <li key={index}>
                 <label
-                  className={`flex gap-1 items-center text-sm normal-case 
-										${active ? 'font-medium text-primary-theme-light dark:text-primary-theme-dark' : 'font-light text-paragraph-theme-light dark:text-paragraph-theme-dark'}`}
+                  className={`flex group gap-1 items-center text-sm normal-case cursor-pointer
+										transition hover:text-primary-theme 
+										${active ? 'font-medium text-primary-theme' : 'font text-paragraph-theme'}`}
                 >
-                  <div className='size-4 sm:size-3 border border-paragraph-theme-light dark:border-paragraph-theme-dark flex items-center justify-center'>
-                    {active && (
-                      <FaCheck className='size-3 sm:size-2 fill-primary-theme-light dark:fill-primary-theme-dark' />
-                    )}
+                  <div
+                    className={`size-4 sm:size-3 border transition flex items-center justify-center group-hover:border-primary-theme 
+										${active ? 'border-primary-theme' : 'border-paragraph-theme'}`}
+                  >
+                    {active && <FaCheck className='size-3 sm:size-2 fill-primary-theme' />}
                   </div>
                   <input
                     type='checkbox'
@@ -70,8 +71,7 @@ export function Filter({
           <button
             disabled={selectedSkills.length === 0}
             onClick={() => setSelectedSkills([])}
-            className='text-primary-theme-light font-medium dark:text-primary-theme-dark ml-auto
-						disabled:hidden'
+            className='text-primary-theme font-medium ml-auto disabled:hidden'
           >
             Limpar
           </button>
