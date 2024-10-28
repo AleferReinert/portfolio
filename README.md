@@ -24,35 +24,50 @@ Meu portfólio de desenvolvedor front-end.
 
 # Scripts
 
-- Realize commits com mensagens padronizadas:
+### Commits
 
-  ```
-  npm run commit
-  ```
+1. Adicione os arquivos:
 
-- Inicie o Storybook:
+   ```
+   git add .
+   ```
 
-  ```
-  npm run storybook
-  ```
+2. Selecione uma mensagem de commit válida:
 
-- Execute os testes do Storybook:
+   ```
+   git commit
+   ```
 
-  ```
-  npm run test --watch
-  ```
+### Storybook
 
-- Crie um componente:
+1. Iniciar:
 
-  ```
-  npm run plop
-  ```
+   ```
+   npm run storybook
+   ```
+
+2. Executar testes:
+   ```
+   npm run test --watch
+   ```
+
+### Lint
+
+```
+npm run lint
+```
+
+### Criar componente
+
+```
+npm run plop
+```
 
 ## Tecnologias Utilizadas
 
 - **Chromatic:** Ferramenta para captura de tela, revisão e testes visuais automatizados para componentes de interface de usuário.
 - **commitlint:** Ferramenta para validar e padronizar mensagens de commit.
-
+- **cz-commitlint:** Adaptador para Commitizen que aplica regras de mensagens de commit definidas pelo Commitlint.
 - **ESLint:** Ferramenta de linting para identificar e corrigir problemas em código JavaScript/TypeScript.
 - **Husky:** Ferramenta para adicionar hooks de Git, como pré-commit e pré-push, para automatizar verificações de código.
 - **Next.js:** Framework React para a construção de aplicações web estáticas e dinâmicas.
