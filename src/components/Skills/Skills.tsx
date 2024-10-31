@@ -3,7 +3,7 @@ import { Heading } from 'components/Heading/Heading'
 import { Skill, SkillProps } from 'components/Skill/Skill'
 
 interface SkillsProps {
-  skills: SkillProps[]
+  skills: Omit<SkillProps, 'index'>[]
 }
 
 export function Skills({ skills }: SkillsProps) {

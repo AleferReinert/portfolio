@@ -3,7 +3,7 @@ import { Container } from 'components/Container/Container'
 import { Heading } from 'components/Heading/Heading'
 
 interface CertificatesProps {
-  certificates: CertificateProps[]
+  certificates: Omit<CertificateProps, 'index'>[]
 }
 
 export function Certificates({ certificates }: CertificatesProps) {

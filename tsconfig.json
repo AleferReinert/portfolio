@@ -30,7 +30,7 @@
     "next.config.ts",
     "postcss.config.ts",
     "tailwind.config.ts",
-    "src",
+    "src/**/*",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
