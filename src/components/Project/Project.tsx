@@ -1,5 +1,8 @@
 import { ProjectLinks } from 'components/ProjectLinks/ProjectLinks'
+import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
+import { useRef } from 'react'
+import { globalMotion } from 'utils/motionUtils'
 
 export interface ProjectProps {
   slug: string
@@ -27,9 +30,17 @@ export function Project({
   lazy,
   index
 }: ProjectProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const isFirst = index === 0
+
   return (
-    <li
+    <motion.li
       data-testid='ProjectComponent'
+      ref={ref}
+      initial={{ ...globalMotion.initial.fromBottom }}
+      animate={isInView || isFirst ? { ...globalMotion.animate.vertical } : {}}
+      transition={{ ...globalMotion.transition, delay: isFirst ? 0.4 : 0 }}
       className='
 				flex flex-col items-center self-center bg-black bg-opacity-5 dark:bg-opacity-25 w-full px-4 py-7 gap-6 
 				md:flex-row md:justify-between md:px-6 md:py-8 md:max-w-none md:self-auto md:gap-8
@@ -66,6 +77,6 @@ export function Project({
           index={index}
         />
       </div>
-    </li>
+    </motion.li>
   )
 }

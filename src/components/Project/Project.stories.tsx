@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { expect, within } from '@storybook/test'
+import { expect, waitFor, within } from '@storybook/test'
 import { projects } from 'app/content'
 import { Project } from './Project'
 
@@ -28,35 +28,42 @@ export const Default: Story = {
 
     await step('Visible title', () => {
       const title = canvas.getByRole('heading', { level: 3 })
-      expect(title).toBeVisible()
-      expect(title).toHaveTextContent(lastProject!.title)
+      waitFor(() => {
+        expect(title).toBeVisible()
+        expect(title).toHaveTextContent(lastProject!.title)
+      })
     })
 
     await step('Visible year', () => {
       const year = canvas.getByLabelText('ano')
-      expect(year).toBeVisible()
-      expect(year).toHaveTextContent(lastProject!.year)
+      waitFor(() => {
+        expect(year).toBeVisible()
+        expect(year).toHaveTextContent(lastProject!.year)
+      })
     })
 
     await step('Visible shortDescription', () => {
       const shortDescription = canvas.getByLabelText('descrição')
-      expect(shortDescription).toBeVisible()
-      expect(shortDescription).toHaveTextContent(lastProject!.shortDescription)
+      waitFor(() => {
+        expect(shortDescription).toBeVisible()
+        expect(shortDescription).toHaveTextContent(lastProject!.shortDescription)
+      })
     })
 
     await step('Visible skills', () => {
       const skills = canvas.getByTitle(/tecnologias utilizadas/i)
-      expect(skills).toBeVisible()
-      expect(skills).toHaveTextContent(lastProject!.skills)
+      waitFor(() => {
+        expect(skills).toBeVisible()
+        expect(skills).toHaveTextContent(lastProject!.skills)
+      })
     })
 
     await step('Visible img', () => {
       const img = canvas.getByRole('img', { name: /imagem do projeto/i })
-      expect(img).toBeVisible()
-      expect(img).toHaveAttribute(
-        'src',
-        expect.stringContaining(lastProject!.img)
-      )
+      waitFor(() => {
+        expect(img).toBeVisible()
+        expect(img).toHaveAttribute('src', expect.stringContaining(lastProject!.img))
+      })
     })
   }
 }

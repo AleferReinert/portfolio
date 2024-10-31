@@ -1,30 +1,41 @@
-import { IconType } from 'react-icons'
+'use client'
+import { motion, useInView } from 'framer-motion'
+import { cloneElement, useRef } from 'react'
+import { globalMotion } from 'utils/motionUtils'
 
 export interface SkillProps {
   title: string
-  icon: IconType
+  icon: JSX.Element
   shortTitle?: string
+  index: number
 }
 
-export function Skill({ title, icon: Icon, shortTitle }: SkillProps) {
+export function Skill({ title, icon, shortTitle, index }: SkillProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   return (
-    <li
+    <motion.li
+      ref={ref}
+      initial={{ ...globalMotion.initial.fromScale, y: 20 }}
+      animate={isInView ? { ...globalMotion.animate.scale, y: 0 } : {}}
+      transition={{ ...globalMotion.transition, delay: index * 0.05 }}
       data-testid='SkillComponent'
       title={shortTitle ? title : undefined}
       className='group overflow-hidden aspect-[94/87] sm:aspect-[128/87] relative bg-black bg-opacity-5 dark:bg-opacity-25'
     >
-      <Icon
-        aria-label={title}
-        role='img'
-        className='size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 
-          -translate-y-2 group-hover:animate-wheelInIcon'
-      />
+      {cloneElement(icon, {
+        'aria-label': title,
+        role: 'img',
+        className:
+          'size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 -translate-y-2 group-hover:animate-wheelInIcon'
+      })}
       <div
         className='whitespace-nowrap text-[0.625rem] font-normal h-6 w-full text-center absolute top-1/2 
           mt-5 leading-none group-hover:animate-wheelInText group-hover:opacity-0 group-hover:-mt-2 group-hover:font-medium'
       >
         {shortTitle ?? title}
       </div>
-    </li>
+    </motion.li>
   )
 }

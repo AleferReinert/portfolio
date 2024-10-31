@@ -14,7 +14,7 @@ export function Skills({ skills }: SkillsProps) {
 
         <ul className='grid grid-cols-3 gap-1 justify-between sm:grid-cols-6'>
           {skills.map((skill, index) => {
-            return <Skill key={index} {...skill} />
+            return <Skill key={index} {...skill} index={index} />
           })}
         </ul>
       </Container>

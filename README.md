@@ -69,6 +69,7 @@ npm run plop
 - **commitlint:** Ferramenta para validar e padronizar mensagens de commit.
 - **cz-commitlint:** Adaptador para Commitizen que aplica regras de mensagens de commit definidas pelo Commitlint.
 - **ESLint:** Ferramenta de linting para identificar e corrigir problemas em código JavaScript/TypeScript.
+- **Framer Motion:** Ferramenta para animações.
 - **Husky:** Ferramenta para adicionar hooks de Git, como pré-commit e pré-push, para automatizar verificações de código.
 - **Next.js:** Framework React para a construção de aplicações web estáticas e dinâmicas.
 - **React:** Biblioteca JavaScript para construir interfaces de usuário.

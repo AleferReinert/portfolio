@@ -21,7 +21,7 @@ type Story = StoryObj<typeof Skill>
 export const Default: Story = {
   args: {
     title: 'Tailwind',
-    icon: SiTailwindcss
+    icon: <SiTailwindcss />
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
@@ -33,7 +33,9 @@ export const Default: Story = {
 
     await step('Visible svg', () => {
       const svg = canvas.getByRole('img')
-      expect(svg).toBeVisible()
+      waitFor(() => {
+        expect(svg).toBeVisible()
+      })
     })
 
     await step('Visible skill name', () => {
@@ -46,7 +48,7 @@ export const Default: Story = {
 export const WithShortTile: Story = {
   args: {
     title: 'StyledComponents',
-    icon: SiStyledcomponents,
+    icon: <SiStyledcomponents />,
     shortTitle: 'CSSinJS'
   },
   play: async ({ canvasElement, step }) => {
@@ -54,7 +56,9 @@ export const WithShortTile: Story = {
 
     await step('shortTitle attribute in heading', () => {
       const skillName = canvas.getByText('CSSinJS')
-      expect(skillName).toBeVisible()
+      waitFor(() => {
+        expect(skillName).toBeVisible()
+      })
     })
 
     await step('Render title in <li>', () => {

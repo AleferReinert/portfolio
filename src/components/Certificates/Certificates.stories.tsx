@@ -25,9 +25,7 @@ export const Default: Story = {
     })
 
     await step('Minimal two certificates', () => {
-      const CertificateComponents = canvas.getAllByTestId(
-        'CertificateComponent'
-      )
+      const CertificateComponents = canvas.getAllByTestId('CertificateComponent')
       expect(CertificateComponents.length).toBeGreaterThan(1)
     })
   }

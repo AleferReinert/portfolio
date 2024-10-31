@@ -13,7 +13,7 @@ export function Certificates({ certificates }: CertificatesProps) {
         <Heading>Certificados</Heading>
         <ul className='flex flex-col gap-4 md:grid md:grid-cols-2'>
           {certificates.map((certificate, index) => (
-            <Certificate key={index} {...certificate} />
+            <Certificate key={index} {...certificate} index={index} />
           ))}
         </ul>
       </Container>

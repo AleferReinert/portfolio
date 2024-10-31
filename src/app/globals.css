@@ -16,3 +16,7 @@ svg:focus {
 ::selection {
   @apply text-white bg-primary-theme;
 }
+
+li {
+  @apply list-none;
+}

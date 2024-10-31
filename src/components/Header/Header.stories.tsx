@@ -70,7 +70,9 @@ export const Desktop: Story = {
 
     await step('Render only one NavMenuComponent', () => {
       const NavMenuComponent = canvas.getAllByTestId('NavMenuComponent')
-      expect(NavMenuComponent[0]).toBeVisible()
+      waitFor(() => {
+        expect(NavMenuComponent[0]).toBeVisible()
+      })
       expect(NavMenuComponent[1]).not.toBeVisible()
     })
   }

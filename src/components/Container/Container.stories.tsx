@@ -6,11 +6,7 @@ const meta: Meta<typeof Container> = {
   title: 'Components/Container',
   component: Container,
   args: {
-    children: (
-      <div className='flex justify-center items-center bg-black/25 h-svh'>
-        children
-      </div>
-    )
+    children: <div className='flex justify-center items-center bg-black/25 h-svh'>children</div>
   }
 }
 

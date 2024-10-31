@@ -6,9 +6,8 @@ const Configuration: UserConfig = {
   formatter: '@commitlint/format',
   parserPreset: 'conventional-changelog-conventionalcommits',
   rules: {
-    'header-case': [RuleConfigSeverity.Error, 'always', 'lower-case'],
-    'header-min-length': [RuleConfigSeverity.Error, 'always', 20],
     'subject-case': [RuleConfigSeverity.Error, 'always', 'lower-case'],
+    'subject-min-length': [RuleConfigSeverity.Error, 'always', 10],
     'subject-max-length': [RuleConfigSeverity.Error, 'always', 72],
     'type-enum': [
       RuleConfigSeverity.Error,
@@ -28,16 +27,13 @@ const Configuration: UserConfig = {
     },
     questions: {
       scope: {
-        description: 'Opcional: nome do componente ou arquivo que está sendo alterado'
+        description: '[scope] Opcional: nome do componente ou arquivo que está sendo alterado'
       },
       subject: {
-        description: 'Descreva o commit'
+        description: '[subject] Descreva o commit'
       },
-      // header: {
-      //   description: 'Descreva o header'
-      // },
       body: {
-        description: 'Opcional: forneça uma descrição detalhada'
+        description: '[body] Opcional: forneça uma descrição detalhada'
       },
       isBreaking: {
         description: 'Existem mudanças que quebram a compatibilidade?'

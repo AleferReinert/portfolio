@@ -1,15 +1,30 @@
+'use client'
+import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
+import { useRef } from 'react'
+import { globalMotion } from 'utils/motionUtils'
 
 export interface CertificateProps {
   title: string
   organization: string
   conclusionDate: string
   link: string
+  index: number
 }
 
-export function Certificate({ title, organization, conclusionDate, link }: CertificateProps) {
+export function Certificate({ title, organization, conclusionDate, link, index }: CertificateProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   return (
-    <li data-testid='CertificateComponent' className='relative'>
+    <motion.li
+      ref={ref}
+      initial={{ ...globalMotion.initial.fromBottom, y: 20 }}
+      animate={isInView ? { ...globalMotion.animate.vertical } : {}}
+      transition={{ ...globalMotion.transition, delay: index * 0.05 }}
+      data-testid='CertificateComponent'
+      className='relative'
+    >
       <Link title='Visualizar certificado' href={link!} target='_blank' className='relative group'>
         <span
           className='
@@ -24,6 +39,6 @@ export function Certificate({ title, organization, conclusionDate, link }: Certi
           {organization} | {conclusionDate}
         </p>
       </Link>
-    </li>
+    </motion.li>
   )
 }

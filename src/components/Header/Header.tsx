@@ -3,9 +3,11 @@ import { Container } from 'components/Container/Container'
 import { MenuMobile } from 'components/MenuMobile/MenuMobile'
 import { NavMenu, NavMenuItemProps } from 'components/NavMenu/NavMenu'
 import { Switch } from 'components/Switch/Switch'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { IoMenuOutline } from 'react-icons/io5'
 import { useFixedHeader } from 'utils/scrollHeader'
+import { globalMotion } from '../../utils/motionUtils'
 
 interface HeaderProps {
   menu: NavMenuItemProps[]
@@ -16,7 +18,12 @@ export function Header({ menu }: HeaderProps) {
   const fixedHeader = useFixedHeader()
 
   return (
-    <header data-testid='header-component'>
+    <motion.header
+      initial={{ ...globalMotion.initial.fromTop }}
+      animate={{ ...globalMotion.animate.vertical }}
+      transition={{ ...globalMotion.transition, delay: 0.5 }}
+      data-testid='header-component'
+    >
       <div
         className={`
 						${fixedHeader ? 'translate-y-0' : '-translate-y-full'} 
@@ -44,6 +51,6 @@ export function Header({ menu }: HeaderProps) {
       </div>
 
       <MenuMobile menu={menu} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu} />
-    </header>
+    </motion.header>
   )
 }

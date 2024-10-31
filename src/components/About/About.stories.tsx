@@ -48,11 +48,13 @@ export const Desktop: Story = {
     const canvas = within(canvasElement)
 
     await step('Render subtitle', () => {
-      const subtitle = canvas.getByRole('heading', {
-        level: 2,
-        name: /sobre mim/i
+      waitFor(() => {
+        const subtitle = canvas.getByRole('heading', {
+          level: 2,
+          name: /sobre mim/i
+        })
+        expect(subtitle).toBeVisible()
       })
-      expect(subtitle).toBeVisible()
     })
   }
 }

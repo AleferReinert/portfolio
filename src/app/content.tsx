@@ -293,26 +293,26 @@ export const certificates: CertificateProps[] = [
 ]
 
 export const skills: SkillProps[] = [
-  { title: 'HTML5', icon: SiHtml5 },
-  { title: 'CSS3', icon: SiCss3 },
-  { title: 'JavaScript', icon: SiJavascript },
-  { title: 'TypeScript', icon: SiTypescript },
-  // { title: 'SASS', icon: SiSass },
-  { title: 'React', icon: SiReact },
-  { title: 'Next.js', icon: SiNextdotjs },
-  { title: 'Tailwind', icon: SiTailwindcss },
-  { title: 'StyledComponents', icon: SiStyledcomponents, shortTitle: 'CSSinJS' },
-  { title: 'Storybook', icon: SiStorybook },
-  // { title: 'Jest', icon: SiJest },
-  { title: 'TestingLibrary', icon: SiTestinglibrary },
-  { title: 'Git', icon: SiGit },
-  { title: 'Strapi', icon: SiStrapi },
-  { title: 'GraphQL', icon: SiGraphql },
-  { title: 'ApolloGraphQL', icon: SiApollographql, shortTitle: 'Apollo' },
-  { title: 'LESS', icon: SiLess },
-  { title: 'Gulp', icon: SiGulp },
-  { title: 'Figma', icon: SiFigma },
-  { title: 'Photoshop', icon: SiAdobephotoshop }
+  { title: 'HTML5', icon: <SiHtml5 /> },
+  { title: 'CSS3', icon: <SiCss3 /> },
+  { title: 'JavaScript', icon: <SiJavascript /> },
+  { title: 'TypeScript', icon: <SiTypescript /> },
+  // { title: 'SASS', icon: <SiSass /> },
+  { title: 'React', icon: <SiReact /> },
+  { title: 'Next.js', icon: <SiNextdotjs /> },
+  { title: 'Tailwind', icon: <SiTailwindcss /> },
+  { title: 'StyledComponents', icon: <SiStyledcomponents />, shortTitle: 'CSSinJS' },
+  { title: 'Storybook', icon: <SiStorybook /> },
+  // { title: 'Jest', icon: <SiJest /> },
+  { title: 'TestingLibrary', icon: <SiTestinglibrary /> },
+  { title: 'Git', icon: <SiGit /> },
+  { title: 'Strapi', icon: <SiStrapi /> },
+  { title: 'GraphQL', icon: <SiGraphql /> },
+  { title: 'ApolloGraphQL', icon: <SiApollographql />, shortTitle: 'Apollo' },
+  { title: 'LESS', icon: <SiLess /> },
+  { title: 'Gulp', icon: <SiGulp /> },
+  { title: 'Figma', icon: <SiFigma /> },
+  { title: 'Photoshop', icon: <SiAdobephotoshop /> }
 ]
 
 export const socials: SocialProps[] = [

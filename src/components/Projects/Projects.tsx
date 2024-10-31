@@ -27,16 +27,18 @@ export function Projects({ projects }: ProjectsProps) {
   return (
     <section id='projects'>
       <Container>
-        <Heading className='flex justify-between'>
-          Projetos
-          <button
-            title={showFilters ? 'Ocultar filtros' : 'Exibir filtros'}
-            onClick={() => setShowFilters(!showFilters)}
-          >
-            <IoFilter
-              className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme '}`}
-            />
-          </button>
+        <Heading>
+          <div className='flex justify-between'>
+            Projetos
+            <button
+              title={showFilters ? 'Ocultar filtros' : 'Exibir filtros'}
+              onClick={() => setShowFilters(!showFilters)}
+            >
+              <IoFilter
+                className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme '}`}
+              />
+            </button>
+          </div>
         </Heading>
 
         <Filter
