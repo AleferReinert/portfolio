@@ -42,7 +42,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta name='twitter:card' content='summary_large_image' />
-        <link rel='canonical' href={about.websiteLink} />
+        <link rel='canonical' href={`${about.websiteLink}/`} />
 
         {/* Google Search Console */}
         <meta name='google-site-verification' content='01tG19FkhgIo8cteSWl6WUHYFYCeZywVTSJC6Ua5WGA' />
