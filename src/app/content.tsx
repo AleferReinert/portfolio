@@ -175,7 +175,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
   }
 ]
 
-export const certificates: CertificateProps[] = [
+export const certificates: Omit<CertificateProps, 'index'>[] = [
   {
     title: 'Inteligência Emocional na Prática',
     organization: 'Fundação Estudar',
@@ -292,7 +292,7 @@ export const certificates: CertificateProps[] = [
   }
 ]
 
-export const skills: SkillProps[] = [
+export const skills: Omit<SkillProps, 'index'>[] = [
   { title: 'HTML5', icon: <SiHtml5 /> },
   { title: 'CSS3', icon: <SiCss3 /> },
   { title: 'JavaScript', icon: <SiJavascript /> },
