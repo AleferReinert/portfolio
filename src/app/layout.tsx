@@ -31,6 +31,9 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         />
         <meta name='theme-color' content={themes.dark.secondary} />
 
+        <meta name='google-site-verification' content='01tG19FkhgIo8cteSWl6WUHYFYCeZywVTSJC6Ua5WGA' />
+        <link rel='preconnect' href='https://vercel.live' />
+
         {/* Visualização de compartilhamento em redes sociais */}
         <meta property='og:title' content={`Portfólio | ${about.name} - ${about.role}`} />
         <meta name='author' content={about.name} />
@@ -43,9 +46,6 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <meta property='og:image:height' content='630' />
         <meta name='twitter:card' content='summary_large_image' />
         <link rel='canonical' href={about.websiteLink} />
-
-        {/* Google Search Console */}
-        <meta name='google-site-verification' content='01tG19FkhgIo8cteSWl6WUHYFYCeZywVTSJC6Ua5WGA' />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
