@@ -26,8 +26,7 @@
   },
   "include": [
     "commilint.config.ts",
-    "next-env.d.ts",
-    "next.config.ts",
+    "next.config.js",
     "postcss.config.ts",
     "tailwind.config.ts",
     "src/**/*",

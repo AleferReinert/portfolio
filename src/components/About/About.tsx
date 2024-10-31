@@ -5,7 +5,7 @@ import { globalMotion } from '../../utils/motionUtils'
 export interface AboutProps {
   name: string
   role: string
-  description: string
+  description: JSX.Element
   googleDescription: string
   websiteLink: string
   email: string
@@ -58,8 +58,9 @@ export function About({ name, role, description }: AboutProps) {
           transition={{ ...globalMotion.transition, delay: 0.3 }}
           className={`[&>span>strong]:inline [&>span>strong]:text-primary-theme [&>span>strong]:font-medium 
 						md:text-center md:max-w-screen-md md:mt-2 md:mx-auto md:[&>span]:block md:[&>span+br]:hidden`}
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+        >
+          {description}
+        </motion.p>
       </Container>
     </section>
   )
