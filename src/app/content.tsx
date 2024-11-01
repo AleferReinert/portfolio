@@ -56,6 +56,7 @@ export const about: AboutProps = {
   role: 'Desenvolvedor Front-end',
   email: 'aleferreinert@gmail.com',
   websiteLink: 'https://aleferreinert.vercel.app',
+  socialShareImg: '/social-share.webp',
   phone: '47999558118',
   googleDescription:
     'Desenvolvedor Front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, etc.',

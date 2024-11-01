@@ -10,6 +10,7 @@ export interface AboutProps {
   websiteLink: string
   email: string
   phone: string
+  socialShareImg: string
 }
 
 export function About({ name, role, description }: AboutProps) {

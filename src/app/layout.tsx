@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import { themes } from '../../tailwind.config'
-import imageSocialShare from './../../public/social-share.webp'
 import { about, skills } from './content'
 import './globals.css'
 
@@ -40,7 +39,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <meta property='og:description' content={about.googleDescription} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={about.websiteLink} />
-        <meta property='og:image' content={imageSocialShare.src} />
+        <meta property='og:image' content={about.socialShareImg} />
         <meta name='og:image:alt' content='Imagem que mostra o site responsivo em um celular, tablet e notebook.' />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
