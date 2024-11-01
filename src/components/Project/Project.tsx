@@ -66,7 +66,9 @@ export function Project({
           <span className='text-2xl font-bold text-heading-theme'>{title}</span>
           <span aria-label='ano'>{year}</span>
         </h3>
-        <p aria-label='descrição' className='leading-5 w-full' dangerouslySetInnerHTML={{ __html: shortDescription }} />
+        <p aria-label='descrição' className='leading-5 w-full'>
+          {shortDescription}
+        </p>
         <p className='w-full text-primary-theme font-normal' title='Tecnologias utilizadas'>
           {skills}
         </p>

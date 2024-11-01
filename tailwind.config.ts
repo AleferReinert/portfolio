@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 import plugin from 'tailwindcss/plugin'
 
+// Definir cores dos temas aqui
 export const themes = {
   light: {
     primary: colors.cyan[950],
@@ -38,23 +39,23 @@ export default {
           '100%': { transform: 'translateX(-100%)' }
         },
         wheelInIcon: {
-          '0%': { opacity: '0', transform: 'translateY(100%) scale(0.25)' },
-          '45%': { opacity: '1', transform: 'translateY(0) scale(1.35)' },
-          '55%': { opacity: '1', transform: 'translateY(0) scale(1.35)' },
-          '100%': { opacity: '0', transform: 'translateY(-100%) scale(0.25)' }
+          '0%': { opacity: '0', top: '90%', transform: 'scale(0.25)' },
+          '35%': { opacity: '1', top: '50%', transform: 'scale(1.35)' },
+          '50%': { opacity: '1', top: '50%', transform: 'scale(1.35)' },
+          '100%': { opacity: '0', top: '10%', transform: 'scale(0.25)' }
         },
         wheelInText: {
-          '0%': { opacity: '0', top: '100%', fontSize: '0.5rem' },
-          '45%': { opacity: '1', top: '50%', fontSize: '1rem' },
-          '55%': { opacity: '1', top: '50%', fontSize: '1rem' },
-          '100%': { opacity: '0', top: '0', fontSize: '0.5rem' }
+          '0%': { opacity: '0', top: '90%', fontSize: '0.5rem' },
+          '35%': { opacity: '1', top: '50%', fontSize: '1rem' },
+          '50%': { opacity: '1', top: '50%', fontSize: '1rem' },
+          '100%': { opacity: '0', top: '10%', fontSize: '0.5rem' }
         }
       },
       animation: {
         rotateFrom180: 'rotateFrom180 .4s',
         scroll: 'scroll 2s linear infinite',
-        wheelInIcon: 'wheelInIcon 2.2s infinite',
-        wheelInText: 'wheelInText 2.2s infinite 1.1s'
+        wheelInIcon: 'wheelInIcon 2s infinite',
+        wheelInText: 'wheelInText 2s infinite 1s'
       }
     }
   },

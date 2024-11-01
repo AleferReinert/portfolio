@@ -137,7 +137,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     title: 'Portfólio',
     year: '2024',
     shortDescription: 'Confira o processo de criação deste portfólio.',
-    skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary',
+    skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary FramerMotion',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
     img: '/projects/portfolio.webp'
@@ -146,8 +146,10 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     slug: 'react-avançado',
     title: 'React Avançado',
     year: '2023',
-    shortDescription: `Landing page do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br> 
-        Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados dinâmicos por meio de uma API.`,
+    shortDescription: `Landing page do curso 'React Avançado: Crie aplicações com NextJS, Strapi e mais'.
+        Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados
+        dinâmicos por meio de uma API.
+      `,
     skills: 'Next.js TypeScript StyledComponents Strapi',
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
