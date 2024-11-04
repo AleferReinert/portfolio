@@ -1,7 +1,19 @@
+const delayInterval = 0.2 // Diferença de tempo de transição entre os primeiros elementos da página
+
 export const globalMotion = {
   transition: {
-    duration: 0.2,
+    duration: 0.4,
     ease: 'easeOut'
+  },
+  delay: {
+    about: {
+      name: delayInterval,
+      role: delayInterval * 2,
+      description: delayInterval * 4
+    },
+    firstHeading: delayInterval * 5,
+    firstProject: delayInterval * 6,
+    header: delayInterval * 7
   },
   initial: {
     fromLeft: {

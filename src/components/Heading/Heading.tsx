@@ -1,7 +1,7 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
-import { ComponentProps, isValidElement, ReactNode, useEffect, useRef, useState } from 'react'
-import { globalMotion } from 'utils/motionUtils'
+import { ComponentProps, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
+import { globalMotion } from 'utils/motion'
 
 export interface HeadingProps extends ComponentProps<'h2'> {
   children: ReactNode
@@ -13,7 +13,7 @@ export function Heading({ children }: HeadingProps) {
   const [isFirst, setIsFirst] = useState(false)
 
   useEffect(() => {
-    // Verifica se é o primeiro componente da página (Projetos)
+    // Verifica se é o primeiro componente da página (Projetos) para tratar animação
     if (isValidElement(children)) {
       setIsFirst(children.props.children[0] === 'Projetos')
     }
@@ -27,7 +27,7 @@ export function Heading({ children }: HeadingProps) {
           ref={ref}
           initial={{ ...globalMotion.initial.fromBottom }}
           animate={isInView ? { ...globalMotion.animate.vertical } : {}}
-          transition={{ ...globalMotion.transition, delay: isFirst ? 0.4 : 0.2 }}
+          transition={{ ...globalMotion.transition, delay: isFirst ? globalMotion.delay.firstHeading : 0 }}
         >
           {children}
         </motion.div>
@@ -36,7 +36,7 @@ export function Heading({ children }: HeadingProps) {
         ref={ref}
         initial={{ opacity: 0, maxWidth: 0 }}
         animate={isInView ? { opacity: 1, maxWidth: '100%' } : {}}
-        transition={{ ...globalMotion.transition, delay: isFirst ? 0.4 : 0 }}
+        transition={{ ...globalMotion.transition, delay: isFirst ? globalMotion.delay.firstHeading : 0 }}
         className='h-[1px] bg-paragraph-theme mb-6'
       />
     </>

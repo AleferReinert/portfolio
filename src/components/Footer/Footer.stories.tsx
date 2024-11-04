@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { expect, within } from '@storybook/test'
+import { expect, waitFor, within } from '@storybook/test'
 import { about, socials } from 'app/content'
 import { Footer } from './Footer'
 
@@ -39,8 +39,10 @@ export const Default: Story = {
     await step('Render social links', () => {
       const socialLinks = ['GitHub', 'LinkedIn', 'Whatsapp']
 
-      socialLinks.map((social) => {
-        expect(canvas.getByRole('link', { name: social })).toBeVisible()
+      waitFor(() => {
+        socialLinks.map((social) => {
+          expect(canvas.getByRole('link', { name: social })).toBeVisible()
+        })
       })
     })
   }

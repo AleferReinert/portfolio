@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { IoMenuOutline } from 'react-icons/io5'
 import { useFixedHeader } from 'utils/scrollHeader'
-import { globalMotion } from '../../utils/motionUtils'
+import { globalMotion } from '../../utils/motion'
 
 interface HeaderProps {
   menu: NavMenuItemProps[]
@@ -21,7 +21,7 @@ export function Header({ menu }: HeaderProps) {
     <motion.header
       initial={{ ...globalMotion.initial.fromTop }}
       animate={{ ...globalMotion.animate.vertical }}
-      transition={{ ...globalMotion.transition, delay: 0.5 }}
+      transition={{ ...globalMotion.transition, delay: globalMotion.delay.header + 0.2 }}
       data-testid='header-component'
     >
       <div
@@ -35,18 +35,16 @@ export function Header({ menu }: HeaderProps) {
           <div className='flex h-min'>
             <Switch />
           </div>
-          <div className='md:hidden'>
-            <IoMenuOutline
-              title='Abrir menu'
-              aria-label='Abrir menu'
-              role='img'
-              onClick={() => setShowMobileMenu(true)}
-              className='size-9 text-primary-theme cursor-pointer'
-            />
-          </div>
           <div className='hidden md:flex'>
             <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
           </div>
+          <IoMenuOutline
+            title='Abrir menu'
+            aria-label='Abrir menu'
+            role='img'
+            onClick={() => setShowMobileMenu(true)}
+            className='size-9 text-primary-theme cursor-pointer md:hidden'
+          />
         </Container>
       </div>
 

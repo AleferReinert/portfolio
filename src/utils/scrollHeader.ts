@@ -4,6 +4,9 @@ export const useFixedHeader = () => {
   const [fixedHeader, setFixedHeader] = useState('fixed')
 
   useEffect(() => {
+    if (window.scrollY === 0) {
+      setFixedHeader('fixed')
+    }
     let prev = window.scrollY
     const fixedHeaderOnScrollUp = () => {
       const current = window.scrollY
@@ -13,7 +16,6 @@ export const useFixedHeader = () => {
 
     window.addEventListener('scroll', fixedHeaderOnScrollUp)
     return () => window.removeEventListener('scroll', fixedHeaderOnScrollUp)
-  }, [])
-
+  }, [fixedHeader])
   return fixedHeader
 }

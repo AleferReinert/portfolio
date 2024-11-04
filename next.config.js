@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  experimental: {
+    webVitalsAttribution: ['LCP', 'CLS', 'INP']
+  }
 }
 
 module.exports = nextConfig

@@ -2,7 +2,7 @@
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
 import { useRef } from 'react'
-import { globalMotion } from 'utils/motionUtils'
+import { globalMotion } from 'utils/motion'
 
 export interface CertificateProps {
   title: string

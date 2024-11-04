@@ -34,10 +34,6 @@ export default {
           from: { transform: 'rotateY(-180deg)' },
           to: { transform: 'rotateY(0)' }
         },
-        scroll: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' }
-        },
         wheelInIcon: {
           '0%': { opacity: '0', top: '90%', transform: 'scale(0.25)' },
           '35%': { opacity: '1', top: '50%', transform: 'scale(1.35)' },
@@ -52,8 +48,7 @@ export default {
         }
       },
       animation: {
-        rotateFrom180: 'rotateFrom180 .4s',
-        scroll: 'scroll 2s linear infinite',
+        rotateFrom180: 'rotateFrom180 .25s',
         wheelInIcon: 'wheelInIcon 2s infinite',
         wheelInText: 'wheelInText 2s infinite 1s'
       }

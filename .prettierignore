@@ -1,4 +1,5 @@
 # Arquivos que não precisam ser formatados
+.github
 .husky
 .next
 build

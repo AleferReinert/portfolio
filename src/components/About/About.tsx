@@ -1,11 +1,11 @@
 import { Container } from 'components/Container/Container'
 import * as motion from 'framer-motion/client'
-import { globalMotion } from '../../utils/motionUtils'
+import { globalMotion } from '../../utils/motion'
 
 export interface AboutProps {
   name: string
   role: string
-  description: JSX.Element
+  description: string
   googleDescription: string
   websiteLink: string
   email: string
@@ -31,14 +31,14 @@ export function About({ name, role, description }: AboutProps) {
               className='text-[2.75rem] text-heading-theme font-black leading-snug md:text-6xl'
               initial={{ ...globalMotion.initial.fromLeft }}
               animate={{ ...globalMotion.animate.horizontal }}
-              transition={{ ...globalMotion.transition, delay: 0.1 }}
+              transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.name }}
             >
               {name}
             </motion.span>
             <motion.span
               initial={{ ...globalMotion.initial.fromLeft }}
               animate={{ ...globalMotion.animate.horizontal }}
-              transition={{ ...globalMotion.transition, delay: 0.2 }}
+              transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.role }}
               className='text-primary-theme text-lg font-bold md:text-xl'
             >
               {role}
@@ -49,19 +49,18 @@ export function About({ name, role, description }: AboutProps) {
           className='hidden text-xl font-bold text-center md:block'
           initial={{ ...globalMotion.initial.fromBottom }}
           animate={{ ...globalMotion.animate.vertical }}
-          transition={{ ...globalMotion.transition, delay: 0.3 }}
+          transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.description }}
         >
           Sobre mim
         </motion.h2>
         <motion.p
           initial={{ ...globalMotion.initial.fromBottom }}
           animate={{ ...globalMotion.animate.vertical }}
-          transition={{ ...globalMotion.transition, delay: 0.3 }}
+          transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.description }}
           className={`[&>span>strong]:inline [&>span>strong]:text-primary-theme [&>span>strong]:font-medium 
 						md:text-center md:max-w-screen-md md:mt-2 md:mx-auto md:[&>span]:block md:[&>span+br]:hidden`}
-        >
-          {description}
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </Container>
     </section>
   )

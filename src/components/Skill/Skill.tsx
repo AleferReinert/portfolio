@@ -1,7 +1,7 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { cloneElement, useRef } from 'react'
-import { globalMotion } from 'utils/motionUtils'
+import { globalMotion } from 'utils/motion'
 
 export interface SkillProps {
   title: string
