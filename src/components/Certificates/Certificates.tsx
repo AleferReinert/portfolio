@@ -8,7 +8,7 @@ interface CertificatesProps {
 
 export function Certificates({ certificates }: CertificatesProps) {
   return (
-    <div id='certificates'>
+    <section id='certificates'>
       <Container>
         <Heading>Certificados</Heading>
         <ul className='flex flex-col gap-4 md:grid md:grid-cols-2'>
@@ -17,6 +17,6 @@ export function Certificates({ certificates }: CertificatesProps) {
           ))}
         </ul>
       </Container>
-    </div>
+    </section>
   )
 }

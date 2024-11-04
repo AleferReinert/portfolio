@@ -15,7 +15,7 @@ export interface AboutProps {
 
 export function About({ name, role, description }: AboutProps) {
   return (
-    <div id='about'>
+    <section id='about'>
       <Container>
         <div className='pt-20 mb-8 md:mb-12 md:pt-28'>
           <motion.div
@@ -58,6 +58,6 @@ export function About({ name, role, description }: AboutProps) {
           />
         </motion.div>
       </Container>
-    </div>
+    </section>
   )
 }

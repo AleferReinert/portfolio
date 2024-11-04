@@ -34,8 +34,8 @@ export function Heading({ children }: HeadingProps) {
       </h2>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, maxWidth: 0 }}
-        animate={isInView ? { opacity: 1, maxWidth: '100%' } : {}}
+        initial={{ ...globalMotion.initial.maxWidth }}
+        animate={isInView ? { ...globalMotion.animate.maxWidth } : {}}
         transition={{ ...globalMotion.transition, delay: isFirst ? globalMotion.delay.firstHeading : 0 }}
         className='h-[1px] bg-paragraph-theme mb-6'
       />

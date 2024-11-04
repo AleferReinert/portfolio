@@ -36,6 +36,10 @@ export const globalMotion = {
     fromScale: {
       opacity: 0,
       scale: 0.8
+    },
+    maxWidth: {
+      opacity: 0,
+      maxWidth: 0
     }
   },
   animate: {
@@ -50,6 +54,10 @@ export const globalMotion = {
     scale: {
       opacity: 1,
       scale: 1
+    },
+    maxWidth: {
+      opacity: 1,
+      maxWidth: '100%'
     }
   }
 }

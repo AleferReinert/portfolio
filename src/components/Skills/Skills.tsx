@@ -8,7 +8,7 @@ interface SkillsProps {
 
 export function Skills({ skills }: SkillsProps) {
   return (
-    <div id='skills'>
+    <section id='skills'>
       <Container>
         <Heading>Habilidades</Heading>
 
@@ -18,6 +18,6 @@ export function Skills({ skills }: SkillsProps) {
           })}
         </ul>
       </Container>
-    </div>
+    </section>
   )
 }
