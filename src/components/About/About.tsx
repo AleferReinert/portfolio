@@ -15,14 +15,14 @@ export interface AboutProps {
 
 export function About({ name, role, description }: AboutProps) {
   return (
-    <section id='about'>
+    <div id='about'>
       <Container>
         <div className='pt-20 mb-8 md:mb-12 md:pt-28'>
           <motion.div
             className='text-xl leading-5'
             initial={{ ...globalMotion.initial.fromLeft }}
             animate={{ ...globalMotion.animate.horizontal }}
-            transition={{ ...globalMotion.transition }}
+            transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.firstLine }}
           >
             Olá, meu nome é
           </motion.div>
@@ -45,23 +45,19 @@ export function About({ name, role, description }: AboutProps) {
             </motion.span>
           </h1>
         </div>
-        <motion.h2
-          className='hidden text-xl font-bold text-center md:block'
+        <motion.div
           initial={{ ...globalMotion.initial.fromBottom }}
           animate={{ ...globalMotion.animate.vertical }}
           transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.description }}
         >
-          Sobre mim
-        </motion.h2>
-        <motion.p
-          initial={{ ...globalMotion.initial.fromBottom }}
-          animate={{ ...globalMotion.animate.vertical }}
-          transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.description }}
-          className={`[&>span>strong]:inline [&>span>strong]:text-primary-theme [&>span>strong]:font-medium 
+          <h2 className='hidden text-xl font-bold text-center md:block'>Sobre mim</h2>
+          <p
+            className={`[&>span>strong]:inline [&>span>strong]:text-primary-theme [&>span>strong]:font-medium 
 						md:text-center md:max-w-screen-md md:mt-2 md:mx-auto md:[&>span]:block md:[&>span+br]:hidden`}
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+        </motion.div>
       </Container>
-    </section>
+    </div>
   )
 }

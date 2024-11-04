@@ -7,13 +7,14 @@ export const globalMotion = {
   },
   delay: {
     about: {
-      name: delayInterval,
+      firstLine: delayInterval * 3,
+      name: 0,
       role: delayInterval * 2,
-      description: delayInterval * 4
+      description: delayInterval
     },
-    firstHeading: delayInterval * 5,
-    firstProject: delayInterval * 6,
-    header: delayInterval * 7
+    firstHeading: delayInterval * 3,
+    firstProject: delayInterval * 3,
+    header: delayInterval * 3
   },
   initial: {
     fromLeft: {

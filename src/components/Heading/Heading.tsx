@@ -12,8 +12,8 @@ export function Heading({ children }: HeadingProps) {
   const isInView = useInView(ref, { once: true })
   const [isFirst, setIsFirst] = useState(false)
 
+  // Verifica se é o primeiro componente da página (Projetos) para tratar animação
   useEffect(() => {
-    // Verifica se é o primeiro componente da página (Projetos) para tratar animação
     if (isValidElement(children)) {
       setIsFirst(children.props.children[0] === 'Projetos')
     }

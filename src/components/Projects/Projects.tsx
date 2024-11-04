@@ -25,7 +25,7 @@ export function Projects({ projects }: ProjectsProps) {
   })
 
   return (
-    <section id='projects'>
+    <div id='projects'>
       <Container>
         <Heading>
           <div className='flex justify-between'>
@@ -61,6 +61,6 @@ export function Projects({ projects }: ProjectsProps) {
           <p>Nenhum projeto encontrado contendo todos os filtros selecionados.</p>
         )}
       </Container>
-    </section>
+    </div>
   )
 }
