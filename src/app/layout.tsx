@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -51,7 +52,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
