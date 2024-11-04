@@ -25,7 +25,7 @@ export function Skill({ title, icon, shortTitle, index }: SkillProps) {
       className='group overflow-hidden aspect-[94/87] sm:aspect-[128/87] relative bg-black bg-opacity-5 dark:bg-opacity-25'
     >
       {cloneElement(icon, {
-        'aria-label': title,
+        'aria-hidden': 'true',
         role: 'img',
         className:
           'size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 -translate-y-2 group-hover:animate-wheelInIcon'

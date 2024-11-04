@@ -32,7 +32,7 @@ export const Default: Story = {
     })
 
     await step('Visible svg', () => {
-      const svg = canvas.getByRole('img')
+      const svg = canvas.getByRole('img', { hidden: true })
       waitFor(() => {
         expect(svg).toBeVisible()
       })

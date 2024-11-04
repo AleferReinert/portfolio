@@ -18,7 +18,6 @@ export function MenuMobile({ showMobileMenu, setShowMobileMenu, menu }: MenuMobi
     >
       <IoCloseOutline
         title='Fechar menu'
-        aria-label='Fechar menu'
         role='img'
         onClick={() => setShowMobileMenu(false)}
         className='size-9 text-primary-theme cursor-pointer absolute top-2 right-4'

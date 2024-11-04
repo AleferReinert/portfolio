@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
 import { about, socials } from 'app/content'
+import { formatPhone } from 'utils/formatPhone'
 import { Footer } from './Footer'
 
 const meta: Meta<typeof Footer> = {
@@ -27,12 +28,12 @@ export const Default: Story = {
     })
 
     await step('Render phone', () => {
-      const phone = canvas.getByLabelText('telefone', { selector: 'a' })
+      const phone = canvas.getByRole('link', { name: formatPhone(about.phone) })
       expect(phone).toHaveAttribute('href', `tel:${about.phone}`)
     })
 
     await step('Render email', () => {
-      const phone = canvas.getByLabelText('email', { selector: 'a' })
+      const phone = canvas.getByRole('link', { name: about.email })
       expect(phone).toHaveAttribute('href', `mailto:${about.email}`)
     })
 

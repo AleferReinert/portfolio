@@ -17,18 +17,18 @@ export function ProjectLinks({ repositoryLink, storybookLink, projectLink, index
   return (
     <div className={`flex gap-4 justify-end w-full sm:justify-start ${isEven ? 'lg:justify-end' : ''}`}>
       <Link href={repositoryLink} title='GitHub' target='_blank' className={linkStyles}>
-        <SiGithub className={svgStyles} />
+        <SiGithub aria-hidden role='img' className={svgStyles} />
       </Link>
 
       {storybookLink && (
         <Link href={storybookLink} title='Storybook' target='_blank' className={linkStyles}>
-          <SiStorybook className={svgStyles} />
+          <SiStorybook aria-hidden role='img' className={svgStyles} />
         </Link>
       )}
 
       {projectLink && (
         <Link href={projectLink} title='Visualizar' target='_blank' className={linkStyles}>
-          <IoIosLink className={svgStyles} />
+          <IoIosLink aria-hidden role='img' className={svgStyles} />
         </Link>
       )}
     </div>

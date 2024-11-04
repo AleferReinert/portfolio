@@ -26,7 +26,7 @@ export const Default: Story = {
     const canvas = within(canvasElement)
 
     await step('Visible closeButton ', () => {
-      const closeMenuButton = canvas.getByLabelText('Fechar menu')
+      const closeMenuButton = canvas.getByTitle('Fechar menu')
       waitFor(() => {
         expect(closeMenuButton).toBeVisible()
       })

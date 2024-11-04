@@ -34,14 +34,10 @@ export function Footer({ phone, email, socials }: FooterProps) {
         >
           <p className='mb-6 sm:mb-0 [&>span]:font-medium [&>a:hover]:text-primary-theme [&>a]:transition'>
             <span className='text-heading-theme'>Tel: </span>
-            <a aria-label='telefone' href={`tel:${phone}`}>
-              {formatPhone(phone)}
-            </a>
+            <a href={`tel:${phone}`}>{formatPhone(phone)}</a>
             <br />
             <span className='text-heading-theme'>E-mail: </span>
-            <a aria-label='email' href={`mailto:${email}`}>
-              {email}
-            </a>
+            <a href={`mailto:${email}`}>{email}</a>
           </p>
           <nav data-testid='social-component' className='inline-flex gap-5'>
             {socials.map((social, index) => {

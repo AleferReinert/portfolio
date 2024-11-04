@@ -22,12 +22,12 @@ export const Mobile: Story = {
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const openMenuButton = canvas.getByLabelText('Abrir menu')
-    const closeMenuButton = canvas.getByLabelText('Fechar menu')
+    const openMenuButton = canvas.getByTitle('Abrir menu')
+    const closeMenuButton = canvas.getByTitle('Fechar menu')
     const MenuMobileComponent = canvas.getByTestId('MenuMobileComponent')
 
     await step('Render buttonOpenMenu', () => {
-      waitFor(() => expect(openMenuButton).toBeVisible())
+      waitFor(() => expect(openMenuButton).toBeVisible(), { timeout: 2000 })
     })
 
     await step('Hidden MenuMobile as default', () => {
@@ -64,15 +64,18 @@ export const Desktop: Story = {
     const canvas = within(canvasElement)
 
     await step('Hidden button to open menu', () => {
-      const openMenuButton = canvas.getByLabelText('Abrir menu')
+      const openMenuButton = canvas.getByTitle('Abrir menu')
       expect(openMenuButton).not.toBeVisible()
     })
 
     await step('Render only one NavMenuComponent', () => {
       const NavMenuComponent = canvas.getAllByTestId('NavMenuComponent')
-      waitFor(() => {
-        expect(NavMenuComponent[0]).toBeVisible()
-      })
+      waitFor(
+        () => {
+          expect(NavMenuComponent[0]).toBeVisible()
+        },
+        { timeout: 2000 }
+      )
       expect(NavMenuComponent[1]).not.toBeVisible()
     })
   }

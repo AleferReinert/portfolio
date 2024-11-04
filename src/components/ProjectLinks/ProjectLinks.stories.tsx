@@ -17,11 +17,16 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render GitHub', () => {
+    await step('Render GitHub link', () => {
       const repositoryLink = canvas.getByRole('link', {
         name: 'GitHub'
       })
       expect(repositoryLink).toHaveAttribute('href', '/repository-link')
+    })
+
+    await step('Render svg with aria-hidden', () => {
+      const svg = canvas.getByRole('img', { hidden: true })
+      expect(svg).toHaveAttribute('aria-hidden', 'true')
     })
   }
 }
@@ -39,6 +44,11 @@ export const WithStorybook: Story = {
       })
       expect(storybookLink).toHaveAttribute('href', '/storybook-link')
     })
+
+    await step('Render all svgs with aria-hidden', () => {
+      const svgs = canvas.getAllByRole('img', { hidden: true })
+      expect(svgs.length).toBe(2)
+    })
   }
 }
 
@@ -54,6 +64,11 @@ export const WithWebsite: Story = {
         name: 'Visualizar'
       })
       expect(projectLink).toHaveAttribute('href', '/project-link')
+    })
+
+    await step('Render all svgs with aria-hidden', () => {
+      const svgs = canvas.getAllByRole('img', { hidden: true })
+      expect(svgs.length).toBe(2)
     })
   }
 }

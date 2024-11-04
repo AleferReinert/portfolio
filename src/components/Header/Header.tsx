@@ -40,7 +40,6 @@ export function Header({ menu }: HeaderProps) {
           </div>
           <IoMenuOutline
             title='Abrir menu'
-            aria-label='Abrir menu'
             role='img'
             onClick={() => setShowMobileMenu(true)}
             className='size-9 text-primary-theme cursor-pointer md:hidden'
