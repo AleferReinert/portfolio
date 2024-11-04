@@ -11,8 +11,10 @@ const inter = Inter({
   display: 'swap'
 })
 
+const globalTitle = `Portfólio | ${about.name} - ${about.role}`
+
 export const metadata: Metadata = {
-  title: `Portfólio | ${about.name} - ${about.role}`
+  title: globalTitle
 }
 
 export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
@@ -29,22 +31,25 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             .toString()}
         />
         <meta name='theme-color' content={themes.dark.secondary} />
-
         <meta name='google-site-verification' content='01tG19FkhgIo8cteSWl6WUHYFYCeZywVTSJC6Ua5WGA' />
         <link rel='preconnect' href='https://vercel.live' />
+        <meta name='author' content={about.name} />
+        <link rel='canonical' href={about.websiteLink} />
 
         {/* Visualização de compartilhamento em redes sociais */}
-        <meta property='og:title' content={`Portfólio | ${about.name} - ${about.role}`} />
-        <meta name='author' content={about.name} />
+        <meta property='twitter:title' content={globalTitle} />
+        <meta property='twitter:description' content={about.googleDescription} />
+        <meta property='twitter:image' content={about.socialShareImg} />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='og:title' content={globalTitle} />
+        <meta property='og:site_name' content={globalTitle} />
         <meta property='og:description' content={about.googleDescription} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={about.websiteLink} />
         <meta property='og:image' content={about.socialShareImg} />
-        <meta name='og:image:alt' content='Imagem que mostra o site responsivo em um celular, tablet e notebook.' />
+        <meta property='og:image:alt' content='Imagem que mostra o site responsivo em um celular, tablet e notebook.' />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <link rel='canonical' href={about.websiteLink} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
