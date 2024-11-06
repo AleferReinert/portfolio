@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { about } from './content/layoutContent'
+import { about } from './content/about'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
