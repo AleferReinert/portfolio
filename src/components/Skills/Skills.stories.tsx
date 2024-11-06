@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import { skills } from 'app/content'
+import { skills } from 'app/content/skills'
 import { Skills } from './Skills'
 
 const meta: Meta<typeof Skills> = {

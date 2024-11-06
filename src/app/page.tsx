@@ -1,8 +1,13 @@
 'use client'
-import { about, certificates, menu, projects, skills, socials } from 'app/content'
 import { Header } from 'components/Header/Header'
 import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
+import { scrollToSection } from 'utils/scrollToSection'
+import { about } from './content/about'
+import { certificates } from './content/certificates'
+import { menu, socials } from './content/layoutContent'
+import { projects } from './content/projects'
+import { skills } from './content/skills'
 
 const DynamicAbout = dynamic(() => import('components/About/About').then((mod) => mod.About))
 const DynamicProjects = dynamic(() => import('components/Projects/Projects').then((mod) => mod.Projects))
@@ -13,12 +18,7 @@ const DynamicCertificates = dynamic(() =>
 const DynamicFooter = dynamic(() => import('components/Footer/Footer').then((mod) => mod.Footer))
 
 export default function Page() {
-  // Realiza o scroll para a seção correta ao atualizar a página
-  useEffect(() => {
-    const hash = window.location.hash
-    const offsetTop = document.getElementById(hash.replace('#', ''))?.offsetTop
-    window.scrollTo({ top: hash ? offsetTop : 0, behavior: 'instant' })
-  }, [])
+  useEffect(() => scrollToSection(), [])
 
   return (
     <>

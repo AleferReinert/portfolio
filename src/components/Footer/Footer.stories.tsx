@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
-import { about, socials } from 'app/content'
+import { about } from 'app/content/about'
+import { socials } from 'app/content/layoutContent'
 import { formatPhone } from 'utils/formatPhone'
 import { Footer } from './Footer'
 

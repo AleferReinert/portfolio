@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { projects } from 'app/content'
+import { projects } from 'app/content/projects'
 import { Filter } from './Filter'
 
 const meta: Meta<typeof Filter> = {

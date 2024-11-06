@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import { menu } from 'app/content'
+import { menu } from 'app/content/layoutContent'
 import { NavMenu } from './NavMenu'
 
 const meta: Meta<typeof NavMenu> = {

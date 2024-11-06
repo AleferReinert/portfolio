@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import { certificates } from 'app/content'
+import { certificates } from 'app/content/certificates'
 import { Certificates } from './Certificates'
 
 const meta: Meta<typeof Certificates> = {
