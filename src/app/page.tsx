@@ -1,12 +1,16 @@
 'use client'
 import { about, certificates, menu, projects, skills, socials } from 'app/content'
-import { About } from 'components/About/About'
-import { Certificates } from 'components/Certificates/Certificates'
-import { Footer } from 'components/Footer/Footer'
 import { Header } from 'components/Header/Header'
-import { Projects } from 'components/Projects/Projects'
-import { Skills } from 'components/Skills/Skills'
+import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
+
+const DynamicAbout = dynamic(() => import('components/About/About').then((mod) => mod.About))
+const DynamicProjects = dynamic(() => import('components/Projects/Projects').then((mod) => mod.Projects))
+const DynamicSkills = dynamic(() => import('components/Skills/Skills').then((mod) => mod.Skills))
+const DynamicCertificates = dynamic(() =>
+  import('components/Certificates/Certificates').then((mod) => mod.Certificates)
+)
+const DynamicFooter = dynamic(() => import('components/Footer/Footer').then((mod) => mod.Footer))
 
 export default function Page() {
   // Realiza o scroll para a seção correta ao atualizar a página
@@ -20,12 +24,12 @@ export default function Page() {
     <>
       <Header menu={menu} />
       <main>
-        <About {...about} />
-        <Projects projects={projects} />
-        <Skills skills={skills} />
-        <Certificates certificates={certificates} />
+        <DynamicAbout {...about} />
+        <DynamicProjects projects={projects} />
+        <DynamicSkills skills={skills} />
+        <DynamicCertificates certificates={certificates} />
       </main>
-      <Footer phone={about.phone} email={about.email} socials={socials} />
+      <DynamicFooter phone={about.phone} email={about.email} socials={socials} />
     </>
   )
 }

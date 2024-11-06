@@ -18,7 +18,7 @@ export const Default: Story = {
   name: 'Projects',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const ProjectComponents = canvas.getAllByTestId('ProjectComponent')
+    const ProjectComponents = await waitFor(() => canvas.getAllByTestId('ProjectComponent'))
     const FilterComponent = canvas.getByTestId('FilterComponent')
     const filterButton = canvas.getByRole('button', { name: 'Exibir filtros' })
 

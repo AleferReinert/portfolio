@@ -2,9 +2,11 @@
 import { Container } from 'components/Container/Container'
 import { Filter } from 'components/Filter/Filter'
 import { Heading } from 'components/Heading/Heading'
-import { Project, ProjectProps } from 'components/Project/Project'
+import { ProjectProps } from 'components/Project/Project'
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { IoFilter } from 'react-icons/io5'
+const DynamicProject = dynamic(() => import('components/Project/Project').then((mod) => mod.Project))
 
 interface ProjectsProps {
   projects: Omit<ProjectProps, 'index'>[]
@@ -54,7 +56,7 @@ export function Projects({ projects }: ProjectsProps) {
           <ul className='flex flex-col gap-6'>
             {filteredProjects.map((project, index) => {
               project.lazy = index === 0 || false // Desativa lazy loading para o primeiro elemento
-              return <Project key={index} {...project} index={index} />
+              return <DynamicProject key={index} {...project} index={index} />
             })}
           </ul>
         ) : (
