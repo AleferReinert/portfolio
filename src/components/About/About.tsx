@@ -1,11 +1,12 @@
 import { Container } from 'components/Container/Container'
 import * as motion from 'framer-motion/client'
+import { ReactNode } from 'react'
 import { globalMotion } from '../../utils/motion'
 
 export interface AboutProps {
   name: string
   role: string
-  description: string
+  description: ReactNode
   googleDescription: string
   websiteLink: string
   email: string
@@ -54,8 +55,9 @@ export function About({ name, role, description }: AboutProps) {
           <p
             className={`[&>span>strong]:inline [&>span>strong]:text-primary-theme [&>span>strong]:font-medium 
 						md:text-center md:max-w-screen-md md:mt-2 md:mx-auto md:[&>span]:block md:[&>span+br]:hidden`}
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
+          >
+            {description}
+          </p>
         </motion.div>
       </Container>
     </section>
