@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
-import { about } from 'app/content/about'
+import { about } from 'app/content'
 import { About } from './About'
 
 const meta: Meta<typeof About> = {

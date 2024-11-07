@@ -3,11 +3,7 @@ import { Header } from 'components/Header/Header'
 import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
 import { scrollToSection } from 'utils/scrollToSection'
-import { about } from './content/about'
-import { certificates } from './content/certificates'
-import { menu, socials } from './content/layoutContent'
-import { projects } from './content/projects'
-import { skills } from './content/skills'
+import { about, certificates, menu, projects, skills, socials } from './content'
 
 const DynamicAbout = dynamic(() => import('components/About/About').then((mod) => mod.About))
 const DynamicProjects = dynamic(() => import('components/Projects/Projects').then((mod) => mod.Projects))

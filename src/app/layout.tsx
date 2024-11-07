@@ -3,8 +3,7 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import { themes } from '../../tailwind.config'
-import { about } from './content/about'
-import { skills } from './content/skills'
+import { about, skills } from './content'
 import './globals.css'
 
 const inter = Inter({
