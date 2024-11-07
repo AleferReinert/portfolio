@@ -43,8 +43,8 @@ export const about: AboutProps = {
       desempenho, acessibilidade e experiência do usuário. <br />
       Minhas principais habilidades incluem:
       <span>
-        <strong>React</strong>,<strong>Next.js</strong>,<strong>TypeScript</strong>,<strong>Tailwind</strong>,
-        <strong>Storybook</strong> e <strong>Testing Library</strong>.
+        <strong> React</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Tailwind</strong>,
+        <strong> Storybook</strong> e <strong>Testing Library</strong>.
       </span>
     </>
   )
