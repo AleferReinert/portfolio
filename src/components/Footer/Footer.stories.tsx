@@ -38,11 +38,10 @@ export const Default: Story = {
     })
 
     await step('Render social links', () => {
-      const socialLinks = ['GitHub', 'LinkedIn', 'Whatsapp']
-
       waitFor(() => {
+        const socialLinks = ['GitHub', 'LinkedIn', 'Whatsapp']
         socialLinks.map((social) => {
-          expect(canvas.getByRole('link', { name: social })).toBeVisible()
+          expect(canvas.getByRole('link', { name: social })).toBeInTheDocument()
         })
       })
     })

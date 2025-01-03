@@ -94,6 +94,12 @@ export const certificates: Omit<CertificateProps, 'index'>[] = [
     link: 'https://drive.google.com/file/d/14vRBD2eydc9Q2aixTQ6HMy24481nVMLb/view'
   },
   {
+    title: 'Inglês 1',
+    organization: 'Aprenda Mais',
+    conclusionDate: 'Abril/2024',
+    link: 'https://drive.google.com/file/d/1japK7LL_tyYhLcgY1EEutDE8_RXmEKfe/view'
+  },
+  {
     title: 'Trilha fluêncIA',
     organization: 'ENAP',
     conclusionDate: 'Abril/2024',
