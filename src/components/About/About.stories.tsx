@@ -25,6 +25,12 @@ export const Mobile: Story = {
       expect(heading).toHaveTextContent(about.role)
     })
 
+    await step('Render resume link button', () => {
+      const resumeLink = canvas.getByRole('link', { name: 'Visualizar CV' })
+      expect(resumeLink).toHaveAttribute('href', about.resumeLink)
+      expect(resumeLink).toHaveAttribute('target', '_blank')
+    })
+
     await step('Render description', () => {
       const description = canvas.getByRole('paragraph')
       expect(description).toBeInTheDocument()

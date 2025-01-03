@@ -10,8 +10,8 @@ interface ProjectLinksProps {
 }
 
 export function ProjectLinks({ repositoryLink, storybookLink, projectLink, index }: ProjectLinksProps) {
-  const linkStyles = 'group hover:text-primary-theme'
-  const svgStyles = 'size-7 transition ease-linear group-hover:animate-rotateFrom180'
+  const linkStyles = 'group/project-link hover:text-primary-theme'
+  const svgStyles = 'size-7 transition ease-linear group-hover/project-link:animate-rotateFrom180'
   const isEven = index % 2 === 0
 
   return (

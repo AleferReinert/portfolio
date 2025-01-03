@@ -37,7 +37,7 @@ export function Projects({ projects }: ProjectsProps) {
               onClick={() => setShowFilters(!showFilters)}
             >
               <IoFilter
-                className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme '}`}
+                className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme transition hover:fill-primary-theme'}`}
               />
             </button>
           </div>

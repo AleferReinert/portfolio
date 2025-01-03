@@ -10,6 +10,7 @@ export const globalMotion = {
       firstLine: delayInterval * 2,
       name: 0,
       role: delayInterval * 1,
+      resumeLink: delayInterval * 3,
       description: 0
     },
     firstHeading: delayInterval * 2,
@@ -40,6 +41,9 @@ export const globalMotion = {
     maxWidth: {
       opacity: 0,
       maxWidth: 0
+    },
+    opacity: {
+      opacity: 0
     }
   },
   animate: {
@@ -58,6 +62,9 @@ export const globalMotion = {
     maxWidth: {
       opacity: 1,
       maxWidth: '100%'
+    },
+    opacity: {
+      opacity: 1
     }
   }
 }
