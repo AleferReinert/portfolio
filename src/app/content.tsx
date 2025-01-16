@@ -176,11 +176,22 @@ export const certificates: Omit<CertificateProps, 'index'>[] = [
 
 export const projects: Omit<ProjectProps, 'index'>[] = [
   {
+    slug: 'advice-health',
+    title: 'Advice Health',
+    year: '2025',
+    shortDescription: `Aplicação web para consultório médico, desenvolvida como parte de um processo seletivo. Permite agendar consultas, gerenciar pacientes e visualizar dados financeiros e estatísticos do dia.`,
+    skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary',
+    projectLink: 'https://advicehealth.vercel.app',
+    repositoryLink: 'https://github.com/AleferReinert/advice-health',
+    storybookLink: 'https://main--67620d8560ad19d1f017f00f.chromatic.com',
+    img: '/projects/advice-health.webp'
+  },
+  {
     slug: 'impacta-tecnologia',
     title: 'Impacta Tecnologia',
     year: '2024',
     shortDescription: `Website institucional para uma empresa de tecnologia, destacando seus serviços e soluções personalizadas, com uma interface intuitiva e gerenciamento de conteúdo via CMS.`,
-    skills: 'Next.js TypeScript Tailwind Storybook Strapi Apollo GraphQL',
+    skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary Strapi Apollo GraphQL',
     projectLink: 'https://impacta-tecnologia.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/impacta-tecnologia',
     storybookLink: 'https://670946a91c483c5167ccb017-xrgkkrbcaz.chromatic.com',

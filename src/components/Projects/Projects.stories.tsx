@@ -56,7 +56,7 @@ export const Default: Story = {
       await waitFor(() => {
         expect(FilterComponent).not.toHaveStyle({ 'max-height': '0' })
         expect(skillsChecked.length).toBe(0)
-        expect(canvas.getByText('Exibindo 8 de 8 projetos.')).toBeVisible()
+        expect(canvas.getByText('Exibindo 9 de 9 projetos.')).toBeVisible()
         expect(clearButton).not.toBeInTheDocument()
         expect(filterButton).toHaveAttribute('title', 'Ocultar filtros')
       })
@@ -68,7 +68,7 @@ export const Default: Story = {
       userEvent.click(tailwindSkill)
       waitFor(() => {
         expect(tailwindSkill).toBeChecked()
-        expect(canvas.getByText('Exibindo 5 de 8 projetos.')).toBeVisible()
+        expect(canvas.getByText('Exibindo 6 de 9 projetos.')).toBeVisible()
       })
     })
 
@@ -78,7 +78,7 @@ export const Default: Story = {
       userEvent.click(storybookSkill)
       waitFor(() => {
         expect(storybookSkill).toBeChecked()
-        expect(canvas.getByText('Exibindo 2 de 8 projetos.')).toBeVisible()
+        expect(canvas.getByText('Exibindo 3 de 9 projetos.')).toBeVisible()
       })
     })
 
@@ -88,7 +88,7 @@ export const Default: Story = {
       userEvent.click(gulpkSkill)
       waitFor(() => {
         expect(gulpkSkill).toBeChecked()
-        expect(canvas.getByText('Exibindo 0 de 8 projetos.')).toBeVisible()
+        expect(canvas.getByText('Exibindo 0 de 9 projetos.')).toBeVisible()
       })
     })
 
