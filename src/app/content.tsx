@@ -53,6 +53,12 @@ export const about: AboutProps = {
 
 export const certificates: Omit<CertificateProps, 'index'>[] = [
   {
+    title: 'Inteligência emocional 4.0',
+    organization: 'Conquer',
+    conclusionDate: 'Fevereiro/2025',
+    link: 'https://drive.google.com/file/d/1HdkhbWRRVHxA-tiMK2wLG8wUe3cXwLyA/view'
+  },
+  {
     title: 'Inteligência Emocional na Prática',
     organization: 'Fundação Estudar',
     conclusionDate: 'Outubro/2024',
@@ -179,7 +185,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     slug: 'advice-health',
     title: 'Advice Health',
     year: '2025',
-    shortDescription: `Aplicação web para consultório médico, desenvolvida como parte de um processo seletivo. Permite agendar consultas, gerenciar pacientes e visualizar dados financeiros e estatísticos do dia.`,
+    shortDescription: `Aplicação web para consultório médico, desenvolvido como parte de um processo seletivo. Permite agendar consultas, gerenciar pacientes e visualizar dados financeiros e estatísticos do dia.`,
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary',
     projectLink: 'https://advicehealth.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/advice-health',
