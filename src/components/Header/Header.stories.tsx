@@ -1,13 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, userEvent, waitFor, within } from '@storybook/test'
-import { menu } from 'app/content'
+import { menu, socials } from 'app/content'
 import { Header } from './Header'
 
 const meta: Meta<typeof Header> = {
   title: 'Components/Header',
   component: Header,
   args: {
-    menu: menu
+    menu: menu,
+    github: socials[0]
   }
 }
 
@@ -51,6 +52,11 @@ export const Mobile: Story = {
         expect(MenuMobileComponent).not.toBeVisible()
       })
     })
+
+    await step('GitHub hidden', () => {
+      const githubLink = canvas.queryByRole('link', { name: socials[0].name })
+      expect(githubLink).not.toBeVisible()
+    })
   }
 }
 
@@ -77,6 +83,16 @@ export const Desktop: Story = {
         { timeout: 2000 }
       )
       expect(NavMenuComponent[1]).not.toBeVisible()
+    })
+
+    await step('GitHub', () => {
+      const githubLink = canvas.getByRole('link', { name: socials[0].name })
+      const githubIcon = canvas.getByRole('img')
+
+      waitFor(() => {
+        expect(githubLink).toHaveAttribute('href', socials[0].link)
+        expect(githubIcon).toBeVisible()
+      })
     })
   }
 }

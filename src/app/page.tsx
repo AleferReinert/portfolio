@@ -18,7 +18,7 @@ export default function Page() {
 
   return (
     <>
-      <Header menu={menu} />
+      <Header menu={menu} github={socials[0]} />
       <main>
         <DynamicAbout {...about} />
         <DynamicProjects projects={projects} />

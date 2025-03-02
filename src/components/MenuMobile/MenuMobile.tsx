@@ -1,11 +1,8 @@
-import { NavMenu, NavMenuItemProps } from 'components/NavMenu/NavMenu'
-import type { Dispatch, SetStateAction } from 'react'
+import { NavMenu, NavMenuProps } from 'components/NavMenu/NavMenu'
 import { IoCloseOutline } from 'react-icons/io5'
 
-export interface MenuMobileProps {
+export interface MenuMobileProps extends NavMenuProps {
   showMobileMenu: boolean
-  setShowMobileMenu: Dispatch<SetStateAction<boolean>>
-  menu: NavMenuItemProps[]
 }
 
 export function MenuMobile({ showMobileMenu, setShowMobileMenu, menu }: MenuMobileProps) {

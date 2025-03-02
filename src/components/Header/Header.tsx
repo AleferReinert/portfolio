@@ -1,7 +1,7 @@
 'use client'
 import { Container } from 'components/Container/Container'
 import { MenuMobile } from 'components/MenuMobile/MenuMobile'
-import { NavMenu, NavMenuItemProps } from 'components/NavMenu/NavMenu'
+import { NavMenu, NavMenuProps } from 'components/NavMenu/NavMenu'
 import { Switch } from 'components/Switch/Switch'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -9,11 +9,9 @@ import { IoMenuOutline } from 'react-icons/io5'
 import { useFixedHeader } from 'utils/scrollHeader'
 import { globalMotion } from '../../utils/motion'
 
-interface HeaderProps {
-  menu: NavMenuItemProps[]
-}
+interface HeaderProps extends Pick<NavMenuProps, 'menu' | 'github'> {}
 
-export function Header({ menu }: HeaderProps) {
+export function Header({ menu, github }: HeaderProps) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const fixedHeader = useFixedHeader()
 
@@ -36,7 +34,7 @@ export function Header({ menu }: HeaderProps) {
             <Switch />
           </div>
           <div className='hidden md:flex'>
-            <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
+            <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} github={github} />
           </div>
           <IoMenuOutline
             title='Abrir menu'
@@ -47,7 +45,7 @@ export function Header({ menu }: HeaderProps) {
         </Container>
       </div>
 
-      <MenuMobile menu={menu} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu} />
+      <MenuMobile menu={menu} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu} github={github} />
     </motion.header>
   )
 }
