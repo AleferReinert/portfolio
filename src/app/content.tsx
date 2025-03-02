@@ -198,6 +198,17 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/betalent.webp'
   },
   {
+    slug: 'devstage',
+    title: 'DevStage',
+    year: '2025',
+    shortDescription: `Website de inscrição e indicação para eventos. Desenvolvido através do NLW Connect da Rocketseat na trilha React.`,
+    skills: 'Next.js TypeScript Tailwind Storybook',
+    projectLink: 'https://devstage-nlw-connect.vercel.app',
+    repositoryLink: 'https://github.com/AleferReinert/devstage',
+    storybookLink: 'https://67c3a6b77510efaa57103f96-qlbzemaenb.chromatic.com',
+    img: '/projects/devstage.webp'
+  },
+  {
     slug: 'advice-health',
     title: 'Advice Health',
     year: '2025',
