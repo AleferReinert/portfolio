@@ -68,7 +68,7 @@ export const Default: Story = {
       userEvent.click(tailwindSkill)
       waitFor(() => {
         expect(tailwindSkill).toBeChecked()
-        expect(canvas.getByText(`Exibindo 8 de ${projects.length} projetos.`)).toBeVisible()
+        expect(canvas.getByText(`Exibindo 9 de ${projects.length} projetos.`)).toBeVisible()
       })
     })
 
@@ -78,7 +78,7 @@ export const Default: Story = {
       userEvent.click(storybookSkill)
       waitFor(() => {
         expect(storybookSkill).toBeChecked()
-        expect(canvas.getByText(`Exibindo 4 de ${projects.length} projetos.`)).toBeVisible()
+        expect(canvas.getByText(`Exibindo 5 de ${projects.length} projetos.`)).toBeVisible()
       })
     })
 

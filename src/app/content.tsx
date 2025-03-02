@@ -205,7 +205,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'Next.js TypeScript Tailwind Storybook',
     projectLink: 'https://devstage-nlw-connect.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/devstage',
-    storybookLink: 'https://67c3a6b77510efaa57103f96-qlbzemaenb.chromatic.com',
+    storybookLink: 'https://main--67c3a6b77510efaa57103f96.chromatic.com',
     img: '/projects/devstage.webp'
   },
   {
@@ -220,6 +220,17 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/advice-health.webp'
   },
   {
+    slug: 'debbifit',
+    title: 'DebbiFit',
+    year: '2024',
+    shortDescription: `Website de consultoria fitness online que oferece acompanhamento personalizado, dicas de treino e orientações para uma vida mais saudável.`,
+    skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary Strapi Apollo GraphQL',
+    projectLink: 'https://debbifit.vercel.app',
+    repositoryLink: 'https://github.com/AleferReinert/debbifit',
+    storybookLink: 'https://main--67c3ae790f8abf6d4f9b019f.chromatic.com',
+    img: '/projects/debbifit.webp'
+  },
+  {
     slug: 'impacta-tecnologia',
     title: 'Impacta Tecnologia',
     year: '2024',
@@ -227,7 +238,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary Strapi Apollo GraphQL',
     projectLink: 'https://impacta-tecnologia.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/impacta-tecnologia',
-    storybookLink: 'https://670946a91c483c5167ccb017-xrgkkrbcaz.chromatic.com',
+    storybookLink: 'https://main--670946a91c483c5167ccb017.chromatic.com',
     img: '/projects/impacta-tecnologia.webp'
   },
   {
@@ -284,7 +295,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     shortDescription: 'Confira o processo de criação deste portfólio.',
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary FramerMotion',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
-    storybookLink: 'https://64cd32980293c902cb6e27ce-alwameemnu.chromatic.com',
+    storybookLink: 'https://main--64cd32980293c902cb6e27ce.chromatic.com',
     img: '/projects/portfolio.webp'
   },
   {
