@@ -33,7 +33,7 @@ export function Filter({
   return (
     <div
       data-testid='FilterComponent'
-      className={`transition-all duration-500 overflow-hidden ${showFilters ? 'max-h-[352px] md:max-h-60 xl:max-h-48' : 'max-h-0'}`}
+      className={`transition-all duration-500 overflow-hidden ${showFilters ? 'max-h-[376px] md:max-h-[232px] lg:max-h-[208px] xl:max-h-[192px]' : 'max-h-0'}`}
     >
       <div className='mb-6'>
         <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
@@ -66,7 +66,7 @@ export function Filter({
           })}
         </ul>
 
-        <div className='flex justify-between overflow-hidden transition-all py-6 text-sm'>
+        <div className='flex justify-between overflow-hidden transition-all pt-6 text-sm'>
           <p>{`Exibindo ${filteredProjects.length} de ${projects.length} projetos.`}</p>
           <button
             disabled={selectedSkills.length === 0}

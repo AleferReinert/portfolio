@@ -53,6 +53,12 @@ export const about: AboutProps = {
 
 export const certificates: Omit<CertificateProps, 'index'>[] = [
   {
+    title: 'NLW Connect - React',
+    organization: 'Rocketseat',
+    conclusionDate: 'Fevereiro/2025',
+    link: 'https://drive.google.com/file/d/1JYpvGgBnImhIa972afeYbnCjYaNhYkaK/view'
+  },
+  {
     title: 'Inteligência emocional 4.0',
     organization: 'Conquer',
     conclusionDate: 'Fevereiro/2025',
@@ -181,6 +187,16 @@ export const certificates: Omit<CertificateProps, 'index'>[] = [
 ]
 
 export const projects: Omit<ProjectProps, 'index'>[] = [
+  {
+    slug: 'betalent',
+    title: 'BeTalent',
+    year: '2025',
+    shortDescription: `Teste técnico para front-End da BeTalent. Consiste em construir a visualização de uma tabela com dados que virão de uma API simulada, em json-server.`,
+    skills: 'React TypeScript Tailwind JSONServer',
+    projectLink: 'https://betalent.netlify.app',
+    repositoryLink: 'https://github.com/AleferReinert/betalent',
+    img: '/projects/betalent.webp'
+  },
   {
     slug: 'advice-health',
     title: 'Advice Health',
