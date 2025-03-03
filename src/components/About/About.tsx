@@ -67,7 +67,7 @@ export function About({ name, role, description, resumeLink }: AboutProps) {
           <h2 className='hidden text-xl font-bold text-center md:block'>Sobre mim</h2>
           <p
             className={`[&>span>strong]:inline [&>span>strong]:text-primary-theme [&>span>strong]:font-medium 
-						md:text-center md:max-w-screen-md md:mt-2 md:mx-auto md:[&>span]:block md:[&>span+br]:hidden`}
+						md:text-center md:max-w-(--breakpoint-md) md:mt-2 md:mx-auto md:[&>span]:block md:[&>span+br]:hidden`}
           >
             {description}
           </p>

@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@config '../../tailwind.config.ts';
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 body {
   @apply antialiased overflow-x-hidden tracking-wide leading-normal font-light text-paragraph-theme bg-secondary-theme;
@@ -10,7 +19,7 @@ a:focus-visible,
 button:focus,
 button:focus-visible,
 svg:focus {
-  @apply outline-none;
+  @apply outline-hidden;
 }
 
 ::selection {

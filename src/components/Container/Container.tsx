@@ -6,7 +6,7 @@ interface ContainerProps extends ComponentProps<'div'> {
 }
 
 export function Container({ children, fluid = false, ...rest }: ContainerProps) {
-  const containerStyles = `px-4 md:px-6 mx-auto ${fluid ? '' : 'max-w-screen-lg'}`
+  const containerStyles = `px-4 md:px-6 mx-auto ${fluid ? '' : 'max-w-(--breakpoint-lg)'}`
 
   return (
     <div {...rest} className={`${containerStyles} ${rest.className || ''}`}>
