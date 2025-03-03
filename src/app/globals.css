@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@config '../../tailwind.config.ts';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   *,
@@ -8,6 +8,10 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 }
 
@@ -28,4 +32,77 @@ svg:focus {
 
 li {
   @apply list-none;
+}
+
+@utility primary-theme {
+  @apply bg-red-500 text-red-50;
+}
+
+@theme {
+  /* Theme light here and theme dark in .dark bellow */
+  --color-primary-theme: var(--color-cyan-950);
+  --color-secondary-theme: var(--color-slate-50);
+  --color-heading-theme: var(--color-slate-800);
+  --color-paragraph-theme: var(--color-slate-700);
+
+  --animate-rotateFrom180: rotateFrom180 0.25s;
+  --animate-wheelInIcon: wheelInIcon 2s infinite;
+  --animate-wheelInText: wheelInText 2s infinite 1s;
+
+  @keyframes rotateFrom180 {
+    from {
+      transform: rotateY(-180deg);
+    }
+    to {
+      transform: rotateY(0);
+    }
+  }
+
+  @keyframes wheelInIcon {
+    0% {
+      opacity: 0;
+      top: 90%;
+      transform: scale(0.25);
+    }
+    50% {
+      opacity: 1;
+      top: 60%;
+      transform: scale(1.35);
+    }
+    100% {
+      opacity: 0;
+      top: 10%;
+      transform: scale(0.25);
+    }
+  }
+
+  @keyframes wheelInText {
+    0% {
+      opacity: 0;
+      top: 90%;
+      font-size: 0.5rem;
+    }
+    35% {
+      opacity: 1;
+      top: 50%;
+      font-size: 1rem;
+    }
+    50% {
+      opacity: 1;
+      top: 50%;
+      font-size: 1rem;
+    }
+    100% {
+      opacity: 0;
+      top: 10%;
+      font-size: 0.5rem;
+    }
+  }
+}
+
+.dark {
+  --color-primary-theme: var(--color-green-400);
+  --color-secondary-theme: var(--color-cyan-950);
+  --color-heading-theme: var(--color-slate-50);
+  --color-paragraph-theme: var(--color-slate-300);
 }

@@ -30,7 +30,7 @@ export function About({ name, role, description, resumeLink }: AboutProps) {
           </motion.div>
           <h1 className='flex flex-col'>
             <motion.span
-              className='text-[2.75rem] text-heading-theme font-black leading-snug md:text-6xl'
+              className='text-[2.75rem]/[3.75rem] text-heading-theme font-black md:text-6xl'
               initial={{ ...globalMotion.initial.fromLeft }}
               animate={{ ...globalMotion.animate.horizontal }}
               transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.name }}
@@ -41,7 +41,7 @@ export function About({ name, role, description, resumeLink }: AboutProps) {
               initial={{ ...globalMotion.initial.fromLeft }}
               animate={{ ...globalMotion.animate.horizontal }}
               transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.role }}
-              className='text-paragraph-theme leading-none font-bold md:text-lg'
+              className='text-paragraph-theme leading-none font-bold md:text-lg/[1.75rem]'
             >
               {role}
             </motion.span>

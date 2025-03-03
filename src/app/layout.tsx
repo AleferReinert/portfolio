@@ -2,7 +2,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
-import { themes } from '../../tailwind.config'
+// import { themes } from '../../tailwind.config'
 import { about, skills } from './content'
 import './globals.css'
 
@@ -31,7 +31,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             .join(', ')
             .toString()}
         />
-        <meta name='theme-color' content={themes.dark.secondary} />
+        <meta name='theme-color' content='#083344' />
         <meta name='google-site-verification' content='01tG19FkhgIo8cteSWl6WUHYFYCeZywVTSJC6Ua5WGA' />
         <link rel='preconnect' href='https://vercel.live' />
         <meta name='author' content={about.name} />

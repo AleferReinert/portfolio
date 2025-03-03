@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { themes } from '../../../tailwind.config'
 
 export function Switch() {
   const [theme, setTheme] = useState<'dark' | undefined>('dark')
@@ -8,7 +7,7 @@ export function Switch() {
   useEffect(() => {
     const htmlTag = document.documentElement
     const themeMetaTag = document.querySelector("meta[name='theme-color']")
-    const newTheme = isDarkTheme ? themes.dark.secondary : themes.light.secondary
+    const newTheme = isDarkTheme ? '#083344' : '#f8fafc'
 
     themeMetaTag?.setAttribute('content', newTheme)
     htmlTag.classList[isDarkTheme ? 'add' : 'remove']('dark')
