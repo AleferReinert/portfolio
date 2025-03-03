@@ -29,7 +29,12 @@ export function NavMenu({ menu, setShowMobileMenu, github }: NavMenuProps) {
         </Link>
       ))}
       {github && (
-        <a title={github.name} href={github.link} className='transition hover:text-primary-theme hidden md:inline'>
+        <a
+          title={github.name}
+          href={github.link}
+          target='_blank'
+          className='transition hover:text-primary-theme hidden md:inline'
+        >
           <SiGithub size={24} />
         </a>
       )}
