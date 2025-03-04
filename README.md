@@ -16,7 +16,14 @@ Meu portfólio de desenvolvedor front-end.
    ```
     npm install
    ```
-4. Inicie o servidor de desenvolvimento:
+4. Configure as variaveis de ambiente como em `.env.example`.
+
+   ```
+   //.env
+   CHROMATIC_PROJECT_TOKEN=tobemodified
+   ```
+
+5. Inicie o servidor de desenvolvimento:
 
    ```
    npm run dev
@@ -38,18 +45,17 @@ Meu portfólio de desenvolvedor front-end.
    git commit
    ```
 
-### Storybook
+### Iniciar Storybook
 
-1. Iniciar:
+```
+npm run storybook
+```
 
-   ```
-   npm run storybook
-   ```
+### Executar testes
 
-2. Executar testes:
-   ```
-   npm run test --watch
-   ```
+```
+npm run test --watch
+```
 
 ### Lint
 
@@ -61,6 +67,12 @@ npm run lint
 
 ```
 npm run plop
+```
+
+### Publicar Storybook
+
+```
+npm run chromatic
 ```
 
 ## Tecnologias Utilizadas

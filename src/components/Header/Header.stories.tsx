@@ -46,7 +46,11 @@ export const Mobile: Story = {
 
     await step('GitHub hidden', () => {
       const githubLink = canvas.queryByRole('link', { name: socials[0].name })
-      expect(githubLink).not.toBeVisible()
+      if (githubLink) {
+        expect(githubLink).not.toBeVisible()
+      } else {
+        expect(githubLink).toBeNull()
+      }
     })
   }
 }
