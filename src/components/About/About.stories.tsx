@@ -6,16 +6,15 @@ import { About } from './About'
 const meta: Meta<typeof About> = {
   title: 'Components/About',
   component: About,
-  args: about
+  args: about,
+  parameters: { layout: 'fullscreen' }
 }
 
 export default meta
 type Story = StoryObj<typeof About>
 
 export const Mobile: Story = {
-  parameters: {
-    viewport: { defaultViewport: 'xs' }
-  },
+  parameters: { viewport: { defaultViewport: 'xs' } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
@@ -38,11 +37,7 @@ export const Mobile: Story = {
 
     await step('Not render subtitle', () => {
       waitFor(() => {
-        const subtitle = canvas.queryByRole('heading', {
-          name: 'Sobre mim',
-          level: 2,
-          hidden: true
-        })
+        const subtitle = canvas.queryByRole('heading', { name: 'Sobre mim', level: 2, hidden: true })
         expect(subtitle).not.toBeInTheDocument()
       })
     })
@@ -55,10 +50,7 @@ export const Desktop: Story = {
 
     await step('Render subtitle', () => {
       waitFor(() => {
-        const subtitle = canvas.getByRole('heading', {
-          level: 2,
-          name: /sobre mim/i
-        })
+        const subtitle = canvas.getByRole('heading', { level: 2, name: /sobre mim/i })
         expect(subtitle).toBeVisible()
       })
     })

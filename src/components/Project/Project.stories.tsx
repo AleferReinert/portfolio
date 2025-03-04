@@ -8,14 +8,15 @@ const lastProject = projects.at(-1)
 const meta: Meta<typeof Project> = {
   title: 'Components/Project',
   component: Project,
-  args: {
-    ...lastProject
-  },
-  argTypes: {
-    lazy: {
-      table: { disable: true }
-    }
-  }
+  args: { ...lastProject },
+  argTypes: { lazy: { table: { disable: true } } },
+  decorators: [
+    (Story) => (
+      <div className='p-4'>
+        <Story />
+      </div>
+    )
+  ]
 }
 
 export default meta

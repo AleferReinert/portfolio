@@ -6,21 +6,15 @@ import { Header } from './Header'
 const meta: Meta<typeof Header> = {
   title: 'Components/Header',
   component: Header,
-  args: {
-    menu: menu,
-    github: socials[0]
-  }
+  args: { menu: menu, github: socials[0] },
+  parameters: { layout: 'fullscreen' }
 }
 
 export default meta
 type Story = StoryObj<typeof Header>
 
 export const Mobile: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: 'xs'
-    }
-  },
+  parameters: { viewport: { defaultViewport: 'xs' } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const openMenuButton = canvas.getByTitle('Abrir menu')
@@ -39,10 +33,7 @@ export const Mobile: Story = {
       userEvent.click(openMenuButton)
 
       await waitFor(() => {
-        expect(MenuMobileComponent).toHaveStyle({
-          opacity: '1',
-          'pointer-events': 'auto'
-        })
+        expect(MenuMobileComponent).toHaveStyle({ opacity: '1', 'pointer-events': 'auto' })
       })
     })
 
@@ -61,11 +52,7 @@ export const Mobile: Story = {
 }
 
 export const Desktop: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: 'responsive'
-    }
-  },
+  parameters: { viewport: { defaultViewport: 'responsive' } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

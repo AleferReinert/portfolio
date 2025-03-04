@@ -6,9 +6,8 @@ import { Certificates } from './Certificates'
 const meta: Meta<typeof Certificates> = {
   title: 'Components/Certificates',
   component: Certificates,
-  args: {
-    certificates: certificates
-  }
+  args: { certificates: certificates },
+  parameters: { layout: 'fullscreen' }
 }
 
 export default meta

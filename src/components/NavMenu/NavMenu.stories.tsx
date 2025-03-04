@@ -3,13 +3,7 @@ import { expect, within } from '@storybook/test'
 import { menu, socials } from 'app/content'
 import { NavMenu } from './NavMenu'
 
-const meta: Meta<typeof NavMenu> = {
-  title: 'Components/NavMenu',
-  component: NavMenu,
-  args: {
-    menu: menu
-  }
-}
+const meta: Meta<typeof NavMenu> = { title: 'Components/NavMenu', component: NavMenu, args: { menu: menu } }
 
 export default meta
 type Story = StoryObj<typeof NavMenu>
@@ -32,9 +26,7 @@ export const Default: Story = {
 }
 
 export const WithGithub: Story = {
-  args: {
-    github: socials[0]
-  },
+  args: { github: socials[0] },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

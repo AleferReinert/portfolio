@@ -1,6 +1,6 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
-import { ComponentProps, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
+import { ComponentProps, ReactElement, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
 import { globalMotion } from 'utils/motion'
 
 export interface HeadingProps extends ComponentProps<'h2'> {
@@ -15,7 +15,10 @@ export function Heading({ children }: HeadingProps) {
   // Verifica se é o primeiro componente da página (Projetos) para tratar animação
   useEffect(() => {
     if (isValidElement(children)) {
-      setIsFirst(children.props.children[0] === 'Projetos')
+      const element = children as ReactElement<{ children: ReactNode[] }>
+      if (Array.isArray(element.props.children) && typeof element.props.children[0] === 'string') {
+        setIsFirst(element.props.children[0] === 'Projetos')
+      }
     }
   }, [children])
 

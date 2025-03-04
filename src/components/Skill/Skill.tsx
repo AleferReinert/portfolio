@@ -1,11 +1,12 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
-import { cloneElement, useRef } from 'react'
+import { useRef } from 'react'
+import { IconType } from 'react-icons'
 import { globalMotion } from 'utils/motion'
 
 export interface SkillProps {
   title: string
-  icon: JSX.Element
+  icon: IconType
   shortTitle?: string
   index: number
 }
@@ -13,6 +14,7 @@ export interface SkillProps {
 export function Skill({ title, icon, shortTitle, index }: SkillProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const Icon = icon
 
   return (
     <motion.li
@@ -24,12 +26,11 @@ export function Skill({ title, icon, shortTitle, index }: SkillProps) {
       title={shortTitle ? title : undefined}
       className='group overflow-hidden aspect-94/87 sm:aspect-128/87 relative bg-black/5 dark:bg-black/25'
     >
-      {cloneElement(icon, {
-        'aria-hidden': 'true',
-        role: 'img',
-        className:
-          'size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 -translate-y-2 group-hover:animate-wheelInIcon'
-      })}
+      <Icon
+        aria-hidden
+        role='img'
+        className='size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 -translate-y-2 group-hover:animate-wheelInIcon'
+      />
       <div
         className='whitespace-nowrap text-[0.625rem] font-normal h-6 w-full text-center absolute top-1/2 
           mt-5 leading-none group-hover:animate-wheelInText group-hover:opacity-0 group-hover:-mt-2 group-hover:font-medium'

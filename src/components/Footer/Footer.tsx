@@ -3,14 +3,15 @@ import { AboutProps } from 'components/About/About'
 import { Container } from 'components/Container/Container'
 import { Heading } from 'components/Heading/Heading'
 import { motion, useInView } from 'framer-motion'
-import { cloneElement, useRef } from 'react'
+import { useRef } from 'react'
+import { IconType } from 'react-icons'
 import { formatPhone } from 'utils/formatPhone'
 import { globalMotion } from 'utils/motion'
 
 export interface SocialProps {
   name: string
   link: string
-  icon: JSX.Element
+  icon: IconType
 }
 
 interface FooterProps extends Pick<AboutProps, 'phone' | 'email'> {
@@ -41,6 +42,8 @@ export function Footer({ phone, email, socials }: FooterProps) {
           </p>
           <nav data-testid='social-component' className='inline-flex gap-5'>
             {socials.map((social, index) => {
+              const Icon = social.icon
+
               return (
                 <a
                   key={index}
@@ -49,12 +52,11 @@ export function Footer({ phone, email, socials }: FooterProps) {
                   target='_blank'
                   className='group flex relative transition-colors ease-linear hover:text-primary-theme'
                 >
-                  {/* <social.icon className='size-8 transition-all ease-linear sm:size-7 group-hover:animate-rotateFrom180' /> */}
-                  {cloneElement(social.icon, {
-                    'aria-label': social.name,
-                    role: 'img',
-                    className: 'size-8 transition-all ease-linear sm:size-7 group-hover:animate-rotateFrom180'
-                  })}
+                  <Icon
+                    role='img'
+                    aria-label={social.name}
+                    className='size-8 transition-all ease-linear sm:size-7 group-hover:animate-rotateFrom180'
+                  />
                 </a>
               )
             })}

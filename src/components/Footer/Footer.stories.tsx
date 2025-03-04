@@ -7,11 +7,8 @@ import { Footer } from './Footer'
 const meta: Meta<typeof Footer> = {
   title: 'Components/Footer',
   component: Footer,
-  args: {
-    phone: about.phone,
-    email: about.email,
-    socials: socials
-  }
+  args: { phone: about.phone, email: about.email, socials: socials },
+  parameters: { layout: 'fullscreen' }
 }
 
 export default meta
@@ -37,8 +34,8 @@ export const Default: Story = {
       expect(phone).toHaveAttribute('href', `mailto:${about.email}`)
     })
 
-    await step('Render social links', () => {
-      waitFor(() => {
+    await step('Render social links', async () => {
+      await waitFor(() => {
         const socialLinks = ['GitHub', 'LinkedIn', 'Whatsapp']
         socialLinks.map((social) => {
           expect(canvas.getByRole('link', { name: social })).toBeInTheDocument()

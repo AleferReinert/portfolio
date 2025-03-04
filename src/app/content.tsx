@@ -334,63 +334,36 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
 ]
 
 export const skills: Omit<SkillProps, 'index'>[] = [
-  { title: 'HTML5', icon: <SiHtml5 /> },
-  { title: 'CSS3', icon: <SiCss3 /> },
-  { title: 'JavaScript', icon: <SiJavascript /> },
-  { title: 'TypeScript', icon: <SiTypescript /> },
-  { title: 'React', icon: <SiReact /> },
-  { title: 'Next.js', icon: <SiNextdotjs /> },
-  { title: 'Tailwind', icon: <SiTailwindcss /> },
-  { title: 'StyledComponents', icon: <SiStyledcomponents />, shortTitle: 'CSSinJS' },
-  { title: 'Storybook', icon: <SiStorybook /> },
-  { title: 'TestingLibrary', icon: <SiTestinglibrary /> },
-  { title: 'Git', icon: <SiGit /> },
-  { title: 'Strapi', icon: <SiStrapi /> },
-  { title: 'GraphQL', icon: <SiGraphql /> },
-  { title: 'ApolloGraphQL', icon: <SiApollographql />, shortTitle: 'Apollo' },
-  { title: 'LESS', icon: <SiLess /> },
-  { title: 'Gulp', icon: <SiGulp /> },
-  { title: 'Figma', icon: <SiFigma /> },
-  { title: 'Photoshop', icon: <SiAdobephotoshop /> }
+  { title: 'HTML5', icon: SiHtml5 },
+  { title: 'CSS3', icon: SiCss3 },
+  { title: 'JavaScript', icon: SiJavascript },
+  { title: 'TypeScript', icon: SiTypescript },
+  { title: 'React', icon: SiReact },
+  { title: 'Next.js', icon: SiNextdotjs },
+  { title: 'Tailwind', icon: SiTailwindcss },
+  { title: 'StyledComponents', icon: SiStyledcomponents, shortTitle: 'CSSinJS' },
+  { title: 'Storybook', icon: SiStorybook },
+  { title: 'TestingLibrary', icon: SiTestinglibrary },
+  { title: 'Git', icon: SiGit },
+  { title: 'Strapi', icon: SiStrapi },
+  { title: 'GraphQL', icon: SiGraphql },
+  { title: 'ApolloGraphQL', icon: SiApollographql, shortTitle: 'Apollo' },
+  { title: 'LESS', icon: SiLess },
+  { title: 'Gulp', icon: SiGulp },
+  { title: 'Figma', icon: SiFigma },
+  { title: 'Photoshop', icon: SiAdobephotoshop }
 ]
 
 export const menu: NavMenuItemProps[] = [
-  {
-    link: '#about',
-    children: 'Sobre mim'
-  },
-  {
-    link: '#projects',
-    children: 'Projetos'
-  },
-  {
-    link: '#skills',
-    children: 'Habilidades'
-  },
-  {
-    link: '#certificates',
-    children: 'Certificados'
-  },
-  {
-    link: '#contact',
-    children: 'Contato'
-  }
+  { link: '#about', children: 'Sobre mim' },
+  { link: '#projects', children: 'Projetos' },
+  { link: '#skills', children: 'Habilidades' },
+  { link: '#certificates', children: 'Certificados' },
+  { link: '#contact', children: 'Contato' }
 ]
 
 export const socials: SocialProps[] = [
-  {
-    name: 'GitHub',
-    link: 'https://github.com/AleferReinert',
-    icon: <SiGithub />
-  },
-  {
-    name: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/AleferReinert',
-    icon: <SiLinkedin />
-  },
-  {
-    name: 'Whatsapp',
-    link: `https://wa.me/55${about.phone}`,
-    icon: <SiWhatsapp />
-  }
+  { name: 'GitHub', link: 'https://github.com/AleferReinert', icon: SiGithub },
+  { name: 'LinkedIn', link: 'https://www.linkedin.com/in/AleferReinert', icon: SiLinkedin },
+  { name: 'Whatsapp', link: `https://wa.me/55${about.phone}`, icon: SiWhatsapp }
 ]

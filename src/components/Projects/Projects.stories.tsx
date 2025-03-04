@@ -6,9 +6,8 @@ import { Projects } from './Projects'
 const meta: Meta<typeof Projects> = {
   title: 'Components/Projects',
   component: Projects,
-  args: {
-    projects: projects
-  }
+  args: { projects: projects },
+  parameters: { layout: 'fullscreen' }
 }
 
 export default meta
@@ -41,9 +40,7 @@ export const Default: Story = {
         if (i % 2 === 0) {
           expect(ProjectComponents[i]).toHaveStyle({ flexDirection: 'row' })
         } else {
-          expect(ProjectComponents[i]).toHaveStyle({
-            flexDirection: 'row-reverse'
-          })
+          expect(ProjectComponents[i]).toHaveStyle({ flexDirection: 'row-reverse' })
         }
       }
     })

@@ -6,15 +6,8 @@ import { MenuMobile } from './MenuMobile'
 const meta: Meta<typeof MenuMobile> = {
   title: 'Components/MenuMobile',
   component: MenuMobile,
-  args: {
-    showMobileMenu: true,
-    menu: menu
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: 'xs'
-    }
-  }
+  args: { showMobileMenu: true, menu: menu },
+  parameters: { layout: 'fullscreen', viewport: { defaultViewport: 'xs' } }
 }
 
 export default meta

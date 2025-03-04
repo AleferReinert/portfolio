@@ -9,9 +9,7 @@ import { IoMenuOutline } from 'react-icons/io5'
 import { useFixedHeader } from 'utils/scrollHeader'
 import { globalMotion } from '../../utils/motion'
 
-interface HeaderProps extends Pick<NavMenuProps, 'menu' | 'github'> {}
-
-export function Header({ menu, github }: HeaderProps) {
+export function Header({ menu, github }: Pick<NavMenuProps, 'menu' | 'github'>) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const fixedHeader = useFixedHeader()
 

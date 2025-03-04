@@ -6,9 +6,8 @@ import { Skills } from './Skills'
 const meta: Meta<typeof Skills> = {
   title: 'Components/Skills',
   component: Skills,
-  args: {
-    skills: skills
-  }
+  args: { skills: skills },
+  parameters: { layout: 'fullscreen' }
 }
 
 export default meta
@@ -16,9 +15,7 @@ export default meta
 type Story = StoryObj<typeof Skills>
 
 export const Mobile: Story = {
-  parameters: {
-    viewport: { defaultViewport: 'xs' }
-  },
+  parameters: { viewport: { defaultViewport: 'xs' } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

@@ -6,19 +6,13 @@ import { ReactNode } from 'react'
 import { about, skills } from './content'
 import './globals.css'
 
-const inter = Inter({
-  weight: ['300', '400', '500', '700', '900'],
-  subsets: ['latin'],
-  display: 'swap'
-})
+const inter = Inter({ weight: ['300', '400', '500', '700', '900'], subsets: ['latin'], display: 'swap' })
 
 const globalTitle = `Portfólio | ${about.name} - ${about.role}`
 
-export const metadata: Metadata = {
-  title: globalTitle
-}
+export const metadata: Metadata = { title: globalTitle }
 
-export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang='pt-BR' className='scroll-smooth dark'>
       <head>
