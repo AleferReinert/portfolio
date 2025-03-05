@@ -1,19 +1,19 @@
 
 > portfolio@2.0.0 build-storybook
-> storybook build --output-dir=C:\Users\alefe\AppData\Local\Temp\chromatic--9580-YWmXfRIZXeT4
+> storybook build --output-dir=C:\Users\alefe\AppData\Local\Temp\chromatic--14404-N3joi94cQOAH
 
 [1m@storybook/core v8.6.3
 [22m
-info => Cleaning outputDir: [36m..\..\..\..\AppData\Local\Temp\chromatic--9580-YWmXfRIZXeT4[39m
+info => Cleaning outputDir: [36m..\..\..\..\AppData\Local\Temp\chromatic--14404-N3joi94cQOAH[39m
 info => Loading presets
 info => Building manager..
-info => Manager built ([38;2;181;126;229m303 ms[39m)
+info => Manager built ([38;2;181;126;229m281 ms[39m)
 info => Building preview..
 info Addon-docs: using MDX3
 info => Using implicit CSS loaders
 info => Using SWC as compiler
 info => Using default Webpack5 setup
-info => Copying static files: [36mpublic[39m at [36m..\..\..\..\AppData\Local\Temp\chromatic--9580-YWmXfRIZXeT4[39m
+info => Copying static files: [36mpublic[39m at [36m..\..\..\..\AppData\Local\Temp\chromatic--14404-N3joi94cQOAH[39m
 info Using tsconfig paths for react-docgen
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
@@ -24,9 +24,9 @@ WARN   878.f93e55ce.iframe.bundle.js (962 KiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
 WARN   main (2.01 MiB)
-WARN       runtime~main.9ecf9e48.iframe.bundle.js
+WARN       runtime~main.42be0a44.iframe.bundle.js
 WARN       531.e40ed692.iframe.bundle.js
 WARN       main.067887bb.iframe.bundle.js
 WARN 
 info => Preview built ([38;2;181;126;229m22 s[39m)
-info => Output directory: C:\Users\alefe\AppData\Local\Temp\chromatic--9580-YWmXfRIZXeT4
+info => Output directory: C:\Users\alefe\AppData\Local\Temp\chromatic--14404-N3joi94cQOAH

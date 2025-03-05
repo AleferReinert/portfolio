@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react'
+import { create } from '@storybook/theming'
 import '../src/app/globals.css'
 
 const preview: Preview = {
@@ -12,6 +13,17 @@ const preview: Preview = {
       default: 'Dark'
     },
     controls: { hideNoControlsWarning: true },
+    docs: {
+      theme: create({
+        base: 'dark',
+        appContentBg: '05334',
+        barBg: 'transparent',
+        inputBg: 'transparent',
+        booleanBg: 'transparent',
+        booleanSelectedBg: 'rgba(0,0,0,0.15)',
+        buttonBg: 'transparent'
+      })
+    },
     options: { showPanel: true, panelDirection: 'right' },
     viewport: {
       viewports: {

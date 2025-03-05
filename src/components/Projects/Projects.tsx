@@ -1,8 +1,7 @@
 'use client'
-import { Container } from 'components/Container/Container'
 import { Filter } from 'components/Filter/Filter'
-import { Heading } from 'components/Heading/Heading'
 import { ProjectProps } from 'components/Project/Project'
+import { Section } from 'components/Section/Section'
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { IoFilter } from 'react-icons/io5'
@@ -27,42 +26,41 @@ export function Projects({ projects }: ProjectsProps) {
   })
 
   return (
-    <section id='projects'>
-      <Container>
-        <Heading>
-          <div className='flex justify-between'>
-            Projetos
-            <button
-              title={showFilters ? 'Ocultar filtros' : 'Exibir filtros'}
-              onClick={() => setShowFilters(!showFilters)}
-            >
-              <IoFilter
-                className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme transition hover:fill-primary-theme'}`}
-              />
-            </button>
-          </div>
-        </Heading>
+    <Section
+      id='projects'
+      title={
+        <div className='flex justify-between'>
+          Projetos
+          <button
+            title={showFilters ? 'Ocultar filtros' : 'Exibir filtros'}
+            onClick={() => setShowFilters(!showFilters)}
+          >
+            <IoFilter
+              className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme transition hover:fill-primary-theme'}`}
+            />
+          </button>
+        </div>
+      }
+    >
+      <Filter
+        showFilters={showFilters}
+        skills={allSkills}
+        selectedSkills={selectedSkills}
+        setSelectedSkills={setSelectedSkills}
+        filteredProjects={filteredProjects}
+        projects={projects}
+      />
 
-        <Filter
-          showFilters={showFilters}
-          skills={allSkills}
-          selectedSkills={selectedSkills}
-          setSelectedSkills={setSelectedSkills}
-          filteredProjects={filteredProjects}
-          projects={projects}
-        />
-
-        {filteredProjects.length > 0 ? (
-          <ul className='flex flex-col gap-6'>
-            {filteredProjects.map((project, index) => {
-              project.lazy = index === 0 || false // Desativa lazy loading para o primeiro elemento
-              return <DynamicProject key={index} {...project} index={index} />
-            })}
-          </ul>
-        ) : (
-          <p>Nenhum projeto encontrado contendo todos os filtros selecionados.</p>
-        )}
-      </Container>
-    </section>
+      {filteredProjects.length > 0 ? (
+        <ul className='flex flex-col gap-6'>
+          {filteredProjects.map((project, index) => {
+            project.lazy = index === 0 || false // Desativa lazy loading para o primeiro elemento
+            return <DynamicProject key={index} {...project} index={index} />
+          })}
+        </ul>
+      ) : (
+        <p>Nenhum projeto encontrado contendo todos os filtros selecionados.</p>
+      )}
+    </Section>
   )
 }
