@@ -15,7 +15,6 @@ export default meta
 type Story = StoryObj<typeof Certificate>
 
 export const Default: Story = {
-  name: 'Certificate',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

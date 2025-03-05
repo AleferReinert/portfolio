@@ -12,7 +12,6 @@ export default meta
 type Story = StoryObj<typeof Section>
 
 export const Default: Story = {
-  name: 'Section',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
@@ -29,7 +28,6 @@ export const Default: Story = {
 }
 
 export const WithTitle: Story = {
-  name: 'Section',
   args: { title: 'My custom title' },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)

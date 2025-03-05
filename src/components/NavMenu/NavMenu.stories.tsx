@@ -9,7 +9,6 @@ export default meta
 type Story = StoryObj<typeof NavMenu>
 
 export const Default: Story = {
-  name: 'NavMenu',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

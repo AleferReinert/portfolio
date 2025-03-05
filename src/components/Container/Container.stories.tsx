@@ -13,13 +13,27 @@ export default meta
 type Story = StoryObj<typeof Container>
 
 export const Default: Story = {
-  name: 'Container',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
     await step('Render children', () => {
       const children = canvas.getByText('children')
       expect(children).toBeInTheDocument()
+    })
+
+    await step('Max width', () => {
+      const container = canvasElement.firstChild
+      expect(container).toHaveClass('max-w-(--breakpoint-lg)')
+    })
+  }
+}
+
+export const Fluid: Story = {
+  args: { fluid: true },
+  play: async ({ canvasElement, step }) => {
+    await step('Not max width', () => {
+      const container = canvasElement.firstChild
+      expect(container).not.toHaveClass('max-w-(--breakpoint-lg)')
     })
   }
 }

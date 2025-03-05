@@ -34,14 +34,14 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         {/* Visualização de compartilhamento em redes sociais */}
         <meta property='twitter:title' content={globalTitle} />
         <meta property='twitter:description' content={about.googleDescription} />
-        <meta property='twitter:image' content={about.socialShareImg} />
+        <meta property='twitter:image' content={about.shareImgUrl} />
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='og:title' content={globalTitle} />
         <meta property='og:site_name' content={globalTitle} />
         <meta property='og:description' content={about.googleDescription} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={about.websiteLink} />
-        <meta property='og:image' content={about.socialShareImg} />
+        <meta property='og:image' content={about.shareImgUrl} />
         <meta property='og:image:alt' content='Imagem que mostra o site responsivo em um celular, tablet e notebook.' />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />

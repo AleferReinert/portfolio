@@ -5,10 +5,9 @@ import { useRef } from 'react'
 import { globalMotion } from 'utils/motion'
 
 export interface ProjectProps {
-  slug: string
   title: string
   year: string
-  shortDescription: string
+  description: string
   skills: string
   repositoryLink: string
   storybookLink?: string
@@ -21,7 +20,7 @@ export interface ProjectProps {
 export function Project({
   title,
   year,
-  shortDescription,
+  description,
   skills,
   repositoryLink,
   storybookLink,
@@ -67,7 +66,7 @@ export function Project({
           <span aria-label='ano'>{year}</span>
         </h3>
         <p aria-label='descrição' className='leading-5 w-full'>
-          {shortDescription}
+          {description}
         </p>
         <p className='w-full text-primary-theme font-normal' title='Tecnologias utilizadas'>
           {skills}

@@ -7,14 +7,13 @@ const meta: Meta<typeof MenuMobile> = {
   title: 'Components/MenuMobile',
   component: MenuMobile,
   args: { showMobileMenu: true, menu: menu },
-  parameters: { layout: 'fullscreen', viewport: { defaultViewport: 'xs' } }
+  parameters: { layout: 'centered', viewport: { defaultViewport: 'xs' } }
 }
 
 export default meta
 type Story = StoryObj<typeof MenuMobile>
 
 export const Default: Story = {
-  name: 'MenuMobile',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

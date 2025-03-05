@@ -12,7 +12,7 @@ export interface AboutProps {
   resumeLink: string
   email: string
   phone: string
-  socialShareImg: string
+  shareImgUrl: string
 }
 
 export function About({ name, role, description, resumeLink }: AboutProps) {

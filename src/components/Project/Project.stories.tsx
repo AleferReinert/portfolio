@@ -23,7 +23,6 @@ export default meta
 type Story = StoryObj<typeof Project>
 
 export const Default: Story = {
-  name: 'Project',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
@@ -43,11 +42,11 @@ export const Default: Story = {
       })
     })
 
-    await step('Visible shortDescription', () => {
-      const shortDescription = canvas.getByLabelText('descrição')
+    await step('Visible description', () => {
+      const description = canvas.getByLabelText('descrição')
       waitFor(() => {
-        expect(shortDescription).toBeVisible()
-        expect(shortDescription).toHaveTextContent(lastProject!.shortDescription)
+        expect(description).toBeVisible()
+        expect(description).toHaveTextContent(lastProject!.description)
       })
     })
 

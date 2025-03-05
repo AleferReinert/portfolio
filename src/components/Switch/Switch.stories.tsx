@@ -8,7 +8,6 @@ export default meta
 type Story = StoryObj<typeof Switch>
 
 export const Default: Story = {
-  name: 'Switch',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const SwitchComponent = canvas.getByTestId('SwitchComponent')

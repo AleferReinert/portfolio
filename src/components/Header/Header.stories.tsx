@@ -7,7 +7,14 @@ const meta: Meta<typeof Header> = {
   title: 'Components/Header',
   component: Header,
   args: { menu: menu, github: socials[0] },
-  parameters: { layout: 'fullscreen' }
+  parameters: { layout: 'fullscreen' },
+  decorators: [
+    (Story) => (
+      <div className='min-h-14'>
+        <Story />
+      </div>
+    )
+  ]
 }
 
 export default meta

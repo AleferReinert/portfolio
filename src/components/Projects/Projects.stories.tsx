@@ -14,7 +14,6 @@ export default meta
 type Story = StoryObj<typeof Projects>
 
 export const Default: Story = {
-  name: 'Projects',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const ProjectComponents = await waitFor(() => canvas.getAllByTestId('ProjectComponent'))

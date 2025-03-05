@@ -20,7 +20,6 @@ export default meta
 type Story = StoryObj<typeof Filter>
 
 export const Default: Story = {
-  name: 'Filter',
   play: async () => {
     // Testes com filtros no story Projects
   }

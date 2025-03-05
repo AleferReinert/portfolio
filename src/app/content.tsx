@@ -34,7 +34,7 @@ export const about: AboutProps = {
   email: 'aleferreinert@gmail.com',
   websiteLink: 'https://aleferreinert.vercel.app',
   resumeLink: 'https://drive.google.com/file/d/1rl5BEI5eoqREjQUh37iKNULMQAFPRAx0/view',
-  socialShareImg: '/social-share.webp',
+  shareImgUrl: '/social-share.webp',
   phone: '47999558118',
   googleDescription:
     'Desenvolvedor Front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, etc.',
@@ -188,20 +188,18 @@ export const certificates: Omit<CertificateProps, 'index'>[] = [
 
 export const projects: Omit<ProjectProps, 'index'>[] = [
   {
-    slug: 'betalent',
     title: 'BeTalent',
     year: '2025',
-    shortDescription: `Teste técnico para a empresa BeTalent. Consiste em construir a visualização de uma tabela com dados de uma API simulada.`,
+    description: `Teste técnico para a empresa BeTalent. Consiste em construir a visualização de uma tabela com dados de uma API simulada.`,
     skills: 'React TypeScript Tailwind JSONServer',
     projectLink: 'https://betalent.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/betalent',
     img: '/projects/betalent.webp'
   },
   {
-    slug: 'devstage',
     title: 'DevStage',
     year: '2025',
-    shortDescription: `Website de inscrição e indicação para eventos. Desenvolvido através do NLW Connect da Rocketseat na trilha React.`,
+    description: `Website de inscrição e indicação para eventos. Desenvolvido através do NLW Connect da Rocketseat na trilha React.`,
     skills: 'Next.js TypeScript Tailwind Storybook',
     projectLink: 'https://devstage-nlw-connect.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/devstage',
@@ -209,10 +207,9 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/devstage.webp'
   },
   {
-    slug: 'advice-health',
     title: 'Advice Health',
     year: '2025',
-    shortDescription: `Aplicação web para consultório médico, desenvolvido como parte de um processo seletivo. Permite agendar consultas, gerenciar pacientes e visualizar dados financeiros e estatísticos do dia.`,
+    description: `Aplicação web para consultório médico, desenvolvido como parte de um processo seletivo. Permite agendar consultas, gerenciar pacientes e visualizar dados financeiros e estatísticos do dia.`,
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary',
     projectLink: 'https://advicehealth.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/advice-health',
@@ -220,10 +217,9 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/advice-health.webp'
   },
   {
-    slug: 'debbifit',
     title: 'DebbiFit',
     year: '2024',
-    shortDescription: `Website de consultoria fitness online que oferece acompanhamento personalizado, dicas de treino e orientações para uma vida mais saudável.`,
+    description: `Website de consultoria fitness online que oferece acompanhamento personalizado, dicas de treino e orientações para uma vida mais saudável.`,
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary Strapi Apollo GraphQL',
     projectLink: 'https://debbifit.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/debbifit',
@@ -231,10 +227,9 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/debbifit.webp'
   },
   {
-    slug: 'impacta-tecnologia',
     title: 'Impacta Tecnologia',
     year: '2024',
-    shortDescription: `Website institucional para uma empresa de tecnologia, destacando seus serviços e soluções personalizadas, com uma interface intuitiva e gerenciamento de conteúdo via CMS.`,
+    description: `Website institucional para uma empresa de tecnologia, destacando seus serviços e soluções personalizadas, com uma interface intuitiva e gerenciamento de conteúdo via CMS.`,
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary Strapi Apollo GraphQL',
     projectLink: 'https://impacta-tecnologia.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/impacta-tecnologia',
@@ -242,10 +237,9 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/impacta-tecnologia.webp'
   },
   {
-    slug: 'findbook',
     title: 'Findbook',
     year: '2024',
-    shortDescription: `
+    description: `
         Aplicação web que utiliza inteligência artificial para recomendar livros a partir da busca do usuário.`,
     skills: 'React TypeScript Tailwind Radix Vite OpenAI Express MongoDB',
     projectLink: 'https://findbook-ar.netlify.app',
@@ -253,10 +247,9 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/findbook.webp'
   },
   {
-    slug: 'notes',
     title: 'Notes',
     year: '2024',
-    shortDescription: `
+    description: `
         Aplicação web para criar e gerenciar notas utilizando texto digitado ou gravações de áudio. 
         Desenvolvido através do NLW Expert da Rocketseat na trilha React.`,
     skills: 'React TypeScript Tailwind Radix Sonner',
@@ -265,10 +258,9 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/nlw-expert-notes.webp'
   },
   {
-    slug: 'pass-in',
     title: 'Pass In',
     year: '2024',
-    shortDescription: `
+    description: `
         Aplicação para gestão de participantes em eventos presenciais. 
         Desenvolvido durante o NLW Unite da Rocketseat, foram feitas as trilhas de React e Node.js.`,
     skills: 'React TypeScript Tailwind Node.js Prisma Fastify',
@@ -277,10 +269,9 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/nlw-unite-pass-in.webp'
   },
   // {
-  //   slug: 'won-games',
   //   title: 'Won Games',
   //   year: '2024',
-  //   shortDescription: `
+  //   description: `
   //       Projeto principal do curso <q>React Avançado: Crie aplicações com NextJS, Strapi e mais</q>.<br>
   //       Won Games é um-commerce onde os usuários podem explorar, pesquisar e comprar jogos. Em desenvolvimento.`,
   //   skills: 'Next.js TypeScript StyledComponents Storybook TestingLibrary Strapi GraphQL',
@@ -289,20 +280,18 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
   //   img: '/projects/won-games.webp'
   // },
   {
-    slug: 'portfolio',
     title: 'Portfólio',
     year: '2024',
-    shortDescription: 'Confira o processo de criação deste portfólio.',
+    description: 'Confira o processo de criação deste portfólio.',
     skills: 'Next.js TypeScript Tailwind Storybook TestingLibrary FramerMotion',
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://main--64cd32980293c902cb6e27ce.chromatic.com',
     img: '/projects/portfolio.webp'
   },
   {
-    slug: 'react-avançado',
     title: 'React Avançado',
     year: '2023',
-    shortDescription: `Landing page do curso 'React Avançado: Crie aplicações com NextJS, Strapi e mais'.
+    description: `Landing page do curso 'React Avançado: Crie aplicações com NextJS, Strapi e mais'.
         Este projeto adicional tem como objetivo introduzir o uso do Strapi para substituir dados estáticos por dados
         dinâmicos por meio de uma API.
       `,
@@ -312,20 +301,18 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/landing-page.webp'
   },
   {
-    slug: 'single-page',
     title: 'Single Page',
     year: '2022',
-    shortDescription: `Website de uma empresa fictícia destacando seus projetos e serviços. Além disso, é apresentado sua história, redes sociais e formulário para contato, tudo de forma minimalista e objetiva.`,
+    description: `Website de uma empresa fictícia destacando seus projetos e serviços. Além disso, é apresentado sua história, redes sociais e formulário para contato, tudo de forma minimalista e objetiva.`,
     skills: 'HTML Less JavaScript Gulp',
     projectLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
     img: '/projects/single-page.webp'
   },
   {
-    slug: 'metronome',
     title: 'Metronome',
     year: '2022',
-    shortDescription: `Metrônomo com diversas configurações. Além do andamento, é possível definir a fórmula de compasso, quantidade de compassos a serem executados e limite de tempo em minutos. Também é possível controlar o volume dos tempos, contratempos e tercinas separadamente.`,
+    description: `Metrônomo com diversas configurações. Além do andamento, é possível definir a fórmula de compasso, quantidade de compassos a serem executados e limite de tempo em minutos. Também é possível controlar o volume dos tempos, contratempos e tercinas separadamente.`,
     skills: 'HTML CSS JavaScript',
     projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
