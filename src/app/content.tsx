@@ -53,6 +53,12 @@ export const about: AboutProps = {
 
 export const certificates: Omit<CertificateProps, 'index'>[] = [
   {
+    title: 'NLW Connect - Nodejs',
+    organization: 'Rocketseat',
+    conclusionDate: 'Fevereiro/2025',
+    link: 'https://drive.google.com/file/d/14j0Hu3_3aC0Z5z6tiSz7e19TxHF3hgx3/view'
+  },
+  {
     title: 'NLW Connect - React',
     organization: 'Rocketseat',
     conclusionDate: 'Fevereiro/2025',
