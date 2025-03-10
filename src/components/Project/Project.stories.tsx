@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
-import { projects } from 'app/content'
+import { projects } from 'content/projects'
 import { Project } from './Project'
 
 const lastProject = projects.at(-1)

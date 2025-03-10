@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
-import { menu } from 'app/content'
+import { menu } from 'content/layout'
 import { MenuMobile } from './MenuMobile'
 
 const meta: Meta<typeof MenuMobile> = {

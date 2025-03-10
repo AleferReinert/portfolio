@@ -3,7 +3,8 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 // import { themes } from '../../tailwind.config'
-import { about, skills } from './content'
+import { about } from 'content/about'
+import { skills } from 'content/skills'
 import './globals.css'
 
 const inter = Inter({ weight: ['300', '400', '500', '700', '900'], subsets: ['latin'], display: 'swap' })

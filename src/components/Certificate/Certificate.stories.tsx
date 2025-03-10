@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import { certificates } from 'app/content'
+import { certificates } from 'content/certificates'
 import { Certificate } from './Certificate'
 
 const lastCertificate = certificates.at(-1)

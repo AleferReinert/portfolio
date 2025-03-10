@@ -1,5 +1,5 @@
+import { about } from 'content/about'
 import type { MetadataRoute } from 'next'
-import { about } from './content'
 
 export default function robots(): MetadataRoute.Robots {
   return {

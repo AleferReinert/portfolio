@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, userEvent, waitFor, within } from '@storybook/test'
-import { menu, socials } from 'app/content'
+import { menu, socials } from 'content/layout'
 import { Header } from './Header'
 
 const meta: Meta<typeof Header> = {
