@@ -51,10 +51,11 @@ export const Default: Story = {
     })
 
     await step('Visible skills', () => {
-      const skills = canvas.getByTitle(/tecnologias utilizadas/i)
+      const list = canvas.getByRole('list', { name: 'Tecnologias utilizadas' })
+      const skills = within(list).getAllByRole('listitem')
       waitFor(() => {
-        expect(skills).toBeVisible()
-        expect(skills).toHaveTextContent(lastProject!.skills)
+        expect(list).toBeVisible()
+        expect(skills.length).toBe(3)
       })
     })
 

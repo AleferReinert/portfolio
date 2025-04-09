@@ -14,13 +14,13 @@ interface ProjectsProps {
 export function Projects({ projects }: ProjectsProps) {
   const [showFilters, setShowFilters] = useState(false)
   const [selectedSkills, setSelectedSkills] = useState<string[]>([])
-  const allSkills = Array.from(new Set(projects.flatMap((project) => project.skills.split(' ')))).sort()
+  const allSkills = Array.from(new Set(projects.flatMap((project) => project.skills))).sort()
 
-  // Retorna projetos que possuem todas skills selecionadas
-  // Se nenhuma skill estiver selecionada, retorna todos
+  // Returns projects that have all skills checked
+  // If no skill are checked, return all
   const filteredProjects = projects.filter((project) => {
-    if (selectedSkills.length > 0) {
-      return selectedSkills.every((skill) => project.skills.split(' ').includes(skill))
+    if (selectedSkills.length) {
+      return selectedSkills.every((skill) => project.skills.includes(skill))
     }
     return true
   })
@@ -51,10 +51,10 @@ export function Projects({ projects }: ProjectsProps) {
         projects={projects}
       />
 
-      {filteredProjects.length > 0 ? (
+      {filteredProjects.length ? (
         <ul className='flex flex-col gap-6'>
           {filteredProjects.map((project, index) => {
-            project.lazy = index === 0 || false // Desativa lazy loading para o primeiro elemento
+            project.lazy = index === 0 || false // Disable lazy loading to the first project
             return <DynamicProject key={index} {...project} index={index} />
           })}
         </ul>

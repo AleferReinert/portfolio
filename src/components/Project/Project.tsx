@@ -8,7 +8,7 @@ export interface ProjectProps {
   title: string
   year: string
   description: string
-  skills: string
+  skills: string[]
   repositoryLink: string
   storybookLink?: string
   projectLink?: string
@@ -70,9 +70,11 @@ export function Project({
         <p aria-label='descrição' className='leading-5 w-full'>
           {description}
         </p>
-        <p className='w-full text-primary-theme font-normal' title='Tecnologias utilizadas'>
-          {skills}
-        </p>
+        <ul className='w-full text-primary-theme font-normal gap-1 flex' title='Tecnologias utilizadas'>
+          {skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
         <ProjectLinks
           repositoryLink={repositoryLink}
           storybookLink={storybookLink}
