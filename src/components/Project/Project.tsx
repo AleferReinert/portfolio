@@ -48,7 +48,7 @@ export function Project({
 			'
     >
       <a
-        href={projectLink}
+        href={projectLink || storybookLink || repositoryLink}
         target='_blank'
         className='relative w-full h-min aspect-25/17 max-w-[280px] md:max-w-[240px] lg:max-w-[280px]'
       >
