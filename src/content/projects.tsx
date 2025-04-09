@@ -9,7 +9,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['Next.js', 'TypeScript', 'StyledComponents', 'Storybook', 'TestingLibrary', 'Strapi', 'GraphQL'],
     repositoryLink: 'https://github.com/AleferReinert/won-games',
     storybookLink: 'https://main--64ceaf6be6c94aa14b9fe174.chromatic.com',
-    img: '/projects/won-games.webp'
+    img: '/projects/min/won-games.webp'
   },
   {
     id: '12',
@@ -19,7 +19,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['React', 'TypeScript', 'Tailwind', 'JSONServer'],
     projectLink: 'https://betalent.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/betalent',
-    img: '/projects/betalent.webp'
+    img: '/projects/min/betalent.webp'
   },
   {
     id: '11',
@@ -30,7 +30,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     projectLink: 'https://devstage-nlw-connect.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/devstage',
     storybookLink: 'https://main--67c3a6b77510efaa57103f96.chromatic.com',
-    img: '/projects/devstage.webp'
+    img: '/projects/min/devstage.webp'
   },
   {
     id: '10',
@@ -41,7 +41,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     projectLink: 'https://advicehealth.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/advice-health',
     storybookLink: 'https://main--67620d8560ad19d1f017f00f.chromatic.com',
-    img: '/projects/advice-health.webp'
+    img: '/projects/min/advice-health.webp'
   },
   {
     id: '9',
@@ -52,7 +52,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     projectLink: 'https://debbifit.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/debbifit',
     storybookLink: 'https://main--67c3ae790f8abf6d4f9b019f.chromatic.com',
-    img: '/projects/debbifit.webp'
+    img: '/projects/min/debbifit.webp'
   },
   {
     id: '8',
@@ -63,7 +63,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     projectLink: 'https://impacta-tecnologia.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/impacta-tecnologia',
     storybookLink: 'https://main--670946a91c483c5167ccb017.chromatic.com',
-    img: '/projects/impacta-tecnologia.webp'
+    img: '/projects/min/impacta-tecnologia.webp'
   },
   {
     id: '7',
@@ -73,7 +73,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['React', 'TypeScript', 'Tailwind', 'Radix', 'Vite', 'OpenAI', 'Express', 'MongoDB'],
     projectLink: 'https://findbook-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/findbook',
-    img: '/projects/findbook.webp'
+    img: '/projects/min/findbook.webp'
   },
   {
     id: '6',
@@ -84,7 +84,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['React', 'TypeScript', 'Tailwind', 'Radix', 'Sonner'],
     projectLink: 'https://nlw-expert-notes-ar.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/nlw-expert-notes',
-    img: '/projects/nlw-expert-notes.webp'
+    img: '/projects/min/nlw-expert-notes.webp'
   },
   {
     id: '5',
@@ -95,7 +95,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Prisma', 'Fastify'],
     projectLink: 'https://pass-in-nlw-unite.vercel.app',
     repositoryLink: 'https://github.com/AleferReinert/pass.in-react',
-    img: '/projects/nlw-unite-pass-in.webp'
+    img: '/projects/min/nlw-unite-pass-in.webp'
   },
   {
     id: '4',
@@ -105,7 +105,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['Next.js', 'TypeScript', 'Tailwind', 'Storybook', 'TestingLibrary', 'FramerMotion'],
     repositoryLink: 'https://github.com/AleferReinert/portfolio',
     storybookLink: 'https://main--64cd32980293c902cb6e27ce.chromatic.com',
-    img: '/projects/portfolio.webp'
+    img: '/projects/min/portfolio.webp'
   },
   {
     id: '3',
@@ -118,7 +118,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['Next.js', 'TypeScript', 'StyledComponents', 'Strapi'],
     projectLink: 'https://landing-page-ar.netlify.app',
     repositoryLink: 'https://github.com/AleferReinert/landing-page',
-    img: '/projects/landing-page.webp'
+    img: '/projects/min/landing-page.webp'
   },
   {
     id: '2',
@@ -128,7 +128,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['HTML', 'Less', 'JavaScript', 'Gulp'],
     projectLink: 'https://aleferreinert.github.io/single-page',
     repositoryLink: 'https://github.com/AleferReinert/single-page',
-    img: '/projects/single-page.webp'
+    img: '/projects/min/single-page.webp'
   },
   {
     id: '1',
@@ -138,6 +138,6 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     skills: ['HTML', 'CSS', 'JavaScript'],
     projectLink: 'https://aleferreinert.github.io/metronome',
     repositoryLink: 'https://github.com/AleferReinert/metronome',
-    img: '/projects/metronome.webp'
+    img: '/projects/min/metronome.webp'
   }
 ]
