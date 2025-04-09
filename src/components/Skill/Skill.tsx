@@ -6,24 +6,24 @@ import { globalMotion } from 'utils/motion'
 
 export interface SkillProps {
   title: string
-  icon: IconType
+  iconAction: IconType
   shortTitle?: string
   index: number
 }
 
-export function Skill({ title, icon, shortTitle, index }: SkillProps) {
+export function Skill({ title, iconAction, shortTitle, index }: SkillProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const Icon = icon
+  const Icon = iconAction
 
   return (
     <motion.li
       ref={ref}
       initial={{ ...globalMotion.initial.fromScale, y: 20 }}
-      animate={isInView ? { ...globalMotion.animate.scale, y: 0 } : {}}
+      animate={isInView && { ...globalMotion.animate.scale, y: 0 }}
       transition={{ ...globalMotion.transition, delay: index * 0.05 }}
       data-testid='SkillComponent'
-      title={shortTitle ? title : undefined}
+      title={shortTitle && title}
       className='group overflow-hidden aspect-94/87 sm:aspect-128/87 relative bg-black/5 dark:bg-black/25'
     >
       <Icon

@@ -19,7 +19,7 @@ export default meta
 type Story = StoryObj<typeof Skill>
 
 export const Default: Story = {
-  args: { title: 'Tailwind', icon: SiTailwindcss },
+  args: { title: 'Tailwind', iconAction: SiTailwindcss },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
@@ -28,7 +28,7 @@ export const Default: Story = {
       expect(listItem).not.toHaveAttribute('title', 'Tailwind')
     })
 
-    await step('Visible svg', async () => {
+    await step('Visible svg', () => {
       const svg = canvas.getByRole('img', { hidden: true })
       waitFor(() => {
         expect(svg).toBeVisible()
@@ -43,7 +43,7 @@ export const Default: Story = {
 }
 
 export const WithShortTile: Story = {
-  args: { title: 'StyledComponents', icon: SiStyledcomponents, shortTitle: 'CSSinJS' },
+  args: { title: 'StyledComponents', iconAction: SiStyledcomponents, shortTitle: 'CSSinJS' },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

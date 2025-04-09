@@ -6,7 +6,14 @@ import typescriptParser from '@typescript-eslint/parser'
 const compat = new FlatCompat({ baseDirectory: import.meta.dirname })
 
 const eslintConfig = [
-  ...compat.config({ extends: ['next', 'plugin:storybook/recommended', 'prettier'] }),
+  ...compat.config({
+    extends: [
+      'next',
+      'plugin:storybook/recommended',
+      'prettier',
+      'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    ]
+  }),
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -14,7 +21,7 @@ const eslintConfig = [
       parserOptions: { project: './tsconfig.json', tsconfigRootDir: import.meta.dirname }
     },
     plugins: { '@typescript-eslint': typescriptPlugin },
-    rules: { ...typescriptPlugin.configs['recommended'].rules }
+    rules: { ...typescriptPlugin.configs['recommended'].rules, '@typescript-eslint/no-floating-promises': 'off' }
   }
 ]
 

@@ -107,7 +107,7 @@ export const Default: Story = {
       const clearButton = canvas.getByRole('button', { name: 'Limpar' })
       userEvent.click(filterButton)
       await waitFor(() => {
-        userEvent.click(clearButton!)
+        userEvent.click(clearButton)
         userEvent.click(filterButton)
       })
     })

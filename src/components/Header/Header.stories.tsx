@@ -44,7 +44,7 @@ export const Mobile: Story = {
       })
     })
 
-    await step('Close menu on buttonCloseMenu click', async () => {
+    await step('Close menu on buttonCloseMenu click', () => {
       userEvent.click(closeMenuButton)
       waitFor(() => {
         expect(MenuMobileComponent).not.toBeVisible()
