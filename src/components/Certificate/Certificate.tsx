@@ -21,12 +21,12 @@ export function Certificate({ title, organization, conclusionDate, link, index }
     <motion.li
       ref={ref}
       initial={{ ...globalMotion.initial.fromBottom, y: 20 }}
-      animate={isInView ? { ...globalMotion.animate.vertical } : {}}
+      animate={isInView && { ...globalMotion.animate.vertical }}
       transition={{ ...globalMotion.transition, delay: index * 0.05 }}
       data-testid='CertificateComponent'
       className='relative'
     >
-      <Link title='Visualizar certificado' href={link!} target='_blank' className='relative group'>
+      <Link title='Visualizar certificado' href={link} target='_blank' className='relative group'>
         <span
           className='
 						w-[1px] h-full duration-300 max-h-[0%] transition-all absolute left-0 top-0

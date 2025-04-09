@@ -36,6 +36,8 @@ export const Default: Story = {
 
     await step('Render social links', async () => {
       await waitFor(() => {
+        const socialLinksNavigation = canvas.getByRole('navigation')
+        expect(socialLinksNavigation).toBeVisible()
         const socialLinks = ['GitHub', 'LinkedIn', 'Whatsapp']
         socialLinks.map((social) => {
           expect(canvas.getByRole('link', { name: social })).toBeInTheDocument()

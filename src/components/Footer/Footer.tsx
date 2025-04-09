@@ -41,7 +41,7 @@ export function Footer({ phone, email, socials }: FooterProps) {
             <span className='text-heading-theme'>E-mail: </span>
             <a href={`mailto:${email}`}>{email}</a>
           </p>
-          <nav data-testid='social-component' className='inline-flex gap-5'>
+          <nav className='inline-flex gap-5'>
             {socials.map((social) => {
               const Icon = social.icon
 
