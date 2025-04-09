@@ -10,7 +10,7 @@ export function Certificates({ certificates }: CertificatesProps) {
     <Section id='certificates' title='Certificados'>
       <ul className='flex flex-col gap-4 md:grid md:grid-cols-2'>
         {certificates.map((certificate, index) => (
-          <Certificate key={index} {...certificate} index={index} />
+          <Certificate key={certificate.id} {...certificate} index={index} />
         ))}
       </ul>
     </Section>

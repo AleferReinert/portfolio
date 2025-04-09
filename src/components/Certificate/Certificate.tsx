@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import { globalMotion } from 'utils/motion'
 
 export interface CertificateProps {
+  id: string
   title: string
   organization: string
   conclusionDate: string
