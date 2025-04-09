@@ -19,7 +19,7 @@
     "plugins": [{ "name": "next" }]
   },
   "include": [
-    "commilint.config.ts",
+    "commitlint.config.ts",
     "next.config.js",
     "postcss.config.ts",
     "tailwind.config.ts",
