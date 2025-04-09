@@ -3,7 +3,7 @@ import { Filter } from 'components/Filter/Filter'
 import { ProjectProps } from 'components/Project/Project'
 import { Section } from 'components/Section/Section'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { IoFilter } from 'react-icons/io5'
 const DynamicProject = dynamic(() => import('components/Project/Project').then((mod) => mod.Project))
 
@@ -14,16 +14,20 @@ interface ProjectsProps {
 export function Projects({ projects }: ProjectsProps) {
   const [showFilters, setShowFilters] = useState(false)
   const [selectedSkills, setSelectedSkills] = useState<string[]>([])
-  const allSkills = Array.from(new Set(projects.flatMap((project) => project.skills))).sort()
+  const allSkills = useMemo(() => {
+    return Array.from(new Set(projects.flatMap((project) => project.skills))).sort()
+  }, [projects])
 
   // Returns projects that have all skills checked
   // If no skill are checked, return all
-  const filteredProjects = projects.filter((project) => {
-    if (selectedSkills.length) {
-      return selectedSkills.every((skill) => project.skills.includes(skill))
-    }
-    return true
-  })
+  const filteredProjects = useMemo(() => {
+    return projects.filter((project) => {
+      if (selectedSkills.length) {
+        return selectedSkills.every((skill) => project.skills.includes(skill))
+      }
+      return true
+    })
+  }, [projects, selectedSkills])
 
   return (
     <Section
@@ -54,8 +58,7 @@ export function Projects({ projects }: ProjectsProps) {
       {filteredProjects.length ? (
         <ul className='flex flex-col gap-6'>
           {filteredProjects.map((project, index) => {
-            project.lazy = index === 0 || false // Disable lazy loading to the first project
-            return <DynamicProject key={index} {...project} index={index} />
+            return <DynamicProject key={index} lazy={index === 0} {...project} index={index} />
           })}
         </ul>
       ) : (
