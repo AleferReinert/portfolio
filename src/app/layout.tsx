@@ -1,16 +1,19 @@
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { about } from 'content/about'
+import { skills } from 'content/skills'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
-// import { themes } from '../../tailwind.config'
-import { about } from 'content/about'
-import { skills } from 'content/skills'
 import './globals.css'
 
+export interface SeoProps {
+  googleDescription: string
+  websiteLink: string
+  shareImgUrl: string
+}
+
 const inter = Inter({ weight: ['300', '400', '500', '700', '900'], subsets: ['latin'], display: 'swap' })
-
 const globalTitle = `Portfólio | ${about.name} - ${about.role}`
-
 export const metadata: Metadata = { title: globalTitle }
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

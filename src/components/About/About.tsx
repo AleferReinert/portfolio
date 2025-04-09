@@ -7,47 +7,44 @@ export interface AboutProps {
   name: string
   role: string
   description: ReactNode
-  googleDescription: string
-  websiteLink: string
   resumeLink: string
-  email: string
-  phone: string
-  shareImgUrl: string
 }
 
 export function About({ name, role, description, resumeLink }: AboutProps) {
+  const { initial, animate, transition, delay } = globalMotion
+
   return (
     <Section id='about'>
       <div className='pt-20 mb-8 md:pt-28'>
         <motion.div
           className='text-xl leading-5'
-          initial={{ ...globalMotion.initial.fromLeft }}
-          animate={{ ...globalMotion.animate.horizontal }}
-          transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.firstLine }}
+          initial={{ ...initial.fromLeft }}
+          animate={{ ...animate.horizontal }}
+          transition={{ ...transition, delay: delay.about.firstLine }}
         >
           Olá, meu nome é
         </motion.div>
         <h1 className='flex flex-col'>
           <motion.span
             className='text-[2.75rem]/[3.75rem] text-heading-theme font-black md:text-6xl'
-            initial={{ ...globalMotion.initial.fromLeft }}
-            animate={{ ...globalMotion.animate.horizontal }}
-            transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.name }}
+            initial={{ ...initial.fromLeft }}
+            animate={{ ...animate.horizontal }}
+            transition={{ ...transition, delay: delay.about.name }}
           >
             {name}
           </motion.span>
           <motion.span
-            initial={{ ...globalMotion.initial.fromLeft }}
-            animate={{ ...globalMotion.animate.horizontal }}
-            transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.role }}
+            initial={{ ...initial.fromLeft }}
+            animate={{ ...animate.horizontal }}
+            transition={{ ...transition, delay: delay.about.role }}
             className='text-paragraph-theme leading-none font-bold md:text-lg/[1.75rem]'
           >
             {role}
           </motion.span>
           <motion.a
-            initial={{ ...globalMotion.initial.opacity }}
-            animate={{ ...globalMotion.animate.opacity }}
-            transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.resumeLink }}
+            initial={{ ...initial.opacity }}
+            animate={{ ...animate.opacity }}
+            transition={{ ...transition, delay: delay.about.resumeLink }}
             href={resumeLink}
             target='_blank'
             className='rounded-3xl border border-primary-theme text-primary-theme py-2 px-5 mt-5 font-medium text-sm max-w-fit 
@@ -59,9 +56,9 @@ export function About({ name, role, description, resumeLink }: AboutProps) {
         </h1>
       </div>
       <motion.div
-        initial={{ ...globalMotion.initial.fromBottom }}
-        animate={{ ...globalMotion.animate.vertical }}
-        transition={{ ...globalMotion.transition, delay: globalMotion.delay.about.description }}
+        initial={{ ...initial.fromBottom }}
+        animate={{ ...animate.vertical }}
+        transition={{ ...transition, delay: delay.about.description }}
       >
         <h2 className='hidden text-xl font-bold text-center md:block'>Sobre mim</h2>
         <p

@@ -1,5 +1,4 @@
 'use client'
-import { AboutProps } from 'components/About/About'
 import { Container } from 'components/Container/Container'
 import { Heading } from 'components/Heading/Heading'
 import { motion, useInView } from 'framer-motion'
@@ -14,8 +13,10 @@ export interface SocialProps {
   icon: IconType
 }
 
-interface FooterProps extends Pick<AboutProps, 'phone' | 'email'> {
+export interface FooterProps {
   socials: SocialProps[]
+  email: string
+  phone: string
 }
 
 export function Footer({ phone, email, socials }: FooterProps) {

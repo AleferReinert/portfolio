@@ -1,6 +1,8 @@
+import { SeoProps } from 'app/layout'
 import { AboutProps } from 'components/About/About'
+import { FooterProps } from 'components/Footer/Footer'
 
-export const about: AboutProps = {
+export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps = {
   name: 'Alefer Reinert',
   role: 'Desenvolvedor Front-end',
   email: 'aleferreinert@gmail.com',
