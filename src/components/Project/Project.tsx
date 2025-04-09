@@ -47,22 +47,24 @@ export function Project({
 				lg:px-8 lg:py-10 lg:gap-12 md:even:flex-row-reverse
 			'
     >
-      <div className='relative w-full h-min aspect-25/17 max-w-[280px] md:max-w-[240px] lg:max-w-[280px]'>
-        <a href={projectLink} target='_blank'>
-          <Image
-            src={img}
-            alt='Imagem do projeto'
-            priority={lazy}
-            fill
-            quality={100}
-            sizes='(min-width: 320px) 240px,
+      <a
+        href={projectLink}
+        target='_blank'
+        className='relative w-full h-min aspect-25/17 max-w-[280px] md:max-w-[240px] lg:max-w-[280px]'
+      >
+        <Image
+          src={img}
+          alt='Imagem do projeto'
+          priority={lazy}
+          fill
+          quality={100}
+          sizes='(min-width: 320px) 240px,
 					(min-width: 576px) 280px,
 					(min-width: 768px) 240px,
 					(min-width: 1024px) 280px,
 					288px'
-          />
-        </a>
-      </div>
+        />
+      </a>
       <div className='flex flex-col shrink items-center gap-4 mx-auto w-full tex-center md:text-left'>
         <h3 className='w-full flex justify-between items-baseline'>
           <span className='text-2xl font-bold text-heading-theme'>{title}</span>
