@@ -31,6 +31,7 @@ export function Projects({ projects }: ProjectsProps) {
 
   return (
     <Section
+      isFirst
       id='projects'
       title={
         <div className='flex justify-between'>

@@ -1,18 +1,18 @@
 import { Container } from 'components/Container/Container'
-import { Heading } from 'components/Heading/Heading'
+import { Heading, HeadingProps } from 'components/Heading/Heading'
 import { ReactNode } from 'react'
 
-interface SectionProps {
+interface SectionProps extends Pick<HeadingProps, 'isFirst'> {
   id: string
   title?: ReactNode
   children: ReactNode
 }
 
-export function Section({ id, title, children }: SectionProps) {
+export function Section({ id, title, children, isFirst }: SectionProps) {
   return (
     <section id={id} className='pb-12 md:pb-16'>
       <Container>
-        {title && <Heading>{title}</Heading>}
+        {title && <Heading isFirst={isFirst}>{title}</Heading>}
         {children}
       </Container>
     </section>
