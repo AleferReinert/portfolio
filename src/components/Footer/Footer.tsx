@@ -41,12 +41,12 @@ export function Footer({ phone, email, socials }: FooterProps) {
             <a href={`mailto:${email}`}>{email}</a>
           </p>
           <nav data-testid='social-component' className='inline-flex gap-5'>
-            {socials.map((social, index) => {
+            {socials.map((social) => {
               const Icon = social.icon
 
               return (
                 <a
-                  key={index}
+                  key={social.name}
                   href={social.link}
                   title={social.name}
                   target='_blank'

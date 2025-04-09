@@ -37,11 +37,11 @@ export function Filter({
     >
       <div className='mb-6'>
         <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
-          {skills.map((skill, index) => {
+          {skills.map((skill) => {
             const active = selectedSkills.includes(skill)
 
             return (
-              <li key={index}>
+              <li key={skill}>
                 <label
                   className={`flex group gap-1 items-center text-sm normal-case cursor-pointer
 										transition hover:text-primary-theme 

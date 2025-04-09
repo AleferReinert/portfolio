@@ -72,8 +72,8 @@ export function Project({
           {description}
         </p>
         <ul className='w-full text-primary-theme font-normal gap-1 flex' title='Tecnologias utilizadas'>
-          {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
+          {skills.map((skill) => (
+            <li key={skill}>{skill}</li>
           ))}
         </ul>
         <ProjectLinks

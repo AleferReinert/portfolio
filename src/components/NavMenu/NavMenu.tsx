@@ -17,9 +17,9 @@ export interface NavMenuProps {
 export function NavMenu({ menu, setShowMobileMenu, github }: NavMenuProps) {
   return (
     <nav data-testid='NavMenuComponent' className='flex flex-col gap-6 text-center text-2xl md:flex-row md:text-base'>
-      {menu.map((item, index) => (
+      {menu.map((item) => (
         <Link
-          key={index}
+          key={item.link}
           href={item.link}
           scroll={true}
           onClick={() => setShowMobileMenu(false)}

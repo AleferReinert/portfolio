@@ -10,7 +10,7 @@ export function Skills({ skills }: SkillsProps) {
     <Section id='skills' title='Habilidades'>
       <ul className='grid grid-cols-3 gap-1 justify-between sm:grid-cols-6'>
         {skills.map((skill, index) => {
-          return <Skill key={index} {...skill} index={index} />
+          return <Skill key={skill.title} {...skill} index={index} />
         })}
       </ul>
     </Section>
