@@ -58,7 +58,7 @@ export function Projects({ projects }: ProjectsProps) {
       {filteredProjects.length ? (
         <ul className='flex flex-col gap-6'>
           {filteredProjects.map((project, index) => {
-            return <DynamicProject key={index} lazy={index === 0} {...project} index={index} />
+            return <DynamicProject key={project.id} lazy={index === 0} {...project} index={index} />
           })}
         </ul>
       ) : (

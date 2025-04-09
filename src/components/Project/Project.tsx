@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import { globalMotion } from 'utils/motion'
 
 export interface ProjectProps {
+  id: string
   title: string
   year: string
   description: string

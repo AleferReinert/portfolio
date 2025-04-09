@@ -2,6 +2,7 @@ import { ProjectProps } from 'components/Project/Project'
 
 export const projects: Omit<ProjectProps, 'index'>[] = [
   {
+    id: '13',
     title: 'Won Games',
     year: '2025',
     description: `E-commerce de jogos. Em desenvolvimento.`,
@@ -11,6 +12,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/won-games.webp'
   },
   {
+    id: '12',
     title: 'BeTalent',
     year: '2025',
     description: `Teste técnico para a empresa BeTalent. Consiste em construir a visualização de uma tabela com dados de uma API simulada.`,
@@ -20,6 +22,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/betalent.webp'
   },
   {
+    id: '11',
     title: 'DevStage',
     year: '2025',
     description: `Website de inscrição e indicação para eventos. Desenvolvido através do NLW Connect da Rocketseat na trilha React.`,
@@ -30,6 +33,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/devstage.webp'
   },
   {
+    id: '10',
     title: 'Advice Health',
     year: '2025',
     description: `Aplicação web para consultório médico, desenvolvido como parte de um processo seletivo. Permite agendar consultas, gerenciar pacientes e visualizar dados financeiros e estatísticos do dia.`,
@@ -40,6 +44,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/advice-health.webp'
   },
   {
+    id: '9',
     title: 'DebbiFit',
     year: '2024',
     description: `Website de consultoria fitness online que oferece acompanhamento personalizado, dicas de treino e orientações para uma vida mais saudável.`,
@@ -50,6 +55,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/debbifit.webp'
   },
   {
+    id: '8',
     title: 'Impacta Tecnologia',
     year: '2024',
     description: `Website institucional para uma empresa de tecnologia, destacando seus serviços e soluções personalizadas, com uma interface intuitiva e gerenciamento de conteúdo via CMS.`,
@@ -60,6 +66,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/impacta-tecnologia.webp'
   },
   {
+    id: '7',
     title: 'Findbook',
     year: '2024',
     description: `Aplicação web que utiliza inteligência artificial para recomendar livros a partir da busca do usuário.`,
@@ -69,6 +76,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/findbook.webp'
   },
   {
+    id: '6',
     title: 'Notes',
     year: '2024',
     description: `Aplicação web para criar e gerenciar notas utilizando texto digitado ou gravações de áudio. 
@@ -79,6 +87,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/nlw-expert-notes.webp'
   },
   {
+    id: '5',
     title: 'Pass In',
     year: '2024',
     description: `Aplicação para gestão de participantes em eventos presenciais. 
@@ -89,6 +98,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/nlw-unite-pass-in.webp'
   },
   {
+    id: '4',
     title: 'Portfólio',
     year: '2024',
     description: 'Confira o processo de criação deste portfólio.',
@@ -98,6 +108,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/portfolio.webp'
   },
   {
+    id: '3',
     title: 'React Avançado',
     year: '2023',
     description: `Landing page do curso 'React Avançado: Crie aplicações com NextJS, Strapi e mais'.
@@ -110,6 +121,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/landing-page.webp'
   },
   {
+    id: '2',
     title: 'Single Page',
     year: '2022',
     description: `Website de uma empresa fictícia destacando seus projetos e serviços. Além disso, é apresentado sua história, redes sociais e formulário para contato, tudo de forma minimalista e objetiva.`,
@@ -119,6 +131,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     img: '/projects/single-page.webp'
   },
   {
+    id: '1',
     title: 'Metronome',
     year: '2022',
     description: `Metrônomo com diversas configurações. Além do andamento, é possível definir a fórmula de compasso, quantidade de compassos a serem executados e limite de tempo em minutos. Também é possível controlar o volume dos tempos, contratempos e tercinas separadamente.`,
