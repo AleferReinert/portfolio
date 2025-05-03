@@ -7,10 +7,10 @@ export interface AboutProps {
   name: string
   role: string
   description: ReactNode
-  resumeLink: string
+  curriculumUrl: string
 }
 
-export function About({ name, role, description, resumeLink }: AboutProps) {
+export function About({ name, role, description, curriculumUrl }: AboutProps) {
   const { initial, animate, transition, delay } = globalMotion
 
   return (
@@ -44,8 +44,8 @@ export function About({ name, role, description, resumeLink }: AboutProps) {
           <motion.a
             initial={{ ...initial.opacity }}
             animate={{ ...animate.opacity }}
-            transition={{ ...transition, delay: delay.about.resumeLink }}
-            href={resumeLink}
+            transition={{ ...transition, delay: delay.about.curriculumUrl }}
+            href={curriculumUrl}
             target='_blank'
             className='rounded-3xl border border-primary-theme text-primary-theme py-2 px-5 mt-5 font-medium text-sm max-w-fit 
 								transition hover:bg-primary-theme hover:text-secondary-theme hover:scale-95

@@ -8,7 +8,7 @@ import './globals.css'
 
 export interface SeoProps {
   googleDescription: string
-  websiteLink: string
+  websiteUrl: string
   shareImgUrl: string
 }
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: globalTitle,
     description: about.googleDescription,
-    url: about.websiteLink,
+    url: about.websiteUrl,
     siteName: globalTitle,
     type: 'website',
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     .join(', ')
     .toString(),
   alternates: {
-    canonical: about.websiteLink
+    canonical: about.websiteUrl
   },
   verification: {
     google: '01tG19FkhgIo8cteSWl6WUHYFYCeZywVTSJC6Ua5WGA'

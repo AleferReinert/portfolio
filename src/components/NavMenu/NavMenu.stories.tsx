@@ -37,7 +37,7 @@ export const WithGithub: Story = {
     await step('GitHub', () => {
       const githubLink = canvas.getByRole('link', { name: socials[0].name })
       const githubIcon = canvas.getByRole('img')
-      expect(githubLink).toHaveAttribute('href', socials[0].link)
+      expect(githubLink).toHaveAttribute('href', socials[0].url)
       expect(githubIcon).toBeVisible()
     })
   }

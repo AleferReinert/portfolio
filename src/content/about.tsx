@@ -6,8 +6,8 @@ export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps
   name: 'Alefer Reinert',
   role: 'Desenvolvedor front-end',
   email: 'aleferreinert@gmail.com',
-  websiteLink: 'https://aleferreinert.vercel.app',
-  resumeLink: 'https://drive.google.com/file/d/1rl5BEI5eoqREjQUh37iKNULMQAFPRAx0/view',
+  websiteUrl: 'https://aleferreinert.vercel.app',
+  curriculumUrl: 'https://drive.google.com/file/d/1rl5BEI5eoqREjQUh37iKNULMQAFPRAx0/view',
   shareImgUrl: '/social-share.webp',
   phone: '47999558118',
   googleDescription:

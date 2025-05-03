@@ -4,7 +4,7 @@ import { ProjectLinks } from './ProjectLinks'
 
 const meta: Meta<typeof ProjectLinks> = {
   title: 'Components/ProjectLinks',
-  args: { repositoryLink: '/repository-link' },
+  args: { repositoryUrl: '/repository-link' },
   component: ProjectLinks
 }
 
@@ -15,9 +15,9 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render GitHub link', () => {
-      const repositoryLink = canvas.getByRole('link', { name: 'GitHub' })
-      expect(repositoryLink).toHaveAttribute('href', '/repository-link')
+    await step('Render GitHub url', () => {
+      const repositoryUrl = canvas.getByRole('link', { name: 'GitHub' })
+      expect(repositoryUrl).toHaveAttribute('href', '/repository-link')
     })
 
     await step('Render svg with aria-hidden', () => {
@@ -28,13 +28,13 @@ export const Default: Story = {
 }
 
 export const WithStorybook: Story = {
-  args: { storybookLink: '/storybook-link' },
+  args: { storybookUrl: '/storybook-link' },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
     await step('Render Storybook', () => {
-      const storybookLink = canvas.getByRole('link', { name: 'Storybook' })
-      expect(storybookLink).toHaveAttribute('href', '/storybook-link')
+      const storybookUrl = canvas.getByRole('link', { name: 'Storybook' })
+      expect(storybookUrl).toHaveAttribute('href', '/storybook-link')
     })
 
     await step('Render all svgs with aria-hidden', () => {
@@ -45,13 +45,13 @@ export const WithStorybook: Story = {
 }
 
 export const WithWebsite: Story = {
-  args: { projectLink: '/project-link' },
+  args: { projectUrl: '/project-link' },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
     await step('Render website', () => {
-      const projectLink = canvas.getByRole('link', { name: 'Visualizar' })
-      expect(projectLink).toHaveAttribute('href', '/project-link')
+      const projectUrl = canvas.getByRole('link', { name: 'Visualizar' })
+      expect(projectUrl).toHaveAttribute('href', '/project-link')
     })
 
     await step('Render all svgs with aria-hidden', () => {

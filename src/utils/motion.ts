@@ -10,7 +10,7 @@ export const globalMotion = {
       firstLine: delayInterval * 2,
       name: 0,
       role: delayInterval * 1,
-      resumeLink: delayInterval * 3,
+      curriculumUrl: delayInterval * 3,
       description: 0
     },
     firstHeading: delayInterval * 2,

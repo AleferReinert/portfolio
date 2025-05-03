@@ -9,7 +9,7 @@ import { globalMotion } from 'utils/motion'
 
 export interface SocialProps {
   name: string
-  link: string
+  url: string
   icon: IconType
 }
 
@@ -48,7 +48,7 @@ export function Footer({ phone, email, socials }: FooterProps) {
               return (
                 <a
                   key={social.name}
-                  href={social.link}
+                  href={social.url}
                   title={social.name}
                   target='_blank'
                   className='group flex relative transition-colors ease-linear hover:text-primary-theme'

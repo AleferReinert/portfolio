@@ -10,9 +10,9 @@ export interface ProjectProps {
   year: string
   description: string
   skills: string[]
-  repositoryLink: string
-  storybookLink?: string
-  projectLink?: string
+  repositoryUrl: string
+  storybookUrl?: string
+  projectUrl?: string
   img: string
   lazy?: boolean
   index: number
@@ -23,9 +23,9 @@ export function Project({
   year,
   description,
   skills,
-  repositoryLink,
-  storybookLink,
-  projectLink,
+  repositoryUrl,
+  storybookUrl,
+  projectUrl,
   img,
   lazy,
   index
@@ -48,7 +48,7 @@ export function Project({
 			'
     >
       <a
-        href={projectLink || storybookLink || repositoryLink}
+        href={projectUrl || storybookUrl || repositoryUrl}
         target='_blank'
         className='relative w-full h-min aspect-25/17 max-w-[280px] md:max-w-[240px] lg:max-w-[280px]'
       >
@@ -67,12 +67,7 @@ export function Project({
             <li key={skill}>{skill}</li>
           ))}
         </ul>
-        <ProjectLinks
-          repositoryLink={repositoryLink}
-          storybookLink={storybookLink}
-          projectLink={projectLink}
-          index={index}
-        />
+        <ProjectLinks repositoryUrl={repositoryUrl} storybookUrl={storybookUrl} projectUrl={projectUrl} index={index} />
       </div>
     </motion.li>
   )

@@ -12,7 +12,7 @@ export const menu: NavMenuItemProps[] = [
 ]
 
 export const socials: SocialProps[] = [
-  { name: 'GitHub', link: 'https://github.com/AleferReinert', icon: SiGithub },
-  { name: 'LinkedIn', link: 'https://www.linkedin.com/in/AleferReinert', icon: SiLinkedin },
-  { name: 'Whatsapp', link: `https://wa.me/55${about.phone}`, icon: SiWhatsapp }
+  { name: 'GitHub', url: 'https://github.com/AleferReinert', icon: SiGithub },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/AleferReinert', icon: SiLinkedin },
+  { name: 'Whatsapp', url: `https://wa.me/55${about.phone}`, icon: SiWhatsapp }
 ]

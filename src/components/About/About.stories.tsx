@@ -24,10 +24,10 @@ export const Mobile: Story = {
       expect(heading).toHaveTextContent(about.role)
     })
 
-    await step('Render resume link button', () => {
-      const resumeLink = canvas.getByRole('link', { name: 'Visualizar CV' })
-      expect(resumeLink).toHaveAttribute('href', about.resumeLink)
-      expect(resumeLink).toHaveAttribute('target', '_blank')
+    await step('Render curriculum button', () => {
+      const curriculumUrl = canvas.getByRole('link', { name: 'Visualizar CV' })
+      expect(curriculumUrl).toHaveAttribute('href', about.curriculumUrl)
+      expect(curriculumUrl).toHaveAttribute('target', '_blank')
     })
 
     await step('Render description', () => {

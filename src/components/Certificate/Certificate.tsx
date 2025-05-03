@@ -9,11 +9,11 @@ export interface CertificateProps {
   title: string
   organization: string
   conclusionDate: string
-  link: string
+  url: string
   index: number
 }
 
-export function Certificate({ title, organization, conclusionDate, link, index }: CertificateProps) {
+export function Certificate({ title, organization, conclusionDate, url, index }: CertificateProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -26,7 +26,7 @@ export function Certificate({ title, organization, conclusionDate, link, index }
       data-testid='CertificateComponent'
       className='relative'
     >
-      <Link title='Visualizar certificado' href={link} target='_blank' className='relative group'>
+      <Link title='Visualizar certificado' href={url} target='_blank' className='relative group'>
         <span
           className='
 						w-[1px] h-full duration-300 max-h-[0%] transition-all absolute left-0 top-0

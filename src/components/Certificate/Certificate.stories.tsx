@@ -29,10 +29,10 @@ export const Default: Story = {
       expect(description).toHaveTextContent(lastCertificate!.conclusionDate)
     })
 
-    await step('Render link', () => {
+    await step('Render url', () => {
       const link = canvas.queryByRole('link')
       expect(link).toHaveAttribute('title', 'Visualizar certificado')
-      expect(link).toHaveAttribute('href', lastCertificate!.link)
+      expect(link).toHaveAttribute('href', lastCertificate!.url)
     })
   }
 }
