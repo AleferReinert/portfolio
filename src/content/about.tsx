@@ -4,14 +4,14 @@ import { FooterProps } from 'components/Footer/Footer'
 
 export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps = {
   name: 'Alefer Reinert',
-  role: 'Desenvolvedor Front-end',
+  role: 'Desenvolvedor front-end',
   email: 'aleferreinert@gmail.com',
   websiteLink: 'https://aleferreinert.vercel.app',
   resumeLink: 'https://drive.google.com/file/d/1rl5BEI5eoqREjQUh37iKNULMQAFPRAx0/view',
   shareImgUrl: '/social-share.webp',
   phone: '47999558118',
   googleDescription:
-    'Desenvolvedor Front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, etc.',
+    'Desenvolvedor front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, GraphQL e Strapi.',
   description: (
     <>
       Com mais de 8 anos experiência, desenvolvo sites e e-commerces utilizando as tecnologias mais atuais, focando em

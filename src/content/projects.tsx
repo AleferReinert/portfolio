@@ -6,7 +6,16 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     title: 'Won Games',
     year: '2025',
     description: `E-commerce de jogos. Em desenvolvimento.`,
-    skills: ['Next.js', 'TypeScript', 'StyledComponents', 'Storybook', 'TestingLibrary', 'Strapi', 'GraphQL'],
+    skills: [
+      'Next.js',
+      'TypeScript',
+      'StyledComponents',
+      'Storybook',
+      'TestingLibrary',
+      'Strapi',
+      'GraphQL',
+      'Cypress'
+    ],
     repositoryLink: 'https://github.com/AleferReinert/won-games',
     storybookLink: 'https://main--64ceaf6be6c94aa14b9fe174.chromatic.com',
     img: '/projects/min/won-games.webp'
