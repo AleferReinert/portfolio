@@ -16,6 +16,7 @@ const inter = Inter({ weight: ['300', '400', '500', '700', '900'], subsets: ['la
 const globalTitle = `Portfólio | ${about.name} - ${about.role}`
 
 export const metadata: Metadata = {
+  metadataBase: new URL(about.websiteUrl),
   title: globalTitle,
   description: about.googleDescription,
   authors: [{ name: about.name }],
