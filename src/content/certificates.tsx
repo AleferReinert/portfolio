@@ -2,6 +2,13 @@ import { CertificateProps } from 'components/Certificate/Certificate'
 
 export const certificates: Omit<CertificateProps, 'index'>[] = [
   {
+    id: '24',
+    title: 'React Avançado - NextJS, Strapi e mais',
+    organization: 'Udemy',
+    conclusionDate: 'Maio/2025',
+    url: 'https://drive.google.com/file/d/13GFn0Vh6vb413F4sYhXAkAGc9GDP-aYN/view'
+  },
+  {
     id: '23',
     title: 'NLW Connect - Nodejs',
     organization: 'Rocketseat',

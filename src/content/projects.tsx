@@ -14,7 +14,8 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
       'TestingLibrary',
       'Strapi',
       'GraphQL',
-      'Cypress'
+      'Cypress',
+      'NextAuth'
     ],
     repositoryUrl: 'https://github.com/AleferReinert/won-games',
     storybookUrl: 'https://main--64ceaf6be6c94aa14b9fe174.chromatic.com',
