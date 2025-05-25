@@ -106,27 +106,27 @@ export const certificates: Omit<CertificateProps, 'index'>[] = [
     conclusionDate: 'Abril/2024',
     url: 'https://drive.google.com/file/d/19E4pMUcpfhewk0dFpbHczLk01zM0znA4/view'
   },
-  {
-    id: '9',
-    title: 'Curso Introdução ao React',
-    organization: 'Refatorando',
-    conclusionDate: 'Março/2024',
-    url: 'https://drive.google.com/file/d/1QY9usp1Wvj3EwK6RDuSTb0LbUDnImg0u/view'
-  },
-  {
-    id: '8',
-    title: 'Curso Introdução ao TypeScript',
-    organization: 'Refatorando',
-    conclusionDate: 'Março/2024',
-    url: 'https://drive.google.com/file/d/1d3-MN9qgV0cW93yQf3xFDlRAWqzAHGeI/view'
-  },
-  {
-    id: '7',
-    title: 'Curso Introdução ao Git e Github',
-    organization: 'Refatorando',
-    conclusionDate: 'Março/2024',
-    url: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view'
-  },
+  // {
+  //   id: '9',
+  //   title: 'Curso Introdução ao React',
+  //   organization: 'Refatorando',
+  //   conclusionDate: 'Março/2024',
+  //   url: 'https://drive.google.com/file/d/1QY9usp1Wvj3EwK6RDuSTb0LbUDnImg0u/view'
+  // },
+  // {
+  //   id: '8',
+  //   title: 'Curso Introdução ao TypeScript',
+  //   organization: 'Refatorando',
+  //   conclusionDate: 'Março/2024',
+  //   url: 'https://drive.google.com/file/d/1d3-MN9qgV0cW93yQf3xFDlRAWqzAHGeI/view'
+  // },
+  // {
+  //   id: '7',
+  //   title: 'Curso Introdução ao Git e Github',
+  //   organization: 'Refatorando',
+  //   conclusionDate: 'Março/2024',
+  //   url: 'https://drive.google.com/file/d/14W5ImKi1cSnFopLsjwg12ylpsgSXXRjO/view'
+  // },
   {
     id: '6',
     title: 'Organização de Produtividade Remota',
@@ -141,20 +141,20 @@ export const certificates: Omit<CertificateProps, 'index'>[] = [
     conclusionDate: 'Janeiro/2024',
     url: 'https://drive.google.com/file/d/168BBYFD8yjjCRLlZx608FqsNLAATOTY1/view'
   },
-  {
-    id: '4',
-    title: 'PHP - MYSQL - Iniciante',
-    organization: 'Unova Cursos',
-    conclusionDate: 'Novembro/2023',
-    url: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view'
-  },
-  {
-    id: '3',
-    title: 'Javascript Para Iniciantes',
-    organization: 'Unova Cursos',
-    conclusionDate: 'Outubro/2022',
-    url: 'https://drive.google.com/file/d/1JlXW0mOzE2BANTBJE-EuKvALBTx1y0OF/view'
-  },
+  // {
+  //   id: '4',
+  //   title: 'PHP - MYSQL - Iniciante',
+  //   organization: 'Unova Cursos',
+  //   conclusionDate: 'Novembro/2023',
+  //   url: 'https://drive.google.com/file/d/1KxtzH0xtrpr3qjteX-8EDgQkKy0Hzr0Z/view'
+  // },
+  // {
+  //   id: '3',
+  //   title: 'Javascript Para Iniciantes',
+  //   organization: 'Unova Cursos',
+  //   conclusionDate: 'Outubro/2022',
+  //   url: 'https://drive.google.com/file/d/1JlXW0mOzE2BANTBJE-EuKvALBTx1y0OF/view'
+  // },
   {
     id: '2',
     title: 'CC50: Introdução à Ciência da Computação',
