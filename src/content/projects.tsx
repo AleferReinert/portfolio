@@ -5,11 +5,11 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     id: '13',
     title: 'Won Games',
     year: '2025',
-    description: `E-commerce de jogos. Em desenvolvimento.`,
+    description: `E-commerce de jogos completo.`,
     skills: [
       'Next.js',
       'TypeScript',
-      'StyledComponents',
+      'Tailwind',
       'Storybook',
       'TestingLibrary',
       'Strapi',
@@ -17,6 +17,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
       'Cypress',
       'NextAuth'
     ],
+    projectUrl: 'https://wongames-store.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/won-games',
     storybookUrl: 'https://main--64ceaf6be6c94aa14b9fe174.chromatic.com',
     img: '/projects/min/won-games.webp'
