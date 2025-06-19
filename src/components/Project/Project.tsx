@@ -57,8 +57,8 @@ export function Project({
           alt='Visualização do projeto em smartphone, tablet e desktop'
           priority={lazy}
           quality={100}
-          fill
-          sizes='(max-width: 320px) 256px, (max-width: 640px) 280px, (max-width: 768px) 240px, (max-width: 1024px) 280px, 280px'
+          width={280}
+          height={191}
         />
       </a>
       <div className='flex flex-col shrink items-center gap-4 mx-auto w-full tex-center md:text-left'>
