@@ -1,4 +1,3 @@
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { about } from 'content/about'
 import { skills } from 'content/skills'
 import { Metadata, Viewport } from 'next'
@@ -65,10 +64,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <head>
         <link rel='preconnect' href='https://vercel.live' />
       </head>
-      <body className={inter.className}>
-        {children}
-        <SpeedInsights />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
