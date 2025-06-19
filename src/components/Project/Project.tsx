@@ -52,7 +52,14 @@ export function Project({
         target='_blank'
         className='relative w-full h-min aspect-25/17 max-w-[280px] md:max-w-[240px] lg:max-w-[280px]'
       >
-        <Image src={img} alt='Imagem do projeto' priority={lazy} quality={100} width={288} height={196} />
+        <Image
+          src={img}
+          alt='Visualização do projeto em smartphone, tablet e desktop'
+          priority={lazy}
+          quality={100}
+          fill
+          sizes='(max-width: 320px) 256px, (max-width: 640px) 280px, (max-width: 768px) 240px, (max-width: 1024px) 280px, 280px'
+        />
       </a>
       <div className='flex flex-col shrink items-center gap-4 mx-auto w-full tex-center md:text-left'>
         <h3 className='w-full flex justify-between items-baseline'>

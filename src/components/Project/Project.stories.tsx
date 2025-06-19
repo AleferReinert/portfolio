@@ -60,7 +60,7 @@ export const Default: Story = {
     })
 
     await step('Visible img', () => {
-      const img = canvas.getByRole('img', { name: /imagem do projeto/i })
+      const img = canvas.getByRole('img', { name: 'Visualização do projeto em smartphone, tablet e desktop' })
       waitFor(() => {
         expect(img).toBeVisible()
         expect(img).toHaveAttribute('src', expect.stringContaining(lastProject!.img))
