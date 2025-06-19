@@ -18,11 +18,6 @@ Meu portfólio de desenvolvedor front-end.
    ```
 4. Configure as variaveis de ambiente como em `.env.example`.
 
-   ```
-   //.env
-   CHROMATIC_PROJECT_TOKEN=tobemodified
-   ```
-
 5. Inicie o servidor de desenvolvimento:
 
    ```
@@ -30,20 +25,6 @@ Meu portfólio de desenvolvedor front-end.
    ```
 
 # Scripts
-
-### Commits
-
-1. Adicione os arquivos:
-
-   ```
-   git add .
-   ```
-
-2. Selecione uma mensagem de commit válida:
-
-   ```
-   git commit
-   ```
 
 ### Iniciar Storybook
 
@@ -54,19 +35,13 @@ npm run storybook
 ### Executar testes
 
 ```
-npm run test --watch
+npm run test-storybook --watch
 ```
 
 ### Lint
 
 ```
 npm run lint
-```
-
-### Criar componente
-
-```
-npm run plop
 ```
 
 ### Publicar Storybook
@@ -78,14 +53,11 @@ npm run chromatic
 ## Tecnologias Utilizadas
 
 - **Chromatic:** Ferramenta para captura de tela, revisão e testes visuais automatizados para componentes de interface de usuário.
-- **commitlint:** Ferramenta para validar e padronizar mensagens de commit.
-- **cz-commitlint:** Adaptador para Commitizen que aplica regras de mensagens de commit definidas pelo Commitlint.
 - **ESLint:** Ferramenta de linting para identificar e corrigir problemas em código JavaScript/TypeScript.
 - **Framer Motion:** Ferramenta para animações.
 - **Husky:** Ferramenta para adicionar hooks de Git, como pré-commit e pré-push, para automatizar verificações de código.
 - **Next.js:** Framework React para a construção de aplicações web estáticas e dinâmicas.
 - **React:** Biblioteca JavaScript para construir interfaces de usuário.
-- **Plop:** Ferramenta de scaffolding para gerar código e arquivos de forma consistente e automatizada.
 - **Prettier:** Formatador de código opinativo que garante um estilo consistente de código.
 - **Storybook:** Ferramenta de desenvolvimento para construir e testar componentes de interface de usuário de forma isolada.
 - **Tailwind CSS:** Framework de utilidades CSS para estilização rápida e eficiente.
