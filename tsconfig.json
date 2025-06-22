@@ -18,6 +18,13 @@
     "paths": { "@/*": ["./src/*"] },
     "plugins": [{ "name": "next" }]
   },
-  "include": ["next.config.js", "postcss.config.ts", "tailwind.config.ts", "src/**/*", ".next/types/**/*.ts"],
+  "include": [
+    "next.config.js",
+    "postcss.config.ts",
+    "tailwind.config.ts",
+    "src/**/*",
+    ".next/types/**/*.ts",
+    "next-env.d.ts"
+  ],
   "exclude": ["node_modules"]
 }

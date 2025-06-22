@@ -1,4 +1,3 @@
-// eslint.config.mjs
 import { FlatCompat } from '@eslint/eslintrc'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'

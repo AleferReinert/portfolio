@@ -16,38 +16,25 @@ Meu portfólio de desenvolvedor front-end.
    ```
     npm install
    ```
-4. Configure as variaveis de ambiente como em `.env.example`.
-
-5. Inicie o servidor de desenvolvimento:
-
-   ```
-   npm run dev
-   ```
 
 # Scripts
 
-### Iniciar Storybook
+Iniciar servidor de desenvolvimento:
+
+```
+npm run dev
+```
+
+Iniciar Storybook:
 
 ```
 npm run storybook
 ```
 
-### Executar testes
+Executar testes unitários:
 
 ```
 npm run test-storybook --watch
-```
-
-### Lint
-
-```
-npm run lint
-```
-
-### Publicar Storybook
-
-```
-npm run chromatic
 ```
 
 ## Tecnologias Utilizadas
@@ -61,8 +48,5 @@ npm run chromatic
 - **Prettier:** Formatador de código opinativo que garante um estilo consistente de código.
 - **Storybook:** Ferramenta de desenvolvimento para construir e testar componentes de interface de usuário de forma isolada.
 - **Tailwind CSS:** Framework de utilidades CSS para estilização rápida e eficiente.
+- **Testing Library:** Ferramenta para testes unitários.
 - **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática ao código.
-
-## URL do Projeto
-
-Explore o projeto no link: [Meu Portfólio](https://aleferreinert.vercel.app).
