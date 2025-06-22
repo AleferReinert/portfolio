@@ -61,10 +61,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang='pt-BR' className='scroll-smooth dark'>
-      <head>
-        <link rel='preconnect' href='https://vercel.live' />
-      </head>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} antialiased overflow-x-hidden tracking-wide leading-normal font-light text-paragraph-theme bg-secondary-theme`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
