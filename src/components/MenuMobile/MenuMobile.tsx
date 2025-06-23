@@ -13,12 +13,13 @@ export function MenuMobile({ showMobileMenu, setShowMobileMenu, menu }: MenuMobi
         showMobileMenu ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       } md:hidden`}
     >
-      <IoCloseOutline
+      <button
         title='Fechar menu'
-        role='img'
         onClick={() => setShowMobileMenu(false)}
-        className='size-9 text-primary-theme cursor-pointer absolute top-2 right-4'
-      />
+        className='cursor-pointer absolute top-2 right-4'
+      >
+        <IoCloseOutline role='img' aria-hidden className='size-9 text-primary-theme' />
+      </button>
       <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
     </div>
   )

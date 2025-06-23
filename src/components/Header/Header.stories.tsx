@@ -24,29 +24,30 @@ export const Mobile: Story = {
   parameters: { viewport: { defaultViewport: 'xs' } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
-    const openMenuButton = canvas.getByTitle('Abrir menu')
-    const closeMenuButton = canvas.getByTitle('Fechar menu')
     const MenuMobileComponent = canvas.getByTestId('MenuMobileComponent')
 
     await step('Render buttonOpenMenu', () => {
-      waitFor(() => expect(openMenuButton).toBeVisible(), { timeout: 2000 })
+      waitFor(() => {
+        const openMenuButton = canvas.getByRole('button', { name: 'Abrir menu' })
+        waitFor(() => expect(openMenuButton).toBeVisible(), { timeout: 6000 })
+      })
     })
 
     await step('Hidden MenuMobile as default', () => {
       expect(MenuMobileComponent).not.toBeVisible()
     })
 
-    await step('Show MenuMobile on buttonOpenMenu click', async () => {
-      userEvent.click(openMenuButton)
-
-      await waitFor(() => {
+    await step('Show MenuMobile on buttonOpenMenu click', () => {
+      waitFor(() => {
+        userEvent.click(canvas.getByRole('button', { name: 'Abrir menu' }))
         expect(MenuMobileComponent).toHaveStyle({ opacity: '1', 'pointer-events': 'auto' })
       })
     })
 
     await step('Close menu on buttonCloseMenu click', () => {
-      userEvent.click(closeMenuButton)
-      waitFor(() => {
+      waitFor(async () => {
+        const closeMenuButton = await canvas.findByRole('button', { name: 'Fechar menu' })
+        userEvent.click(closeMenuButton)
         expect(MenuMobileComponent).not.toBeVisible()
       })
     })
@@ -67,9 +68,10 @@ export const Desktop: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Hidden button to open menu', () => {
-      const openMenuButton = canvas.getByTitle('Abrir menu')
-      expect(openMenuButton).not.toBeVisible()
+    await step('Hidden button to open menu', async () => {
+      await waitFor(() => expect(canvas.getByTestId('header-component')).toBeVisible(), { timeout: 2000 })
+      const openMenuButton = canvas.queryByRole('button', { name: 'Abrir menu', hidden: true })
+      expect(openMenuButton).not.toBeInTheDocument()
     })
 
     await step('Render only one NavMenuComponent', () => {

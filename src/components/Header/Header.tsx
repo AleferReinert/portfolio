@@ -34,12 +34,9 @@ export function Header({ menu, github }: Pick<NavMenuProps, 'menu' | 'github'>) 
           <div className='hidden md:flex'>
             <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} github={github} />
           </div>
-          <IoMenuOutline
-            title='Abrir menu'
-            role='img'
-            onClick={() => setShowMobileMenu(true)}
-            className='size-9 text-primary-theme cursor-pointer md:hidden'
-          />
+          <button title='Abrir menu' onClick={() => setShowMobileMenu(true)} className='cursor-pointer md:hidden'>
+            <IoMenuOutline role='img' aria-hidden className='size-9 text-primary-theme' />
+          </button>
         </Container>
       </div>
 
