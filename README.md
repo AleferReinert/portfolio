@@ -20,7 +20,7 @@ Meu portfólio de desenvolvedor front-end.
 ## Scripts disponíveis
 
 | Script                   | Descrição                                   |
-| ------------------------ | ------------------------------------------- |
+| :----------------------- | :------------------------------------------ |
 | `npm run dev`            | Inicia o servidor de desenvolvimento        |
 | `npm run storybook`      | Inicia o Storybook                          |
 | `npx tsc`                | Validação de TypeScript                     |
