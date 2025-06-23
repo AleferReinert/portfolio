@@ -69,7 +69,10 @@ export function Project({
         <p aria-label='descrição' className='leading-5 w-full'>
           {description}
         </p>
-        <ul className='w-full text-primary-theme font-normal gap-1 flex flex-wrap' title='Tecnologias utilizadas'>
+        <ul
+          className='w-full text-primary-theme font-normal gap-1.5 flex flex-wrap text-sm'
+          title='Tecnologias utilizadas'
+        >
           {skills.map((skill) => (
             <li key={skill}>{skill}</li>
           ))}

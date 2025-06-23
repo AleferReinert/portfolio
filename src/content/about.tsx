@@ -14,9 +14,8 @@ export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps
     'Desenvolvedor front-end com experiência em React, Next.js, TypeScript, Tailwind, Storybook, Testing Library, GraphQL e Strapi.',
   description: (
     <>
-      Com mais de 8 anos experiência, desenvolvo sites e e-commerces utilizando as tecnologias mais atuais, focando em
-      desempenho, acessibilidade e experiência do usuário. <br />
-      Minhas principais habilidades incluem:
+      Desenvolvo sites e e-commerces utilizando as tecnologias mais atuais, focando em desempenho, acessibilidade e
+      experiência do usuário. Minhas principais habilidades incluem:
       <span>
         <strong>React</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Tailwind</strong>,{' '}
         <strong>Storybook</strong>, <strong>Testing Library</strong>, <strong>GraphQL</strong> e <strong>Strapi</strong>
