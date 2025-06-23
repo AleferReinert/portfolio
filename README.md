@@ -14,39 +14,38 @@ Meu portfólio de desenvolvedor front-end.
    ```
 3. Instale as dependências:
    ```
-    npm install
+   npm install
    ```
 
-# Scripts
+## Scripts disponíveis
 
-Iniciar servidor de desenvolvimento:
-
-```
-npm run dev
-```
-
-Iniciar Storybook:
-
-```
-npm run storybook
-```
-
-Executar testes unitários:
-
-```
-npm run test-storybook --watch
-```
+| Script                   | Descrição                                   |
+| ------------------------ | ------------------------------------------- |
+| `npm run dev`            | Inicia o servidor de desenvolvimento        |
+| `npm run storybook`      | Inicia o Storybook                          |
+| `npx tsc`                | Validação de TypeScript                     |
+| `npm run lint`           | Validação do Next.js                        |
+| `npm run test-storybook` | Executa testes unitários                    |
+| `npm run cy:run`         | Executa testes E2E em modo headless         |
+| `npm run cy:open`        | Executa testes E2E com interface do Cypress |
 
 ## Tecnologias Utilizadas
 
-- **Chromatic:** Ferramenta para captura de tela, revisão e testes visuais automatizados para componentes de interface de usuário.
-- **ESLint:** Ferramenta de linting para identificar e corrigir problemas em código JavaScript/TypeScript.
-- **Framer Motion:** Ferramenta para animações.
-- **Husky:** Ferramenta para adicionar hooks de Git, como pré-commit e pré-push, para automatizar verificações de código.
-- **Next.js:** Framework React para a construção de aplicações web estáticas e dinâmicas.
-- **React:** Biblioteca JavaScript para construir interfaces de usuário.
-- **Prettier:** Formatador de código opinativo que garante um estilo consistente de código.
-- **Storybook:** Ferramenta de desenvolvimento para construir e testar componentes de interface de usuário de forma isolada.
-- **Tailwind CSS:** Framework de utilidades CSS para estilização rápida e eficiente.
+- **Chromatic:** Testes visuais e revisão de componentes de UI.
+- **Cypress:** Ferramenta de automação de testes E2E.
+- **ESLint:** Identificação e correção de problemas em JS/TS.
+- **Framer Motion:** Biblioteca de animações para interfaces.
+- **Husky:** Configuração de hooks Git para validações automáticas.
+- **Next.js:** Framework React para apps web modernas.
+- **React:** Biblioteca para criação de interfaces de usuário.
+- **Prettier:** Formatador para manter o estilo de código consistente.
+- **Storybook:** Ambiente para desenvolvimento de componentes isolados.
+- **Tailwind CSS:** Framework utilitário para estilização com CSS.
 - **Testing Library:** Ferramenta para testes unitários.
-- **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática ao código.
+- **TypeScript:** Superset de JavaScript com tipagem estática.
+
+## Links
+
+Deploy: [aleferreinert.vercel.app](https://aleferreinert.vercel.app)
+
+Storybook: [Visualizar no Chromatic](https://main--64cd32980293c902cb6e27ce.chromatic.com)

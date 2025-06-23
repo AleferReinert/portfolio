@@ -26,6 +26,8 @@
     ".next/types/**/*.ts",
     ".storybook/*.ts",
     ".storybook/*.tsx",
+    "cypress/**/*.ts",
+    "cypress.config.ts",
     "next-env.d.ts"
   ],
   "exclude": ["node_modules"]

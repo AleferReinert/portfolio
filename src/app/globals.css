@@ -41,7 +41,7 @@ li {
 @theme {
   /* Theme light here and theme dark in .dark bellow */
   --color-primary-theme: var(--color-cyan-950);
-  --color-secondary-theme: var(--color-slate-50);
+  --color-secondary-theme: #f8fafc;
   --color-heading-theme: var(--color-slate-800);
   --color-paragraph-theme: var(--color-slate-700);
 
