@@ -33,7 +33,9 @@ export function Filter({
   return (
     <div
       data-testid='FilterComponent'
-      className={`transition-all duration-500 overflow-hidden ${showFilters ? 'max-h-[376px] md:max-h-[232px] lg:max-h-[208px] xl:max-h-[192px]' : 'max-h-0'}`}
+      className={`transition-all duration-500 overflow-hidden 
+				${showFilters ? 'max-h-[400px] sm:amx-h-[304px] md:max-h-[232px] lg:max-h-[208px]' : 'max-h-0'}
+			`}
     >
       <div className='mb-6'>
         <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
