@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#083344',
+  themeColor: '#032633',
   initialScale: 1,
   width: 'device-width'
 }
@@ -61,11 +61,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang='pt-BR' className='scroll-smooth dark'>
-      <body
-        className={`${inter.className} antialiased overflow-x-hidden tracking-wide leading-normal font-light text-paragraph-theme bg-secondary-theme`}
-      >
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

@@ -7,7 +7,7 @@ export function Switch() {
   useEffect(() => {
     const htmlTag = document.documentElement
     const themeMetaTag = document.querySelector("meta[name='theme-color']")
-    const newTheme = isDarkTheme ? '#083344' : '#f8fafc'
+    const newTheme = isDarkTheme ? '#032633' : '#f8fafc'
 
     themeMetaTag?.setAttribute('content', newTheme)
     htmlTag.classList[isDarkTheme ? 'add' : 'remove']('dark')

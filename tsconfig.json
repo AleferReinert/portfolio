@@ -24,6 +24,8 @@
     "tailwind.config.ts",
     "src/**/*",
     ".next/types/**/*.ts",
+    ".storybook/*.ts",
+    ".storybook/*.tsx",
     "next-env.d.ts"
   ],
   "exclude": ["node_modules"]
