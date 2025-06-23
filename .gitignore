@@ -37,3 +37,9 @@ next-env.d.ts
 
 # logs
 build-storybook.log
+
+# cypress
+cypress/screenshots
+cypress/videos
+cypress/.env
+cypress/downloads
