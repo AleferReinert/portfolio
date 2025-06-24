@@ -15,7 +15,7 @@ export function Heading({ children, isFirst = false }: HeadingProps) {
 
   return (
     <>
-      <h2 className='text-2xl leading-none font-bold overflow-hidden uppercase pb-2 text-primary-theme'>
+      <h2 className='text-2xl leading-none font-bold overflow-hidden uppercase pt-6 pb-2 text-primary-theme'>
         <motion.div
           data-testid='HeadingComponent'
           ref={ref}

@@ -10,7 +10,7 @@ interface SectionProps extends Pick<HeadingProps, 'isFirst'> {
 
 export function Section({ id, title, children, isFirst }: SectionProps) {
   return (
-    <section id={id} className='pb-12 md:pb-16'>
+    <section id={id} className='pb-6 md:pb-10'>
       <Container>
         {title && <Heading isFirst={isFirst}>{title}</Heading>}
         {children}
