@@ -28,14 +28,14 @@ export const Default: Story = {
       expect(listItem).not.toHaveAttribute('title', 'Tailwind')
     })
 
-    await step('Visible svg', () => {
+    await step('Svg', () => {
       const svg = canvas.getByRole('img', { hidden: true })
       waitFor(() => {
         expect(svg).toBeVisible()
       })
     })
 
-    await step('Visible skill name', () => {
+    await step('Skill name', () => {
       const skillName = canvas.getByText('Tailwind')
       waitFor(() => expect(skillName).toBeVisible())
     })
@@ -54,7 +54,7 @@ export const WithShortTile: Story = {
       })
     })
 
-    await step('Render title in <li>', () => {
+    await step('Title in <li>', () => {
       const listItem = canvas.getByRole('listitem')
       expect(listItem).toHaveAttribute('title', 'StyledComponents')
     })

@@ -34,10 +34,6 @@ li {
   @apply list-none;
 }
 
-@utility primary-theme {
-  @apply bg-red-500 text-red-50;
-}
-
 @theme {
   /* Theme light here and theme dark in .dark bellow */
   --color-primary-theme: var(--color-cyan-950);

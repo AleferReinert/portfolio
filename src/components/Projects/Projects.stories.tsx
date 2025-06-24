@@ -20,7 +20,7 @@ export const Default: Story = {
     const FilterComponent = canvas.getByTestId('FilterComponent')
     const filterButton = canvas.getByRole('button', { name: 'Exibir filtros' })
 
-    await step('Render heading', () => {
+    await step('Heading', () => {
       const HeadingComponent = canvas.getByTestId('HeadingComponent')
       expect(HeadingComponent).toHaveTextContent('Projetos')
     })

@@ -11,7 +11,7 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render h2', () => {
+    await step('h2', () => {
       const heading = canvas.getByRole('heading', { level: 2 })
       expect(heading).toHaveTextContent('Heading')
     })

@@ -19,12 +19,12 @@ export const Mobile: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render heading', () => {
+    await step('Heading', () => {
       const HeadingComponent = canvas.getByTestId('HeadingComponent')
       expect(HeadingComponent).toHaveTextContent('Habilidades')
     })
 
-    await step('Render 18 skills', () => {
+    await step('18 skills', () => {
       const skills = canvas.getAllByRole('listitem')
       expect(skills.length).toBeGreaterThanOrEqual(18)
     })

@@ -8,7 +8,11 @@ import { Footer } from './Footer'
 const meta: Meta<typeof Footer> = {
   title: 'Components/Footer',
   component: Footer,
-  args: { phone: about.phone, email: about.email, socials: socials },
+  args: {
+    phone: about.phone,
+    email: about.email,
+    socials: socials
+  },
   parameters: { layout: 'fullscreen' }
 }
 
@@ -19,22 +23,22 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render heading', () => {
+    await step('Heading', () => {
       const HeadingComponent = canvas.getByTestId('HeadingComponent')
       expect(HeadingComponent).toHaveTextContent('Contato')
     })
 
-    await step('Render phone', () => {
+    await step('Phone', () => {
       const phone = canvas.getByRole('link', { name: formatPhone(about.phone) })
       expect(phone).toHaveAttribute('href', `tel:${about.phone}`)
     })
 
-    await step('Render email', () => {
+    await step('Email', () => {
       const phone = canvas.getByRole('link', { name: about.email })
       expect(phone).toHaveAttribute('href', `mailto:${about.email}`)
     })
 
-    await step('Render social links', async () => {
+    await step('Social links', async () => {
       await waitFor(() => {
         const socialLinksNavigation = canvas.getByRole('navigation')
         expect(socialLinksNavigation).toBeVisible()

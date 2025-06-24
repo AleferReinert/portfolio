@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: about.shareImgUrl,
         width: 1200,
         height: 630,
-        alt: 'Imagem que mostra o site responsivo em um celular, tablet e notebook.'
+        alt: 'Visualização do site em um celular, tablet e notebook.'
       }
     ]
   },

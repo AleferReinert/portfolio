@@ -18,18 +18,18 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render title', () => {
+    await step('Title', () => {
       const title = canvas.getByRole('heading', { level: 3 })
       expect(title).toHaveTextContent(lastCertificate!.title)
     })
 
-    await step('Render organization and conclusion date', () => {
+    await step('Organization and conclusion date', () => {
       const description = canvas.getByRole('paragraph')
       expect(description).toHaveTextContent(lastCertificate!.organization)
       expect(description).toHaveTextContent(lastCertificate!.conclusionDate)
     })
 
-    await step('Render url', () => {
+    await step('Url', () => {
       const link = canvas.queryByRole('link')
       expect(link).toHaveAttribute('title', 'Visualizar certificado')
       expect(link).toHaveAttribute('href', lastCertificate!.url)

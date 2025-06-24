@@ -19,7 +19,7 @@ export function Filter({
   filteredProjects,
   projects
 }: FilterProps) {
-  // Remove a skill caso já exista, se não adiciona
+  // Remove the skill if it already exists, if not add it
   const updateSelectedSkills = (skill: string) => {
     setSelectedSkills((prevSelectedSkills) => {
       if (prevSelectedSkills.includes(skill)) {

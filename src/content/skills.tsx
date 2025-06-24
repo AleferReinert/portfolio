@@ -37,7 +37,6 @@ export const skills: Omit<SkillProps, 'index'>[] = [
   { title: 'GraphQL', iconAction: SiGraphql },
   { title: 'ApolloGraphQL', iconAction: SiApollographql, shortTitle: 'Apollo' },
   { title: 'LESS', iconAction: SiLess },
-  // { title: 'Gulp', iconAction: SiGulp },
   { title: 'Figma', iconAction: SiFigma },
   { title: 'Photoshop', iconAction: SiAdobephotoshop }
 ]

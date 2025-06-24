@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { projects } from 'content/projects'
+import { skills } from 'content/skills'
 import { Filter } from './Filter'
 
 const meta: Meta<typeof Filter> = {
@@ -8,7 +9,7 @@ const meta: Meta<typeof Filter> = {
   component: Filter,
   args: {
     showFilters: true,
-    skills: ['React', 'TypeScript', 'Tailwind', 'Next.js'],
+    skills: skills.map((skill) => skill.title),
     selectedSkills: [],
     setSelectedSkills: fn(),
     filteredProjects: projects,
@@ -19,8 +20,4 @@ const meta: Meta<typeof Filter> = {
 export default meta
 type Story = StoryObj<typeof Filter>
 
-export const Default: Story = {
-  play: async () => {
-    // Testes com filtros no story Projects
-  }
-}
+export const Default: Story = {}

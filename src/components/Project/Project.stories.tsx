@@ -26,7 +26,7 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Visible title', () => {
+    await step('Title', () => {
       const title = canvas.getByRole('heading', { level: 3 })
       waitFor(() => {
         expect(title).toBeVisible()
@@ -34,7 +34,7 @@ export const Default: Story = {
       })
     })
 
-    await step('Visible year', () => {
+    await step('Year', () => {
       const year = canvas.getByLabelText('ano')
       waitFor(() => {
         expect(year).toBeVisible()
@@ -42,7 +42,7 @@ export const Default: Story = {
       })
     })
 
-    await step('Visible description', () => {
+    await step('Description', () => {
       const description = canvas.getByLabelText('descrição')
       waitFor(() => {
         expect(description).toBeVisible()
@@ -50,7 +50,7 @@ export const Default: Story = {
       })
     })
 
-    await step('Visible skills', () => {
+    await step('Skills', () => {
       const list = canvas.getByRole('list', { name: 'Tecnologias utilizadas' })
       const skills = within(list).getAllByRole('listitem')
       waitFor(() => {
@@ -59,7 +59,7 @@ export const Default: Story = {
       })
     })
 
-    await step('Visible img', () => {
+    await step('Image', () => {
       const img = canvas.getByRole('img', { name: 'Visualização do projeto em smartphone, tablet e desktop' })
       waitFor(() => {
         expect(img).toBeVisible()

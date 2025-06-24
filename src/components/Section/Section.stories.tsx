@@ -15,7 +15,7 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('id', () => {
+    await step('Id', () => {
       const section = canvasElement.getElementsByTagName('section')[0]
       expect(section.id).toBe('about')
     })

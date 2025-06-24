@@ -12,7 +12,7 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render 5 links', () => {
+    await step('5 links', () => {
       const links = canvas.getAllByRole('link')
       expect(links.length).toBe(5)
     })
@@ -29,7 +29,7 @@ export const WithGithub: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render 6 links', () => {
+    await step('6 links', () => {
       const links = canvas.getAllByRole('link')
       expect(links.length).toBe(6)
     })

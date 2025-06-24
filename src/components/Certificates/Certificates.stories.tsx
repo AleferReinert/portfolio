@@ -17,7 +17,7 @@ export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('Render heading', () => {
+    await step('Heading', () => {
       const HeadingComponent = canvas.getByTestId('HeadingComponent')
       expect(HeadingComponent).toHaveTextContent('Certificados')
     })

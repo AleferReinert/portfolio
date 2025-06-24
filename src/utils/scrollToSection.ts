@@ -1,5 +1,4 @@
-// Realiza o scroll para a seção correta ao atualizar a página
-
+// Scroll to section with id in url hash
 export function scrollToSection() {
   const hash = window.location.hash
   const offsetTop = document.getElementById(hash.replace('#', ''))?.offsetTop

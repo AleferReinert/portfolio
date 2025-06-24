@@ -15,38 +15,13 @@ type Story = StoryObj<typeof HomeComponent>
 
 export const Home: Story = {
   play: async ({ step }) => {
-    await step('Render section about', async () => {
+    await step('Sections: About, Projects, Skills, Certificates and Contact', async () => {
       await waitFor(() => {
-        const about = document.getElementById('about')
-        expect(about).toBeVisible()
-      })
-    })
-
-    await step('Render section projects', async () => {
-      await waitFor(() => {
-        const projects = document.getElementById('projects')
-        expect(projects).toBeVisible()
-      })
-    })
-
-    await step('Render section skills', async () => {
-      await waitFor(() => {
-        const skills = document.getElementById('skills')
-        expect(skills).toBeVisible()
-      })
-    })
-
-    await step('Render section certificates', async () => {
-      await waitFor(() => {
-        const certificates = document.getElementById('certificates')
-        expect(certificates).toBeVisible()
-      })
-    })
-
-    await step('Render section contact', async () => {
-      await waitFor(() => {
-        const contact = document.getElementById('contact')
-        expect(contact).toBeVisible()
+        expect(document.getElementById('about')).toBeVisible()
+        expect(document.getElementById('projects')).toBeVisible()
+        expect(document.getElementById('skills')).toBeVisible()
+        expect(document.getElementById('certificates')).toBeVisible()
+        expect(document.getElementById('contact')).toBeVisible()
       })
     })
   }
