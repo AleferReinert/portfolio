@@ -18,7 +18,7 @@ export function MenuMobile({ showMobileMenu, setShowMobileMenu, menu }: MenuMobi
         onClick={() => setShowMobileMenu(false)}
         className='cursor-pointer absolute top-2 right-4'
       >
-        <IoCloseOutline role='img' aria-hidden className='size-9 text-primary-theme' />
+        <IoCloseOutline aria-hidden className='size-9 text-primary-theme' />
       </button>
       <NavMenu menu={menu} setShowMobileMenu={setShowMobileMenu} />
     </div>

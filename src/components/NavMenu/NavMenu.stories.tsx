@@ -3,7 +3,11 @@ import { expect, within } from '@storybook/test'
 import { menu, socials } from 'content/layout'
 import { NavMenu } from './NavMenu'
 
-const meta: Meta<typeof NavMenu> = { title: 'Components/NavMenu', component: NavMenu, args: { menu: menu } }
+const meta: Meta<typeof NavMenu> = {
+  title: 'Components/NavMenu',
+  component: NavMenu,
+  args: { menu: menu }
+}
 
 export default meta
 type Story = StoryObj<typeof NavMenu>
@@ -36,7 +40,7 @@ export const WithGithub: Story = {
 
     await step('GitHub', () => {
       const githubLink = canvas.getByRole('link', { name: socials[0].name })
-      const githubIcon = canvas.getByRole('img')
+      const githubIcon = canvas.getByRole('img', { hidden: true })
       expect(githubLink).toHaveAttribute('href', socials[0].url)
       expect(githubIcon).toBeVisible()
     })

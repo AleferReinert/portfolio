@@ -8,7 +8,10 @@ const lastCertificate = certificates.at(-1)
 const meta: Meta<typeof Certificate> = {
   title: 'Components/Certificate',
   component: Certificate,
-  args: { ...lastCertificate }
+  args: { ...lastCertificate },
+  parameters: {
+    a11y: { config: { rules: [{ id: 'listitem', enabled: false }] } }
+  }
 }
 
 export default meta

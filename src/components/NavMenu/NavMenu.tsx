@@ -16,7 +16,11 @@ export interface NavMenuProps {
 
 export function NavMenu({ menu, setShowMobileMenu, github }: NavMenuProps) {
   return (
-    <nav data-testid='NavMenuComponent' className='flex flex-col gap-6 text-center text-2xl md:flex-row md:text-base'>
+    <nav
+      data-testid='NavMenuComponent'
+      aria-label='Menu'
+      className='flex flex-col gap-6 text-center text-2xl md:flex-row md:text-base'
+    >
       {menu.map((item) => (
         <Link
           key={item.link}
@@ -35,7 +39,7 @@ export function NavMenu({ menu, setShowMobileMenu, github }: NavMenuProps) {
           target='_blank'
           className='transition hover:text-primary-theme hidden md:inline'
         >
-          <SiGithub size={24} />
+          <SiGithub aria-hidden size={24} />
         </a>
       )}
     </nav>

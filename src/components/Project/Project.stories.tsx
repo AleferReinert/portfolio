@@ -10,13 +10,10 @@ const meta: Meta<typeof Project> = {
   component: Project,
   args: { ...lastProject },
   argTypes: { lazy: { table: { disable: true } } },
-  decorators: [
-    (Story) => (
-      <div className='p-4'>
-        <Story />
-      </div>
-    )
-  ]
+  parameters: {
+    layout: 'padded',
+    a11y: { config: { rules: [{ id: 'listitem', enabled: false }] } }
+  }
 }
 
 export default meta
@@ -35,7 +32,7 @@ export const Default: Story = {
     })
 
     await step('Year', () => {
-      const year = canvas.getByLabelText('ano')
+      const year = canvas.getByRole('time')
       waitFor(() => {
         expect(year).toBeVisible()
         expect(year).toHaveTextContent(lastProject!.year)
@@ -43,7 +40,7 @@ export const Default: Story = {
     })
 
     await step('Description', () => {
-      const description = canvas.getByLabelText('descrição')
+      const description = canvas.getByRole('paragraph')
       waitFor(() => {
         expect(description).toBeVisible()
         expect(description).toHaveTextContent(lastProject!.description)

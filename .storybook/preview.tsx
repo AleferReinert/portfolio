@@ -38,7 +38,8 @@ const preview: Preview = {
         md: { name: 'Tailwind md (768)', styles: { width: '768px', height: '100%' } },
         lg: { name: 'Tailwind lg (1024)', styles: { width: '1024px', height: '100%' } },
         xl: { name: 'Tailwind xl (1280)', styles: { width: '1920px', height: '1080px' } }
-      }
+      },
+      defaultViewport: 'reset'
     }
   }
 }

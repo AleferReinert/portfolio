@@ -64,11 +64,9 @@ export function Project({
       <div className='flex flex-col shrink items-center gap-4 mx-auto w-full tex-center md:text-left'>
         <h3 className='w-full flex justify-between items-baseline'>
           <span className='text-2xl font-bold text-heading-theme'>{title}</span>
-          <span aria-label='ano'>{year}</span>
+          <time dateTime={year}>{year}</time>
         </h3>
-        <p aria-label='descrição' className='leading-5 w-full'>
-          {description}
-        </p>
+        <p className='leading-5 w-full'>{description}</p>
         <ul
           className='w-full text-primary-theme font-normal gap-1.5 flex flex-wrap text-sm'
           title='Tecnologias utilizadas'

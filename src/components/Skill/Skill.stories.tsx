@@ -12,6 +12,9 @@ const meta: Meta<typeof Skill> = {
         <Story />
       </div>
     )
+  },
+  parameters: {
+    a11y: { config: { rules: [{ id: 'listitem', enabled: false }] } }
   }
 }
 

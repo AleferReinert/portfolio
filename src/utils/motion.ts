@@ -1,4 +1,7 @@
 const delayInterval = 0.2 // Diferença de tempo de transição entre os primeiros elementos da página
+const isStorybook = process.env.STORYBOOK
+
+// Disable initial animation in Storybook
 
 export const globalMotion = {
   transition: {
@@ -18,33 +21,47 @@ export const globalMotion = {
     header: delayInterval * 2
   },
   initial: {
-    fromLeft: {
-      opacity: 0,
-      x: -100
-    },
-    fromRight: {
-      opacity: 0,
-      x: 100
-    },
-    fromBottom: {
-      opacity: 0,
-      y: 100
-    },
-    fromTop: {
-      opacity: 0,
-      y: -100
-    },
-    fromScale: {
-      opacity: 0,
-      scale: 0.8
-    },
-    maxWidth: {
-      opacity: 0,
-      maxWidth: 0
-    },
-    opacity: {
-      opacity: 0
-    }
+    fromLeft: isStorybook
+      ? {}
+      : {
+          opacity: 0,
+          x: -100
+        },
+    fromRight: isStorybook
+      ? {}
+      : {
+          opacity: 0,
+          x: 100
+        },
+    fromBottom: isStorybook
+      ? {}
+      : {
+          opacity: 0,
+          y: 100
+        },
+    fromTop: isStorybook
+      ? {}
+      : {
+          opacity: 0,
+          y: -100
+        },
+    fromScale: isStorybook
+      ? {}
+      : {
+          opacity: 0,
+          scale: 0.8
+        },
+    maxWidth: isStorybook
+      ? {}
+      : {
+          opacity: 0,
+          maxWidth: 0
+        },
+    opacity: isStorybook
+      ? {}
+      : {
+          opacity: 0
+        }
   },
   animate: {
     horizontal: {
