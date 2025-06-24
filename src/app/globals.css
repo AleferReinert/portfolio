@@ -101,7 +101,7 @@ li {
 }
 
 .dark {
-  --color-primary-theme: var(--color-green-400);
+  --color-primary-theme: var(--color-green-500);
   --color-secondary-theme: #032633;
   --color-heading-theme: var(--color-slate-50);
   --color-paragraph-theme: var(--color-slate-300);
