@@ -135,7 +135,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     title: 'Portfólio',
     year: '2024',
     description: 'Confira o processo de criação deste portfólio.',
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Storybook', 'TestingLibrary', 'FramerMotion'],
+    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Storybook', 'TestingLibrary', 'FramerMotion', 'Cypress'],
     repositoryUrl: 'https://github.com/AleferReinert/portfolio',
     storybookUrl: 'https://main--64cd32980293c902cb6e27ce.chromatic.com',
     img: '/projects/min/portfolio.webp'
