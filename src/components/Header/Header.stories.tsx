@@ -64,7 +64,7 @@ export const Mobile: Story = {
 }
 
 export const Desktop: Story = {
-  parameters: { viewport: { defaultViewport: 'responsive' } },
+  parameters: { viewport: { defaultViewport: 'reset' } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 

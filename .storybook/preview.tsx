@@ -1,16 +1,22 @@
+import { withThemeByClassName } from '@storybook/addon-themes'
 import type { Preview } from '@storybook/react'
 import { create } from '@storybook/theming'
 import '../src/app/globals.css'
 
 const preview: Preview = {
   tags: ['autodocs'],
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: '',
+        dark: 'dark'
+      },
+      defaultTheme: 'dark'
+    })
+  ],
   parameters: {
     backgrounds: {
-      values: [
-        { name: 'Light', value: '#f8fafc' },
-        { name: 'Dark', value: '#032633' }
-      ],
-      default: 'Dark'
+      disable: true
     },
     controls: { hideNoControlsWarning: true },
     docs: {
@@ -31,10 +37,8 @@ const preview: Preview = {
         sm: { name: 'Tailwind sm (640)', styles: { width: '640px', height: '100%' } },
         md: { name: 'Tailwind md (768)', styles: { width: '768px', height: '100%' } },
         lg: { name: 'Tailwind lg (1024)', styles: { width: '1024px', height: '100%' } },
-        xl: { name: 'Tailwind xl (1280)', styles: { width: '1920px', height: '1080px' } },
-        responsive: { name: 'responsive', styles: { width: '100%', height: '100%' } }
-      },
-      defaultViewport: 'responsive'
+        xl: { name: 'Tailwind xl (1280)', styles: { width: '1920px', height: '1080px' } }
+      }
     }
   }
 }
