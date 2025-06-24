@@ -15,11 +15,12 @@ export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps
   description: (
     <>
       Desenvolvo sites e e-commerces utilizando as tecnologias mais atuais, focando em desempenho, acessibilidade e
-      experiência do usuário. Minhas principais habilidades incluem:
+      experiência do usuário. <br className='block lg:hidden' />
+      Minhas principais habilidades incluem:{' '}
       <span>
         <strong>React</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Tailwind</strong>,{' '}
-        <strong>Storybook</strong>, <strong>Testing Library</strong>, <strong>GraphQL</strong> e <strong>Strapi</strong>
-        .
+        <strong>Storybook</strong>, <strong>Testing Library</strong>, <strong>GraphQL</strong>, <strong>Cypress</strong>{' '}
+        e <strong>Strapi</strong>.
       </span>
     </>
   )
