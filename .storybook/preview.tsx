@@ -1,35 +1,28 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
 import type { Preview } from '@storybook/react'
-import { create } from '@storybook/theming'
 import '../src/app/globals.css'
-
 const preview: Preview = {
   tags: ['autodocs'],
   decorators: [
     withThemeByClassName({
       themes: {
-        light: '',
-        dark: 'dark'
+        light: 'light',
+        dark: 'dark '
       },
       defaultTheme: 'dark'
-    })
+    }),
+    (Story) => (
+      <div className='bg-secondary-theme'>
+        <Story />
+      </div>
+    )
   ],
   parameters: {
     backgrounds: {
       disable: true
     },
     controls: { hideNoControlsWarning: true },
-    docs: {
-      theme: create({
-        base: 'dark',
-        appContentBg: '05334',
-        barBg: 'transparent',
-        inputBg: 'transparent',
-        booleanBg: 'transparent',
-        booleanSelectedBg: 'rgba(0,0,0,0.15)',
-        buttonBg: 'transparent'
-      })
-    },
+    layout: 'fullscreen',
     options: { showPanel: true, panelDirection: 'right' },
     viewport: {
       viewports: {

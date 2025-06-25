@@ -5,7 +5,12 @@ import { ProjectLinks } from './ProjectLinks'
 const meta: Meta<typeof ProjectLinks> = {
   title: 'Components/ProjectLinks',
   args: { repositoryUrl: '/repository-link' },
-  component: ProjectLinks
+  component: ProjectLinks,
+  decorators: (Story) => (
+    <div className='p-4'>
+      <Story />
+    </div>
+  )
 }
 
 export default meta

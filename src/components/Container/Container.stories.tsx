@@ -5,8 +5,7 @@ import { Container } from './Container'
 const meta: Meta<typeof Container> = {
   title: 'Components/Container',
   component: Container,
-  args: { children: <div className='flex justify-center items-center bg-white/25 py-10'>children</div> },
-  parameters: { layout: 'fullscreen' }
+  args: { children: <div className='flex justify-center items-center bg-white/50 py-10'>children</div> }
 }
 
 export default meta
@@ -15,14 +14,14 @@ type Story = StoryObj<typeof Container>
 export const Default: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
+    const children = canvas.getByText('children')
 
     await step('Children', () => {
-      const children = canvas.getByText('children')
       expect(children).toBeInTheDocument()
     })
 
     await step('Max width', () => {
-      const container = canvasElement.firstChild
+      const container = children.parentElement
       expect(container).toHaveClass('max-w-5xl')
     })
   }

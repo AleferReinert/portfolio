@@ -11,7 +11,6 @@ const meta: Meta<typeof Project> = {
   args: { ...lastProject },
   argTypes: { lazy: { table: { disable: true } } },
   parameters: {
-    layout: 'padded',
     a11y: { config: { rules: [{ id: 'listitem', enabled: false }] } }
   }
 }

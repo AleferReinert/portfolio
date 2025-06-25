@@ -6,7 +6,12 @@ import { NavMenu } from './NavMenu'
 const meta: Meta<typeof NavMenu> = {
   title: 'Components/NavMenu',
   component: NavMenu,
-  args: { menu: menu }
+  args: { menu: menu },
+  decorators: (Story) => (
+    <div className='p-4'>
+      <Story />
+    </div>
+  )
 }
 
 export default meta

@@ -2,12 +2,22 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { expect, userEvent, waitFor, within } from '@storybook/test'
 import { Switch } from './Switch'
 
-const meta: Meta<typeof Switch> = { title: 'Components/Switch', component: Switch }
+const meta: Meta<typeof Switch> = {
+  title: 'Components/Switch',
+  component: Switch,
+  decorators: (Story) => (
+    <div className='p-4'>
+      <Story />
+    </div>
+  ),
+  tags: ['!autodocs']
+}
 
 export default meta
 type Story = StoryObj<typeof Switch>
 
 export const Default: Story = {
+  name: 'Switch',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
     const SwitchComponent = canvas.getByTestId('SwitchComponent')

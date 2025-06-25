@@ -10,8 +10,14 @@ const meta: Meta<typeof Certificate> = {
   component: Certificate,
   args: { ...lastCertificate },
   parameters: {
-    a11y: { config: { rules: [{ id: 'listitem', enabled: false }] } }
-  }
+    a11y: { config: { rules: [{ id: 'listitem', enabled: false }] } },
+    layout: 'fullscreen'
+  },
+  decorators: (Story) => (
+    <div className='p-4'>
+      <Story />
+    </div>
+  )
 }
 
 export default meta

@@ -14,7 +14,12 @@ const meta: Meta<typeof Filter> = {
     setSelectedSkills: fn(),
     filteredProjects: projects,
     projects: projects
-  }
+  },
+  decorators: (Story) => (
+    <div className='p-4'>
+      <Story />
+    </div>
+  )
 }
 
 export default meta
