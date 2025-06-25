@@ -38,29 +38,32 @@ export const Mobile: Story = {
     })
 
     await step('Show MenuMobile on buttonOpenMenu click', () => {
-      waitFor(() => {
+      waitFor(async () => {
         userEvent.click(canvas.getByRole('button', { name: 'Abrir menu' }))
-        expect(MenuMobileComponent).toHaveStyle({ opacity: '1', 'pointer-events': 'auto' })
+        await expect(MenuMobileComponent).toBeVisible()
       })
     })
 
-    await step('Close menu on buttonCloseMenu click', () => {
-      waitFor(async () => {
-        const closeMenuButton = await canvas.findByRole('button', { name: 'Fechar menu' })
-        userEvent.click(closeMenuButton)
+    await step('Close menu on buttonCloseMenu click', async () => {
+      const closeMenuButton = await canvas.findByRole('button', { name: 'Fechar menu' })
+      await waitFor(() => {
+        expect(closeMenuButton).toBeVisible()
+      })
+      await userEvent.click(closeMenuButton)
+
+      await waitFor(() => {
         expect(MenuMobileComponent).not.toBeVisible()
       })
     })
 
-    // Todo: test-runner not recognize defaultViewport
-    // await step('GitHub hidden', () => {
-    //   const github = canvas.queryByRole('link', { name: 'GitHub', hidden: true })
-    //   if (github) {
-    //     expect(github).not.toBeVisible()
-    //   } else {
-    //     expect(github).toBeNull()
-    //   }
-    // })
+    await step('GitHub hidden', () => {
+      const github = canvas.queryByRole('link', { name: 'GitHub', hidden: true })
+      if (github) {
+        expect(github).not.toBeVisible()
+      } else {
+        expect(github).toBeNull()
+      }
+    })
   }
 }
 

@@ -12,7 +12,7 @@ export function Heading({ children, isFirst = false }: HeadingProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const { initial, animate, transition, delay } = globalMotion
-  console.log('isInView:', isInView)
+
   return (
     <h2
       ref={ref}
