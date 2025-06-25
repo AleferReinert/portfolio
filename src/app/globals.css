@@ -27,7 +27,7 @@ svg:focus {
 }
 
 body {
-  @apply antialiased overflow-x-hidden tracking-wide leading-normal font-light text-paragraph-theme bg-secondary-theme;
+  @apply antialiased overflow-x-hidden tracking-wide leading-normal text-paragraph-theme bg-secondary-theme;
 }
 
 li {
@@ -36,10 +36,10 @@ li {
 
 @theme {
   /* Theme light here and theme dark in .dark bellow */
-  --color-primary-theme: var(--color-cyan-950);
-  --color-secondary-theme: #f8fafc;
-  --color-heading-theme: var(--color-slate-800);
-  --color-paragraph-theme: var(--color-slate-700);
+  --color-primary-theme: #00734c;
+  --color-secondary-theme: #e7e3e4;
+  --color-heading-theme: #000;
+  --color-paragraph-theme: #000;
 
   --animate-rotateFrom180: rotateFrom180 0.25s;
   --animate-wheelInIcon: wheelInIcon 2s infinite;
@@ -97,8 +97,8 @@ li {
 }
 
 .dark {
-  --color-primary-theme: var(--color-green-500);
-  --color-secondary-theme: #032633;
-  --color-heading-theme: var(--color-slate-50);
-  --color-paragraph-theme: var(--color-slate-300);
+  --color-primary-theme: #00f88f;
+  --color-secondary-theme: #000;
+  --color-heading-theme: #fff;
+  --color-paragraph-theme: #fff;
 }

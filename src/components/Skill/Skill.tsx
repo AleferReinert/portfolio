@@ -24,16 +24,16 @@ export function Skill({ title, iconAction, shortTitle, index }: SkillProps) {
       transition={{ ...globalMotion.transition, delay: index * 0.05 }}
       data-testid='SkillComponent'
       title={shortTitle && title}
-      className='group overflow-hidden aspect-94/87 sm:aspect-128/87 relative bg-black/5 dark:bg-black/25'
+      className='group overflow-hidden aspect-94/87 sm:aspect-128/87 relative bg-black/5 dark:bg-white/8'
     >
       <Icon
         aria-hidden
         role='img'
-        className='size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 -translate-y-2 group-hover:animate-wheelInIcon'
+        className='size-8 fill-heading-theme absolute left-1/2 -ml-4 top-1/2 -mt-4 -translate-y-2 group-hover:animate-wheelInIcon group-hover:fill-primary-theme'
       />
       <div
-        className='whitespace-nowrap text-[0.625rem] font-normal h-6 w-full text-center absolute top-1/2 
-          mt-5 leading-none group-hover:animate-wheelInText group-hover:opacity-0 group-hover:-mt-2 group-hover:font-medium'
+        className='whitespace-nowrap text-xs h-6 w-full text-center absolute top-1/2 
+          mt-5 leading-none group-hover:animate-wheelInText group-hover:opacity-0 group-hover:-mt-2 group-hover:font-medium group-hover:text-primary-theme'
       >
         {shortTitle ?? title}
       </div>

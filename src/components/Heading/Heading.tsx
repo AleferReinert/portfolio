@@ -12,27 +12,20 @@ export function Heading({ children, isFirst = false }: HeadingProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const { initial, animate, transition, delay } = globalMotion
-
+  console.log('isInView:', isInView)
   return (
-    <>
-      <h2 className='text-2xl leading-none font-bold overflow-hidden uppercase pt-6 pb-2 text-primary-theme'>
-        <motion.div
-          data-testid='HeadingComponent'
-          ref={ref}
-          initial={{ ...initial.fromBottom }}
-          animate={isInView ? { ...animate.vertical } : {}}
-          transition={{ ...transition, delay: isFirst ? delay.firstHeading : 0 }}
-        >
-          {children}
-        </motion.div>
-      </h2>
+    <h2
+      ref={ref}
+      className='text-3xl leading-none font-extrabold overflow-hidden uppercase pt-6 pb-2 mb-2 text-primary-theme'
+    >
       <motion.div
-        ref={ref}
-        initial={{ ...initial.maxWidth }}
-        animate={isInView ? { ...animate.maxWidth } : {}}
+        data-testid='HeadingComponent'
+        initial={{ ...initial.fromBottom }}
+        animate={isInView ? { ...animate.vertical } : {}}
         transition={{ ...transition, delay: isFirst ? delay.firstHeading : 0 }}
-        className='h-[1px] bg-paragraph-theme mb-6'
-      />
-    </>
+      >
+        {children}
+      </motion.div>
+    </h2>
   )
 }

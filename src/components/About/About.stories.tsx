@@ -20,7 +20,7 @@ export const Mobile: Story = {
 
     await step('Name and role', () => {
       const heading = canvas.getByRole('heading', { level: 1 })
-      expect(heading).toHaveTextContent(about.name)
+      expect(heading).toHaveTextContent('Alefer Reinert')
       expect(heading).toHaveTextContent(about.role)
     })
 

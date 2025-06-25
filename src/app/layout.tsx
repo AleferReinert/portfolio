@@ -1,7 +1,7 @@
 import { about } from 'content/about'
 import { skills } from 'content/skills'
 import { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import { ReactNode } from 'react'
 import './globals.css'
 
@@ -11,14 +11,18 @@ export interface SeoProps {
   shareImgUrl: string
 }
 
-const inter = Inter({ weight: ['300', '400', '500', '700', '900'], subsets: ['latin'], display: 'swap' })
-const globalTitle = `Portfólio | ${about.name} - ${about.role}`
+const font = Plus_Jakarta_Sans({
+  weight: ['300', '400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap'
+})
+const globalTitle = `Portfólio | ${about.firstName} ${about.lastName} - ${about.role}`
 
 export const metadata: Metadata = {
   metadataBase: new URL(about.websiteUrl),
   title: globalTitle,
   description: about.googleDescription,
-  authors: [{ name: about.name }],
+  authors: [{ name: `${about.firstName} ${about.lastName}` }],
   openGraph: {
     title: globalTitle,
     description: about.googleDescription,
@@ -53,7 +57,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#032633',
+  themeColor: '#000',
   initialScale: 1,
   width: 'device-width'
 }
@@ -61,7 +65,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang='pt-BR' className='scroll-smooth dark'>
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   )
 }

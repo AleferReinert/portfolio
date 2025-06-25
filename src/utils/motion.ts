@@ -1,8 +1,6 @@
 const delayInterval = 0.2 // Diferença de tempo de transição entre os primeiros elementos da página
 const isStorybook = process.env.STORYBOOK
 
-// Disable initial animation in Storybook
-
 export const globalMotion = {
   transition: {
     duration: 0.4,

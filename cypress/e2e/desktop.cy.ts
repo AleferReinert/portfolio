@@ -4,11 +4,11 @@ describe('Desktop', () => {
   })
 
   it('Change theme', () => {
-    cy.checkTheme('#032633')
+    cy.checkTheme('#000')
     cy.get('[data-testid="SwitchComponent"]').click()
-    cy.checkTheme('#f8fafc')
+    cy.checkTheme('#e7e3e4')
     cy.get('[data-testid="SwitchComponent"]').click()
-    cy.checkTheme('#032633')
+    cy.checkTheme('#000')
   })
 
   it('Change filters', () => {

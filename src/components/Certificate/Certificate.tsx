@@ -33,10 +33,10 @@ export function Certificate({ title, organization, conclusionDate, url, index }:
 						group-hover:bg-primary-theme group-hover:max-h-full
 					'
         ></span>
-        <h3 className='text-heading-theme font-medium leading-5 group-hover:translate-x-3 group-hover:text-primary-theme transition'>
+        <h3 className='text-heading-theme font-semibold leading-5 group-hover:translate-x-3 group-hover:text-primary-theme transition'>
           {title}
         </h3>
-        <p className='text-sm group-hover:translate-x-3 transition duration-300'>
+        <p className='text-sm font-light group-hover:translate-x-3 transition duration-300 text-paragraph-theme/90'>
           {organization} | {conclusionDate}
         </p>
       </Link>

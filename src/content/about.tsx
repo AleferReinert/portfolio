@@ -3,7 +3,8 @@ import { AboutProps } from 'components/About/About'
 import { FooterProps } from 'components/Footer/Footer'
 
 export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps = {
-  name: 'Alefer Reinert',
+  firstName: 'Alefer',
+  lastName: 'Reinert',
   role: 'Desenvolvedor front-end',
   email: 'aleferreinert@gmail.com',
   websiteUrl: 'https://aleferreinert.vercel.app',

@@ -42,7 +42,7 @@ export function Project({
       animate={isInView || isFirst ? { ...globalMotion.animate.vertical } : {}}
       transition={{ ...globalMotion.transition, delay: isFirst ? globalMotion.delay.firstProject : 0 }}
       className='
-				flex flex-col items-center self-center bg-black/5 dark:bg-black/25 w-full px-4 py-7 gap-6 
+				flex flex-col items-center self-center bg-black/5 dark:bg-white/8 w-full px-4 py-7 gap-6 
 				md:flex-row md:justify-between md:px-6 md:py-8 md:max-w-none md:self-auto md:gap-8
 				lg:px-8 lg:py-10 lg:gap-12 md:even:flex-row-reverse
 			'
@@ -63,12 +63,12 @@ export function Project({
       </a>
       <div className='flex flex-col shrink items-center gap-4 mx-auto w-full tex-center md:text-left'>
         <h3 className='w-full flex justify-between items-baseline'>
-          <span className='text-2xl font-bold text-heading-theme'>{title}</span>
+          <span className='text-xl font-bold text-heading-theme'>{title}</span>
           <time dateTime={year}>{year}</time>
         </h3>
         <p className='leading-5 w-full'>{description}</p>
         <ul
-          className='w-full text-primary-theme font-normal gap-1.5 flex flex-wrap text-sm'
+          className='w-full text-primary-theme font-medium dark:font-light gap-x-1.5 gap-y-1 flex flex-wrap text-sm'
           title='Tecnologias utilizadas'
         >
           {skills.map((skill) => (
