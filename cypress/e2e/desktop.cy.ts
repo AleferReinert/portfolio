@@ -11,10 +11,11 @@ describe('Desktop', () => {
     cy.checkTheme('#000')
   })
 
-  it('Change filters', () => {
+  it.only('Change filters', () => {
     const totalProjects = 13
     cy.wait(800)
     cy.findByTestId('FilterComponent').should('be.hidden')
+    cy.findByTitle('0 filtros selecionados').should('have.attr', 'aria-hidden', 'true')
     cy.checkProjectsLength(13)
 
     cy.findByRole('button', { name: 'Exibir filtros' }).click()
@@ -22,10 +23,12 @@ describe('Desktop', () => {
     cy.findByText(`Exibindo ${totalProjects} de ${totalProjects} projetos.`)
 
     cy.contains('label', 'React').click()
+    cy.findByTitle('1 filtros selecionados').should('be.visible')
     cy.findByText(`Exibindo 11 de ${totalProjects} projetos.`)
     cy.checkProjectsLength(11)
 
     cy.contains('label', 'Storybook').click()
+    cy.findByTitle('2 filtros selecionados').should('be.visible')
     cy.findByText(`Exibindo 6 de ${totalProjects} projetos.`)
     cy.checkProjectsLength(6)
 
@@ -35,6 +38,7 @@ describe('Desktop', () => {
     cy.findByText('Nenhum projeto encontrado contendo todos os filtros selecionados.')
 
     cy.findByRole('button', { name: 'Limpar' }).click()
+    cy.findByTitle('0 filtros selecionados').should('have.attr', 'aria-hidden', 'true')
     cy.findByText(`Exibindo ${totalProjects} de ${totalProjects} projetos.`)
     cy.checkProjectsLength(totalProjects)
 

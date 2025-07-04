@@ -14,10 +14,7 @@ export function Heading({ children, isFirst = false }: HeadingProps) {
   const { initial, animate, transition, delay } = globalMotion
 
   return (
-    <h2
-      ref={ref}
-      className='text-3xl leading-none font-extrabold overflow-hidden uppercase pt-6 pb-2 mb-2 text-primary-theme'
-    >
+    <h2 ref={ref} className='text-3xl leading-none font-extrabold uppercase pt-6 pb-2 mb-2 text-primary-theme'>
       <motion.div
         data-testid='HeadingComponent'
         initial={{ ...initial.fromBottom }}

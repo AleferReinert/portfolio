@@ -39,10 +39,16 @@ export function Projects({ projects }: ProjectsProps) {
           <button
             title={showFilters ? 'Ocultar filtros' : 'Exibir filtros'}
             onClick={() => setShowFilters(!showFilters)}
+            className='relative'
           >
-            <IoFilter
-              className={`size-6 ${selectedSkills.length > 0 ? 'fill-primary-theme ' : 'fill-paragraph-theme transition hover:fill-primary-theme'}`}
-            />
+            <span
+              title={`${selectedSkills.length} filtros selecionados`}
+              aria-hidden={selectedSkills.length === 0}
+              className={`${selectedSkills.length > 0 ? 'scale-100' : 'scale-0'} transition-all ease-in-out rounded-full size-4 bg-primary-theme absolute font-bold leading-4 -top-0.5 -right-1.5 text-black text-center text-xs`}
+            >
+              <span className='translate-x-[1px]'>{selectedSkills.length}</span>
+            </span>
+            <IoFilter className={'size-6 fill-paragraph-theme transition hover:fill-primary-theme'} />
           </button>
         </div>
       }

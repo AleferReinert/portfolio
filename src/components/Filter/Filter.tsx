@@ -73,7 +73,7 @@ export function Filter({
           <button
             disabled={selectedSkills.length === 0}
             onClick={() => setSelectedSkills([])}
-            className='text-primary-theme font-medium ml-auto disabled:hidden'
+            className='text-primary-theme font-medium ml-auto disabled:hidden transition hover:scale-95'
           >
             Limpar
           </button>
