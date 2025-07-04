@@ -27,9 +27,10 @@ export function NavMenu({ menu, setShowMobileMenu, github }: NavMenuProps) {
           href={item.link}
           scroll={true}
           onClick={() => setShowMobileMenu(false)}
-          className='transition hover:text-primary-theme'
+          className='transition hover:text-primary-theme group flex flex-col items-center relative'
         >
           {item.children}
+          <div className='bg-primary-theme absolute -translate-y-[1px] -bottom-2 transition-all h-[1px] w-full max-w-0 group-hover:max-w-full' />
         </Link>
       ))}
       {github && (
@@ -37,9 +38,9 @@ export function NavMenu({ menu, setShowMobileMenu, github }: NavMenuProps) {
           title={github.name}
           href={github.url}
           target='_blank'
-          className='transition hover:text-primary-theme hidden md:inline'
+          className='transition hover:text-primary-theme group hidden md:inline'
         >
-          <SiGithub aria-hidden size={24} />
+          <SiGithub aria-hidden size={24} className='group-hover:animate-rotateFrom180' />
         </a>
       )}
     </nav>
