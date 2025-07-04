@@ -68,20 +68,22 @@ export function Projects({ projects }: ProjectsProps) {
       />
 
       <div
-        className={`${selectedSkills.length > 0 ? 'max-h-10 opacity-100 transition-all duration-300' : 'max-h-0 opacity-0'} overflow-hidden flex justify-between text-sm gap-2`}
+        className={`${selectedSkills.length > 0 ? 'max-h-10 opacity-100 transition-all duration-300' : 'max-h-0 opacity-0'} overflow-hidden`}
       >
-        <p className='pb-4'>
-          {filteredProjects.length > 0
-            ? `Exibindo ${filteredProjects.length} de ${projects.length} projetos.`
-            : 'Nenhum projeto encontrado contendo todos os filtros selecionados.'}
-        </p>
-        <button
-          disabled={selectedSkills.length === 0}
-          onClick={() => setSelectedSkills([])}
-          className='text-primary-theme ml-auto disabled:hidden transition hover:scale-95'
-        >
-          Limpar
-        </button>
+        <div className='pb-4 flex justify-between text-sm gap-2'>
+          <p>
+            {filteredProjects.length > 0
+              ? `Exibindo ${filteredProjects.length} de ${projects.length} projetos.`
+              : 'Nenhum projeto encontrado contendo todos os filtros selecionados.'}
+          </p>
+          <button
+            disabled={selectedSkills.length === 0}
+            onClick={() => setSelectedSkills([])}
+            className='text-primary-theme ml-auto disabled:hidden transition hover:scale-95'
+          >
+            Limpar
+          </button>
+        </div>
       </div>
 
       <ul className='flex flex-col gap-6'>
