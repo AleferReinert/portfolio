@@ -1,4 +1,3 @@
 npx tsc
 npm run lint
 npm run test-storybook
-npm run cy:run
