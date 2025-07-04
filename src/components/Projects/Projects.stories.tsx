@@ -44,7 +44,7 @@ export const Default: Story = {
       }
     })
 
-    await step('Open filters: all uncheck, hidden clear button and text with all projects', async () => {
+    await step('Open filters: all uncheck, hidden clear button', async () => {
       const skillsChecked = canvas.queryAllByRole('checkbox', { checked: true })
       const clearButton = canvas.queryByRole('button', { name: 'Limpar' })
       expect(FilterComponent).toHaveStyle({ 'max-height': '0' })
@@ -52,63 +52,53 @@ export const Default: Story = {
       await waitFor(() => {
         expect(FilterComponent).not.toHaveStyle({ 'max-height': '0' })
         expect(skillsChecked.length).toBe(0)
-        expect(canvas.getByText(`Exibindo ${projects.length} de ${projects.length} projetos.`)).toBeVisible()
         expect(clearButton).not.toBeInTheDocument()
         expect(filterButton).toHaveAttribute('title', 'Ocultar filtros')
       })
     })
 
-    await step('Selected only one skill', () => {
+    await step('Selected only one skill', async () => {
       const tailwindSkill = canvas.getByLabelText('Tailwind')
       expect(tailwindSkill).not.toBeChecked()
-      userEvent.click(tailwindSkill)
-      waitFor(() => {
+      await userEvent.click(tailwindSkill)
+      await waitFor(() => {
         expect(tailwindSkill).toBeChecked()
         expect(canvas.getByText(`Exibindo 10 de ${projects.length} projetos.`)).toBeVisible()
       })
     })
 
-    await step('Selected multiple skills', () => {
+    await step('Selected multiple skills', async () => {
       const storybookSkill = canvas.getByLabelText('Storybook')
       expect(storybookSkill).not.toBeChecked()
-      userEvent.click(storybookSkill)
-      waitFor(() => {
+      await userEvent.click(storybookSkill)
+      await waitFor(() => {
         expect(storybookSkill).toBeChecked()
         expect(canvas.getByText(`Exibindo 6 de ${projects.length} projetos.`)).toBeVisible()
       })
     })
 
-    await step('Filter without results', () => {
+    await step('Filter without results', async () => {
       const gulpkSkill = canvas.getByLabelText('Gulp')
       expect(gulpkSkill).not.toBeChecked()
-      userEvent.click(gulpkSkill)
-      waitFor(() => {
+      await userEvent.click(gulpkSkill)
+      await waitFor(() => {
         expect(gulpkSkill).toBeChecked()
-        expect(canvas.getByText(`Exibindo 0 de ${projects.length} projetos.`)).toBeVisible()
+        expect(canvas.getByText('Nenhum projeto encontrado contendo todos os filtros selecionados.')).toBeVisible()
       })
     })
 
-    await step('Clear all filters on click button Limpar', () => {
+    await step('Clear all filters on click button Limpar', async () => {
       const clearButton = canvas.queryByRole('button', { name: 'Limpar' })
-      userEvent.click(clearButton!)
+      await userEvent.click(clearButton!)
       const skillsChecked = canvas.queryAllByRole('checkbox', { checked: true })
       expect(skillsChecked.length).toBe(0)
     })
 
     await step('Close filter on click button', async () => {
-      userEvent.click(filterButton)
+      await userEvent.click(filterButton)
       await waitFor(() => {
         expect(FilterComponent).toHaveStyle({ 'max-height': '0' })
         expect(filterButton).toHaveAttribute('title', 'Exibir filtros')
-      })
-    })
-
-    await step('Ignore this test, is only to reset story after tests', async () => {
-      const clearButton = canvas.getByRole('button', { name: 'Limpar' })
-      userEvent.click(filterButton)
-      await waitFor(() => {
-        userEvent.click(clearButton)
-        userEvent.click(filterButton)
       })
     })
   }

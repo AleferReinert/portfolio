@@ -42,7 +42,14 @@ export function Projects({ projects }: ProjectsProps) {
             className='relative'
           >
             <span
-              title={`${selectedSkills.length} filtros selecionados`}
+              data-testid='FilterBadge'
+              title={
+                selectedSkills.length > 1
+                  ? `${selectedSkills.length} filtros selecionados`
+                  : selectedSkills.length === 1
+                    ? '1 filtro selecionado'
+                    : ''
+              }
               aria-hidden={selectedSkills.length === 0}
               className={`${selectedSkills.length > 0 ? 'scale-100' : 'scale-0'} transition-all ease-in-out rounded-full size-4 bg-primary-theme absolute font-bold leading-4 -top-0.5 -right-1.5 text-black text-center text-xs`}
             >
@@ -58,19 +65,30 @@ export function Projects({ projects }: ProjectsProps) {
         skills={allSkills}
         selectedSkills={selectedSkills}
         setSelectedSkills={setSelectedSkills}
-        filteredProjects={filteredProjects}
-        projects={projects}
       />
 
-      {filteredProjects.length ? (
-        <ul className='flex flex-col gap-6'>
-          {filteredProjects.map((project, index) => {
-            return <DynamicProject key={project.id} lazy={index === 0} {...project} index={index} />
-          })}
-        </ul>
-      ) : (
-        <p>Nenhum projeto encontrado contendo todos os filtros selecionados.</p>
-      )}
+      <div
+        className={`${selectedSkills.length > 0 ? 'max-h-10 opacity-100 transition-all duration-300' : 'max-h-0 opacity-0'} overflow-hidden flex justify-between text-sm gap-2`}
+      >
+        <p className='pb-4'>
+          {filteredProjects.length > 0
+            ? `Exibindo ${filteredProjects.length} de ${projects.length} projetos.`
+            : 'Nenhum projeto encontrado contendo todos os filtros selecionados.'}
+        </p>
+        <button
+          disabled={selectedSkills.length === 0}
+          onClick={() => setSelectedSkills([])}
+          className='text-primary-theme ml-auto disabled:hidden transition hover:scale-95'
+        >
+          Limpar
+        </button>
+      </div>
+
+      <ul className='flex flex-col gap-6'>
+        {filteredProjects.map((project, index) => {
+          return <DynamicProject key={project.id} lazy={index === 0} {...project} index={index} />
+        })}
+      </ul>
     </Section>
   )
 }

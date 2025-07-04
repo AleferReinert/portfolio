@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { projects } from 'content/projects'
 import { skills } from 'content/skills'
 import { Filter } from './Filter'
 
@@ -11,9 +10,7 @@ const meta: Meta<typeof Filter> = {
     showFilters: true,
     skills: skills.map((skill) => skill.title),
     selectedSkills: [],
-    setSelectedSkills: fn(),
-    filteredProjects: projects,
-    projects: projects
+    setSelectedSkills: fn()
   },
   decorators: (Story) => (
     <div className='p-4'>

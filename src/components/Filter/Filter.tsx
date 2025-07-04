@@ -1,4 +1,3 @@
-import { ProjectProps } from 'components/Project/Project'
 import { Dispatch, SetStateAction } from 'react'
 import { FaCheck } from 'react-icons/fa6'
 
@@ -7,18 +6,9 @@ interface FilterProps {
   skills: string[]
   selectedSkills: string[]
   setSelectedSkills: Dispatch<SetStateAction<string[]>>
-  filteredProjects: Omit<ProjectProps, 'index'>[]
-  projects: Omit<ProjectProps, 'index'>[]
 }
 
-export function Filter({
-  showFilters,
-  skills,
-  selectedSkills,
-  setSelectedSkills,
-  filteredProjects,
-  projects
-}: FilterProps) {
+export function Filter({ showFilters, skills, selectedSkills, setSelectedSkills }: FilterProps) {
   // Remove the skill if it already exists, if not add it
   const updateSelectedSkills = (skill: string) => {
     setSelectedSkills((prevSelectedSkills) => {
@@ -67,17 +57,6 @@ export function Filter({
             )
           })}
         </ul>
-
-        <div className='flex justify-between overflow-hidden transition-all pt-6 text-sm'>
-          <p>{`Exibindo ${filteredProjects.length} de ${projects.length} projetos.`}</p>
-          <button
-            disabled={selectedSkills.length === 0}
-            onClick={() => setSelectedSkills([])}
-            className='text-primary-theme font-medium ml-auto disabled:hidden transition hover:scale-95'
-          >
-            Limpar
-          </button>
-        </div>
       </div>
     </div>
   )
