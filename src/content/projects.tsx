@@ -136,6 +136,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     year: '2024',
     description: 'Confira o processo de criação deste portfólio.',
     skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Storybook', 'TestingLibrary', 'FramerMotion', 'Cypress'],
+    projectUrl: 'https://aleferreinert.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/portfolio',
     storybookUrl: 'https://main--64cd32980293c902cb6e27ce.chromatic.com',
     img: '/projects/min/portfolio.webp'

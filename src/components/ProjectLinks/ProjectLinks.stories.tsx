@@ -4,7 +4,10 @@ import { ProjectLinks } from './ProjectLinks'
 
 const meta: Meta<typeof ProjectLinks> = {
   title: 'Components/ProjectLinks',
-  args: { repositoryUrl: '/repository-link' },
+  args: {
+    repositoryUrl: 'https://repository-url.com',
+    projectUrl: 'https://project-url.com'
+  },
   component: ProjectLinks,
   decorators: (Story) => (
     <div className='p-4'>
@@ -17,52 +20,47 @@ export default meta
 type Story = StoryObj<typeof ProjectLinks>
 
 export const Default: Story = {
-  name: 'GitHub (default)',
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
-    await step('GitHub url', () => {
-      const repositoryUrl = canvas.getByRole('link', { name: 'GitHub' })
-      expect(repositoryUrl).toHaveAttribute('href', '/repository-link')
+    await step('PageSpeed Insights url', () => {
+      const repositoryUrl = canvas.getByRole('link', { name: 'PageSpeed Insights' })
+      expect(repositoryUrl).toHaveAttribute(
+        'href',
+        'https://pagespeed.web.dev/analysis?url=https://project-url.com&form_factor=desktop'
+      )
     })
 
-    await step('Svg with aria-hidden', () => {
-      const svg = canvas.getByRole('img', { hidden: true })
-      expect(svg).toHaveAttribute('aria-hidden', 'true')
+    await step('GitHub url', () => {
+      const repositoryUrl = canvas.getByRole('link', { name: 'GitHub' })
+      expect(repositoryUrl).toHaveAttribute('href', 'https://repository-url.com')
+    })
+
+    await step('Project url', () => {
+      const projectUrl = canvas.getByRole('link', { name: 'Visualizar' })
+      expect(projectUrl).toHaveAttribute('href', 'https://project-url.com')
     })
   }
 }
 
 export const WithStorybook: Story = {
-  args: { storybookUrl: '/storybook-link' },
+  args: {
+    storybookUrl: 'https://storybook-url.com'
+  },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
     await step('Storybook', () => {
       const storybookUrl = canvas.getByRole('link', { name: 'Storybook' })
-      expect(storybookUrl).toHaveAttribute('href', '/storybook-link')
+      expect(storybookUrl).toHaveAttribute('href', 'https://storybook-url.com')
     })
 
-    await step('All svgs with aria-hidden', () => {
+    await step('SVGs with aria-hidden', () => {
       const svgs = canvas.getAllByRole('img', { hidden: true })
-      expect(svgs.length).toBe(2)
-    })
-  }
-}
-
-export const WithProject: Story = {
-  args: { projectUrl: '/project-link' },
-  play: async ({ canvasElement, step }) => {
-    const canvas = within(canvasElement)
-
-    await step('Project url', () => {
-      const projectUrl = canvas.getByRole('link', { name: 'Visualizar' })
-      expect(projectUrl).toHaveAttribute('href', '/project-link')
-    })
-
-    await step('Render all svgs with aria-hidden', () => {
-      const svgs = canvas.getAllByRole('img', { hidden: true })
-      expect(svgs.length).toBe(2)
+      for (let i = 0; i < svgs.length; i++) {
+        expect(svgs[i]).toBeVisible()
+        expect(svgs[i]).toHaveAttribute('aria-hidden', 'true')
+      }
     })
   }
 }

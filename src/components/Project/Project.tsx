@@ -12,7 +12,7 @@ export interface ProjectProps {
   skills: string[]
   repositoryUrl: string
   storybookUrl?: string
-  projectUrl?: string
+  projectUrl: string
   img: string
   lazy?: boolean
   index: number
@@ -48,7 +48,7 @@ export function Project({
 			'
     >
       <a
-        href={projectUrl || storybookUrl || repositoryUrl}
+        href={projectUrl || repositoryUrl}
         target='_blank'
         className='relative w-full h-min aspect-25/17 max-w-[280px] md:max-w-[240px] lg:max-w-[280px]'
       >
