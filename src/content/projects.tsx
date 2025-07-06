@@ -51,7 +51,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     year: '2025',
     description: `Teste técnico desenvolvido para um processo seletivo. Consiste em construir a visualização de uma tabela com dados de uma API simulada.`,
     skills: ['React', 'TypeScript', 'Tailwind', 'JSONServer'],
-    projectUrl: 'https://betalent.netlify.app',
+    projectUrl: 'https://betalent.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/betalent',
     img: '/projects/min/betalent.webp'
   },
