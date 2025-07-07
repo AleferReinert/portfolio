@@ -2,6 +2,10 @@
 
 Meu portfólio de desenvolvedor front-end.
 
+- [aleferreinert.vercel.app](https://aleferreinert.vercel.app)
+
+- [Storybook](https://main--64cd32980293c902cb6e27ce.chromatic.com)
+
 ## Começando
 
 1. Clone o repositório:
@@ -43,9 +47,3 @@ Meu portfólio de desenvolvedor front-end.
 - **Tailwind CSS:** Framework utilitário para estilização com CSS.
 - **Testing Library:** Ferramenta para testes unitários.
 - **TypeScript:** Superset de JavaScript com tipagem estática.
-
-## Links
-
-Deploy: [aleferreinert.vercel.app](https://aleferreinert.vercel.app)
-
-Storybook: [Visualizar no Chromatic](https://main--64cd32980293c902cb6e27ce.chromatic.com)
