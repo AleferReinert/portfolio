@@ -104,7 +104,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     year: '2024',
     description: `Aplicação web que utiliza inteligência artificial para recomendar livros a partir da busca do usuário.`,
     skills: ['React', 'TypeScript', 'Tailwind', 'Radix', 'Vite', 'OpenAI', 'Express', 'MongoDB'],
-    projectUrl: 'https://findbook-ar.netlify.app',
+    projectUrl: 'https://findbook-app.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/findbook',
     img: '/projects/min/findbook.webp'
   },
