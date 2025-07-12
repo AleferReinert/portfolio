@@ -9,7 +9,15 @@ import { IoMenuOutline } from 'react-icons/io5'
 import { useFixedHeader } from 'utils/scrollHeader'
 import { globalMotion } from '../../utils/motion'
 
-export function Header({ menu, github }: Pick<NavMenuProps, 'menu' | 'github'>) {
+export const menu: NavMenuProps['menu'] = [
+  { link: '#about', label: 'Sobre mim' },
+  { link: '#projects', label: 'Projetos' },
+  { link: '#skills', label: 'Habilidades' },
+  { link: '#certificates', label: 'Certificados' },
+  { link: '#contact', label: 'Contato' }
+]
+
+export function Header({ github }: Pick<NavMenuProps, 'github'>) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const fixedHeader = useFixedHeader()
 

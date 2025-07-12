@@ -1,13 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import { menu, socials } from 'content/layout'
+import { menu } from 'components/Header/Header'
+import { about } from 'content/about'
 import { NavMenu } from './NavMenu'
 
 const meta: Meta<typeof NavMenu> = {
   title: 'Components/NavMenu',
   component: NavMenu,
-  args: { menu: menu },
-  decorators: (Story) => (
+  args: { menu },
+  decorators: Story => (
     <div className='p-4'>
       <Story />
     </div>
@@ -27,14 +28,14 @@ export const Default: Story = {
     })
 
     await step('GitHub hidden', () => {
-      const githubLink = canvas.queryByRole('link', { name: socials[0].name })
+      const githubLink = canvas.queryByRole('link', { name: 'GitHub' })
       expect(githubLink).not.toBeInTheDocument()
     })
   }
 }
 
 export const WithGithub: Story = {
-  args: { github: socials[0] },
+  args: { github: about.socialLinks.find(link => link.name === 'GitHub') },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
@@ -44,9 +45,9 @@ export const WithGithub: Story = {
     })
 
     await step('GitHub', () => {
-      const githubLink = canvas.getByRole('link', { name: socials[0].name })
+      const githubLink = canvas.getByRole('link', { name: 'GitHub' })
       const githubIcon = canvas.getByRole('img', { hidden: true })
-      expect(githubLink).toHaveAttribute('href', socials[0].url)
+      expect(githubLink).toHaveAttribute('href', about.socialLinks.find(link => link.name === 'GitHub')?.url)
       expect(githubIcon).toBeVisible()
     })
   }

@@ -1,15 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, userEvent, waitFor, within } from '@storybook/test'
-import { menu, socials } from 'content/layout'
+import { about } from 'content/about'
 import { Header } from './Header'
 
 const meta: Meta<typeof Header> = {
   title: 'Components/Header',
   component: Header,
-  args: { menu: menu, github: socials[0] },
+  args: {
+    github: about.socialLinks.find(link => link.name === 'GitHub')
+  },
   parameters: { layout: 'fullscreen' },
   decorators: [
-    (Story) => (
+    Story => (
       <div className='min-h-14'>
         <Story />
       </div>
@@ -88,7 +90,7 @@ export const Desktop: Story = {
       const githubIcon = within(githubLink).getByRole('img', { hidden: true })
 
       waitFor(() => {
-        expect(githubLink).toHaveAttribute('href', socials[0].url)
+        expect(githubLink).toHaveAttribute('href', about.socialLinks.find(link => link.name === 'GitHub')?.url)
         expect(githubIcon).toBeVisible()
       })
     })

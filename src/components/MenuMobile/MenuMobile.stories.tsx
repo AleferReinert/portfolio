@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
-import { menu } from 'content/layout'
+import { menu } from 'components/Header/Header'
 import { MenuMobile } from './MenuMobile'
 
 const meta: Meta<typeof MenuMobile> = {
   title: 'Components/MenuMobile',
   component: MenuMobile,
-  args: { showMobileMenu: true, menu: menu },
+  args: { showMobileMenu: true, menu },
   parameters: { layout: 'centered', viewport: { defaultViewport: 'xs' } }
 }
 

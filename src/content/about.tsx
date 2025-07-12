@@ -1,6 +1,7 @@
 import { SeoProps } from 'app/layout'
 import { AboutProps } from 'components/About/About'
 import { FooterProps } from 'components/Footer/Footer'
+import { SiGithub, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 
 export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps = {
   firstName: 'Alefer',
@@ -24,5 +25,10 @@ export const about: AboutProps & Pick<FooterProps, 'phone' | 'email'> & SeoProps
         e <strong>Strapi</strong>.
       </span>
     </>
-  )
+  ),
+  socialLinks: [
+    { name: 'GitHub', url: 'https://github.com/AleferReinert', icon: SiGithub },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/AleferReinert', icon: SiLinkedin },
+    { name: 'WhatsApp', url: `https://wa.me/5547999558118`, icon: SiWhatsapp }
+  ]
 }

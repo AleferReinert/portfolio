@@ -1,3 +1,4 @@
+import { SocialProps } from 'components/Footer/Footer'
 import { Section } from 'components/Section/Section'
 import * as motion from 'framer-motion/client'
 import { ReactNode } from 'react'
@@ -9,6 +10,7 @@ export interface AboutProps {
   role: string
   description: ReactNode
   curriculumUrl: string
+	socialLinks: SocialProps[]
 }
 
 export function About({ firstName, lastName, role, description, curriculumUrl }: AboutProps) {

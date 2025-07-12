@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, waitFor, within } from '@storybook/test'
 import { about } from 'content/about'
-import { socials } from 'content/layout'
 import { formatPhone } from 'utils/formatPhone'
 import { Footer } from './Footer'
 
@@ -11,7 +10,7 @@ const meta: Meta<typeof Footer> = {
   args: {
     phone: about.phone,
     email: about.email,
-    socials: socials
+    socials: about.socialLinks
   },
   parameters: { layout: 'fullscreen' }
 }
@@ -42,8 +41,8 @@ export const Default: Story = {
       await waitFor(() => {
         const socialLinksNavigation = canvas.getByRole('navigation')
         expect(socialLinksNavigation).toBeVisible()
-        const socialLinks = ['GitHub', 'LinkedIn', 'Whatsapp']
-        socialLinks.map((social) => {
+        const socialLinks = ['GitHub', 'LinkedIn', 'WhatsApp']
+        socialLinks.map(social => {
           expect(canvas.getByRole('link', { name: social })).toBeInTheDocument()
         })
       })
