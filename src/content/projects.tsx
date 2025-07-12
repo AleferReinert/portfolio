@@ -59,7 +59,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     id: '10',
     title: 'DevStage',
     year: '2025',
-    description: `Website de inscrição e indicação para eventos. Desenvolvido durante o NLW Connect da Rocketseat na trilha React.`,
+    description: `Website de inscrição e indicação para eventos. Desenvolvido durante o NLW Connect da Rocketseat nas trilhas React e Node.js.`,
     skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Storybook'],
     projectUrl: 'https://devstage-nlw-connect.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/devstage',
