@@ -28,10 +28,10 @@ export const Mobile: Story = {
     const canvas = within(canvasElement)
     const MenuMobileComponent = canvas.getByTestId('MenuMobileComponent')
 
-    await step('Button Open Menu', () => {
-      waitFor(() => {
+    await step('Button Open Menu', async () => {
+      await waitFor(async () => {
         const openMenuButton = canvas.getByRole('button', { name: 'Abrir menu' })
-        waitFor(() => expect(openMenuButton).toBeVisible(), { timeout: 6000 })
+        await waitFor(() => expect(openMenuButton).toBeVisible(), { timeout: 6000 })
       })
     })
 
@@ -39,8 +39,8 @@ export const Mobile: Story = {
       expect(MenuMobileComponent).not.toBeVisible()
     })
 
-    await step('Show MenuMobile on buttonOpenMenu click', () => {
-      waitFor(async () => {
+    await step('Show MenuMobile on buttonOpenMenu click', async () => {
+      await waitFor(async () => {
         userEvent.click(canvas.getByRole('button', { name: 'Abrir menu' }))
         await expect(MenuMobileComponent).toBeVisible()
       })
