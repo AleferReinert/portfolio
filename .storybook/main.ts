@@ -15,7 +15,7 @@ const config: StorybookConfig = {
     autodocs: true
   },
   staticDirs: ['../public'],
-  webpackFinal: (config) => {
+  webpackFinal: config => {
     config.resolve?.modules?.push(`${process.cwd()}/src`)
     return config
   },

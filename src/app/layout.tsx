@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     images: [about.shareImgUrl]
   },
   keywords: skills
-    .map((skill) => skill.title)
+    .map(skill => skill.title)
     .join(', ')
     .toString(),
   alternates: {
