@@ -2,6 +2,13 @@ import { CertificateProps } from 'components/Certificate/Certificate'
 
 export const certificates: Omit<CertificateProps, 'index'>[] = [
   {
+    id: '26',
+    title: 'Imersão Cloud DevOps',
+    organization: 'Alura',
+    conclusionDate: 'Julho/2025',
+    url: 'https://drive.google.com/file/d/11Csw_LRb-SeDks2qJ-KludMa5w3EiOFB/view'
+  },
+  {
     id: '25',
     title: 'NLW Agents - Avançado',
     organization: 'Rocketseat',
