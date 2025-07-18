@@ -2,6 +2,29 @@ import { ProjectProps } from 'components/Project/Project'
 
 export const projects: Omit<ProjectProps, 'index'>[] = [
   {
+    id: '14',
+    title: 'Let Me Ask',
+    year: '2025',
+    description: `Gerenciamento de salas. Crie, grave áudio com transcrição, faça perguntas e receba respostas geradas por IA com base no áudio gravado em cada sala.`,
+    skills: [
+      'React',
+      'Vite',
+      'TypeScript',
+      'Tailwind',
+      'Storybook',
+      'TestingLibrary',
+      'Zod',
+      'Drizzle',
+      'Fastify',
+      'Gemini',
+      'PostgreSQL'
+    ],
+    projectUrl: 'https://let-me-ask-app.vercel.app',
+    repositoryUrl: 'https://github.com/AleferReinert/let-me-ask',
+    storybookUrl: 'https://main--68700d12fd56a60965c0891e.chromatic.com',
+    img: '/projects/min/let-me-ask.webp'
+  },
+  {
     id: '13',
     title: 'DebbiFit',
     year: '2025',
@@ -15,7 +38,8 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
       'TestingLibrary',
       'Strapi',
       'Apollo',
-      'GraphQL'
+      'GraphQL',
+      'PostgreSQL'
     ],
     projectUrl: 'https://debbifit.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/debbifit',
@@ -38,7 +62,8 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
       'GraphQL',
       'Apollo',
       'Cypress',
-      'NextAuth'
+      'NextAuth',
+      'PostgreSQL'
     ],
     projectUrl: 'https://wongames-store.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/won-games',
@@ -60,7 +85,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     title: 'DevStage',
     year: '2025',
     description: `Website de inscrição e indicação para eventos. Desenvolvido durante o NLW Connect da Rocketseat nas trilhas React e Node.js.`,
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Storybook'],
+    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Storybook', 'PostgreSQL'],
     projectUrl: 'https://devstage-nlw-connect.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/devstage',
     storybookUrl: 'https://main--67c3a6b77510efaa57103f96.chromatic.com',
@@ -91,7 +116,8 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
       'TestingLibrary',
       'Strapi',
       'Apollo',
-      'GraphQL'
+      'GraphQL',
+      'PostgreSQL'
     ],
     projectUrl: 'https://impacta-tecnologia.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/impacta-tecnologia',
@@ -103,7 +129,7 @@ export const projects: Omit<ProjectProps, 'index'>[] = [
     title: 'Findbook',
     year: '2024',
     description: `Aplicação web que utiliza inteligência artificial para recomendar livros a partir da busca do usuário.`,
-    skills: ['React', 'TypeScript', 'Tailwind', 'Radix', 'Vite', 'OpenAI', 'Express', 'MongoDB'],
+    skills: ['React', 'TypeScript', 'Tailwind', 'Radix', 'Vite', 'OpenAI', 'Express', 'MongoDB', 'Zod'],
     projectUrl: 'https://findbook-app.vercel.app',
     repositoryUrl: 'https://github.com/AleferReinert/findbook',
     img: '/projects/min/findbook.webp'
