@@ -37,7 +37,7 @@ li {
 @theme {
   /* Theme light here and theme dark in .dark bellow */
   --color-primary-theme: #00734c;
-  --color-secondary-theme: #e7e3e4;
+  --color-secondary-theme: #efefef;
   --color-heading-theme: #000;
   --color-paragraph-theme: #000;
 
@@ -98,7 +98,7 @@ li {
 
 .dark {
   --color-primary-theme: #00f88f;
-  --color-secondary-theme: #000;
+  --color-secondary-theme: #070707;
   --color-heading-theme: #fff;
   --color-paragraph-theme: #fff;
 }
