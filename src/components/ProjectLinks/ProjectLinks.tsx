@@ -14,18 +14,21 @@ export function ProjectLinks({ repositoryUrl, storybookUrl, projectUrl, index }:
 
   return (
     <div className={`flex gap-4 justify-end w-full sm:justify-start ${isEven ? 'lg:justify-end' : ''}`}>
-      <Link href={repositoryUrl} title='GitHub' target='_blank' className={linkStyles}>
-        <SiGithub aria-hidden role='img' className={svgStyles} />
-      </Link>
-
-      <Link
-        href={`https://pagespeed.web.dev/analysis?url=${projectUrl}&form_factor=desktop`}
-        title='PageSpeed Insights'
-        target='_blank'
-        className={linkStyles}
-      >
-        <SiPagespeedinsights aria-hidden role='img' className={svgStyles} />
-      </Link>
+      {repositoryUrl && (
+        <>
+          <Link href={repositoryUrl} title='GitHub' target='_blank' className={linkStyles}>
+            <SiGithub aria-hidden role='img' className={svgStyles} />
+          </Link>
+          <Link
+            href={`https://pagespeed.web.dev/analysis?url=${projectUrl}&form_factor=desktop`}
+            title='PageSpeed Insights'
+            target='_blank'
+            className={linkStyles}
+          >
+            <SiPagespeedinsights aria-hidden role='img' className={svgStyles} />
+          </Link>
+        </>
+      )}
 
       {storybookUrl && (
         <Link href={storybookUrl} title='Storybook' target='_blank' className={linkStyles}>

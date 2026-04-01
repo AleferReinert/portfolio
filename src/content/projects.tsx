@@ -2,6 +2,15 @@ import { ProjectProps } from 'components/Project/Project'
 
 export const projects: Omit<ProjectProps, 'index'>[] = [
   {
+    id: '15',
+    title: 'Micropassos',
+    year: '2026',
+    description: `Aplicativo de saúde mental com atividades para ajudar pessoas com depressão a se movimentarem e voltarem a ter rotina.`,
+    skills: ['ReactNative', 'Expo', 'TypeScript', 'Tailwind', 'Jest', 'TestingLibrary', 'Maestro', 'GraphQL'],
+    projectUrl: 'https://play.google.com/store/apps/details?id=com.app.micropassos',
+    img: '/projects/min/micropassos.webp'
+  },
+  {
     id: '14',
     title: 'Let Me Ask',
     year: '2025',

@@ -10,7 +10,7 @@ export interface ProjectProps {
   year: string
   description: string
   skills: string[]
-  repositoryUrl: string
+  repositoryUrl?: string
   storybookUrl?: string
   projectUrl: string
   img: string
@@ -71,7 +71,7 @@ export function Project({
           className='w-full text-primary-theme font-medium dark:font-light gap-x-1.5 gap-y-1 flex flex-wrap text-sm'
           title='Tecnologias utilizadas'
         >
-          {skills.map((skill) => (
+          {skills.map(skill => (
             <li key={skill}>{skill}</li>
           ))}
         </ul>

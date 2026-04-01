@@ -63,7 +63,7 @@ export const Default: Story = {
       await userEvent.click(tailwindSkill)
       await waitFor(() => {
         expect(tailwindSkill).toBeChecked()
-        expect(canvas.getByText(`Exibindo 11 de ${projects.length} projetos.`)).toBeVisible()
+        expect(canvas.getByText(`Exibindo 12 de ${projects.length} projetos.`)).toBeVisible()
       })
     })
 
