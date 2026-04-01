@@ -12,7 +12,7 @@ describe('Desktop', () => {
   })
 
   it('Change filters', () => {
-    const totalProjects = 14
+    const totalProjects = 15
     cy.wait(800)
     cy.findByTestId('FilterComponent').should('be.hidden')
     cy.findByTestId('FilterBadge').should('have.attr', 'title', '').should('have.attr', 'aria-hidden', 'true')
